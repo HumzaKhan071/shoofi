@@ -15,7 +15,7 @@ class MyButtonContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 48,
-      width: double.infinity,
+      width: Get.width * 0.9,
       decoration: BoxDecoration(
         color: conColor,
         borderRadius: BorderRadius.circular(100),

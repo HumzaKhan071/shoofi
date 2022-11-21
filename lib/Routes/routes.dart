@@ -42,4 +42,3 @@ export 'package:shoofi/Screens/UserAgreementScreens/PrivacyScreen.dart';
 export 'package:flutter/gestures.dart';
 export 'package:shoofi/Screens/UserAgreementScreens/UserAgreementScreen.dart';
 export 'package:shoofi/controllers/splash_controller.dart';
-import 'package:shoofi/controllers/get_started_controller.dart';
