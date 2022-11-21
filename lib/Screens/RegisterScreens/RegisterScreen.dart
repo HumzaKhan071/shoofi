@@ -1,6 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
 
-
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
 
@@ -9,9 +8,11 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
-  bool valueObsecure = false;
-  bool valueObsecure1 = false;
-  String dropdownValue = "Male";
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _numberController = TextEditingController();
+
+  String dropdownvalue = 'Male';
+  var items = ['Male', 'Female'];
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -78,6 +79,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         borderRadius: BorderRadius.circular(100),
                       ),
                       child: TextFormField(
+                        controller: _emailController,
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: "Email",
@@ -100,6 +102,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         borderRadius: BorderRadius.circular(100),
                       ),
                       child: TextFormField(
+                        controller: _numberController,
                         keyboardType: TextInputType.number,
                         decoration: InputDecoration(
                           border: InputBorder.none,
@@ -115,73 +118,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     const SizedBox(
                       height: 10,
                     ),
-                    Container(
-                      height: 48,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: grey, width: 1),
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      child: TextFormField(
-                        obscureText: valueObsecure,
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: "Password",
-                          suffixIcon: IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  valueObsecure = !valueObsecure;
-                                });
-                              },
-                              icon: Icon(
-                                valueObsecure
-                                    ? Icons.visibility_off
-                                    : Icons.visibility,
-                                color: grey,
-                              )),
-                          hintStyle: GoogleFonts.archivo(
-                              color: grey,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                          contentPadding: EdgeInsets.all(10),
-                        ),
-                      ),
-                    ),
+                    MyPasswordField(text: "Password"),
                     const SizedBox(
                       height: 10,
                     ),
-                    Container(
-                      height: 48,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: grey, width: 1),
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      child: TextFormField(
-                        obscureText: valueObsecure1,
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: "Confirm Password",
-                          suffixIcon: IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  valueObsecure1 = !valueObsecure1;
-                                });
-                              },
-                              icon: Icon(
-                                valueObsecure1
-                                    ? Icons.visibility_off
-                                    : Icons.visibility,
-                                color: grey,
-                              )),
-                          hintStyle: GoogleFonts.archivo(
-                              color: grey,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                          contentPadding: EdgeInsets.all(10),
-                        ),
-                      ),
-                    ),
+                    MyPasswordField(text: "Confirm Password"),
                     const SizedBox(
                       height: 10,
                     ),
@@ -196,24 +137,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       child: DropdownButton(
                           isExpanded: true,
                           underline: Container(),
-                          value: dropdownValue,
+                          value: dropdownvalue,
                           style: TextStyle(
                               color: grey,
                               fontSize: 16,
                               fontWeight: FontWeight.bold),
-                          items: [
-                            DropdownMenuItem(
-                              child: Text("Male"),
-                              value: "Male",
-                            ),
-                            DropdownMenuItem(
-                              child: Text("Female"),
-                              value: "Female",
-                            ),
-                          ],
-                          onChanged: (String? value) {
+                          items: items.map((String items) {
+                            return DropdownMenuItem(
+                              value: items,
+                              child: Text(items),
+                            );
+                          }).toList(),
+                          onChanged: (String? newValue) {
                             setState(() {
-                              dropdownValue = value!;
+                              dropdownvalue = newValue!;
                             });
                           }),
                     ),
@@ -229,41 +166,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     const SizedBox(
                       height: 10,
                     ),
-                    Text.rich(TextSpan(
-                        text: "by continuing you agree to",
-                        style: GoogleFonts.archivo(
-                          fontSize: 12,
-                          color: textColor,
-                        ),
-                        children: [
-                          TextSpan(
-                              text: " Terms of Service",
-                              style: GoogleFonts.archivo(
-                                  fontSize: 12,
-                                  color: blue,
-                                  decoration: TextDecoration.underline,
-                                  decorationColor: grey,
-                                  decorationStyle: TextDecorationStyle.wavy)),
-                        ])),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Text.rich(TextSpan(
-                        text: "and",
-                        style: GoogleFonts.archivo(
-                          fontSize: 12,
-                          color: textColor,
-                        ),
-                        children: [
-                          TextSpan(
-                              text: " Privacy Policies",
-                              style: GoogleFonts.archivo(
-                                  fontSize: 12,
-                                  color: blue,
-                                  decoration: TextDecoration.underline,
-                                  decorationColor: grey,
-                                  decorationStyle: TextDecorationStyle.wavy)),
-                        ])),
+                    Agreements()
                   ],
                 ),
               ),

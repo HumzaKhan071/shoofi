@@ -54,41 +54,7 @@ class RetypePassword extends StatelessWidget {
               Center(
                   child: Column(
                 children: [
-                  Text.rich(TextSpan(
-                      text: "by continuing you agree to",
-                      style: GoogleFonts.archivo(
-                        fontSize: 12,
-                        color: textColor,
-                      ),
-                      children: [
-                        TextSpan(
-                            text: " Terms of Service",
-                            style: GoogleFonts.archivo(
-                                fontSize: 12,
-                                color: blue,
-                                decoration: TextDecoration.underline,
-                                decorationColor: grey,
-                                decorationStyle: TextDecorationStyle.wavy)),
-                      ])),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Text.rich(TextSpan(
-                      text: "and",
-                      style: GoogleFonts.archivo(
-                        fontSize: 12,
-                        color: textColor,
-                      ),
-                      children: [
-                        TextSpan(
-                            text: " Privacy Policies",
-                            style: GoogleFonts.archivo(
-                                fontSize: 12,
-                                color: blue,
-                                decoration: TextDecoration.underline,
-                                decorationColor: grey,
-                                decorationStyle: TextDecorationStyle.wavy)),
-                      ])),
+               Agreements()
                 ],
               ))
             ],
@@ -109,6 +75,7 @@ class MyPasswordField extends StatefulWidget {
 
 class _MyPasswordFieldState extends State<MyPasswordField> {
   bool valueObsecure = false;
+  TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -119,6 +86,7 @@ class _MyPasswordFieldState extends State<MyPasswordField> {
         borderRadius: BorderRadius.circular(100),
       ),
       child: TextFormField(
+        controller: passwordController,
         obscureText: valueObsecure,
         decoration: InputDecoration(
           border: InputBorder.none,

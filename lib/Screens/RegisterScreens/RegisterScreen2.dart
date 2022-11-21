@@ -1,6 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
 
-
 class RegisterScreen2 extends StatefulWidget {
   const RegisterScreen2({super.key});
 
@@ -9,9 +8,10 @@ class RegisterScreen2 extends StatefulWidget {
 }
 
 class _RegisterScreen2State extends State<RegisterScreen2> {
-  bool valueObsecure = false;
-  bool valueObsecure1 = false;
-  String dropdownValue = "Female";
+  TextEditingController numberController = TextEditingController();
+
+  String dropdownvalue = 'Male';
+  var items = ['Male', 'Female'];
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -81,24 +81,14 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                     const SizedBox(
                       height: 10,
                     ),
-                    Container(
-                      height: 48,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: grey, width: 1),
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      child: TextFormField(
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: "Shaista",
-                          hintStyle: GoogleFonts.archivo(
-                              color: grey,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                          contentPadding: EdgeInsets.all(10),
-                        ),
-                      ),
+                    MyTextField(
+                      text: "Shaista",
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    MyTextField(
+                      text: "shaista_isru",
                     ),
                     const SizedBox(
                       height: 10,
@@ -111,28 +101,7 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                         borderRadius: BorderRadius.circular(100),
                       ),
                       child: TextFormField(
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: "shaista_isru",
-                          hintStyle: GoogleFonts.archivo(
-                              color: grey,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                          contentPadding: EdgeInsets.all(10),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      height: 48,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: grey, width: 1),
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      child: TextFormField(
+                        controller: numberController,
                         keyboardType: TextInputType.number,
                         decoration: InputDecoration(
                           border: InputBorder.none,
@@ -148,73 +117,11 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                     const SizedBox(
                       height: 10,
                     ),
-                    Container(
-                      height: 48,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: grey, width: 1),
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      child: TextFormField(
-                        obscureText: valueObsecure,
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: "Password",
-                          suffixIcon: IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  valueObsecure = !valueObsecure;
-                                });
-                              },
-                              icon: Icon(
-                                valueObsecure
-                                    ? Icons.visibility_off
-                                    : Icons.visibility,
-                                color: grey,
-                              )),
-                          hintStyle: GoogleFonts.archivo(
-                              color: grey,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                          contentPadding: EdgeInsets.all(10),
-                        ),
-                      ),
-                    ),
+                    MyPasswordField(text: "Password"),
                     const SizedBox(
                       height: 10,
                     ),
-                    Container(
-                      height: 48,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: grey, width: 1),
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      child: TextFormField(
-                        obscureText: valueObsecure1,
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: "Confirm Password",
-                          suffixIcon: IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  valueObsecure1 = !valueObsecure1;
-                                });
-                              },
-                              icon: Icon(
-                                valueObsecure1
-                                    ? Icons.visibility_off
-                                    : Icons.visibility,
-                                color: grey,
-                              )),
-                          hintStyle: GoogleFonts.archivo(
-                              color: grey,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                          contentPadding: EdgeInsets.all(10),
-                        ),
-                      ),
-                    ),
+                    MyPasswordField(text: "Confirm Password"),
                     const SizedBox(
                       height: 10,
                     ),
@@ -229,24 +136,20 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                       child: DropdownButton(
                           isExpanded: true,
                           underline: Container(),
-                          value: dropdownValue,
+                          value: dropdownvalue,
                           style: TextStyle(
                               color: grey,
                               fontSize: 16,
                               fontWeight: FontWeight.bold),
-                          items: [
-                            DropdownMenuItem(
-                              value: "Male",
-                              child: Text("Male"),
-                            ),
-                            DropdownMenuItem(
-                              value: "Female",
-                              child: Text("Female"),
-                            ),
-                          ],
-                          onChanged: (String? value) {
+                          items: items.map((String items) {
+                            return DropdownMenuItem(
+                              value: items,
+                              child: Text(items),
+                            );
+                          }).toList(),
+                          onChanged: (String? newValue) {
                             setState(() {
-                              dropdownValue = value!;
+                              dropdownvalue = newValue!;
                             });
                           }),
                     ),
@@ -263,41 +166,7 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                     const SizedBox(
                       height: 10,
                     ),
-                    Text.rich(TextSpan(
-                        text: "by continuing you agree to",
-                        style: GoogleFonts.archivo(
-                          fontSize: 12,
-                          color: textColor,
-                        ),
-                        children: [
-                          TextSpan(
-                              text: " Terms of Service",
-                              style: GoogleFonts.archivo(
-                                  fontSize: 12,
-                                  color: blue,
-                                  decoration: TextDecoration.underline,
-                                  decorationColor: grey,
-                                  decorationStyle: TextDecorationStyle.wavy)),
-                        ])),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Text.rich(TextSpan(
-                        text: "and",
-                        style: GoogleFonts.archivo(
-                          fontSize: 12,
-                          color: textColor,
-                        ),
-                        children: [
-                          TextSpan(
-                              text: " Privacy Policies",
-                              style: GoogleFonts.archivo(
-                                  fontSize: 12,
-                                  color: blue,
-                                  decoration: TextDecoration.underline,
-                                  decorationColor: grey,
-                                  decorationStyle: TextDecorationStyle.wavy)),
-                        ])),
+                  Agreements()
                   ],
                 ),
               ),

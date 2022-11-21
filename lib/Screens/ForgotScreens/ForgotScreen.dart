@@ -158,47 +158,18 @@ class _ForgotScreenState extends State<ForgotScreen> {
                 SizedBox(
                   height: 10,
                 ),
-                Text("Not you?",
-                    style: GoogleFonts.archivo(
-                        color: blue,
-                        fontSize: 12,
-                        fontWeight: FontWeight.w500)),
+                TextButton(
+                  onPressed: () {},
+                  child: Text("Not you?",
+                      style: GoogleFonts.archivo(
+                          color: blue,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500)),
+                ),
                 SizedBox(
                   height: Get.height * 0.1,
                 ),
-                Text.rich(TextSpan(
-                    text: "by continuing you agree to",
-                    style: GoogleFonts.archivo(
-                      fontSize: 12,
-                      color: textColor,
-                    ),
-                    children: [
-                      TextSpan(
-                          text: " Terms of Service",
-                          style: GoogleFonts.archivo(
-                              fontSize: 12,
-                              color: blue,
-                              decoration: TextDecoration.underline,
-                              decorationColor: grey)),
-                    ])),
-                const SizedBox(
-                  height: 10,
-                ),
-                Text.rich(TextSpan(
-                    text: "and",
-                    style: GoogleFonts.archivo(
-                      fontSize: 12,
-                      color: textColor,
-                    ),
-                    children: [
-                      TextSpan(
-                          text: " Privacy Policies",
-                          style: GoogleFonts.archivo(
-                              fontSize: 12,
-                              color: blue,
-                              decoration: TextDecoration.underline,
-                              decorationColor: grey)),
-                    ])),
+                Agreements()
               ],
             ),
           ),
