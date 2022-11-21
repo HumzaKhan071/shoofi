@@ -41,4 +41,4 @@ export 'package:shoofi/Screens/Widgets/Agreements.dart';
 export 'package:shoofi/Screens/UserAgreementScreens/PrivacyScreen.dart';
 export 'package:flutter/gestures.dart';
 export 'package:shoofi/Screens/UserAgreementScreens/UserAgreementScreen.dart';
-export 'package:shoofi/controllers/splash_controller.dart';
+export 'package:shoofi/controllers/SplashControllers/splash_controller.dart';

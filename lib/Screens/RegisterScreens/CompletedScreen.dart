@@ -1,16 +1,8 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/controllers/RegisterControllers/completed_screen.dart';
 
-
-class CompletedScreen extends StatefulWidget {
-  const CompletedScreen({super.key});
-
-  @override
-  State<CompletedScreen> createState() => _CompletedScreenState();
-}
-
-class _CompletedScreenState extends State<CompletedScreen> {
-  bool valueBox1 = false;
-  bool valueBox = false;
+class CompletedScreen extends StatelessWidget {
+  CompletedScreenController controller = CompletedScreenController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,11 +89,15 @@ class _CompletedScreenState extends State<CompletedScreen> {
                 )),
               ),
               SizedBox(height: 20),
-              MyButtonContainer(text: "Next", conColor: yellow,press: (){
-                Get.to(()=>CreateUserProfileScreen());
-              },),
+              MyButtonContainer(
+                text: "Next",
+                conColor: yellow,
+                press: () {
+                  Get.to(() => CreateUserProfileScreen());
+                },
+              ),
               SizedBox(height: 10),
-           Agreements()
+              Agreements()
             ],
           ),
         ),

@@ -1,5 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/controllers/get_started_controller.dart';
+import 'package:shoofi/controllers/GetStartedControllers/get_started_controller.dart';
 
 class GetStarted extends StatelessWidget {
   const GetStarted({super.key});

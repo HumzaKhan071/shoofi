@@ -1,14 +1,7 @@
 import 'package:shoofi/Routes/routes.dart';
 
 
-class YoutubeScreen extends StatefulWidget {
-  const YoutubeScreen({super.key});
-
-  @override
-  State<YoutubeScreen> createState() => _YoutubeScreenState();
-}
-
-class _YoutubeScreenState extends State<YoutubeScreen> {
+class YoutubeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

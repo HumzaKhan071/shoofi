@@ -1,17 +1,10 @@
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/ForgotScreens/ForgotEmail.dart';
 import 'package:shoofi/Screens/ForgotScreens/RetypePassword.dart';
+import 'package:shoofi/controllers/ForgotControllers/forgot_controller.dart';
 
-class ForgotScreen extends StatefulWidget {
-  const ForgotScreen({super.key});
-
-  @override
-  State<ForgotScreen> createState() => _ForgotScreenState();
-}
-
-class _ForgotScreenState extends State<ForgotScreen> {
-  bool valueBox = false;
-  bool valueBox1 = false;
+class ForgotScreen extends StatelessWidget {
+  ForgotController controller = ForgotController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,15 +65,13 @@ class _ForgotScreenState extends State<ForgotScreen> {
                       children: [
                         Row(
                           children: [
-                            Checkbox(
+                            Obx(() => Checkbox(
                                 shape: CircleBorder(),
                                 fillColor: MaterialStateProperty.all(yellow),
-                                value: valueBox,
+                                value: controller.valueBox.value,
                                 onChanged: (valueBox) {
-                                  setState(() {
-                                    this.valueBox = valueBox!;
-                                  });
-                                }),
+                                  controller.valueBox.value = valueBox!;
+                                })),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -107,15 +98,13 @@ class _ForgotScreenState extends State<ForgotScreen> {
                         ),
                         Row(
                           children: [
-                            Checkbox(
+                            Obx(() => Checkbox(
                                 shape: CircleBorder(),
                                 fillColor: MaterialStateProperty.all(yellow),
-                                value: valueBox1,
+                                value: controller.valueBox1.value,
                                 onChanged: (valueBox1) {
-                                  setState(() {
-                                    this.valueBox1 = valueBox1!;
-                                  });
-                                }),
+                                  controller.valueBox1.value = valueBox1!;
+                                })),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -146,9 +135,9 @@ class _ForgotScreenState extends State<ForgotScreen> {
                   text: "Continue",
                   conColor: yellow,
                   press: () {
-                    if (valueBox == true) {
+                    if (controller.valueBox.value) {
                       Get.to(() => ForgotEmail());
-                    } else if (valueBox1 == true) {
+                    } else if (controller.valueBox1.value) {
                       Get.to(() => RetypePassword());
                     } else {
                       Get.snackbar("Error", "Please select one option");
