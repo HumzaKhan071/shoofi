@@ -1,6 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
 
-
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
 
