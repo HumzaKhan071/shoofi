@@ -120,41 +120,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
               const SizedBox(
                 height: 10,
               ),
-              Text.rich(TextSpan(
-                  text: "by continuing you agree to",
-                  style: GoogleFonts.archivo(
-                    fontSize: 12,
-                    color: textColor,
-                  ),
-                  children: [
-                    TextSpan(
-                        text: " Terms of Service",
-                        style: GoogleFonts.archivo(
-                            fontSize: 12,
-                            color: blue,
-                            decoration: TextDecoration.underline,
-                            decorationColor: grey,
-                            decorationStyle: TextDecorationStyle.wavy)),
-                  ])),
-              const SizedBox(
-                height: 10,
-              ),
-              Text.rich(TextSpan(
-                  text: "and",
-                  style: GoogleFonts.archivo(
-                    fontSize: 12,
-                    color: textColor,
-                  ),
-                  children: [
-                    TextSpan(
-                        text: " Privacy Policies",
-                        style: GoogleFonts.archivo(
-                            fontSize: 12,
-                            color: blue,
-                            decoration: TextDecoration.underline,
-                            decorationColor: grey,
-                            decorationStyle: TextDecorationStyle.wavy)),
-                  ])),
+             Agreements()
             ],
           ),
         ),
@@ -170,11 +136,13 @@ class MyTextFieldContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController numberController = TextEditingController();
     return Container(
       height: 47,
       width: 50,
       color: grey,
       child: TextField(
+        controller: numberController,
         keyboardType: TextInputType.number,
         cursorColor: black,
         textAlign: TextAlign.center,

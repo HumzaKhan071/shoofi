@@ -1,6 +1,7 @@
 import 'package:shoofi/Routes/routes.dart';
 
 
+
 class SelectCategory extends StatefulWidget {
   const SelectCategory({super.key});
 
@@ -100,41 +101,7 @@ class _SelectCategoryState extends State<SelectCategory> {
               SizedBox(
                 height: 10,
               ),
-              Text.rich(TextSpan(
-                  text: "by continuing you agree to",
-                  style: GoogleFonts.archivo(
-                    fontSize: 12,
-                    color: textColor,
-                  ),
-                  children: [
-                    TextSpan(
-                        text: " Terms of Service",
-                        style: GoogleFonts.archivo(
-                            fontSize: 12,
-                            color: blue,
-                            decoration: TextDecoration.underline,
-                            decorationColor: grey,
-                            decorationStyle: TextDecorationStyle.wavy)),
-                  ])),
-              const SizedBox(
-                height: 10,
-              ),
-              Text.rich(TextSpan(
-                  text: "and",
-                  style: GoogleFonts.archivo(
-                    fontSize: 12,
-                    color: textColor,
-                  ),
-                  children: [
-                    TextSpan(
-                        text: " Privacy Policies",
-                        style: GoogleFonts.archivo(
-                            fontSize: 12,
-                            color: blue,
-                            decoration: TextDecoration.underline,
-                            decorationColor: grey,
-                            decorationStyle: TextDecorationStyle.wavy)),
-                  ])),
+            Agreements()
             ],
           ),
         ),
