@@ -3,12 +3,16 @@ import 'package:shoofi/Routes/routes.dart';
 class MyButtonContainer extends StatelessWidget {
   final String text;
   final Color conColor;
+  final String? imgPath;
+  final Color textColor;
   final press;
   const MyButtonContainer({
     Key? key,
     required this.text,
     required this.conColor,
     this.press,
+    this.imgPath,
+    this.textColor = Colors.black,
   }) : super(key: key);
 
   @override
@@ -24,10 +28,19 @@ class MyButtonContainer extends StatelessWidget {
           onPressed: () {
             press();
           },
-          child: Text(
-            text,
-            style: GoogleFonts.archivo(
-                color: black, fontSize: 16, fontWeight: FontWeight.bold),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              imgPath != null ? Image.asset(imgPath!) : SizedBox(),
+              imgPath != null ? SizedBox(width: 5) : SizedBox(),
+              Text(
+                text,
+                style: GoogleFonts.archivo(
+                    color: textColor,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold),
+              ),
+            ],
           )),
     );
   }

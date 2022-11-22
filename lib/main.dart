@@ -1,5 +1,3 @@
-import 'package:shoofi/Screens/LoginScreens/login_screen.dart';
-
 import 'Routes/routes.dart';
 
 void main() {
@@ -13,7 +11,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(body: SelectPlan()),
+      home: CreateUserProfileScreen(),
     );
   }
 }

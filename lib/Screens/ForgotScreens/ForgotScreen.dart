@@ -70,6 +70,7 @@ class ForgotScreen extends StatelessWidget {
                                 fillColor: MaterialStateProperty.all(yellow),
                                 value: controller.valueBox.value,
                                 onChanged: (valueBox) {
+                                  controller.valueBox1.value = false;
                                   controller.valueBox.value = valueBox!;
                                 })),
                             Column(
@@ -103,6 +104,7 @@ class ForgotScreen extends StatelessWidget {
                                 fillColor: MaterialStateProperty.all(yellow),
                                 value: controller.valueBox1.value,
                                 onChanged: (valueBox1) {
+                                  controller.valueBox.value = false;
                                   controller.valueBox1.value = valueBox1!;
                                 })),
                             Column(
