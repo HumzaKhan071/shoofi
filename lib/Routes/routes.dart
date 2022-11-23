@@ -42,3 +42,7 @@ export 'package:shoofi/Screens/Widgets/Agreements.dart';
 export 'package:shoofi/Screens/UserAgreementScreens/PrivacyScreen.dart';
 export 'package:flutter/gestures.dart';
 export 'package:shoofi/Screens/UserAgreementScreens/UserAgreementScreen.dart';
+export 'package:shoofi/Screens/Billing%20and%20payments/BillingPaymentScreen.dart';
+export 'package:shoofi/Screens/Chat%20and%20Support/ChatSupportScreen.dart';
+export 'package:shoofi/Screens/DeleteAccount/DeleteAccountScreen.dart';
+export 'package:shoofi/Screens/UpgradedComplete/UpgradedCompleteScreen.dart';
