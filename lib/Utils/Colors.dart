@@ -8,3 +8,5 @@ Color blue = Color(0xff0061F2);
 Color red = Color(0xffEB3940);
 Color fbColor = Color(0xff425993);
 Color googleBttonColor = Color(0xff5384EC);
+Color deleteBtn = Color(0xfEEF072D);
+
