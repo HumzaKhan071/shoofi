@@ -16,7 +16,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
+
       home: ChatSupportScreen(),
+
     );
   }
 }

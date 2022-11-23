@@ -1,5 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
-
+import 'package:shoofi/Screens/Widgets/pin_dialog.dart';
 
 class CreateUserProfileScreen extends StatefulWidget {
   const CreateUserProfileScreen({super.key});
@@ -35,132 +35,66 @@ class _CreateUserProfileScreenState extends State<CreateUserProfileScreen> {
               color: black, fontSize: 14, fontWeight: FontWeight.w500),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(8),
-          child: Column(
-            children: [
-              LinearProgressIndicator(
-                value: 0.1,
-                backgroundColor: grey,
-                valueColor: AlwaysStoppedAnimation<Color>(yellow),
+      body: Padding(
+        padding: EdgeInsets.all(8),
+        child: Column(
+          children: [
+            LinearProgressIndicator(
+              value: 0.1,
+              backgroundColor: grey,
+              valueColor: AlwaysStoppedAnimation<Color>(yellow),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            Container(
+              height: 276,
+              width: 238,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ProfileAvatar(
+                        backgroundImagePath: "assets/Images/a.png",
+                        title: "Shoofista",
+                        onTap: () {
+                          pinDialog(context);
+                        },
+                      ),
+                      ProfileAvatar(
+                        onTap: () {
+                          Get.to(() => CreateProfile());
+                        },
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ProfileAvatar(
+                        onTap: () {
+                          Get.to(() => CreateProfile());
+                        },
+                      ),
+                      ProfileAvatar(
+                        onTap: () {
+                          Get.to(() => CreateProfile());
+                        },
+                      ),
+                    ],
+                  ),
+                ],
               ),
-              SizedBox(
-                height: 40,
+            ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [Agreements(), SizedBox(height: 20)],
               ),
-              Container(
-                height: 276,
-                width: 238,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          children: [
-                            CircleAvatar(
-                              radius: 50,
-                              backgroundColor: yellow,
-                              backgroundImage: AssetImage(
-                                "assets/Images/a.png",
-                              ),
-                            ),
-                            SizedBox(height: 5),
-                            Text(
-                              "Shoofista",
-                              style: GoogleFonts.archivo(
-                                  color: black,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            CircleAvatar(
-                                radius: 50,
-                                backgroundColor: grey,
-                                child: IconButton(
-                                  onPressed: () {
-                                    Get.to(() => CreateProfile());
-                                  },
-                                  icon: Icon(
-                                    Icons.add,
-                                    color: yellow,
-                                    size: 40,
-                                  ),
-                                )),
-                            SizedBox(height: 5),
-                            Text(
-                              "Add Profile",
-                              style: GoogleFonts.archivo(
-                                  color: black,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500),
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          children: [
-                            CircleAvatar(
-                                radius: 50,
-                                backgroundColor: grey,
-                                child: IconButton(
-                                  onPressed: () {},
-                                  icon: Icon(
-                                    Icons.add,
-                                    color: yellow,
-                                    size: 40,
-                                  ),
-                                )),
-                            SizedBox(height: 5),
-                            Text(
-                              "Add Profile",
-                              style: GoogleFonts.archivo(
-                                  color: black,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            CircleAvatar(
-                                radius: 50,
-                                backgroundColor: grey,
-                                child: IconButton(
-                                  onPressed: () {},
-                                  icon: Icon(
-                                    Icons.add,
-                                    color: yellow,
-                                    size: 40,
-                                  ),
-                                )),
-                            SizedBox(height: 5),
-                            Text(
-                              "Add Profile",
-                              style: GoogleFonts.archivo(
-                                  color: black,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500),
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: Get.height * 0.3),
-           Agreements()
-            ],
-          ),
+            )
+          ],
         ),
       ),
     );
