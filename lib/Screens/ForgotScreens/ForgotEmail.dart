@@ -1,11 +1,12 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/controllers/ForgotControllers/forgot_email_controller.dart';
 
 class ForgotEmail extends StatelessWidget {
   const ForgotEmail({super.key});
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController _emailController = TextEditingController();
+    ForgotEmailController controller = ForgotEmailController();
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -81,7 +82,7 @@ class ForgotEmail extends StatelessWidget {
                   borderRadius: BorderRadius.circular(100),
                 ),
                 child: TextFormField(
-                  controller: _emailController,
+                  controller: controller.emailController,
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: "Email or phone",
