@@ -29,7 +29,7 @@ class HomeSearchScreen extends StatelessWidget {
           ),
           SizedBox(height: 15),
           Flexible(
-            child: ListView.separated(
+            child: ListView.builder(
               itemCount: 5,
               itemBuilder: (context, index) {
                 return Wrap(
@@ -42,52 +42,8 @@ class HomeSearchScreen extends StatelessWidget {
                   ],
                 );
               },
-              separatorBuilder: (context, index) {
-                return SizedBox(height: 5);
-              },
             ),
           )
-        ],
-      ),
-    );
-  }
-}
-
-class VideoThumbnail extends StatelessWidget {
-  final String imgPath;
-  const VideoThumbnail({
-    Key? key,
-    required this.imgPath,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: Get.height * 0.2,
-      width: Get.width * 0.27,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            height: Get.height * 0.14,
-            width: Get.width * 0.27,
-            decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage(imgPath)),
-              borderRadius: BorderRadius.circular(16),
-            ),
-          ),
-          Text(
-            "The most Perfect continue",
-            overflow: TextOverflow.ellipsis,
-            style: GoogleFonts.archivo(
-                color: black, fontSize: 11, fontWeight: FontWeight.bold),
-          ),
-          Text(
-            "11/10/2022",
-            overflow: TextOverflow.ellipsis,
-            style: GoogleFonts.archivo(
-                color: grey, fontSize: 9, fontWeight: FontWeight.bold),
-          ),
         ],
       ),
     );

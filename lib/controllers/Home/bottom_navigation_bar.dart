@@ -1,9 +1,4 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/HomeScreens/account_screen.dart';
-import 'package:shoofi/Screens/HomeScreens/search_screen.dart';
-import 'package:shoofi/Screens/HomeScreens/short_screen.dart';
-import 'package:shoofi/Screens/HomeScreens/trending_screen.dart';
-import 'package:shoofi/Screens/HomeScreens/watchlist_screen.dart';
 
 class HomeBottomNavigationBarController extends GetxController {
   List<Widget> screens = [
@@ -13,5 +8,5 @@ class HomeBottomNavigationBarController extends GetxController {
     HomeWatchlistScreen(),
     HomeAccountScreen(),
   ];
-  Rx<int> currentIndex = 2.obs;
+  Rx<int> currentIndex = 3.obs;
 }
