@@ -16,11 +16,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-<<<<<<< Updated upstream
-      home: SplashScreen1(),
-=======
       home: ChatSupportScreen(),
->>>>>>> Stashed changes
     );
   }
 }
