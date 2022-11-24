@@ -2,8 +2,8 @@ import '../../Routes/routes.dart';
 
 class MyTextField extends StatelessWidget {
   final String text;
-  final Icon? prefixIcon;
-  final Icon? suffixIcon;
+  final Widget? prefixIcon;
+  final Widget? suffixIcon;
   final Widget? suffix;
   final Widget? prefix;
   final Color? borderColor;

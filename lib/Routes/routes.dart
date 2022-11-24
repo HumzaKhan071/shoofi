@@ -52,3 +52,6 @@ export 'package:shoofi/Screens/HomeScreens/short_screen.dart';
 export 'package:shoofi/Screens/HomeScreens/trending_screen.dart';
 export 'package:shoofi/Screens/HomeScreens/watchlist_screen.dart';
 export 'package:shoofi/Screens/HomeScreens/bottom_navigation_bar.dart';
+export 'package:shoofi/controllers/Home/watchlist_controller.dart';
+export 'package:shoofi/Screens/HomeScreens/extended_watchlist.dart';
+export 'package:shoofi/Screens/Widgets/removeWatchListBottomSheet.dart';

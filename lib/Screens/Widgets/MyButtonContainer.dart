@@ -4,22 +4,26 @@ class MyButtonContainer extends StatelessWidget {
   final String text;
   final Color conColor;
   final String? imgPath;
+  double? height;
+  double? width;
   final Color textColor;
   final press;
-  const MyButtonContainer({
+  MyButtonContainer({
     Key? key,
     required this.text,
     required this.conColor,
     this.press,
     this.imgPath,
+    this.height,
+    this.width,
     this.textColor = Colors.black,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 48,
-      width: Get.width * 0.9,
+      height: height ?? 48,
+      width: width ?? Get.width * 0.9,
       decoration: BoxDecoration(
         color: conColor,
         borderRadius: BorderRadius.circular(100),

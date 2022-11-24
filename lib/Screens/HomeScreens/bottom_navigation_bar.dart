@@ -19,7 +19,7 @@ class HomeBottomNavigationBar extends StatelessWidget {
           return false;
         }
         if (controller.currentIndex.value == 1) {
-          controller.currentIndex.value = controller.indexBeforeShort;
+          controller.currentIndex.value = controller.indexBeforeShort!;
           return false;
         }
         return true;

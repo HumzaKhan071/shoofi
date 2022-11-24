@@ -1,5 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/controllers/Home/watchlist_controller.dart';
+
 
 class HomeWatchlistScreen extends StatelessWidget {
   const HomeWatchlistScreen({super.key});
@@ -92,44 +92,10 @@ class HomeWatchlistScreen extends StatelessWidget {
                   );
                 },
               )
-            : SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        Padding(
-                          padding:
-                              EdgeInsets.only(left: 24.0, bottom: 15, top: 20),
-                          child: Text(
-                            controler.selectedTile,
-                            style: GoogleFonts.archivo(
-                                color: black,
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-                    ),
-                    ListView.builder(
-                      shrinkWrap: true,
-                      primary: false,
-                      itemCount: 5,
-                      itemBuilder: (context, index) {
-                        return Wrap(
-                          spacing: 10,
-                          alignment: WrapAlignment.center,
-                          children: [
-                            VideoThumbnail(imgPath: "assets/Images/img1.png"),
-                            VideoThumbnail(imgPath: "assets/Images/img2.png"),
-                            VideoThumbnail(imgPath: "assets/Images/img3.png"),
-                          ],
-                        );
-                      },
-                    ),
-                  ],
-                ),
-              );
+            : ExtendedWatchList();
       }),
     );
   }
 }
+
+

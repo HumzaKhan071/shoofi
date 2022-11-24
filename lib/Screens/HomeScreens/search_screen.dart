@@ -17,13 +17,41 @@ class HomeSearchScreen extends StatelessWidget {
                 Icons.search,
                 color: Colors.grey,
               ),
-              suffix: Text(
-                "|",
-                style: TextStyle(color: Colors.red),
-              ),
-              suffixIcon: Icon(
-                Icons.filter_list_alt,
-                color: Colors.grey,
+              suffixIcon: IconButton(
+                onPressed: () {
+                  Get.bottomSheet(Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(35),
+                          topRight: Radius.circular(35),
+                        )),
+                    height: Get.height * 0.35,
+                    child: Column(
+                      children: [
+                        SizedBox(height: 10),
+                        Image.asset("assets/Images/divider.png"),
+                        SizedBox(height: 20),
+                        Text("Filters",
+                            style: GoogleFonts.archivo(
+                                color: black,
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold)),
+                        SizedBox(height: 15),
+                        Divider(
+                          thickness: 1,
+                          indent: 15,
+                          endIndent: 15,
+                        ),
+                        
+                      ],
+                    ),
+                  ));
+                },
+                icon: Icon(
+                  Icons.filter_list_alt,
+                  color: Colors.grey,
+                ),
               ),
             ),
           ),
