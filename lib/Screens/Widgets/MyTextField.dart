@@ -2,10 +2,28 @@ import '../../Routes/routes.dart';
 
 class MyTextField extends StatelessWidget {
   final String text;
-  const MyTextField({
-    Key? key,
-    required this.text,
-  }) : super(key: key);
+  final Icon? prefixIcon;
+  final Icon? suffixIcon;
+  final Widget? suffix;
+  final Widget? prefix;
+  final Color? borderColor;
+  final double contentTopPadding;
+  final double contentBottomPadding;
+  final double contentRightPadding;
+  final double contentLeftPadding;
+  const MyTextField(
+      {Key? key,
+      required this.text,
+      this.prefixIcon,
+      this.suffix,
+      this.prefix,
+      this.suffixIcon,
+      this.borderColor,
+      this.contentTopPadding = 10,
+      this.contentBottomPadding = 10,
+      this.contentLeftPadding = 10,
+      this.contentRightPadding = 10})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,17 +32,25 @@ class MyTextField extends StatelessWidget {
       height: 48,
       width: double.infinity,
       decoration: BoxDecoration(
-        border: Border.all(color: grey, width: 1),
+        border: Border.all(color: borderColor ?? grey, width: 1),
         borderRadius: BorderRadius.circular(100),
       ),
       child: TextFormField(
         controller: nameController,
         decoration: InputDecoration(
+          prefixIcon: prefixIcon,
+          suffixIcon: suffixIcon,
+          suffix: suffix,
+          prefix: prefix,
           border: InputBorder.none,
           hintText: text,
           hintStyle: GoogleFonts.archivo(
               color: grey, fontSize: 16, fontWeight: FontWeight.bold),
-          contentPadding: EdgeInsets.all(10),
+          contentPadding: EdgeInsets.only(
+              left: contentLeftPadding,
+              right: contentRightPadding,
+              top: contentTopPadding,
+              bottom: contentBottomPadding),
         ),
       ),
     );

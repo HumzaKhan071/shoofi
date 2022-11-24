@@ -1,8 +1,3 @@
-import 'package:shoofi/Screens/Billing%20and%20payments/BillingPaymentScreen.dart';
-import 'package:shoofi/Screens/Chat%20and%20Support/ChatSupportScreen.dart';
-import 'package:shoofi/Screens/DeleteAccount/DeleteAccountScreen.dart';
-import 'package:shoofi/Screens/UpgradedComplete/UpgradedCompleteScreen.dart';
-
 import 'Routes/routes.dart';
 
 void main() {
@@ -16,9 +11,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-
-      home: ChatSupportScreen(),
-
+      home: HomeBottomNavigationBar(),
     );
   }
 }
