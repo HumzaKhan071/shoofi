@@ -6,7 +6,7 @@ class HomeWatchlistScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    HomeWatchListControler controler = HomeWatchListControler();
+    HomeWatchListControler controler = Get.find(tag: "watchlist");
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -39,51 +39,97 @@ class HomeWatchlistScreen extends StatelessWidget {
           )
         ],
       ),
-      body: ListView.builder(
-        itemCount: 4,
-        itemBuilder: (context, index) {
-          return Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Padding(
-                  padding:
-                      const EdgeInsets.only(left: 18.0, right: 18, bottom: 10),
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          controler.watchListTiles[index],
-                          style:
-                              GoogleFonts.archivo(color: black, fontSize: 22),
+      body: Obx(() {
+        return !(controler.extended.value)
+            ? ListView.builder(
+                itemCount: 4,
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              left: 18.0, right: 18, bottom: 10),
+                          child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  controler.watchListTiles[index],
+                                  style: GoogleFonts.archivo(
+                                      color: black,
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    controler.selectedTile =
+                                        controler.watchListTiles[index];
+                                    controler.extended.value = true;
+                                  },
+                                  child: Text(
+                                    "view all",
+                                    style: GoogleFonts.archivo(
+                                        color: yellow,
+                                        fontSize: 13,
+                                        decoration: TextDecoration.underline,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                )
+                              ]),
                         ),
-                        GestureDetector(
-                          onTap: () {},
+                      ),
+                      Wrap(
+                        spacing: 10,
+                        alignment: WrapAlignment.center,
+                        children: [
+                          VideoThumbnail(imgPath: "assets/Images/img1.png"),
+                          VideoThumbnail(imgPath: "assets/Images/img2.png"),
+                          VideoThumbnail(imgPath: "assets/Images/img3.png"),
+                        ],
+                      ),
+                    ],
+                  );
+                },
+              )
+            : SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Padding(
+                          padding:
+                              EdgeInsets.only(left: 24.0, bottom: 15, top: 20),
                           child: Text(
-                            "view all",
+                            controler.selectedTile,
                             style: GoogleFonts.archivo(
-                                color: yellow,
-                                fontSize: 13,
-                                decoration: TextDecoration.underline,
+                                color: black,
+                                fontSize: 22,
                                 fontWeight: FontWeight.bold),
                           ),
-                        )
-                      ]),
+                        ),
+                      ],
+                    ),
+                    ListView.builder(
+                      shrinkWrap: true,
+                      primary: false,
+                      itemCount: 5,
+                      itemBuilder: (context, index) {
+                        return Wrap(
+                          spacing: 10,
+                          alignment: WrapAlignment.center,
+                          children: [
+                            VideoThumbnail(imgPath: "assets/Images/img1.png"),
+                            VideoThumbnail(imgPath: "assets/Images/img2.png"),
+                            VideoThumbnail(imgPath: "assets/Images/img3.png"),
+                          ],
+                        );
+                      },
+                    ),
+                  ],
                 ),
-              ),
-              Wrap(
-                spacing: 10,
-                alignment: WrapAlignment.center,
-                children: [
-                  VideoThumbnail(imgPath: "assets/Images/img1.png"),
-                  VideoThumbnail(imgPath: "assets/Images/img2.png"),
-                  VideoThumbnail(imgPath: "assets/Images/img3.png"),
-                ],
-              ),
-            ],
-          );
-        },
-      ),
+              );
+      }),
     );
   }
 }

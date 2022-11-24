@@ -9,4 +9,5 @@ class HomeBottomNavigationBarController extends GetxController {
     HomeAccountScreen(),
   ];
   Rx<int> currentIndex = 3.obs;
+  int indexBeforeShort = 0;
 }

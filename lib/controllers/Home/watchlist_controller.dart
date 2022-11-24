@@ -7,4 +7,6 @@ class HomeWatchListControler extends GetxController {
     "Documentary",
     "Icoinc"
   ];
+  Rx<bool> extended = false.obs;
+  String selectedTile = "";
 }
