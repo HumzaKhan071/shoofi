@@ -1,5 +1,3 @@
-import 'package:shoofi/Screens/HomeScreens/bottom_navigation_bar.dart';
-
 import 'Routes/routes.dart';
 
 void main() {

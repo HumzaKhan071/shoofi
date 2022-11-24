@@ -1,8 +1,6 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/controllers/RegisterControllers/completed_screen.dart';
 
-class CompletedScreen extends StatelessWidget {
-  CompletedScreenController controller = CompletedScreenController();
+class UpgradedCompletedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +41,7 @@ class CompletedScreen extends StatelessWidget {
                 height: 31,
                 width: 293,
                 child: Center(
-                  child: Text("Congratulation your signup is completed",
+                  child: Text("Upgraded Succesfully",
                       style: GoogleFonts.archivo(
                           color: black,
                           fontSize: 14,
@@ -72,14 +70,14 @@ class CompletedScreen extends StatelessWidget {
                     child: Column(
                   children: [
                     Text(
-                      "Enjoy your".toUpperCase(),
+                      "Congratulation".toUpperCase(),
                       style: GoogleFonts.archivo(
                           color: black,
                           fontSize: 16,
                           fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      "90 Days free trail".toUpperCase(),
+                      "your subscription is upgraded".toUpperCase(),
                       style: GoogleFonts.archivo(
                           color: black,
                           fontSize: 16,
