@@ -165,11 +165,28 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
                     const SizedBox(
                       height: 30,
                     ),
+                    ListTile(
+                      onTap: () {
+                        Get.to(AccountUpdate2());
+                      },
+                      trailing: Icon(
+                        Icons.arrow_forward_ios_outlined,
+                        color: black,
+                      ),
+                      leading: Icon(Icons.people),
+                      title: Text(
+                        "Profile Lock",
+                        style: GoogleFonts.archivo(
+                            color: black,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
                     MyButtonContainer(
                       text: "Update",
                       conColor: yellow,
                       press: () {
-                        Get.to(() => AccountUpdate2());
+                      
                       },
                     ),
                     const SizedBox(

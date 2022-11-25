@@ -1,4 +1,6 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/HomeScreens/all_categories.dart';
+import 'package:shoofi/Screens/youtube_home/youtube_home.dart';
 
 class HomeTrendingScreen extends StatefulWidget {
   const HomeTrendingScreen({super.key});
@@ -50,9 +52,14 @@ class _HomeTrendingScreenState extends State<HomeTrendingScreen>
                     color: black,
                   ),
                   SizedBox(width: 10),
-                  Icon(
-                    Icons.pin_drop,
-                    color: black,
+                  IconButton(
+                    onPressed: () {
+                      Get.to(RegisterScreenLocation(showBtn: false));
+                    },
+                    icon: Icon(
+                      Icons.pin_drop,
+                      color: black,
+                    ),
                   ),
                   SizedBox(width: 10),
                   SizedBox(
@@ -104,18 +111,10 @@ class _HomeTrendingScreenState extends State<HomeTrendingScreen>
                     ]),
               ),
               body: TabBarView(controller: _tabController, children: [
-                Center(
-                  child: Text("Youtube"),
-                ),
-                Center(
-                  child: Text("Facebook"),
-                ),
-                Center(
-                  child: Text("Instagram"),
-                ),
-                Center(
-                  child: Text("Category"),
-                )
+                YouTubeHome(),
+                YouTubeHome(),
+                YouTubeHome(),
+                AllCategorySheet()
               ]))),
     );
   }

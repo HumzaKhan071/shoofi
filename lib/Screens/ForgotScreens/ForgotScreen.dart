@@ -138,9 +138,16 @@ class ForgotScreen extends StatelessWidget {
                   conColor: yellow,
                   press: () {
                     if (controller.valueBox.value) {
-                      Get.to(() => ForgotEmail());
+                      Get.to(() => VerifyScreen(
+                            title: "Check your email",
+                            subTitle:
+                                "We have sent the code to the email on your device",
+                          ));
                     } else if (controller.valueBox1.value) {
-                      Get.to(() => RetypePassword());
+                      Get.to(() => VerifyScreen(
+                          title: "Check your phone",
+                          subTitle:
+                              "We have sent the code to the registered phone"));
                     } else {
                       Get.snackbar("Error", "Please select one option");
                     }

@@ -1,4 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/ForgotScreens/ForgotEmail.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -24,14 +25,23 @@ class LoginScreen extends StatelessWidget {
             padding: const EdgeInsets.all(10.0),
             child: MyPasswordField(text: "Password"),
           ),
-          MyButtonContainer(text: "Sign in", conColor: yellow),
+          MyButtonContainer(
+            text: "Sign in",
+            conColor: yellow,
+            press: () {
+              Get.to(CreateUserProfileScreen());
+            },
+          ),
           SizedBox(height: 10),
           GestureDetector(
+              onTap: () {
+                Get.to(ForgotEmail());
+              },
               child: Text(
-            "Forgot Password?",
-            style: GoogleFonts.archivo(
-                color: blue, fontSize: 16, fontWeight: FontWeight.bold),
-          )),
+                "Forgot Password?",
+                style: GoogleFonts.archivo(
+                    color: blue, fontSize: 16, fontWeight: FontWeight.bold),
+              )),
           Padding(
             padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
             child: Divider(
@@ -63,7 +73,10 @@ class LoginScreen extends StatelessWidget {
                         color: yellow,
                         fontSize: 16,
                         fontWeight: FontWeight.bold),
-                    recognizer: TapGestureRecognizer()..onTap = (() {})),
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = (() {
+                        Get.to(RegisterScreen());
+                      })),
                 TextSpan(
                   text: "with",
                   style: GoogleFonts.archivo(color: black, fontSize: 16),
@@ -71,6 +84,9 @@ class LoginScreen extends StatelessWidget {
               ])),
           SizedBox(height: 15),
           MyButtonContainer(
+            press: () {
+              Get.to(RegisterScreen2());
+            },
             text: "Continue with Apple",
             textColor: Colors.white,
             conColor: black,
@@ -78,6 +94,9 @@ class LoginScreen extends StatelessWidget {
           ),
           SizedBox(height: 10),
           MyButtonContainer(
+            press: () {
+              Get.to(RegisterScreen2());
+            },
             text: "Continue with Facebook",
             textColor: Colors.white,
             conColor: fbColor,
@@ -85,6 +104,9 @@ class LoginScreen extends StatelessWidget {
           ),
           SizedBox(height: 10),
           MyButtonContainer(
+            press: () {
+              Get.to(RegisterScreen2());
+            },
             text: "Continue with Google",
             textColor: Colors.white,
             conColor: googleBttonColor,

@@ -12,10 +12,4 @@ class HomeWatchListControler extends GetxController {
   var items = ['EN', 'US', 'UR'];
   Rx<bool> extended = false.obs;
   String selectedTile = "";
-
-  @override
-  void onReady() {
-    super.onReady();
-    allCategoriesSheet();
-  }
 }

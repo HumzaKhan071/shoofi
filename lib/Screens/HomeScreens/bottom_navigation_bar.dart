@@ -1,6 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
-import 'package:shoofi/controllers/Home/watchlist_controller.dart';
 
 class HomeBottomNavigationBar extends StatelessWidget {
   const HomeBottomNavigationBar({super.key});
@@ -10,11 +9,11 @@ class HomeBottomNavigationBar extends StatelessWidget {
     HomeWatchListControler watchListControler =
         Get.put(HomeWatchListControler(), tag: "watchlist");
     HomeBottomNavigationBarController controller =
-        HomeBottomNavigationBarController();
+       Get.put( HomeBottomNavigationBarController(), tag: "bottomNavigation");
     return WillPopScope(
       onWillPop: () async {
         if (watchListControler.extended.value &&
-            controller.currentIndex.value == 3) {
+            ((controller.currentIndex.value == 3) || (controller.currentIndex.value == 1))) {
           watchListControler.extended.value = false;
           return false;
         }

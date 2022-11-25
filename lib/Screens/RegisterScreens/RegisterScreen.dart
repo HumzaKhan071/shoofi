@@ -161,7 +161,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         text: "Next",
                         conColor: yellow,
                         press: () {
-                          Get.to(() => RegisterScreen2());
+                          Get.to(() => ForgotScreen());
                         }),
                     const SizedBox(
                       height: 10,

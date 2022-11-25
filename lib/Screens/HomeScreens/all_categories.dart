@@ -1,22 +1,27 @@
 import 'package:shoofi/Routes/routes.dart';
 
-allCategoriesSheet() {
-  return Get.bottomSheet(
-      Container(
-        color: Colors.white.withOpacity(0.8),
+class AllCategorySheet extends StatelessWidget {
+  const AllCategorySheet({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Container(
+      color: Colors.white.withOpacity(0.8),
+      child: Center(
         child: Column(
           children: [
-            SizedBox(height: 35),
+            SizedBox(height: 20),
             Text(
               "All Categories",
               style: GoogleFonts.archivo(
                   color: black, fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 50),
+            SizedBox(height: 35),
             Wrap(
               direction: Axis.vertical,
               crossAxisAlignment: WrapCrossAlignment.center,
-              spacing: 40,
+              spacing: 21,
               children: [
                 Text(
                   "Action",
@@ -64,13 +69,11 @@ allCategoriesSheet() {
                 ),
               ],
             ),
-            InkWell(
-                onTap: () {
-                  Get.back();
-                },
-                child: Image.asset("assets/Images/circle_cross.png"))
+            SizedBox(height: 20),
+            Image.asset("assets/Images/circle_cross.png")
           ],
         ),
       ),
-      isScrollControlled: true);
+    ));
+  }
 }

@@ -1,4 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/video_player/video_player_view.dart';
 
 class VideoThumbnail extends StatelessWidget {
   final String imgPath;
@@ -13,6 +14,9 @@ class VideoThumbnail extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onLongPress: onLongPress,
+      onTap: () {
+        Get.to(VideoPlayerView());
+      },
       child: Container(
         width: Get.width * 0.27,
         child: Column(

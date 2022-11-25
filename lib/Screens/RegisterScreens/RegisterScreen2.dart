@@ -160,13 +160,17 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                       text: "Next",
                       conColor: yellow,
                       press: () {
-                        Get.to(() => ForgotScreen());
+                        Get.to(() => VerifyScreen(
+                              title: "Check your email",
+                              subTitle:
+                                  "We have sent the code to the email on your device",
+                            ));
                       },
                     ),
                     const SizedBox(
                       height: 10,
                     ),
-                  Agreements()
+                    Agreements()
                   ],
                 ),
               ),

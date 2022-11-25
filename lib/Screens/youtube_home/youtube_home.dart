@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shoofi/Screens/HomeScreens/extendedRecommendedForYou.dart';
+import 'package:shoofi/Screens/HomeScreens/extendingMostTrendingScreen.dart';
+import 'package:shoofi/Screens/HomeScreens/reels.dart';
 import 'package:shoofi/Screens/Widgets/MyButtonContainer.dart';
 import 'package:shoofi/Screens/Widgets/video_thumbnail.dart';
 
@@ -51,7 +54,9 @@ recommandBanner({required String title, required String imagePath}) {
             ),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.to(ExtendRecommendedForYou());
+            },
             child: Text(
               'See all',
               style: GoogleFonts.archivo(
@@ -98,7 +103,9 @@ trendingBanner({required String title, required String imgPath}) {
             ),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.to(ExtendedMostTrendingScreen());
+            },
             child: Text(
               'See all',
               style: GoogleFonts.archivo(
@@ -111,13 +118,33 @@ trendingBanner({required String title, required String imgPath}) {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            trendingImage(imgPath: 'assets/Images/trending_reels.png'),
+            InkWell(
+              onTap: () {
+                Get.to(Reels());
+              },
+              child: trendingImage(imgPath: 'assets/Images/trending_reels.png'),
+            ),
             SizedBox(width: 15),
-            trendingImage(imgPath: 'assets/Images/trending_reels.png'),
+            InkWell(
+              onTap: () {
+                Get.to(Reels());
+              },
+              child: trendingImage(imgPath: 'assets/Images/trending_reels.png'),
+            ),
             SizedBox(width: 15),
-            trendingImage(imgPath: 'assets/Images/trending_reels.png'),
+            InkWell(
+              onTap: () {
+                Get.to(Reels());
+              },
+              child: trendingImage(imgPath: 'assets/Images/trending_reels.png'),
+            ),
             SizedBox(width: 15),
-            trendingImage(imgPath: 'assets/Images/trending_reels.png'),
+            InkWell(
+              onTap: () {
+                Get.to(Reels());
+              },
+              child: trendingImage(imgPath: 'assets/Images/trending_reels.png'),
+            ),
             SizedBox(width: 15),
           ],
         ),

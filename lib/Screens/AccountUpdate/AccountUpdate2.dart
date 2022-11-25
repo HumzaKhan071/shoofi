@@ -53,7 +53,14 @@ class AccountUpdate2 extends StatelessWidget {
                 text: "***",
               ),
               SizedBox(height: Get.height * 0.1),
-              Center(child: MyButtonContainer(text: "Next", conColor: yellow)),
+              Center(
+                  child: MyButtonContainer(
+                text: "Confirm",
+                conColor: yellow,
+                press: () {
+                  Get.back();
+                },
+              )),
               SizedBox(
                 height: 10,
               ),

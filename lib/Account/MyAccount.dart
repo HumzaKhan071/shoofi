@@ -1,3 +1,8 @@
+import 'package:shoofi/Screens/AccountUpdate/AccountUpdate1.dart';
+import 'package:shoofi/Screens/HelpCenter/help_center.dart';
+import 'package:shoofi/Screens/Widgets/pin_dialog.dart';
+import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
+
 import '../Routes/routes.dart';
 
 class MyAccount extends StatefulWidget {
@@ -8,6 +13,8 @@ class MyAccount extends StatefulWidget {
 }
 
 class _MyAccountState extends State<MyAccount> {
+  HomeBottomNavigationBarController homeBottomNavigationBar =
+      Get.find(tag: "bottomNavigation");
   bool isSwitched = true;
   @override
   Widget build(BuildContext context) {
@@ -25,13 +32,13 @@ class _MyAccountState extends State<MyAccount> {
                   radius: 30,
                   backgroundImagePath: "assets/Images/a.png",
                   onTap: () {
-                    print("object");
+                    pinDialog(context);
                   }),
               ProfileAvatar(
                   radius: 30,
                   backgroundImagePath: "assets/Images/a.png",
                   onTap: () {
-                    print("object");
+                    pinDialog(context);
                   }),
               ProfileAvatar(
                   radius: 30,
@@ -119,11 +126,29 @@ class _MyAccountState extends State<MyAccount> {
               Icons.watch_later_outlined,
               color: black,
             ),
+            onTap: () {
+              homeBottomNavigationBar.currentIndex.value = 3;
+            },
             title: Text("My Watchist",
                 style: GoogleFonts.archivo(
                     color: black, fontSize: 16, fontWeight: FontWeight.bold)),
           ),
           ListTile(
+            leading: Icon(
+              Icons.settings,
+              color: black,
+            ),
+            onTap: () {
+              Get.to(AppSetting());
+            },
+            title: Text("App Setting",
+                style: GoogleFonts.archivo(
+                    color: black, fontSize: 16, fontWeight: FontWeight.bold)),
+          ),
+          ListTile(
+            onTap: (() {
+              Get.to(AccountUpdate1());
+            }),
             leading: Icon(
               Icons.person,
               color: black,
@@ -133,6 +158,9 @@ class _MyAccountState extends State<MyAccount> {
                     color: black, fontSize: 16, fontWeight: FontWeight.bold)),
           ),
           ListTile(
+            onTap: () {
+              Get.to(HelpCenter());
+            },
             leading: Icon(
               Icons.help,
               color: black,
@@ -142,7 +170,7 @@ class _MyAccountState extends State<MyAccount> {
                     color: black, fontSize: 16, fontWeight: FontWeight.bold)),
           ),
           SizedBox(
-            height: Get.height * 0.08,
+            height: 10,
           ),
           Divider(
             color: grey,

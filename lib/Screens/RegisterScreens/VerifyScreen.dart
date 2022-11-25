@@ -1,7 +1,9 @@
 import 'package:shoofi/Routes/routes.dart';
 
 class VerifyScreen extends StatefulWidget {
-  const VerifyScreen({super.key});
+  final String title;
+  final String subTitle;
+  const VerifyScreen({super.key, required this.title, required this.subTitle});
 
   @override
   State<VerifyScreen> createState() => _VerifyScreenState();
@@ -45,7 +47,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
                 height: 20,
               ),
               Center(
-                child: Text("Check your email",
+                child: Text(widget.title,
                     style: GoogleFonts.archivo(color: black, fontSize: 24)),
               ),
               SizedBox(
@@ -54,17 +56,17 @@ class _VerifyScreenState extends State<VerifyScreen> {
               SizedBox(
                 height: 47,
                 width: 225,
-                child: Column(
-                  children: [
-                    Text(
-                      "We’ve sent the code to the email",
-                      style: GoogleFonts.archivo(color: black, fontSize: 14),
-                    ),
-                    Text(
-                      "on your device",
-                      style: GoogleFonts.archivo(color: black, fontSize: 14),
-                    ),
-                  ],
+                child: Center(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        widget.subTitle,
+                        style: GoogleFonts.archivo(color: black, fontSize: 14),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
                 ),
               ),
               SizedBox(
@@ -120,7 +122,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
               const SizedBox(
                 height: 10,
               ),
-             Agreements()
+              Agreements()
             ],
           ),
         ),

@@ -1,8 +1,8 @@
 import 'package:shoofi/Routes/routes.dart';
 
-
 class RegisterScreenLocation extends StatefulWidget {
-  const RegisterScreenLocation({super.key});
+  final bool showBtn;
+  const RegisterScreenLocation({super.key, this.showBtn = true});
 
   @override
   State<RegisterScreenLocation> createState() => _RegisterScreenLocationState();
@@ -101,17 +101,18 @@ class _RegisterScreenLocationState extends State<RegisterScreenLocation> {
               SizedBox(
                 height: 20,
               ),
-              MyButtonContainer(
-                text: "Next",
-                conColor: yellow,
-                press: () {
-                  Get.to(() => SelectCategory());
-                },
-              ),
+              if (widget.showBtn)
+                MyButtonContainer(
+                  text: "Next",
+                  conColor: yellow,
+                  press: () {
+                    Get.to(() => SelectCategory());
+                  },
+                ),
               SizedBox(
                 height: 10,
               ),
-          Agreements()
+              Agreements()
             ])),
       ),
     );

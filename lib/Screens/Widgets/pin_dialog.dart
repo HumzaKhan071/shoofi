@@ -24,6 +24,9 @@ pinDialog(context) {
                 ),
                 SizedBox(height: 15),
                 Pinput(
+                  onCompleted: (String val) {
+                    Get.to(HomeBottomNavigationBar());
+                  },
                   defaultPinTheme: PinTheme(
                       width: 50,
                       height: 50,
