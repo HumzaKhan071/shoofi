@@ -1,8 +1,3 @@
-import 'package:shoofi/Screens/HomeScreens/reels.dart';
-
-import 'package:shoofi/Screens/video_player/video_player_card.dart';
-import 'package:shoofi/Screens/video_player/video_player_view.dart';
-
 import 'Routes/routes.dart';
 
 void main() {
@@ -16,7 +11,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: HomeBottomNavigationBar(),
     );
   }
 }

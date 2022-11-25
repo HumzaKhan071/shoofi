@@ -41,11 +41,16 @@ pinDialog(context) {
                 )),
                 Divider(),
                 GestureDetector(
+                    onTap: () {
+                      Get.back();
+                    },
                     child: Text(
-                  "Cancel",
-                  style: GoogleFonts.archivo(
-                      color: blue, fontSize: 16, fontWeight: FontWeight.bold),
-                )),
+                      "Cancel",
+                      style: GoogleFonts.archivo(
+                          color: blue,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold),
+                    )),
                 SizedBox(height: 15),
               ],
             ),
