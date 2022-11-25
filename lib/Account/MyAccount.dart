@@ -141,6 +141,22 @@ class _MyAccountState extends State<MyAccount> {
                 style: GoogleFonts.archivo(
                     color: black, fontSize: 16, fontWeight: FontWeight.bold)),
           ),
+          SizedBox(
+            height: Get.height * 0.08,
+          ),
+          Divider(
+            color: grey,
+            thickness: 2,
+          ),
+          Center(
+            child: TextButton(
+                onPressed: () {},
+                child: Text(
+                  "Sign Out",
+                  style: GoogleFonts.archivo(
+                      color: red, fontSize: 13, fontWeight: FontWeight.bold),
+                )),
+          )
         ],
       ),
     ));
