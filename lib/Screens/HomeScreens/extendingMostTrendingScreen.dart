@@ -13,7 +13,12 @@ class ExtendedMostTrendingScreen extends StatelessWidget {
         title: Text("Most trending",
             style: GoogleFonts.archivo(
                 color: black, fontSize: 18, fontWeight: FontWeight.bold)),
-        leading: Icon(Icons.keyboard_arrow_left, color: black),
+        leading: IconButton(
+            onPressed: () {
+              Get.back();
+            },
+            icon: Icon(Icons.keyboard_arrow_left),
+            color: black),
       ),
       body: Column(
         children: [

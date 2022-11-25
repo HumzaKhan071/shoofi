@@ -8,10 +8,14 @@ class HomeWatchlistScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        leading: Icon(
-          Icons.arrow_back_ios,
+        leading: IconButton(
+          onPressed: () {
+            Get.back();
+          
+          },
+      icon:Icon(    Icons.arrow_back_ios,
           color: black,
-        ),
+        )),
         title: Image.asset(
           "assets/Images/logo5.png",
         ),
