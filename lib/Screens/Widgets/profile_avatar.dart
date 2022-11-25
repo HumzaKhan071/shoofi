@@ -3,12 +3,13 @@ import 'package:shoofi/Routes/routes.dart';
 class ProfileAvatar extends StatelessWidget {
   final String? backgroundImagePath;
   final String title;
+  final double radius;
   final void Function() onTap;
   const ProfileAvatar({
     Key? key,
     this.backgroundImagePath,
     this.title = "Add Profile",
-    required this.onTap,
+    required this.onTap, this.radius =50,
   }) : super(key: key);
 
   @override
@@ -18,7 +19,7 @@ class ProfileAvatar extends StatelessWidget {
       child: Column(
         children: [
           CircleAvatar(
-              radius: 50,
+              radius: radius,
               backgroundColor: grey,
               backgroundImage: backgroundImagePath != null
                   ? AssetImage(backgroundImagePath!)

@@ -7,13 +7,13 @@ class Reels extends StatelessWidget {
     final List<Color> colors = <Color>[Colors.red, Colors.blue, Colors.green];
     final Controller controller = Controller();
     List<String> links = [
-      "'https://assets.mixkit.co/videos/preview/mixkit-tree-with-yellow-flowers-1173-large.mp4'",
+      "https://assets.mixkit.co/videos/preview/mixkit-tree-with-yellow-flowers-1173-large.mp4",
       'https://assets.mixkit.co/videos/preview/mixkit-father-and-his-little-daughter-eating-marshmallows-in-nature-39765-large.mp4',
       'https://assets.mixkit.co/videos/preview/mixkit-mother-with-her-little-daughter-eating-a-marshmallow-in-nature-39764-large.mp4',
     ];
     return Scaffold(
       body: TikTokStyleFullPageScroller(
-        contentSize: 6,
+        contentSize: links.length,
         swipePositionThreshold: 0.3,
         // // ^ the fraction of the screen needed to scroll
         swipeVelocityThreshold: 200,
@@ -23,7 +23,9 @@ class Reels extends StatelessWidget {
         // controller: controller,
         // // ^ registering our own function to listen to page changes
         builder: (BuildContext context, int index) {
-          return HomeShortScreen();
+          return HomeShortScreen(
+            videoLink: links[index],
+          );
         },
       ),
     );
