@@ -1,3 +1,6 @@
+import 'package:shoofi/Screens/HomeScreens/extendedRecommendedForYou.dart';
+import 'package:shoofi/Screens/HomeScreens/extendingMostTrendingScreen.dart';
+
 import 'Routes/routes.dart';
 
 void main() {
@@ -11,7 +14,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: HomeBottomNavigationBar(),
+      home: ExtendedMostTrendingScreen(),
     );
   }
 }
