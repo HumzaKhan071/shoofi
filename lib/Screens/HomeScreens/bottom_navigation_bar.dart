@@ -7,10 +7,10 @@ class HomeBottomNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    HomeBottomNavigationBarController controller =
-        HomeBottomNavigationBarController();
     HomeWatchListControler watchListControler =
         Get.put(HomeWatchListControler(), tag: "watchlist");
+    HomeBottomNavigationBarController controller =
+        HomeBottomNavigationBarController();
     return WillPopScope(
       onWillPop: () async {
         if (watchListControler.extended.value &&
