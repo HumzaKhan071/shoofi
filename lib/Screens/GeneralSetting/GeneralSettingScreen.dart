@@ -98,8 +98,318 @@ class GeneralSettingScreen extends StatelessWidget {
                 Icons.arrow_forward_ios_outlined,
                 color: black,
               ),
-            )
+            ),
+            IconButton(
+                onPressed: () {
+                  ReportBottomModalSheet();
+                },
+                icon: Icon(Icons.abc))
           ],
+        ),
+      ),
+    );
+  }
+
+  void MoreOptionsBottomModalSheet() {
+    Get.bottomSheet((Container(
+        padding: EdgeInsets.all(10),
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(35),
+              topRight: Radius.circular(35),
+            )),
+        child: Column(
+          children: [
+            Center(
+              child: Text(
+                "More Options",
+                style: GoogleFonts.archivo(
+                    color: black, fontSize: 28, fontWeight: FontWeight.bold),
+              ),
+            ),
+            SizedBox(height: 20),
+            Divider(
+              color: grey,
+              thickness: 1,
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.lock_clock,
+                color: black,
+              ),
+              title: Text(
+                "Save to watch later",
+                style: GoogleFonts.archivo(
+                  color: black,
+                  fontSize: 14,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.pause_presentation,
+                color: black,
+              ),
+              title: Text(
+                "Save to my list",
+                style: GoogleFonts.archivo(
+                  color: black,
+                  fontSize: 14,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.share,
+                color: black,
+              ),
+              title: Text(
+                "Share",
+                style: GoogleFonts.archivo(
+                  color: black,
+                  fontSize: 14,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.not_interested,
+                color: black,
+              ),
+              title: Text(
+                "Not interested",
+                style: GoogleFonts.archivo(
+                  color: black,
+                  fontSize: 14,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.report,
+                color: black,
+              ),
+              title: Text(
+                "Report",
+                style: GoogleFonts.archivo(
+                  color: black,
+                  fontSize: 14,
+                ),
+              ),
+            ),
+          ],
+        ))));
+  }
+}
+
+void WatchlistsBottomModalSheet() {
+  Get.bottomSheet((Container(
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(35),
+            topRight: Radius.circular(35),
+          )),
+      child: Column(
+        children: [
+          Center(
+            child: Text(
+              "Watchlists",
+              style: GoogleFonts.archivo(
+                  color: black, fontSize: 28, fontWeight: FontWeight.bold),
+            ),
+          ),
+          SizedBox(height: 20),
+          Divider(
+            color: grey,
+            thickness: 1,
+          ),
+          ListTile(
+            onTap: () {
+              Get.bottomSheet((Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(35),
+                      topRight: Radius.circular(35),
+                    )),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Center(
+                      child: Text(
+                        "Add New Watchlist",
+                        style: GoogleFonts.archivo(
+                            color: black,
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Divider(
+                      color: grey,
+                      thickness: 1,
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Text("Watch list tile",
+                        style: GoogleFonts.archivo(
+                            color: black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold)),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 48,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          border: Border.all(color: grey, width: 1)),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: "Enter Watchlist Title",
+                            hintStyle: GoogleFonts.archivo(
+                                color: black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold),
+                            contentPadding: EdgeInsets.all(10)),
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    MyButtonContainer(text: "Next", conColor: yellow)
+                  ],
+                ),
+              )));
+            },
+            leading: Icon(
+              Icons.watch_later_outlined,
+              color: black,
+            ),
+            minLeadingWidth: 5,
+            title: Text(
+              "Create a Watchlist",
+              style: GoogleFonts.archivo(
+                color: black,
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          MyWatchlistTIle(
+            title: "Watch later",
+          ),
+          MyWatchlistTIle(
+            title: "Youtube Watchlist",
+          ),
+          MyWatchlistTIle(
+            title: "Facebook Watchlist",
+          ),
+          MyWatchlistTIle(
+            title: "Instagram Watchlist",
+          ),
+        ],
+      ))));
+}
+
+void ReportBottomModalSheet() {
+  Get.bottomSheet((Container(
+    padding: EdgeInsets.all(10),
+    decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(35),
+          topRight: Radius.circular(35),
+        )),
+    child: Column(
+      children: [
+        Center(
+          child: Text(
+            "Report",
+            style: GoogleFonts.archivo(
+                color: black, fontSize: 28, fontWeight: FontWeight.bold),
+          ),
+        ),
+        SizedBox(height: 20),
+        Divider(
+          color: grey,
+          thickness: 1,
+        ),
+        MyReportRow(title: "Sexual Content"),
+        MyReportRow(title: "Abusive content"),
+        MyReportRow(title: "Spam or  misleading"),
+        MyReportRow(title: "Child abuse"),
+        MyReportRow(title: "Other"),
+        SizedBox(height: 20),
+        MyButtonContainer(text: "Report", conColor: yellow)
+      ],
+    ),
+  )));
+}
+
+class MyReportRow extends StatefulWidget {
+  final String title;
+  const MyReportRow({
+    Key? key,
+    required this.title,
+  }) : super(key: key);
+
+  @override
+  State<MyReportRow> createState() => _MyReportRowState();
+}
+
+class _MyReportRowState extends State<MyReportRow> {
+  int _groupValue = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Radio(
+          activeColor: yellow,
+          value: 1,
+          groupValue: _groupValue,
+          onChanged: (NewValue) {
+            setState(() {
+              _groupValue = NewValue as int;
+            });
+          },
+        ),
+        Text(
+          widget.title,
+          style: GoogleFonts.archivo(
+            color: black,
+            fontSize: 14,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class MyWatchlistTIle extends StatelessWidget {
+  final String title;
+  const MyWatchlistTIle({
+    Key? key,
+    required this.title,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Image.asset(
+        "assets/Images/img2.png",
+        height: 20,
+      ),
+      minLeadingWidth: 5,
+      title: Text(
+        title,
+        style: GoogleFonts.archivo(
+          color: black,
+          fontSize: 14,
         ),
       ),
     );
