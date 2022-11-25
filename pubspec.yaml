@@ -40,6 +40,7 @@ dependencies:
   get: ^4.6.5
   intro_slider: ^4.2.0
   pinput: ^2.2.16
+  youtube_player_flutter: ^8.1.1
   
 
 
