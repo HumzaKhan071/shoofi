@@ -1,8 +1,13 @@
 import 'package:shoofi/Routes/routes.dart';
 
-class HomeSearchScreen extends StatelessWidget {
+class HomeSearchScreen extends StatefulWidget {
   const HomeSearchScreen({super.key});
 
+  @override
+  State<HomeSearchScreen> createState() => _HomeSearchScreenState();
+}
+
+class _HomeSearchScreenState extends State<HomeSearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,13 +25,13 @@ class HomeSearchScreen extends StatelessWidget {
               suffixIcon: IconButton(
                 onPressed: () {
                   Get.bottomSheet(Container(
+                    padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(35),
                           topRight: Radius.circular(35),
                         )),
-                    height: Get.height * 0.35,
                     child: Column(
                       children: [
                         SizedBox(height: 10),
@@ -43,7 +48,17 @@ class HomeSearchScreen extends StatelessWidget {
                           indent: 15,
                           endIndent: 15,
                         ),
-                        
+                        SizedBox(height: 15),
+                        MyFilterRow(
+                          text: "Sort by",
+                        ),
+                        MyFilterRow(
+                          text: "Type",
+                        ),
+                        MyFilterRow(text: "Upload Date"),
+                        MyFilterRow(text: "Select Location"),
+                        MyFilterRow(text: "No of Subscribers"),
+                        MyFilterRow(text: "No of Views"),
                       ],
                     ),
                   ));
@@ -74,6 +89,56 @@ class HomeSearchScreen extends StatelessWidget {
           )
         ],
       ),
+    );
+  }
+}
+
+class MyFilterRow extends StatefulWidget {
+  final String text;
+  const MyFilterRow({super.key, required this.text});
+
+  @override
+  State<MyFilterRow> createState() => _MyFilterRowState();
+}
+
+class _MyFilterRowState extends State<MyFilterRow> {
+  String dropdownvalue = 'Relevance';
+  var items = ['Relevance', 'Text 1', 'Text 1'];
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          widget.text,
+          style: GoogleFonts.archivo(
+              color: black, fontWeight: FontWeight.bold, fontSize: 18),
+        ),
+        Container(
+          height: 50,
+          width: 150,
+          padding: EdgeInsets.all(10),
+          child: DropdownButton(
+              isExpanded: true,
+              underline: Container(),
+              value: dropdownvalue,
+              style: TextStyle(
+                color: black,
+                fontSize: 15,
+              ),
+              items: items.map((String items) {
+                return DropdownMenuItem(
+                  value: items,
+                  child: Text(items),
+                );
+              }).toList(),
+              onChanged: (String? newValue) {
+                setState(() {
+                  dropdownvalue = newValue!;
+                });
+              }),
+        )
+      ],
     );
   }
 }

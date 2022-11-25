@@ -7,6 +7,8 @@ class HomeWatchListControler extends GetxController {
     "Documentary",
     "Icoinc"
   ];
+  Rx<String> dropdownvalue = 'EN'.obs;
+  var items = ['EN', 'US', 'UR'];
   Rx<bool> extended = false.obs;
   String selectedTile = "";
 }

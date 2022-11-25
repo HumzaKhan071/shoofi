@@ -1,12 +1,9 @@
 import 'package:shoofi/Routes/routes.dart';
 
-
 class HomeWatchlistScreen extends StatelessWidget {
-  const HomeWatchlistScreen({super.key});
-
+  HomeWatchListControler controler = Get.find(tag: "watchlist");
   @override
   Widget build(BuildContext context) {
-    HomeWatchListControler controler = Get.find(tag: "watchlist");
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -24,19 +21,28 @@ class HomeWatchlistScreen extends StatelessWidget {
             color: black,
           ),
           SizedBox(width: 10),
-          Row(
-            children: [
-              Text(
-                "En",
-                style: GoogleFonts.archivo(
-                    color: black, fontWeight: FontWeight.bold),
-              ),
-              Icon(
-                Icons.keyboard_arrow_down_sharp,
-                color: black,
-              )
-            ],
-          )
+          SizedBox(
+              height: 48,
+              width: 50,
+              child: Obx(
+                () => DropdownButton(
+                    isExpanded: true,
+                    underline: Container(),
+                    value: controler.dropdownvalue,
+                    style: TextStyle(
+                        color: black,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold),
+                    items: controler.items.map((String items) {
+                      return DropdownMenuItem(
+                        value: items,
+                        child: Text(items),
+                      );
+                    }).toList(),
+                    onChanged: (newValue) {
+                      controler.dropdownvalue.value = newValue as String;
+                    }),
+              )),
         ],
       ),
       body: Obx(() {
@@ -97,5 +103,3 @@ class HomeWatchlistScreen extends StatelessWidget {
     );
   }
 }
-
-
