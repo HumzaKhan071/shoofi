@@ -7,11 +7,32 @@ class VideoMainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
-          itemCount: 5,
-          itemBuilder: (context, index) {
-            return VideoPlayerCard();
-          }),
-    );
+        body: SingleChildScrollView(
+      child: Column(
+        children: [
+          Center(
+              child: Column(
+            children: [
+              SizedBox(
+                height: 20,
+              ),
+              Image.asset("assets/Images/epic.png"),
+              Text("9.5 M Subscribers",
+                  style: GoogleFonts.archivo(
+                      color: grey, fontSize: 16, fontWeight: FontWeight.bold)),
+              Text("769 Videos",
+                  style: GoogleFonts.archivo(
+                      color: grey, fontSize: 16, fontWeight: FontWeight.bold)),
+            ],
+          )),
+          ListView.builder(
+              shrinkWrap: true,
+              itemCount: 5,
+              itemBuilder: (context, index) {
+                return VideoPlayerCard();
+              }),
+        ],
+      ),
+    ));
   }
 }
