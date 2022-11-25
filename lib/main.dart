@@ -5,6 +5,9 @@ import 'package:shoofi/Screens/HelpCenter/help_center.dart';
 import 'package:shoofi/Screens/video_player/video_player_view.dart';
 import 'package:shoofi/Screens/video_player/videos_main_page.dart';
 
+import 'package:shoofi/Screens/HomeScreens/extendedRecommendedForYou.dart';
+import 'package:shoofi/Screens/HomeScreens/extendingMostTrendingScreen.dart';
+
 import 'Routes/routes.dart';
 
 void main() {
@@ -18,7 +21,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: ChanneledDetail(),
+      home: ExtendedMostTrendingScreen(),
     );
   }
 }

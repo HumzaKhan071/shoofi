@@ -1,4 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/HomeScreens/all_categories.dart';
 
 class HomeWatchListControler extends GetxController {
   List<String> watchListTiles = [
@@ -11,4 +12,10 @@ class HomeWatchListControler extends GetxController {
   var items = ['EN', 'US', 'UR'];
   Rx<bool> extended = false.obs;
   String selectedTile = "";
+
+  @override
+  void onReady() {
+    super.onReady();
+    allCategoriesSheet();
+  }
 }

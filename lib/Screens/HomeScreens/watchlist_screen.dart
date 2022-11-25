@@ -28,15 +28,15 @@ class HomeWatchlistScreen extends StatelessWidget {
                 () => DropdownButton(
                     isExpanded: true,
                     underline: Container(),
-                    value: controler.dropdownvalue,
+                    value: controler.dropdownvalue.value,
                     style: TextStyle(
                         color: black,
                         fontSize: 15,
                         fontWeight: FontWeight.bold),
-                    items: controler.items.map((String items) {
+                    items: controler.items.map((String item) {
                       return DropdownMenuItem(
-                        value: items,
-                        child: Text(items),
+                        value: item,
+                        child: Text(item),
                       );
                     }).toList(),
                     onChanged: (newValue) {
