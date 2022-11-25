@@ -1,9 +1,10 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/HomeScreens/reels.dart';
 
 class HomeBottomNavigationBarController extends GetxController {
   List<Widget> screens = [
     HomeTrendingScreen(),
-    HomeShortScreen(),
+    Reels(),
     HomeSearchScreen(),
     HomeWatchlistScreen(),
     HomeAccountScreen(),
