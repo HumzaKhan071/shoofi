@@ -14,7 +14,6 @@ class VideoThumbnail extends StatelessWidget {
     return InkWell(
       onLongPress: onLongPress,
       child: Container(
-        height: Get.height * 0.2,
         width: Get.width * 0.27,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

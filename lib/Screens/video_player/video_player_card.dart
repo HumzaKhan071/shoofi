@@ -9,11 +9,14 @@ class VideoPlayerCard extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: Column(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(20), // Image border
-            child: Image.asset(
-              'assets/Images/video_thumbnail.png',
-              fit: BoxFit.cover,
+          SizedBox(
+            width: Get.width * 1,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20), // Image border
+              child: Image.asset(
+                'assets/Images/video_thumbnail.png',
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           SizedBox(
