@@ -11,46 +11,48 @@ class GetStarted extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(10.0),
-        child: Column(
-          children: [
-            SizedBox(
-              height: Get.height * 0.1,
-            ),
-            Image.asset("assets/Images/logo3.png"),
-            const SizedBox(
-              height: 30,
-            ),
-            Image.asset("assets/Images/illustration1.png"),
-            Expanded(
-                child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                MyButtonContainer(
-                    conColor: yellow,
-                    text: "Register",
+        child: Center(
+          child: Column(
+            children: [
+              SizedBox(
+                height: Get.height * 0.1,
+              ),
+              Image.asset("assets/Images/logo3.png"),
+              const SizedBox(
+                height: 30,
+              ),
+              Image.asset("assets/Images/illustration1.png"),
+              Expanded(
+                  child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  MyButtonContainer(
+                      conColor: yellow,
+                      text: "Register",
+                      press: () {
+                        Get.to(() => RegisterScreen());
+                      }),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  MyButtonContainer(
+                    conColor: grey,
+                    text: "Sign In",
                     press: () {
-                      Get.to(() => RegisterScreen());
-                    }),
-                const SizedBox(
-                  height: 10,
-                ),
-                MyButtonContainer(
-                  conColor: grey,
-                  text: "Sign In",
-                  press: () {
-                    Get.to(LoginScreen());
-                  },
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Agreements(),
-                SizedBox(
-                  height: Get.height * 0.03,
-                ),
-              ],
-            )),
-          ],
+                      Get.to(LoginScreen());
+                    },
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Agreements(),
+                  SizedBox(
+                    height: Get.height * 0.03,
+                  ),
+                ],
+              )),
+            ],
+          ),
         ),
       ),
     );

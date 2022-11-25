@@ -6,11 +6,11 @@ class SplashController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    Timer(Duration(seconds: 3), (() {
+    Timer(Duration(seconds: 2), (() {
       updateImage();
-      Timer(Duration(seconds: 3), (() {
-        Get.offAll(() => const GetStarted());
-      }));
+    }));
+    Timer(Duration(seconds: 4), (() {
+      Get.offAll(() => const GetStarted());
     }));
   }
 

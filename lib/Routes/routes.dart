@@ -6,7 +6,7 @@ export 'package:shoofi/Screens/RegisterScreens/InstagramScreen.dart';
 export 'package:shoofi/Screens/Widgets/MyButtonContainer.dart';
 export 'package:shoofi/Screens/Widgets/MyYoutubeContainer.dart';
 export 'package:get/get_navigation/src/root/get_material_app.dart';
-export 'package:shoofi/Screens/SplashScreens/SplashScreen.dart';
+export 'package:shoofi/Screens/SplashScreens/splash_screen.dart';
 export 'package:shoofi/Screens/RegisterScreens/VerifyScreen.dart';
 export 'package:shoofi/Screens/RegisterScreens/RegisterScreen.dart';
 export 'package:shoofi/Screens/RegisterScreens/Model/MyFacebookModel.dart';
