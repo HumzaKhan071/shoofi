@@ -1,12 +1,34 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/HelpCenter/ContactUS.dart';
+import 'package:shoofi/Screens/HelpCenter/FaqScreen.dart';
 
-class HelpCenter extends StatelessWidget {
+class HelpCenter extends StatefulWidget {
   const HelpCenter({super.key});
+
+  @override
+  State<HelpCenter> createState() => _HelpCenterState();
+}
+
+class _HelpCenterState extends State<HelpCenter>
+    with SingleTickerProviderStateMixin {
+  TabController? _tabController;
+
+  @override
+  void initState() {
+    _tabController = TabController(length: 2, vsync: this);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _tabController!.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: _tabController!.length,
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
@@ -39,6 +61,7 @@ class HelpCenter extends StatelessWidget {
                   valueColor: AlwaysStoppedAnimation<Color>(yellow),
                 ),
                 TabBar(
+                  controller: _tabController,
                   indicatorColor: yellow,
                   labelColor: black,
                   labelStyle: GoogleFonts.archivo(
@@ -53,51 +76,18 @@ class HelpCenter extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
-               
-                SizedBox(height: 20),
-                MyRow(title: "How to use shoofi?"),
-                SizedBox(height: 10),
-                MyRow(title: "Subscriptions?"),
-                SizedBox(height: 10),
-                MyRow(title: "Why shoofi?"),
-                SizedBox(height: 10),
-                MyRow(title: "How to use shoofi?"),
-                SizedBox(height: 10),
-                MyRow(title: "Subscriptions?"),
-                SizedBox(height: 10),
-                MyRow(title: "Why shoofi?"),
+                SizedBox(
+                  height: 500,
+                  child: TabBarView(
+                    controller: _tabController,
+                    children: [FaqScreen(), ContactUsScreen()],
+                  ),
+                ),
               ],
             ),
           ),
         ),
       ),
-    );
-  }
-}
-
-class MyRow extends StatelessWidget {
-  final String title;
-  const MyRow({
-    Key? key,
-    required this.title,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          title,
-          style: GoogleFonts.archivo(
-            fontSize: 14,
-            color: black,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        Icon(Icons.arrow_drop_down, color: black)
-      ],
     );
   }
 }
