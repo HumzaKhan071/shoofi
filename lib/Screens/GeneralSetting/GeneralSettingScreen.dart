@@ -370,7 +370,7 @@ class _MyReportRowState extends State<MyReportRow> {
       children: [
         Radio(
           activeColor: yellow,
-          value: 1,
+          value: 0,
           groupValue: _groupValue,
           onChanged: (NewValue) {
             setState(() {
