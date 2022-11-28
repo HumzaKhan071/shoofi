@@ -2,6 +2,7 @@ import 'package:shoofi/Routes/routes.dart';
 
 pinDialog(context) {
   showDialog(
+    barrierDismissible: false,
       context: context,
       builder: (context) => Dialog(
             shape:

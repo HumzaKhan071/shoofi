@@ -37,22 +37,10 @@ class ChatSupportScreen extends StatelessWidget {
         )
       ],
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        leadingWidth: 40,
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: Icon(
-              Icons.arrow_back_ios_new,
-              color: grey,
-            )),
-        centerTitle: true,
-        title: Text(
-          "Chat and Support",
-          style: TextStyle(color: black, fontSize: 14,   ),
+      appBar:PreferredSize(
+        preferredSize: Size.fromHeight(50),
+        child: CustomAppBar(
+          title: "Chat And Support",
         ),
       ),
       body: SingleChildScrollView(

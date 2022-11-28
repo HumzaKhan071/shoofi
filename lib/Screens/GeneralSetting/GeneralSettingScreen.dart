@@ -7,22 +7,10 @@ class GeneralSettingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        leadingWidth: 40,
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: Icon(
-              Icons.arrow_back_ios_new,
-              color: grey,
-            )),
-        centerTitle: true,
-        title: Text(
-          "General Settings",
-          style: TextStyle(color: black, fontSize: 14,fontWeight: FontWeight.bold ),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(50),
+        child: CustomAppBar(
+          title: "General Settings",
         ),
       ),
       body: Padding(
@@ -42,7 +30,10 @@ class GeneralSettingScreen extends StatelessWidget {
               ),
               title: Text(
                 "Change Password",
-                style: TextStyle(color: black, fontSize: 14, ),
+                style: TextStyle(
+                  color: black,
+                  fontSize: 14,
+                ),
               ),
               trailing: Icon(
                 Icons.arrow_forward_ios_outlined,
@@ -57,7 +48,10 @@ class GeneralSettingScreen extends StatelessWidget {
               ),
               title: Text(
                 "Manage Subscriptions",
-                style: TextStyle(color: black, fontSize: 14, ),
+                style: TextStyle(
+                  color: black,
+                  fontSize: 14,
+                ),
               ),
               trailing: Icon(
                 Icons.arrow_forward_ios_outlined,
@@ -72,7 +66,10 @@ class GeneralSettingScreen extends StatelessWidget {
               ),
               title: Text(
                 "User Agreement",
-                style: TextStyle(color: black, fontSize: 14, ),
+                style: TextStyle(
+                  color: black,
+                  fontSize: 14,
+                ),
               ),
               trailing: Icon(
                 Icons.arrow_forward_ios_outlined,
@@ -87,7 +84,10 @@ class GeneralSettingScreen extends StatelessWidget {
               ),
               title: Text(
                 "Delete Account",
-                style: TextStyle(color: black, fontSize: 14, ),
+                style: TextStyle(
+                  color: black,
+                  fontSize: 14,
+                ),
               ),
               trailing: Icon(
                 Icons.arrow_forward_ios_outlined,
@@ -119,7 +119,10 @@ class GeneralSettingScreen extends StatelessWidget {
             Center(
               child: Text(
                 "More Options",
-                style: TextStyle(color: black, fontSize: 28, ),
+                style: TextStyle(
+                  color: black,
+                  fontSize: 28,
+                ),
               ),
             ),
             SizedBox(height: 20),
@@ -211,7 +214,10 @@ void WatchlistsBottomModalSheet() {
           Center(
             child: Text(
               "Watchlists",
-              style: TextStyle(color: black, fontSize: 28, ),
+              style: TextStyle(
+                color: black,
+                fontSize: 28,
+              ),
             ),
           ),
           SizedBox(height: 20),
@@ -235,7 +241,10 @@ void WatchlistsBottomModalSheet() {
                     Center(
                       child: Text(
                         "Add New Watchlist",
-                        style: TextStyle(color: black, fontSize: 28, ),
+                        style: TextStyle(
+                          color: black,
+                          fontSize: 28,
+                        ),
                       ),
                     ),
                     SizedBox(height: 20),
@@ -247,7 +256,10 @@ void WatchlistsBottomModalSheet() {
                       height: 30,
                     ),
                     Text("Watch list tile",
-                        style: TextStyle(color: black, fontSize: 14, )),
+                        style: TextStyle(
+                          color: black,
+                          fontSize: 14,
+                        )),
                     SizedBox(
                       height: 10,
                     ),
@@ -260,8 +272,10 @@ void WatchlistsBottomModalSheet() {
                         decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: "Enter Watchlist Title",
-                            hintStyle:
-                                TextStyle(color: black, fontSize: 14, ),
+                            hintStyle: TextStyle(
+                              color: black,
+                              fontSize: 14,
+                            ),
                             contentPadding: EdgeInsets.all(10)),
                       ),
                     ),
@@ -281,7 +295,6 @@ void WatchlistsBottomModalSheet() {
               style: TextStyle(
                 color: black,
                 fontSize: 14,
-                
               ),
             ),
           ),
@@ -315,7 +328,10 @@ void ReportBottomModalSheet() {
         Center(
           child: Text(
             "Report",
-            style: TextStyle(color: black, fontSize: 28, ),
+            style: TextStyle(
+              color: black,
+              fontSize: 28,
+            ),
           ),
         ),
         SizedBox(height: 20),

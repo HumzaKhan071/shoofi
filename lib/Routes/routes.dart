@@ -54,3 +54,4 @@ export 'package:shoofi/Screens/HomeScreens/bottom_navigation_bar.dart';
 export 'package:shoofi/controllers/Home/watchlist_controller.dart';
 export 'package:shoofi/Screens/HomeScreens/extended_watchlist.dart';
 export 'package:shoofi/Screens/Widgets/removeWatchListBottomSheet.dart';
+export 'package:shoofi/Screens/Widgets/customAppBar.dart';

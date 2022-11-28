@@ -3,6 +3,7 @@ import 'package:shoofi/Screens/Billing%20and%20payments/BillingPaymentScreen.dar
 import 'package:shoofi/Screens/GeneralSetting/GeneralSettingScreen.dart';
 import 'package:shoofi/Screens/History/HistoryScreen.dart';
 import 'package:shoofi/Screens/VideoQualityPreferences/VideoQualityPreference.dart';
+import 'package:shoofi/Screens/Widgets/customAppBar.dart';
 
 class AppSetting extends StatelessWidget {
   const AppSetting({super.key});
@@ -10,25 +11,18 @@ class AppSetting extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(50),
+        child: CustomAppBar(
+          title: "App Settings",
+        ),
+      ),
       body: Column(
         children: [
-          SizedBox(height: 40),
-          ListTile(
-              leading: Icon(Icons.arrow_back_ios_new_rounded),
-              title: Center(
-                  child: Text(
-                "App Settings",
-                style: TextStyle(
-                  color: black,
-                  fontSize: 16,
-                   fontWeight: FontWeight.bold
-                ),
-              ))),
-          Divider(
-            indent: 10,
-            endIndent: 10,
-            thickness: 1,
-            color: grey,
+          LinearProgressIndicator(
+            backgroundColor: grey,
+            value: 0,
+            valueColor: AlwaysStoppedAnimation<Color>(yellow),
           ),
           ListTile(
             leading: Image.asset("assets/Images/appSettingIcon1.png"),

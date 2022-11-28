@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/Billing%20and%20payments/BillingPaymentScreen.dart';
 import 'package:shoofi/Screens/History/HistoryScreen.dart';
+import 'package:shoofi/Screens/LoginScreens/login_screen.dart';
 import 'package:shoofi/Screens/video_player/videos_main_page.dart';
 
 import 'Screens/SplashScreens/splash_screen.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Archivo",
       ),
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: HomeBottomNavigationBar(),
     );
   }
 }

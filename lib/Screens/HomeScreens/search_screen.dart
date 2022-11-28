@@ -11,66 +11,70 @@ class _HomeSearchScreenState extends State<HomeSearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(10.0),
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 20.0),
-            child: MyTextField(
-              text: "Search or Paste URL",
-              prefixIcon: Icon(
-                Icons.search,
+          SizedBox(
+            height: 20,
+          ),
+          MyTextField(
+            text: "Search or Paste URL",
+            prefixIcon: Icon(
+              Icons.search,
+              color: Colors.grey,
+            ),
+            contentTopPadding: 13,
+            suffixIcon: IconButton(
+              onPressed: () {
+                Get.bottomSheet(Container(
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(35),
+                        topRight: Radius.circular(35),
+                      )),
+                  child: Column(
+                    children: [
+                      SizedBox(height: 10),
+                      Image.asset("assets/Images/divider.png"),
+                      SizedBox(height: 20),
+                      Text("Filters",
+                          style: TextStyle(
+                              color: black,
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold)),
+                      SizedBox(height: 15),
+                      Divider(
+                        thickness: 1,
+                        indent: 15,
+                        endIndent: 15,
+                      ),
+                      SizedBox(height: 15),
+                      MyFilterRow(
+                        text: "Sort by",
+                      ),
+                      MyFilterRow(
+                        text: "Type",
+                      ),
+                      MyFilterRow(text: "Upload Date"),
+                      MyFilterRow(text: "Select Location"),
+                      MyFilterRow(text: "No of Subscribers"),
+                      MyFilterRow(text: "No of Views"),
+                    ],
+                  ),
+                ));
+              },
+              icon: Icon(
+                Icons.filter_list_alt,
                 color: Colors.grey,
-              ),
-              suffixIcon: IconButton(
-                onPressed: () {
-                  Get.bottomSheet(Container(
-                    padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(35),
-                          topRight: Radius.circular(35),
-                        )),
-                    child: Column(
-                      children: [
-                        SizedBox(height: 10),
-                        Image.asset("assets/Images/divider.png"),
-                        SizedBox(height: 20),
-                        Text("Filters",
-                            style:
-                                TextStyle(color: black, fontSize: 24,  fontWeight: FontWeight.bold)),
-                        SizedBox(height: 15),
-                        Divider(
-                          thickness: 1,
-                          indent: 15,
-                          endIndent: 15,
-                        ),
-                        SizedBox(height: 15),
-                        MyFilterRow(
-                          text: "Sort by",
-                        ),
-                        MyFilterRow(
-                          text: "Type",
-                        ),
-                        MyFilterRow(text: "Upload Date"),
-                        MyFilterRow(text: "Select Location"),
-                        MyFilterRow(text: "No of Subscribers"),
-                        MyFilterRow(text: "No of Views"),
-                      ],
-                    ),
-                  ));
-                },
-                icon: Icon(
-                  Icons.filter_list_alt,
-                  color: Colors.grey,
-                ),
               ),
             ),
           ),
           SizedBox(height: 15),
           Flexible(
             child: ListView.builder(
+              padding: EdgeInsets.all(0),
               itemCount: 5,
               itemBuilder: (context, index) {
                 return Wrap(
@@ -109,7 +113,8 @@ class _MyFilterRowState extends State<MyFilterRow> {
       children: [
         Text(
           widget.text,
-          style: TextStyle(color: black, fontWeight: FontWeight.bold , fontSize: 18),
+          style: TextStyle(
+              color: black, fontWeight: FontWeight.bold, fontSize: 18),
         ),
         Container(
           height: 50,
