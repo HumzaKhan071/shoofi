@@ -46,19 +46,22 @@ class _MyPlatformContainerState extends State<MyPlatformContainer> {
                   Image.asset("assets/Images/fit_screen.png"),
                   SizedBox(width: 5),
                   Text("Screen Time",
-                      style: GoogleFonts.archivo(
-                          color: black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500))
+                      style: TextStyle(
+                        color: black,
+                        fontSize: 14,
+                         fontWeight: FontWeight.w500
+                        
+                      ))
                 ],
               ),
               Row(
                 children: [
                   Text("Daily",
-                      style: GoogleFonts.archivo(
-                          color: black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500)),
+                      style: TextStyle(
+                        color: black,
+                        fontSize: 14,
+                         fontWeight: FontWeight.w500
+                      )),
                   SizedBox(width: 5),
                   Container(
                     height: 26,
@@ -121,8 +124,11 @@ class _MyRowState extends State<MyRow> {
             Image.asset(widget.image),
             SizedBox(width: 5),
             Text(widget.title,
-                style: GoogleFonts.archivo(
-                    color: black, fontSize: 14, fontWeight: FontWeight.w500))
+                style: TextStyle(
+                  color: black,
+                  fontSize: 14,
+                   fontWeight: FontWeight.w500
+                ))
           ],
         ),
         Switch(

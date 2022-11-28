@@ -33,14 +33,20 @@ class VideoThumbnail extends StatelessWidget {
             Text(
               "The most Perfect continue",
               overflow: TextOverflow.ellipsis,
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 11, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: black,
+                fontSize: 11,
+                 fontWeight: FontWeight.bold
+              ),
             ),
             Text(
               "11/10/2022",
               overflow: TextOverflow.ellipsis,
-              style: GoogleFonts.archivo(
-                  color: grey, fontSize: 9, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: grey,
+                fontSize: 9,
+                 fontWeight: FontWeight.bold
+              ),
             ),
           ],
         ),

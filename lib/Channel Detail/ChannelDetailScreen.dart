@@ -78,10 +78,7 @@ class _ChanneledDetailState extends State<ChanneledDetail>
                           isExpanded: true,
                           underline: Container(),
                           value: dropdownvalue,
-                          style: TextStyle(
-                              color: black,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold),
+                          style: TextStyle(color: black, fontSize: 15, fontWeight: FontWeight.bold ),
                           items: items.map((String items) {
                             return DropdownMenuItem(
                               value: items,
@@ -98,10 +95,11 @@ class _ChanneledDetailState extends State<ChanneledDetail>
                   bottom: TabBar(
                       controller: _tabController,
                       labelColor: black,
-                      labelStyle: GoogleFonts.archivo(
+                      labelStyle: TextStyle(
                         fontSize: 14,
                         color: black,
-                        fontWeight: FontWeight.bold,
+                         fontWeight: FontWeight.bold
+                       
                       ),
                       indicatorColor: yellow,
                       tabs: [

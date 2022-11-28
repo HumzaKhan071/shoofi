@@ -18,8 +18,11 @@ class AppSetting extends StatelessWidget {
               title: Center(
                   child: Text(
                 "App Settings",
-                style: GoogleFonts.archivo(
-                    color: black, fontSize: 16, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  color: black,
+                  fontSize: 16,
+                   fontWeight: FontWeight.bold
+                ),
               ))),
           Divider(
             indent: 10,
@@ -34,8 +37,10 @@ class AppSetting extends StatelessWidget {
             },
             title: Text(
               "General",
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: black,
+                fontSize: 16,
+              ),
             ),
             trailing: Icon(Icons.arrow_forward_ios_rounded),
           ),
@@ -46,8 +51,10 @@ class AppSetting extends StatelessWidget {
             },
             title: Text(
               "Video quality preferences",
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: black,
+                fontSize: 16,
+              ),
             ),
             trailing: Icon(Icons.arrow_forward_ios_rounded),
           ),
@@ -58,8 +65,10 @@ class AppSetting extends StatelessWidget {
             },
             title: Text(
               "History",
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: black,
+                fontSize: 16,
+              ),
             ),
             trailing: Icon(Icons.arrow_forward_ios_rounded),
           ),
@@ -70,8 +79,10 @@ class AppSetting extends StatelessWidget {
             },
             title: Text(
               "Privacy policy",
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: black,
+                fontSize: 16,
+              ),
             ),
             trailing: Icon(Icons.arrow_forward_ios_rounded),
           ),
@@ -90,8 +101,10 @@ class AppSetting extends StatelessWidget {
             leading: Image.asset("assets/Images/appSettingIcon6.png"),
             title: Text(
               "Chat and support",
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: black,
+                fontSize: 16,
+              ),
             ),
             trailing: Icon(Icons.arrow_forward_ios_rounded),
           ),
@@ -102,8 +115,10 @@ class AppSetting extends StatelessWidget {
             leading: Image.asset("assets/Images/appSettingIcon7.png"),
             title: Text(
               "About",
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: black,
+                fontSize: 16,
+              ),
             ),
             trailing: Icon(Icons.arrow_forward_ios_rounded),
           ),

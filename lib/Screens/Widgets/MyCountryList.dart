@@ -27,8 +27,11 @@ class _MyCountryListState extends State<MyCountryList> {
             width: 10,
           ),
           Text(widget.countryName,
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 16, fontWeight: FontWeight.bold)),
+              style: TextStyle(
+                color: black,
+                fontSize: 16,
+                 fontWeight: FontWeight.bold
+              )),
         ]),
         Container(
           height: 23,

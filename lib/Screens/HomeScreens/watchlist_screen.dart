@@ -9,13 +9,13 @@ class HomeWatchlistScreen extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: IconButton(
-          onPressed: () {
-            Get.back();
-          
-          },
-      icon:Icon(    Icons.arrow_back_ios,
-          color: black,
-        )),
+            onPressed: () {
+              Get.back();
+            },
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: black,
+            )),
         title: Image.asset(
           "assets/Images/logo5.png",
         ),
@@ -34,9 +34,10 @@ class HomeWatchlistScreen extends StatelessWidget {
                     underline: Container(),
                     value: controler.dropdownvalue.value,
                     style: TextStyle(
-                        color: black,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold),
+                      color: black,
+                      fontSize: 15,
+                       fontWeight: FontWeight.bold
+                    ),
                     items: controler.items.map((String item) {
                       return DropdownMenuItem(
                         value: item,
@@ -66,10 +67,11 @@ class HomeWatchlistScreen extends StatelessWidget {
                               children: [
                                 Text(
                                   controler.watchListTiles[index],
-                                  style: GoogleFonts.archivo(
-                                      color: black,
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.bold),
+                                  style: TextStyle(
+                                    color: black,
+                                    fontSize: 22,
+                                     fontWeight: FontWeight.bold
+                                  ),
                                 ),
                                 GestureDetector(
                                   onTap: () {
@@ -79,11 +81,12 @@ class HomeWatchlistScreen extends StatelessWidget {
                                   },
                                   child: Text(
                                     "view all",
-                                    style: GoogleFonts.archivo(
-                                        color: yellow,
-                                        fontSize: 13,
-                                        decoration: TextDecoration.underline,
-                                        fontWeight: FontWeight.bold),
+                                    style: TextStyle(
+                                      color: yellow,
+                                      fontSize: 13,
+                                      decoration: TextDecoration.underline,
+                                       fontWeight: FontWeight.bold
+                                    ),
                                   ),
                                 )
                               ]),

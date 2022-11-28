@@ -40,7 +40,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               centerTitle: true,
               title: Text(
                 "Sign Up",
-                style: GoogleFonts.archivo(
+                style: TextStyle(
                     color: black, fontSize: 14, fontWeight: FontWeight.w500),
               ),
             ),
@@ -63,7 +63,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     Text(
                       "Click to select avatar or upload picture",
-                      style: GoogleFonts.archivo(
+                      style: TextStyle(
                           color: black,
                           fontSize: 13,
                           fontWeight: FontWeight.w500),
@@ -83,7 +83,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: "Email",
-                          hintStyle: GoogleFonts.archivo(
+                          hintStyle: TextStyle(
                               color: grey,
                               fontSize: 16,
                               fontWeight: FontWeight.bold),
@@ -107,7 +107,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: "+  01  234 567 890",
-                          hintStyle: GoogleFonts.archivo(
+                          hintStyle: TextStyle(
                               color: grey,
                               fontSize: 16,
                               fontWeight: FontWeight.bold),

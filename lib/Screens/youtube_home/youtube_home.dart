@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:shoofi/Screens/HomeScreens/extendedRecommendedForYou.dart';
 import 'package:shoofi/Screens/HomeScreens/extendingMostTrendingScreen.dart';
 import 'package:shoofi/Screens/HomeScreens/reels.dart';
@@ -49,8 +49,10 @@ recommandBanner({required String title, required String imagePath}) {
           Flexible(
             child: Text(
               title,
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: black,
+                fontSize: 16,
+              ),
             ),
           ),
           TextButton(
@@ -59,8 +61,10 @@ recommandBanner({required String title, required String imagePath}) {
             },
             child: Text(
               'See all',
-              style: GoogleFonts.archivo(
-                  color: yellow, fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: yellow,
+                fontSize: 16,
+              ),
             ),
           ),
         ],
@@ -98,8 +102,10 @@ trendingBanner({required String title, required String imgPath}) {
           Flexible(
             child: Text(
               title,
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: black,
+                fontSize: 16,
+              ),
             ),
           ),
           TextButton(
@@ -108,8 +114,10 @@ trendingBanner({required String title, required String imgPath}) {
             },
             child: Text(
               'See all',
-              style: GoogleFonts.archivo(
-                  color: yellow, fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: yellow,
+                fontSize: 16,
+              ),
             ),
           ),
         ],
@@ -191,8 +199,10 @@ adBanner() {
           Flexible(
             child: Text(
               'Vivamus mattis sapien vel eros cursus a venenatis duiincidunt',
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: black,
+                fontSize: 16,
+              ),
             ),
           ),
         ],
@@ -207,7 +217,7 @@ adBanner() {
           ),
           Text(
             'Ad - UAE',
-            style: GoogleFonts.archivo(color: black, fontSize: 14),
+            style: TextStyle(color: black, fontSize: 14),
           ),
         ],
       ),

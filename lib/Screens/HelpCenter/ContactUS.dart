@@ -49,10 +49,11 @@ class MyContainer extends StatelessWidget {
           leading: Icon(iconData, color: black),
           title: Text(
             title,
-            style: GoogleFonts.archivo(
+            style: TextStyle(
               fontSize: 14,
               color: black,
-              fontWeight: FontWeight.bold,
+               fontWeight: FontWeight.bold,
+              
             ),
           ),
         ));

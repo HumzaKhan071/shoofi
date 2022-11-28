@@ -27,8 +27,11 @@ class _InstagramScreenState extends State<InstagramScreen> {
         centerTitle: true,
         title: Text(
           "Sign Up",
-          style: GoogleFonts.archivo(
-              color: black, fontSize: 14, fontWeight: FontWeight.w500),
+          style: TextStyle(
+            color: black,
+            fontSize: 14,
+             fontWeight: FontWeight.w500
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -50,31 +53,34 @@ class _InstagramScreenState extends State<InstagramScreen> {
                 child: Column(
                   children: [
                     Text("Welcome to Shoofi",
-                        style: GoogleFonts.archivo(
-                            color: grey,
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold)),
+                        style: TextStyle(
+                          color: grey,
+                          fontSize: 12,
+                           fontWeight: FontWeight.bold
+                        )),
                     Text.rich(
                       TextSpan(
                           text: "Pick Your favourite ",
-                          style: GoogleFonts.archivo(
-                              color: grey,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500),
+                          style: TextStyle(
+                            color: grey,
+                            fontSize: 12,
+                          ),
                           children: [
                             TextSpan(
                               text: "Instagram ",
-                              style: GoogleFonts.archivo(
-                                  color: black,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                color: black,
+                                fontSize: 12,
+                                 fontWeight: FontWeight.bold
+                              ),
                             ),
                             TextSpan(
                               text: "Channels",
-                              style: GoogleFonts.archivo(
-                                  color: grey,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w500),
+                              style: TextStyle(
+                                color: grey,
+                                fontSize: 12,
+                                 fontWeight: FontWeight.w500
+                              ),
                             ),
                           ]),
                     ),

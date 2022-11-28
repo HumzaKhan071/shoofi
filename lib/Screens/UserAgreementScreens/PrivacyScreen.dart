@@ -22,8 +22,11 @@ class PrivacyScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Privacy Policy",
-          style: GoogleFonts.archivo(
-              color: black, fontSize: 14, fontWeight: FontWeight.w500),
+          style: TextStyle(
+            color: black,
+            fontSize: 14,
+             fontWeight: FontWeight.w500
+          ),
         ),
       ),
       body: SingleChildScrollView(

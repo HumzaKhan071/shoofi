@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/Billing%20and%20payments/BillingPaymentScreen.dart';
+import 'package:shoofi/Screens/History/HistoryScreen.dart';
+import 'package:shoofi/Screens/video_player/videos_main_page.dart';
 
 import 'Screens/SplashScreens/splash_screen.dart';
 
@@ -12,9 +16,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
+      theme: ThemeData(
+        fontFamily: "Archivo",
+      ),
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: PaymentsScreen(),
     );
   }
 }

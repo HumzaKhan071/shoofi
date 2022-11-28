@@ -49,29 +49,37 @@ class _MyYearlyPlanContainerState extends State<MyYearlyPlanContainer> {
             )),
         child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
           Text(widget.title,
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 12, fontWeight: FontWeight.w500)),
+              style: TextStyle(
+                color: black,
+                fontSize: 12,
+                 fontWeight: FontWeight.w500
+              )),
           SizedBox(height: 5),
           Text(widget.totalScreens,
-              style: GoogleFonts.archivo(
+              style: TextStyle(
                 color: grey,
                 fontSize: 12,
               )),
           SizedBox(height: 5),
           Text(widget.perMonth,
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 22, fontWeight: FontWeight.w500)),
+              style: TextStyle(
+                color: black,
+                fontSize: 22,
+                 fontWeight: FontWeight.w500
+              )),
           SizedBox(height: 10),
           Text(widget.price,
-              style: GoogleFonts.archivo(
-                  color: press ? Colors.white : black,
-                  fontSize: 8,
-                  fontWeight: FontWeight.bold)),
+              style: TextStyle(
+                color: press ? Colors.white : black,
+                fontSize: 8,
+                 fontWeight: FontWeight.bold
+              )),
           Text(widget.description,
-              style: GoogleFonts.archivo(
-                  color: press ? Colors.white : black,
-                  fontSize: 8,
-                  fontWeight: FontWeight.bold)),
+              style: TextStyle(
+                color: press ? Colors.white : black,
+                fontSize: 8,
+                 fontWeight: FontWeight.bold
+              )),
         ]),
       ),
     );

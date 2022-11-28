@@ -28,8 +28,11 @@ class _CreateProfileState extends State<CreateProfile> {
         centerTitle: true,
         title: Text(
           "Create Profile",
-          style: GoogleFonts.archivo(
-              color: black, fontSize: 14, fontWeight: FontWeight.w500),
+          style: TextStyle(
+            color: black,
+            fontSize: 14,
+             fontWeight: FontWeight.w500
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -50,24 +53,25 @@ class _CreateProfileState extends State<CreateProfile> {
                     Image.asset("assets/Images/circle.png"),
                     SizedBox(height: 5),
                     Text("Click to select avatar or upload picture",
-                        style: GoogleFonts.archivo(
-                            color: black,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500)),
+                        style: TextStyle(
+                          color: black,
+                          fontSize: 14,
+                           fontWeight: FontWeight.w500
+                        )),
                   ],
                 ),
               ),
               SizedBox(height: 20),
-              
               SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("For Kids",
-                      style: GoogleFonts.archivo(
-                          color: black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500)),
+                      style: TextStyle(
+                        color: black,
+                        fontSize: 14,
+                         fontWeight: FontWeight.w500
+                      )),
                   Switch(
                       activeColor: Colors.green,
                       inactiveThumbColor: grey,
@@ -84,8 +88,11 @@ class _CreateProfileState extends State<CreateProfile> {
               if (isSwitched == true) ...[
                 Text(
                   "Platforms",
-                  style: GoogleFonts.archivo(
-                      color: black, fontSize: 14, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    color: black,
+                    fontSize: 14,
+                     fontWeight: FontWeight.bold
+                  ),
                 ),
                 SizedBox(height: 5),
                 LinearProgressIndicator(
@@ -98,8 +105,11 @@ class _CreateProfileState extends State<CreateProfile> {
                 SizedBox(height: 10),
                 Text(
                   "Platforms",
-                  style: GoogleFonts.archivo(
-                      color: black, fontSize: 14, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    color: black,
+                    fontSize: 14,
+                     fontWeight: FontWeight.bold
+                  ),
                 ),
                 SizedBox(height: 5),
                 LinearProgressIndicator(
@@ -123,9 +133,7 @@ class _CreateProfileState extends State<CreateProfile> {
               SizedBox(height: 10),
               Center(
                   child: Column(
-                children: [
-               Agreements()
-                ],
+                children: [Agreements()],
               ))
             ],
           ),

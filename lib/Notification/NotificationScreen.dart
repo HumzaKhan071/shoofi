@@ -22,8 +22,11 @@ class NotificationScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Notifications",
-          style: GoogleFonts.archivo(
-              color: black, fontSize: 14, fontWeight: FontWeight.w500),
+          style: TextStyle(
+            color: black,
+            fontSize: 14,
+            fontWeight: FontWeight.w500
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -68,18 +71,27 @@ class MyListTile extends StatelessWidget {
         children: [
           Text(
             "The Most Perfect Co...",
-            style: GoogleFonts.archivo(
-                color: black, fontSize: 14, fontWeight: FontWeight.w500),
+            style: TextStyle(
+              color: black,
+              fontSize: 14,
+              fontWeight: FontWeight.w500
+            ),
           ),
           Text(
             "Your order has been shipped",
-            style: GoogleFonts.archivo(
-                color: grey, fontSize: 12, fontWeight: FontWeight.w500),
+            style: TextStyle(
+              color: grey,
+              fontSize: 12,
+              fontWeight: FontWeight.w500
+            ),
           ),
           Text(
             "Your order has been shipped",
-            style: GoogleFonts.archivo(
-                color: grey, fontSize: 12, fontWeight: FontWeight.w500),
+            style: TextStyle(
+              color: grey,
+              fontSize: 12,
+              fontWeight: FontWeight.w500
+            ),
           ),
         ],
       ),

@@ -24,8 +24,11 @@ class ForgotScreen extends StatelessWidget {
           centerTitle: true,
           title: Text(
             "Sign Up",
-            style: GoogleFonts.archivo(
-                color: black, fontSize: 14, fontWeight: FontWeight.w500),
+            style: TextStyle(
+              color: black,
+              fontSize: 14,
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ),
         body: SingleChildScrollView(
@@ -47,10 +50,11 @@ class ForgotScreen extends StatelessWidget {
                     width: 213,
                     child: Text(
                       "How do you want to receive the  code to reset your password?",
-                      style: GoogleFonts.archivo(
-                          color: black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500),
+                      style: TextStyle(
+                        color: black,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                   ),
                 ),
@@ -59,7 +63,7 @@ class ForgotScreen extends StatelessWidget {
                 ),
                 SizedBox(
                   height: 106,
-                  width: 250,
+                  width: 252,
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -78,14 +82,15 @@ class ForgotScreen extends StatelessWidget {
                               children: [
                                 Text(
                                   "Send reset link via email",
-                                  style: GoogleFonts.archivo(
-                                      color: black,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold),
+                                  style: TextStyle(
+                                    color: black,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                                 Text(
                                   "username@yourmail.com",
-                                  style: GoogleFonts.archivo(
+                                  style: TextStyle(
                                     color: grey,
                                     fontSize: 14,
                                   ),
@@ -112,14 +117,15 @@ class ForgotScreen extends StatelessWidget {
                               children: [
                                 Text(
                                   "Send reset code via phone",
-                                  style: GoogleFonts.archivo(
-                                      color: black,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold),
+                                  style: TextStyle(
+                                    color: black,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                                 Text(
                                   "+****-*****01",
-                                  style: GoogleFonts.archivo(
+                                  style: TextStyle(
                                     color: grey,
                                     fontSize: 14,
                                   ),
@@ -159,10 +165,11 @@ class ForgotScreen extends StatelessWidget {
                 TextButton(
                   onPressed: () {},
                   child: Text("Not you?",
-                      style: GoogleFonts.archivo(
-                          color: blue,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500)),
+                      style: TextStyle(
+                        color: blue,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
+                      )),
                 ),
                 SizedBox(
                   height: Get.height * 0.1,

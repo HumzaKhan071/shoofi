@@ -17,8 +17,11 @@ class ExtendedWatchList extends StatelessWidget {
                 padding: EdgeInsets.only(left: 24.0, bottom: 15, top: 20),
                 child: Text(
                   controler.selectedTile,
-                  style: GoogleFonts.archivo(
-                      color: black, fontSize: 22, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    color: black,
+                    fontSize: 22,
+                     fontWeight: FontWeight.bold
+                  ),
                 ),
               ),
             ],

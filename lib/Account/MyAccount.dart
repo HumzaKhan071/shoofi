@@ -59,8 +59,9 @@ class _MyAccountState extends State<MyAccount> {
               color: black,
             ),
             title: Text("Profile Lock",
-                style: GoogleFonts.archivo(
-                    color: black, fontSize: 16, fontWeight: FontWeight.bold)),
+                style: TextStyle(
+                    color: black, fontSize: 16,
+                    fontWeight: FontWeight.bold)),
             trailing: Icon(
               Icons.arrow_forward_ios_rounded,
               color: black,
@@ -72,8 +73,8 @@ class _MyAccountState extends State<MyAccount> {
               color: black,
             ),
             title: Text("Notifications",
-                style: GoogleFonts.archivo(
-                    color: black, fontSize: 16, fontWeight: FontWeight.bold)),
+                style: TextStyle(
+                    color: black, fontSize: 16,  )),
             trailing: Wrap(
               children: [
                 Switch(
@@ -97,26 +98,26 @@ class _MyAccountState extends State<MyAccount> {
             ListTile(
                 leading: Image.asset("assets/Images/img2.png"),
                 title: Text("The Most Perfect Co...",
-                    style: GoogleFonts.archivo(
+                    style: TextStyle(
                         color: black,
                         fontSize: 16,
-                        fontWeight: FontWeight.bold)),
+                        )),
                 subtitle: Text(
                   "11/10/2022",
-                  style: GoogleFonts.archivo(color: grey),
+                  style: TextStyle(color: grey),
                 ),
                 trailing:
                     Image.asset("assets/Images/remove_circle_outline.png")),
             ListTile(
                 leading: Image.asset("assets/Images/img2.png"),
                 title: Text("The Most Perfect Co...",
-                    style: GoogleFonts.archivo(
+                    style: TextStyle(
                         color: black,
                         fontSize: 16,
-                        fontWeight: FontWeight.bold)),
+                       )),
                 subtitle: Text(
                   "11/10/2022",
-                  style: GoogleFonts.archivo(color: grey),
+                  style: TextStyle(color: grey),
                 ),
                 trailing:
                     Image.asset("assets/Images/remove_circle_outline.png"))
@@ -130,8 +131,8 @@ class _MyAccountState extends State<MyAccount> {
               homeBottomNavigationBar.currentIndex.value = 3;
             },
             title: Text("My Watchist",
-                style: GoogleFonts.archivo(
-                    color: black, fontSize: 16, fontWeight: FontWeight.bold)),
+                style: TextStyle(
+                    color: black, fontSize: 16, )),
           ),
           ListTile(
             leading: Icon(
@@ -142,8 +143,8 @@ class _MyAccountState extends State<MyAccount> {
               Get.to(AppSetting());
             },
             title: Text("App Setting",
-                style: GoogleFonts.archivo(
-                    color: black, fontSize: 16, fontWeight: FontWeight.bold)),
+                style: TextStyle(
+                    color: black, fontSize: 16, )),
           ),
           ListTile(
             onTap: (() {
@@ -154,8 +155,8 @@ class _MyAccountState extends State<MyAccount> {
               color: black,
             ),
             title: Text("Account",
-                style: GoogleFonts.archivo(
-                    color: black, fontSize: 16, fontWeight: FontWeight.bold)),
+                style: TextStyle(
+                    color: black, fontSize: 16, )),
           ),
           ListTile(
             onTap: () {
@@ -166,8 +167,8 @@ class _MyAccountState extends State<MyAccount> {
               color: black,
             ),
             title: Text("Help Center",
-                style: GoogleFonts.archivo(
-                    color: black, fontSize: 16, fontWeight: FontWeight.bold)),
+                style: TextStyle(
+                    color: black, fontSize: 16,)),
           ),
           SizedBox(
             height: 10,
@@ -181,8 +182,8 @@ class _MyAccountState extends State<MyAccount> {
                 onPressed: () {},
                 child: Text(
                   "Sign Out",
-                  style: GoogleFonts.archivo(
-                      color: red, fontSize: 13, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      color: red, fontSize: 13, ),
                 )),
           )
         ],

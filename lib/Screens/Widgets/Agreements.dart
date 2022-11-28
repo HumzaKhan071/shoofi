@@ -9,7 +9,7 @@ class Agreements extends StatelessWidget {
       children: [
         Text.rich(TextSpan(
             text: "by continuing you agree to",
-            style: GoogleFonts.archivo(
+            style: TextStyle(
               fontSize: 12,
               color: textColor,
             ),
@@ -20,7 +20,7 @@ class Agreements extends StatelessWidget {
                       Get.to(() => UserAgreementScreen());
                     }),
                   text: " Terms of Service",
-                  style: GoogleFonts.archivo(
+                  style: TextStyle(
                       fontSize: 12,
                       color: blue,
                       decoration: TextDecoration.underline,
@@ -32,7 +32,7 @@ class Agreements extends StatelessWidget {
         ),
         Text.rich(TextSpan(
             text: "and",
-            style: GoogleFonts.archivo(
+            style: TextStyle(
               fontSize: 12,
               color: textColor,
             ),
@@ -43,7 +43,7 @@ class Agreements extends StatelessWidget {
                       Get.to(() => PrivacyScreen());
                     },
                   text: " Privacy Policies",
-                  style: GoogleFonts.archivo(
+                  style: TextStyle(
                       fontSize: 12,
                       color: blue,
                       decoration: TextDecoration.underline,

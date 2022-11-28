@@ -9,7 +9,8 @@ class ProfileAvatar extends StatelessWidget {
     Key? key,
     this.backgroundImagePath,
     this.title = "Add Profile",
-    required this.onTap, this.radius =50,
+    required this.onTap,
+    this.radius = 50,
   }) : super(key: key);
 
   @override
@@ -34,8 +35,11 @@ class ProfileAvatar extends StatelessWidget {
           SizedBox(height: 5),
           Text(
             title,
-            style: GoogleFonts.archivo(
-                color: black, fontSize: 14, fontWeight: FontWeight.bold),
+            style: TextStyle(
+              color: black,
+              fontSize: 14,
+               fontWeight: FontWeight.bold
+            ),
           )
         ],
       ),

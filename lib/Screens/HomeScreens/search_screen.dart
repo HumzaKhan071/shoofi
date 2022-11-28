@@ -38,10 +38,8 @@ class _HomeSearchScreenState extends State<HomeSearchScreen> {
                         Image.asset("assets/Images/divider.png"),
                         SizedBox(height: 20),
                         Text("Filters",
-                            style: GoogleFonts.archivo(
-                                color: black,
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold)),
+                            style:
+                                TextStyle(color: black, fontSize: 24,  fontWeight: FontWeight.bold)),
                         SizedBox(height: 15),
                         Divider(
                           thickness: 1,
@@ -111,8 +109,7 @@ class _MyFilterRowState extends State<MyFilterRow> {
       children: [
         Text(
           widget.text,
-          style: GoogleFonts.archivo(
-              color: black, fontWeight: FontWeight.bold, fontSize: 18),
+          style: TextStyle(color: black, fontWeight: FontWeight.bold , fontSize: 18),
         ),
         Container(
           height: 50,

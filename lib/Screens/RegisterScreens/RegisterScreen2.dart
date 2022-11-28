@@ -39,8 +39,11 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
               centerTitle: true,
               title: Text(
                 "Sign Up",
-                style: GoogleFonts.archivo(
-                    color: black, fontSize: 14, fontWeight: FontWeight.w500),
+                style: TextStyle(
+                  color: black,
+                  fontSize: 14,
+                   fontWeight: FontWeight.w500
+                ),
               ),
             ),
             body: SingleChildScrollView(
@@ -73,10 +76,11 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                     ),
                     Text(
                       "Click to select avatar",
-                      style: GoogleFonts.archivo(
-                          color: black,
-                          fontSize: 13,
-                          fontWeight: FontWeight.w500),
+                      style: TextStyle(
+                        color: black,
+                        fontSize: 13,
+                         fontWeight: FontWeight.w500
+                      ),
                     ),
                     const SizedBox(
                       height: 10,
@@ -106,10 +110,11 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: "+  01  234 567 890",
-                          hintStyle: GoogleFonts.archivo(
-                              color: grey,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
+                          hintStyle: TextStyle(
+                            color: grey,
+                            fontSize: 16,
+                             fontWeight: FontWeight.bold
+                          ),
                           contentPadding: EdgeInsets.all(10),
                         ),
                       ),
@@ -138,9 +143,10 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                           underline: Container(),
                           value: dropdownvalue,
                           style: TextStyle(
-                              color: grey,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
+                            color: grey,
+                            fontSize: 16,
+                             fontWeight: FontWeight.bold
+                          ),
                           items: items.map((String items) {
                             return DropdownMenuItem(
                               value: items,

@@ -1,6 +1,3 @@
-
-
-
 import 'dart:ui';
 
 import 'package:shoofi/Routes/routes.dart';
@@ -36,8 +33,11 @@ class _MyCategoryContainerState extends State<MyCategoryContainer> {
                 alignment: Alignment.bottomCenter,
                 child: Text(
                   widget.title,
-                  style: GoogleFonts.archivo(
-                      color: grey, fontSize: 12, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    color: grey,
+                    fontSize: 12,
+                     fontWeight: FontWeight.bold
+                  ),
                 ),
               ),
             ),

@@ -43,8 +43,7 @@ class _HomeTrendingScreenState extends State<HomeTrendingScreen>
                 ),
                 title: Text(
                   "Shoofi",
-                  style: GoogleFonts.archivo(
-                      fontSize: 30, color: black, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 30, color: black, fontWeight: FontWeight.bold ),
                 ),
                 actions: [
                   Icon(
@@ -69,10 +68,7 @@ class _HomeTrendingScreenState extends State<HomeTrendingScreen>
                         isExpanded: true,
                         underline: Container(),
                         value: dropdownvalue,
-                        style: TextStyle(
-                            color: black,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold),
+                        style: TextStyle(color: black, fontSize: 15, fontWeight: FontWeight.bold ),
                         items: items.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -89,10 +85,11 @@ class _HomeTrendingScreenState extends State<HomeTrendingScreen>
                 bottom: TabBar(
                     controller: _tabController,
                     labelColor: black,
-                    labelStyle: GoogleFonts.archivo(
+                    labelStyle: TextStyle(
                       fontSize: 14,
                       color: black,
-                      fontWeight: FontWeight.bold,
+                       fontWeight: FontWeight.bold
+                      
                     ),
                     indicatorColor: yellow,
                     tabs: [

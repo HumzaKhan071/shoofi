@@ -13,8 +13,11 @@ class ExtendRecommendedForYou extends StatelessWidget {
         backgroundColor: Colors.transparent,
         centerTitle: true,
         title: Text("Recommended for you",
-            style: GoogleFonts.archivo(
-                color: black, fontSize: 18, fontWeight: FontWeight.bold)),
+            style: TextStyle(
+              color: black,
+              fontSize: 18,
+               fontWeight: FontWeight.bold
+            )),
         leading: IconButton(
             onPressed: (() {
               Get.back();

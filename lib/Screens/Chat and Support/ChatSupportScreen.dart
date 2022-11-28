@@ -23,10 +23,11 @@ class ChatSupportScreen extends StatelessWidget {
                   contentPadding: EdgeInsets.only(left: 20, top: 10),
                   border: InputBorder.none,
                   hintText: "Write a comment",
-                  hintStyle: GoogleFonts.archivo(
+                  hintStyle: TextStyle(
                     color: grey,
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
+                      
                   ),
                   suffixIcon: Icon(Icons.send_outlined, color: yellow),
                 ),
@@ -51,8 +52,7 @@ class ChatSupportScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Chat and Support",
-          style: GoogleFonts.archivo(
-              color: black, fontSize: 14, fontWeight: FontWeight.w500),
+          style: TextStyle(color: black, fontSize: 14,   ),
         ),
       ),
       body: SingleChildScrollView(
@@ -92,7 +92,7 @@ class ChatSupportScreen extends StatelessWidget {
                             )),
                         child: Text(
                           "Hi Kitsbase, Let me know you need help and you can ask us any questions.",
-                          style: GoogleFonts.archivo(
+                          style: TextStyle(
                             color: black,
                             fontSize: 12,
                           ),
@@ -104,7 +104,7 @@ class ChatSupportScreen extends StatelessWidget {
                         bottom: 0,
                         child: Text(
                           "08:20 AM",
-                          style: GoogleFonts.archivo(
+                          style: TextStyle(
                             color: black,
                             fontSize: 12,
                           ),
@@ -137,7 +137,7 @@ class ChatSupportScreen extends StatelessWidget {
                               )),
                           child: Text(
                             "How to create a FinX Stock account?",
-                            style: GoogleFonts.archivo(
+                            style: TextStyle(
                               color: yellow,
                               fontSize: 12,
                             ),
@@ -148,7 +148,7 @@ class ChatSupportScreen extends StatelessWidget {
                         ),
                         Text(
                           "08:21 AM",
-                          style: GoogleFonts.archivo(
+                          style: TextStyle(
                             color: black,
                             fontSize: 12,
                           ),
@@ -183,7 +183,7 @@ class ChatSupportScreen extends StatelessWidget {
                             )),
                         child: Text(
                           "Open the FinX Stock app to get started and follow the steps. FinX Stock doesn’t charge a fee to create or maintain your FinX Stock account.",
-                          style: GoogleFonts.archivo(
+                          style: TextStyle(
                             color: black,
                             fontSize: 12,
                           ),
@@ -195,7 +195,7 @@ class ChatSupportScreen extends StatelessWidget {
                         bottom: 0,
                         child: Text(
                           "08:22 AM",
-                          style: GoogleFonts.archivo(
+                          style: TextStyle(
                             color: black,
                             fontSize: 12,
                           ),

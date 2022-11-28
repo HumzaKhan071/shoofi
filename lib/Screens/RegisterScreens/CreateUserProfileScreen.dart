@@ -31,8 +31,11 @@ class _CreateUserProfileScreenState extends State<CreateUserProfileScreen> {
         centerTitle: true,
         title: Text(
           "Who is watching?",
-          style: GoogleFonts.archivo(
-              color: black, fontSize: 14, fontWeight: FontWeight.w500),
+          style: TextStyle(
+            color: black,
+            fontSize: 14,
+             fontWeight: FontWeight.w500
+          ),
         ),
       ),
       body: Padding(

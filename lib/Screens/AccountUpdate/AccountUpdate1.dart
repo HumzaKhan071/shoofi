@@ -42,8 +42,11 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
               centerTitle: true,
               title: Text(
                 "Sign Up",
-                style: GoogleFonts.archivo(
-                    color: black, fontSize: 14, fontWeight: FontWeight.w500),
+                style: TextStyle(
+                  color: black,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500
+                ),
               ),
             ),
             body: SingleChildScrollView(
@@ -76,10 +79,11 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
                     ),
                     Text(
                       "Click to select avatar",
-                      style: GoogleFonts.archivo(
-                          color: black,
-                          fontSize: 13,
-                          fontWeight: FontWeight.w500),
+                      style: TextStyle(
+                        color: black,
+                        fontSize: 13,
+                        fontWeight: FontWeight.w500
+                      ),
                     ),
                     const SizedBox(
                       height: 10,
@@ -116,9 +120,10 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
                           underline: Container(),
                           value: dropdownvalue,
                           style: TextStyle(
-                              color: grey,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
+                            color: grey,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold
+                          ),
                           items: items.map((String items) {
                             return DropdownMenuItem(
                               value: items,
@@ -147,9 +152,10 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
                           underline: Container(),
                           value: dropdownvalue,
                           style: TextStyle(
-                              color: grey,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
+                            color: grey,
+                            fontSize: 16,
+                                                          fontWeight: FontWeight.bold
+                          ),
                           items: items.map((String items) {
                             return DropdownMenuItem(
                               value: items,
@@ -176,18 +182,17 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
                       leading: Icon(Icons.people),
                       title: Text(
                         "Profile Lock",
-                        style: GoogleFonts.archivo(
-                            color: black,
-                            fontSize: 13,
-                            fontWeight: FontWeight.w500),
+                        style: TextStyle(
+                          color: black,
+                          fontSize: 13,
+                           fontWeight: FontWeight.w500
+                        ),
                       ),
                     ),
                     MyButtonContainer(
                       text: "Update",
                       conColor: yellow,
-                      press: () {
-                      
-                      },
+                      press: () {},
                     ),
                     const SizedBox(
                       height: 10,

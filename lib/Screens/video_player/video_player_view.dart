@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:shoofi/Screens/video_player/video_player_card.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -32,7 +31,7 @@ class VideoPlayerView extends StatelessWidget {
           color: Colors.blueAccent,
           titleTextStyle: TextStyle(
             color: Colors.white,
-            fontWeight: FontWeight.w300,
+             fontWeight: FontWeight.w300,           
             fontSize: 20,
           ),
         ),
@@ -171,10 +170,11 @@ class _MyHomePageState extends State<MyHomePage> {
                           Flexible(
                             child: Text(
                               'Vivamus mattis sapien vel eros cursus a venenatis duiincidunt',
-                              style: GoogleFonts.archivo(
-                                  color: black,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                color: black,
+                                fontSize: 16,
+                                 fontWeight: FontWeight.bold
+                              ),
                             ),
                           ),
                         ],
@@ -189,24 +189,21 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           Text(
                             '1.5k views',
-                            style:
-                                GoogleFonts.archivo(color: grey, fontSize: 14),
+                            style: TextStyle(color: grey, fontSize: 14),
                           ),
                           SizedBox(
                             width: 10,
                           ),
                           Text(
                             '|',
-                            style:
-                                GoogleFonts.archivo(color: grey, fontSize: 14),
+                            style: TextStyle(color: grey, fontSize: 14),
                           ),
                           SizedBox(
                             width: 10,
                           ),
                           Text(
                             '26 Sept 2021',
-                            style:
-                                GoogleFonts.archivo(color: grey, fontSize: 14),
+                            style: TextStyle(color: grey, fontSize: 14),
                           ),
                         ],
                       ),
@@ -250,8 +247,9 @@ class _MyHomePageState extends State<MyHomePage> {
           message,
           textAlign: TextAlign.center,
           style: const TextStyle(
-            fontWeight: FontWeight.w300,
+           
             fontSize: 16.0,
+             fontWeight: FontWeight.w300
           ),
         ),
         backgroundColor: Colors.blueAccent,
@@ -281,8 +279,11 @@ moreOptions() {
           Image.asset("assets/Images/divider.png"),
           SizedBox(height: 20),
           Text("More Options",
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 24, fontWeight: FontWeight.bold)),
+              style: TextStyle(
+                color: black,
+                fontSize: 24,
+                 fontWeight: FontWeight.bold
+              )),
           SizedBox(height: 15),
           Divider(
             thickness: 1,

@@ -28,8 +28,11 @@ class VideoPlayerCard extends StatelessWidget {
               Flexible(
                 child: Text(
                   'Vivamus mattis sapien vel eros cursus a venenatis duiincidunt',
-                  style: GoogleFonts.archivo(
-                      color: black, fontSize: 16, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    color: black,
+                    fontSize: 16,
+                     fontWeight: FontWeight.bold
+                  ),
                 ),
               ),
               Icon(
@@ -45,21 +48,21 @@ class VideoPlayerCard extends StatelessWidget {
             children: [
               Text(
                 '1.5k views',
-                style: GoogleFonts.archivo(color: grey, fontSize: 14),
+                style: TextStyle(color: grey, fontSize: 14),
               ),
               SizedBox(
                 width: 10,
               ),
               Text(
                 '|',
-                style: GoogleFonts.archivo(color: grey, fontSize: 14),
+                style: TextStyle(color: grey, fontSize: 14),
               ),
               SizedBox(
                 width: 10,
               ),
               Text(
                 '26 Sept 2021',
-                style: GoogleFonts.archivo(color: grey, fontSize: 14),
+                style: TextStyle(color: grey, fontSize: 14),
               ),
             ],
           ),

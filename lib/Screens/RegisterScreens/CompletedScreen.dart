@@ -22,8 +22,11 @@ class CompletedScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Sign Up",
-          style: GoogleFonts.archivo(
-              color: black, fontSize: 14, fontWeight: FontWeight.w500),
+          style: TextStyle(
+            color: black,
+            fontSize: 14,
+              fontWeight: FontWeight.w500
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -44,10 +47,11 @@ class CompletedScreen extends StatelessWidget {
                 width: 293,
                 child: Center(
                   child: Text("Congratulation your signup is completed",
-                      style: GoogleFonts.archivo(
-                          color: black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500)),
+                      style: TextStyle(
+                        color: black,
+                        fontSize: 14,
+                         fontWeight: FontWeight.w500
+                      )),
                 ),
               ),
               SizedBox(
@@ -73,17 +77,19 @@ class CompletedScreen extends StatelessWidget {
                   children: [
                     Text(
                       "Enjoy your".toUpperCase(),
-                      style: GoogleFonts.archivo(
-                          color: black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        color: black,
+                        fontSize: 16,
+                         fontWeight: FontWeight.bold
+                      ),
                     ),
                     Text(
                       "90 Days free trail".toUpperCase(),
-                      style: GoogleFonts.archivo(
-                          color: black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        color: black,
+                        fontSize: 16,
+                         fontWeight: FontWeight.bold
+                      ),
                     ),
                   ],
                 )),

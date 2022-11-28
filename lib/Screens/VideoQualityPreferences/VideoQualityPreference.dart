@@ -21,8 +21,7 @@ class VideoQualityPreference extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Video Quality Preferences",
-          style: GoogleFonts.archivo(
-              color: black, fontSize: 14, fontWeight: FontWeight.w500),
+          style: TextStyle(color: black, fontSize: 14,   fontWeight: FontWeight.w500 ),
         ),
       ),
       body: SingleChildScrollView(
@@ -75,10 +74,10 @@ class _MyVPRowState extends State<MyVPRow> {
       children: [
         Text(
           widget.title,
-          style: GoogleFonts.archivo(
+          style: TextStyle(
             color: black,
             fontSize: 14,
-            fontWeight: FontWeight.w500,
+               fontWeight: FontWeight.w500
           ),
         ),
         Container(

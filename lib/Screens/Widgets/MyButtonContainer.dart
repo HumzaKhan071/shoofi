@@ -39,10 +39,11 @@ class MyButtonContainer extends StatelessWidget {
               imgPath != null ? SizedBox(width: 5) : SizedBox(),
               Text(
                 text,
-                style: GoogleFonts.archivo(
-                    color: textColor,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  color: textColor,
+                  fontSize: 16,
+                   fontWeight: FontWeight.bold
+                ),
               ),
             ],
           )),

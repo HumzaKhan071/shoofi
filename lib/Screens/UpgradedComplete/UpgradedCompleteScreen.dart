@@ -20,8 +20,11 @@ class UpgradedCompletedScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Sign Up",
-          style: GoogleFonts.archivo(
-              color: black, fontSize: 14, fontWeight: FontWeight.w500),
+          style: TextStyle(
+            color: black,
+            fontSize: 14,
+             fontWeight: FontWeight.w500
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -42,10 +45,11 @@ class UpgradedCompletedScreen extends StatelessWidget {
                 width: 293,
                 child: Center(
                   child: Text("Upgraded Succesfully",
-                      style: GoogleFonts.archivo(
-                          color: black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500)),
+                      style: TextStyle(
+                        color: black,
+                        fontSize: 14,
+                         fontWeight: FontWeight.w500
+                      )),
                 ),
               ),
               SizedBox(
@@ -71,17 +75,19 @@ class UpgradedCompletedScreen extends StatelessWidget {
                   children: [
                     Text(
                       "Congratulation".toUpperCase(),
-                      style: GoogleFonts.archivo(
-                          color: black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        color: black,
+                        fontSize: 16,
+                         fontWeight: FontWeight.bold
+                      ),
                     ),
                     Text(
                       "your subscription is upgraded".toUpperCase(),
-                      style: GoogleFonts.archivo(
-                          color: black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        color: black,
+                        fontSize: 16,
+                         fontWeight: FontWeight.bold
+                      ),
                     ),
                   ],
                 )),

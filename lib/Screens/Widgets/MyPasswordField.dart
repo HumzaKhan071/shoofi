@@ -37,8 +37,11 @@ class _MyPasswordFieldState extends State<MyPasswordField> {
                 valueObsecure ? Icons.visibility : Icons.visibility_off,
                 color: grey,
               )),
-          hintStyle: GoogleFonts.archivo(
-              color: grey, fontSize: 16, fontWeight: FontWeight.bold),
+          hintStyle: TextStyle(
+            color: grey,
+            fontSize: 16,
+             fontWeight: FontWeight.bold
+          ),
           contentPadding: EdgeInsets.all(10),
         ),
       ),

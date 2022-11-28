@@ -13,7 +13,6 @@ class HomeShortScreen extends StatelessWidget {
       children: [
         VideoApp(
           videoLink: videoLink,
-        
         ),
         Container(
           child: Padding(
@@ -41,10 +40,7 @@ class HomeShortScreen extends StatelessWidget {
                 SizedBox(height: Get.height * 0.04),
                 Text(
                   "Vivamus mattis sapien vel eros cursus, a venenatis duiincidunt",
-                  style: GoogleFonts.archivo(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16),
+                  style: TextStyle(color: Colors.white,  fontSize: 16, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 10),
                 Row(
@@ -53,20 +49,19 @@ class HomeShortScreen extends StatelessWidget {
                       opacity: 0.5,
                       child: Text(
                         "1,234,567 views",
-                        style: GoogleFonts.archivo(color: white, fontSize: 11),
+                        style: TextStyle(color: white, fontSize: 11),
                       ),
                     ),
                     SizedBox(width: 10),
                     Text(
                       "|",
-                      style: GoogleFonts.archivo(color: white, fontSize: 11),
+                      style: TextStyle(color: white, fontSize: 11),
                     ),
                     SizedBox(width: 10),
                     Opacity(
                       opacity: 0.5,
                       child: Text("September 1, 2020",
-                          style:
-                              GoogleFonts.archivo(color: white, fontSize: 11)),
+                          style: TextStyle(color: white, fontSize: 11)),
                     ),
                   ],
                 )

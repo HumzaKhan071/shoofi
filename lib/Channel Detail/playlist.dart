@@ -25,10 +25,11 @@ class ChannelPlaylist extends StatelessWidget {
                               children: [
                                 Text(
                                   controller.watchListTiles[index],
-                                  style: GoogleFonts.archivo(
-                                      color: black,
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.bold),
+                                  style: TextStyle(
+                                    color: black,
+                                    fontSize: 22,
+                                     fontWeight: FontWeight.bold
+                                  ),
                                 ),
                                 GestureDetector(
                                   onTap: () {
@@ -38,11 +39,12 @@ class ChannelPlaylist extends StatelessWidget {
                                   },
                                   child: Text(
                                     "view all",
-                                    style: GoogleFonts.archivo(
-                                        color: yellow,
-                                        fontSize: 13,
-                                        decoration: TextDecoration.underline,
-                                        fontWeight: FontWeight.bold),
+                                    style: TextStyle(
+                                      color: yellow,
+                                      fontSize: 13,
+                                      decoration: TextDecoration.underline,
+                                       fontWeight: FontWeight.bold
+                                    ),
                                   ),
                                 )
                               ]),

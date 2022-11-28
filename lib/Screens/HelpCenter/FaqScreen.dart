@@ -30,10 +30,11 @@ class FaqScreen extends StatelessWidget {
                 children: [
                   Text(
                     "What is shoofi?",
-                    style: GoogleFonts.archivo(
+                    style: TextStyle(
                       fontSize: 18,
                       color: black,
-                      fontWeight: FontWeight.bold,
+                       fontWeight: FontWeight.bold,
+                      
                     ),
                   ),
                   Icon(
@@ -48,7 +49,7 @@ class FaqScreen extends StatelessWidget {
               ),
               Text(
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                style: GoogleFonts.archivo(
+                style: TextStyle(
                   fontSize: 14,
                 ),
               )
@@ -86,10 +87,10 @@ class MyRow extends StatelessWidget {
       children: [
         Text(
           title,
-          style: GoogleFonts.archivo(
+          style: TextStyle(
             fontSize: 18,
             color: black,
-            fontWeight: FontWeight.bold,
+            
           ),
         ),
         Icon(Icons.arrow_drop_down, color: black)

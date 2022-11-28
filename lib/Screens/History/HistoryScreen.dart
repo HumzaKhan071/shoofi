@@ -23,28 +23,26 @@ class HistoryScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "History",
-          style: GoogleFonts.archivo(
+          style: TextStyle(
               color: black, fontSize: 14, fontWeight: FontWeight.w500),
         ),
       ),
-      body: Padding(
-        padding: EdgeInsets.all(8),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              LinearProgressIndicator(
-                value: 0.0,
-                backgroundColor: grey,
-                valueColor: AlwaysStoppedAnimation<Color>(yellow),
-              ),
-              ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: 5,
-                  itemBuilder: (context, index) {
-                    return VideoPlayerCard();
-                  }),
-            ],
-          ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            LinearProgressIndicator(
+              value: 0.0,
+              backgroundColor: grey,
+              valueColor: AlwaysStoppedAnimation<Color>(yellow),
+            ),
+            ListView.builder(
+                shrinkWrap: true,
+                itemCount: 5,
+                physics: NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) {
+                  return VideoPlayerCard();
+                }),
+          ],
         ),
       ),
     );

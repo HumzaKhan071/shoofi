@@ -28,8 +28,11 @@ class _RegisterScreenLocationState extends State<RegisterScreenLocation> {
         centerTitle: true,
         title: Text(
           "Sign Up",
-          style: GoogleFonts.archivo(
-              color: black, fontSize: 14, fontWeight: FontWeight.w500),
+          style: TextStyle(
+            color: black,
+            fontSize: 14,
+             fontWeight: FontWeight.w500
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -50,15 +53,17 @@ class _RegisterScreenLocationState extends State<RegisterScreenLocation> {
                 child: Column(
                   children: [
                     Text("This helps us find you more relevant content",
-                        style: GoogleFonts.archivo(
-                            color: black,
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold)),
+                        style: TextStyle(
+                          color: black,
+                          fontSize: 12,
+                           fontWeight: FontWeight.bold
+                        )),
                     Text("Select one or multiple countries",
-                        style: GoogleFonts.archivo(
-                            color: black,
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold)),
+                        style: TextStyle(
+                          color: black,
+                          fontSize: 12,
+                           fontWeight: FontWeight.bold
+                        )),
                   ],
                 ),
               ),
@@ -79,8 +84,11 @@ class _RegisterScreenLocationState extends State<RegisterScreenLocation> {
                   border: InputBorder.none,
                   contentPadding: EdgeInsets.all(7),
                   hintText: "Search",
-                  hintStyle: GoogleFonts.archivo(
-                      color: black, fontSize: 16, fontWeight: FontWeight.bold),
+                  hintStyle: TextStyle(
+                    color: black,
+                    fontSize: 16,
+                     fontWeight: FontWeight.bold
+                  ),
                 )),
               ),
               SizedBox(

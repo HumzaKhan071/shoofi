@@ -39,8 +39,11 @@ class LoginScreen extends StatelessWidget {
               },
               child: Text(
                 "Forgot Password?",
-                style: GoogleFonts.archivo(
-                    color: blue, fontSize: 16, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  color: blue,
+                  fontSize: 16,
+                   fontWeight: FontWeight.bold
+                ),
               )),
           Padding(
             padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
@@ -52,34 +55,34 @@ class LoginScreen extends StatelessWidget {
           ),
           Text.rich(TextSpan(
               text: "Is it first time for you to? ",
-              style: GoogleFonts.archivo(color: black, fontSize: 16),
+              style: TextStyle(color: black, fontSize: 16),
               children: [
                 TextSpan(
                     text: "Sign in",
-                    style: GoogleFonts.archivo(
-                        color: black,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      color: black,
+                      fontSize: 16,
+                    ),
                     recognizer: TapGestureRecognizer()..onTap = (() {})),
               ])),
           SizedBox(height: 5),
           Text.rich(TextSpan(
               text: "OR ",
-              style: GoogleFonts.archivo(color: black, fontSize: 16),
+              style: TextStyle(color: black, fontSize: 16),
               children: [
                 TextSpan(
                     text: "Register Now ",
-                    style: GoogleFonts.archivo(
-                        color: yellow,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      color: yellow,
+                      fontSize: 16,
+                    ),
                     recognizer: TapGestureRecognizer()
                       ..onTap = (() {
                         Get.to(RegisterScreen());
                       })),
                 TextSpan(
                   text: "with",
-                  style: GoogleFonts.archivo(color: black, fontSize: 16),
+                  style: TextStyle(color: black, fontSize: 16),
                 ),
               ])),
           SizedBox(height: 15),

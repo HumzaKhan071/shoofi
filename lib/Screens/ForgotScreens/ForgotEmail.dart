@@ -24,8 +24,7 @@ class ForgotEmail extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Forgot Password",
-          style: GoogleFonts.archivo(
-              color: black, fontSize: 14, fontWeight: FontWeight.w500),
+          style: TextStyle(color: black, fontSize: 14,fontWeight: FontWeight.w500,   ),
         ),
       ),
       body: SingleChildScrollView(
@@ -47,18 +46,19 @@ class ForgotEmail extends StatelessWidget {
                   children: [
                     Text(
                       "Please enter your email address or mobile number",
-                      style: GoogleFonts.archivo(
+                      style: TextStyle(
                         fontSize: 14,
                         color: black,
-                        fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w500,
                       ),
                     ),
                     Text(
                       "to search for your account.",
-                      style: GoogleFonts.archivo(
+                      style: TextStyle(
                         fontSize: 14,
                         color: black,
                         fontWeight: FontWeight.w500,
+                          
                       ),
                     ),
                   ],
@@ -86,8 +86,11 @@ class ForgotEmail extends StatelessWidget {
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: "Email or phone",
-                    hintStyle: GoogleFonts.archivo(
-                        color: grey, fontSize: 16, fontWeight: FontWeight.bold),
+                    hintStyle: TextStyle(
+                      color: grey,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
                     contentPadding: EdgeInsets.all(10),
                   ),
                 ),
@@ -109,7 +112,7 @@ class ForgotEmail extends StatelessWidget {
                 },
               ),
               SizedBox(height: Get.height * 0.1),
-            Agreements()
+              Agreements()
             ],
           ),
         ),

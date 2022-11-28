@@ -22,8 +22,7 @@ class DeleteAccountScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Delete my Account",
-          style: GoogleFonts.archivo(
-              color: black, fontSize: 14, fontWeight: FontWeight.w500),
+          style: TextStyle(color: black, fontSize: 14, fontWeight: FontWeight.w500,  ),
         ),
       ),
       body: Padding(
@@ -42,7 +41,7 @@ class DeleteAccountScreen extends StatelessWidget {
               child: Text(
                 "Are you Sure you want to delete your account",
                 textAlign: TextAlign.center,
-                style: GoogleFonts.archivo(
+                style: TextStyle(
                   color: black,
                   fontSize: 14,
                   fontWeight: FontWeight.bold,

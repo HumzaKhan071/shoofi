@@ -46,8 +46,11 @@ class _HelpCenterState extends State<HelpCenter>
           centerTitle: true,
           title: Text(
             "Help Center",
-            style: GoogleFonts.archivo(
-                color: black, fontSize: 14, fontWeight: FontWeight.w500),
+            style: TextStyle(
+              color: black,
+              fontSize: 14,
+               fontWeight: FontWeight.w500,
+            ),
           ),
         ),
         body: SingleChildScrollView(
@@ -64,8 +67,9 @@ class _HelpCenterState extends State<HelpCenter>
                   controller: _tabController,
                   indicatorColor: yellow,
                   labelColor: black,
-                  labelStyle: GoogleFonts.archivo(
-                      fontSize: 14, fontWeight: FontWeight.w500),
+                  labelStyle: TextStyle(
+                    fontSize: 14,
+                  ),
                   unselectedLabelColor: grey,
                   tabs: [
                     Tab(
