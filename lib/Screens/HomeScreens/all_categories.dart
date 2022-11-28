@@ -1,77 +1,52 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/controllers/Home/trending_controller.dart';
 
 class AllCategorySheet extends StatelessWidget {
   const AllCategorySheet({super.key});
 
   @override
   Widget build(BuildContext context) {
+    List<String> texts = [
+      "Action",
+      "Music",
+      "Entertainment",
+      "Sports",
+      "Account",
+    ];
     return Scaffold(
-        body: Container(
-      color: Colors.white.withOpacity(0.8),
-      child: Center(
-        child: Column(
-          children: [
-            SizedBox(height: 20),
-            Text(
-              "All Categories",
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 35),
-            Wrap(
-              direction: Axis.vertical,
-              crossAxisAlignment: WrapCrossAlignment.center,
-              spacing: 21,
-              children: [
-                Text(
-                  "Action",
-                  style: GoogleFonts.archivo(color: black, fontSize: 16),
+        body: SafeArea(
+      child: Container(
+        color: Colors.white.withOpacity(0.8),
+        child: Center(
+          child: Column(
+            children: [
+              SizedBox(height: 20),
+              Text(
+                "All Categories",
+                style: GoogleFonts.archivo(
+                    color: black, fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Expanded(
+                      child: ListView.builder(
+                          itemCount: 200,
+                          itemBuilder: (context, index) {
+                            return Center(child: Text("data"));
+                          }),
+                    ),
+                    InkWell(
+                        onTap: () {
+                          Get.back();
+                        },
+                        child: Image.asset("assets/Images/circle_cross.png")),
+                  ],
                 ),
-                Text(
-                  "Music",
-                  style: GoogleFonts.archivo(color: black, fontSize: 16),
-                ),
-                Text(
-                  "Entertainment",
-                  style: GoogleFonts.archivo(color: black, fontSize: 16),
-                ),
-                Text(
-                  "Sports",
-                  style: GoogleFonts.archivo(color: black, fontSize: 16),
-                ),
-                Text(
-                  "Gaming",
-                  style: GoogleFonts.archivo(color: black, fontSize: 16),
-                ),
-                Text(
-                  "Comedy",
-                  style: GoogleFonts.archivo(color: black, fontSize: 16),
-                ),
-                Text(
-                  "Vlogs",
-                  style: GoogleFonts.archivo(color: black, fontSize: 16),
-                ),
-                Text(
-                  "Motivation",
-                  style: GoogleFonts.archivo(color: black, fontSize: 16),
-                ),
-                Text(
-                  "Relegious",
-                  style: GoogleFonts.archivo(color: black, fontSize: 16),
-                ),
-                Text(
-                  "Health & Fitness",
-                  style: GoogleFonts.archivo(color: black, fontSize: 16),
-                ),
-                Text(
-                  "Clothing",
-                  style: GoogleFonts.archivo(color: black, fontSize: 16),
-                ),
-              ],
-            ),
-            SizedBox(height: 20),
-            Image.asset("assets/Images/circle_cross.png")
-          ],
+              )
+            ],
+          ),
         ),
       ),
     ));

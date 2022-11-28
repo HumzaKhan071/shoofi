@@ -1,5 +1,6 @@
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/controllers/ChannelDetails/playlist_controller.dart';
+import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
 
 class ChannelPlaylist extends StatelessWidget {
   const ChannelPlaylist({super.key});
@@ -7,9 +8,11 @@ class ChannelPlaylist extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     HomeWatchListControler controller = Get.find(tag: "watchlist");
+    HomeBottomNavigationBarController homeBottomNavigationBarController =
+        Get.find(tag: "bottomNavigation");
     return Scaffold(
       body: Obx(() {
-        return !(controller.extended.value)
+        return !(homeBottomNavigationBarController.extended.value)
             ? ListView.builder(
                 itemCount: 4,
                 itemBuilder: (context, index) {
@@ -34,7 +37,8 @@ class ChannelPlaylist extends StatelessWidget {
                                   onTap: () {
                                     controller.selectedTile =
                                         controller.watchListTiles[index];
-                                    controller.extended.value = true;
+                                    homeBottomNavigationBarController
+                                        .extended.value = true;
                                   },
                                   child: Text(
                                     "view all",

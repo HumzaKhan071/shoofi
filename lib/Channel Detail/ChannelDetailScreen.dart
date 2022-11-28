@@ -4,6 +4,7 @@ import 'package:shoofi/Channel%20Detail/videos.dart';
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/video_player/videos_main_page.dart';
 import 'package:shoofi/controllers/ChannelDetails/playlist_controller.dart';
+import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
 
 class ChanneledDetail extends StatefulWidget {
   const ChanneledDetail({super.key});
@@ -34,11 +35,12 @@ class _ChanneledDetailState extends State<ChanneledDetail>
   Widget build(BuildContext context) {
     HomeWatchListControler watchListControler =
         Get.put(HomeWatchListControler(), tag: "watchlist");
+    HomeBottomNavigationBarController homeBottomNavigationBarController =
+        Get.find(tag: "bottomNavigation");
     return WillPopScope(
       onWillPop: () async {
-        if ((watchListControler.extended.value) &&
-            (_tabController?.index == 2)) {
-          watchListControler.extended.value = false;
+        if (homeBottomNavigationBarController.extended.value) {
+          homeBottomNavigationBarController.extended.value = false;
           return false;
         }
         return true;

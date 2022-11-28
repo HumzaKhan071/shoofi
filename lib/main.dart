@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/HomeScreens/all_categories.dart';
 
 import 'Screens/SplashScreens/splash_screen.dart';
 

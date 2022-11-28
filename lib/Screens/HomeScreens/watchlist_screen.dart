@@ -1,7 +1,11 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
 
 class HomeWatchlistScreen extends StatelessWidget {
-  HomeWatchListControler controler = Get.find(tag: "watchlist");
+  HomeWatchListControler controler =
+      Get.put(HomeWatchListControler(), tag: "watchlist");
+  HomeBottomNavigationBarController homeBottomNavigationBarController =
+      Get.find(tag: "bottomNavigation");
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -9,13 +13,13 @@ class HomeWatchlistScreen extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: IconButton(
-          onPressed: () {
-            Get.back();
-          
-          },
-      icon:Icon(    Icons.arrow_back_ios,
-          color: black,
-        )),
+            onPressed: () {
+              Get.back();
+            },
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: black,
+            )),
         title: Image.asset(
           "assets/Images/logo5.png",
         ),
@@ -50,7 +54,7 @@ class HomeWatchlistScreen extends StatelessWidget {
         ],
       ),
       body: Obx(() {
-        return !(controler.extended.value)
+        return !(homeBottomNavigationBarController.extended.value)
             ? ListView.builder(
                 itemCount: 4,
                 itemBuilder: (context, index) {
@@ -75,7 +79,8 @@ class HomeWatchlistScreen extends StatelessWidget {
                                   onTap: () {
                                     controler.selectedTile =
                                         controler.watchListTiles[index];
-                                    controler.extended.value = true;
+                                    homeBottomNavigationBarController
+                                        .extended.value = true;
                                   },
                                   child: Text(
                                     "view all",

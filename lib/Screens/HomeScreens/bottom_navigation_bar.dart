@@ -1,4 +1,6 @@
+import 'package:shoofi/Account/MyAccount.dart';
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/HomeScreens/reels.dart';
 import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
 
 class HomeBottomNavigationBar extends StatelessWidget {
@@ -6,15 +8,20 @@ class HomeBottomNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    HomeWatchListControler watchListControler =
-        Get.put(HomeWatchListControler(), tag: "watchlist");
     HomeBottomNavigationBarController controller =
-       Get.put( HomeBottomNavigationBarController(), tag: "bottomNavigation");
+        Get.put(HomeBottomNavigationBarController(), tag: "bottomNavigation");
+    List<Widget> screens = [
+      HomeTrendingScreen(),
+      Reels(),
+      HomeSearchScreen(),
+      HomeWatchlistScreen(),
+      MyAccount(),
+    ];
+
     return WillPopScope(
       onWillPop: () async {
-        if (watchListControler.extended.value &&
-            ((controller.currentIndex.value == 3) || (controller.currentIndex.value == 1))) {
-          watchListControler.extended.value = false;
+        if (controller.extended.value) {
+          controller.extended.value = false;
           return false;
         }
         if (controller.currentIndex.value == 1) {
@@ -84,7 +91,7 @@ class HomeBottomNavigationBar extends StatelessWidget {
                 : SizedBox(),
           ),
           body: Obx(
-            () => controller.screens[controller.currentIndex.value],
+            () => screens[controller.currentIndex.value],
           )),
     );
   }

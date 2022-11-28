@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
       _controller.toggleCard();
     });
     Timer(Duration(seconds: 4), () {
-      Get.offAll(GetStarted());
+      Get.offAll(() => GetStarted());
     });
   }
 
