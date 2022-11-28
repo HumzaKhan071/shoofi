@@ -11,7 +11,9 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
+    final heroController = HeroController();
     return GetMaterialApp(
+      navigatorObservers: [heroController],
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
