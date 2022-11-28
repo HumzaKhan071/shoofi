@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Archivo",
       ),
       debugShowCheckedModeBanner: false,
-      home: PaymentsScreen(),
+      home: SplashScreen(),
     );
   }
 }
