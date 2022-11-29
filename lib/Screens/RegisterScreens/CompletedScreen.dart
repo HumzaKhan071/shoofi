@@ -1,8 +1,8 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/controllers/RegisterControllers/completed_screen.dart';
 
 class CompletedScreen extends StatelessWidget {
-  CompletedScreenController controller = CompletedScreenController();
+  const CompletedScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,10 +23,7 @@ class CompletedScreen extends StatelessWidget {
         title: Text(
           "Sign Up",
           style: TextStyle(
-            color: black,
-            fontSize: 14,
-              fontWeight: FontWeight.w500
-          ),
+              color: black, fontSize: 14, fontWeight: FontWeight.w500),
         ),
       ),
       body: SingleChildScrollView(
@@ -48,10 +45,9 @@ class CompletedScreen extends StatelessWidget {
                 child: Center(
                   child: Text("Congratulation your signup is completed",
                       style: TextStyle(
-                        color: black,
-                        fontSize: 14,
-                         fontWeight: FontWeight.w500
-                      )),
+                          color: black,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500)),
                 ),
               ),
               SizedBox(
@@ -78,18 +74,16 @@ class CompletedScreen extends StatelessWidget {
                     Text(
                       "Enjoy your".toUpperCase(),
                       style: TextStyle(
-                        color: black,
-                        fontSize: 16,
-                         fontWeight: FontWeight.bold
-                      ),
+                          color: black,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold),
                     ),
                     Text(
                       "90 Days free trail".toUpperCase(),
                       style: TextStyle(
-                        color: black,
-                        fontSize: 16,
-                         fontWeight: FontWeight.bold
-                      ),
+                          color: black,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold),
                     ),
                   ],
                 )),
