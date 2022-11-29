@@ -1,3 +1,4 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Routes/routes.dart';
 
 class VerifyScreen extends StatefulWidget {
@@ -30,10 +31,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
         title: Text(
           "Sign Up",
           style: TextStyle(
-            color: black,
-            fontSize: 14,
-             fontWeight: FontWeight.w500
-          ),
+              color: black, fontSize: 14, fontWeight: FontWeight.w500),
         ),
       ),
       body: SingleChildScrollView(
@@ -153,11 +151,8 @@ class MyTextFieldContainer extends StatelessWidget {
         textAlign: TextAlign.center,
         decoration: InputDecoration(
           hintText: "-",
-          hintStyle: TextStyle(
-            color: grey,
-            fontSize: 14,
-             fontWeight: FontWeight.w500
-          ),
+          hintStyle:
+              TextStyle(color: grey, fontSize: 14, fontWeight: FontWeight.w500),
         ),
       ),
     );

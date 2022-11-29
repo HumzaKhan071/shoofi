@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/HomeScreens/bgVideo.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 
 class HomeShortScreen extends StatelessWidget {
   final String videoLink;
@@ -26,10 +27,10 @@ class HomeShortScreen extends StatelessWidget {
                     direction: Axis.vertical,
                     spacing: Get.height * 0.05,
                     children: [
-                      Image.asset("assets/Images/moreHorizontalIcon.png"),
-                      Image.asset("assets/Images/addListIcon.png"),
-                      Image.asset("assets/Images/shareForwardIcon.png"),
-                      Image.asset("assets/Images/dislikeIcon.png"),
+                      Image.asset(ImageConstant.moreHorizontalIcon),
+                      Image.asset(ImageConstant.addListicon),
+                      Image.asset(ImageConstant.shareForwardIcon),
+                      Image.asset(ImageConstant.disLikeicon),
                       Image.asset(
                         "assets/Images/likeIcon.png",
                         color: Colors.white,

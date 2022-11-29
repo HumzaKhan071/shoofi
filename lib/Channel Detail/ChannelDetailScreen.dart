@@ -1,8 +1,10 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Channel%20Detail/About.dart';
 import 'package:shoofi/Channel%20Detail/playlist.dart';
 import 'package:shoofi/Channel%20Detail/videos.dart';
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/video_player/videos_main_page.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 import 'package:shoofi/controllers/ChannelDetails/playlist_controller.dart';
 
 class ChanneledDetail extends StatefulWidget {
@@ -51,7 +53,7 @@ class _ChanneledDetailState extends State<ChanneledDetail>
                 appBar: AppBar(
                   backgroundColor: Colors.white,
                   elevation: 0,
-                  title: Image.asset("assets/Images/logo3.png"),
+                  title: SvgPicture.asset(ImageConstant.logo3),
                   leading: IconButton(
                       onPressed: () {
                         Get.back();

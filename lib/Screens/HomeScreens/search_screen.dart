@@ -1,4 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 
 class HomeSearchScreen extends StatefulWidget {
   const HomeSearchScreen({super.key});
@@ -37,7 +38,7 @@ class _HomeSearchScreenState extends State<HomeSearchScreen> {
                   child: Column(
                     children: [
                       SizedBox(height: 10),
-                      Image.asset("assets/Images/divider.png"),
+                      Image.asset(ImageConstant.divider),
                       SizedBox(height: 20),
                       Text("Filters",
                           style: TextStyle(

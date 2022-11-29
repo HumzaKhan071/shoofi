@@ -1,6 +1,8 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/HomeScreens/all_categories.dart';
 import 'package:shoofi/Screens/youtube_home/youtube_home.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 
 class HomeTrendingScreen extends StatefulWidget {
   const HomeTrendingScreen({super.key});
@@ -40,7 +42,7 @@ class _HomeTrendingScreenState extends State<HomeTrendingScreen>
                 leadingWidth: 100,
                 leading: Padding(
                   padding: const EdgeInsets.only(left: 15.0),
-                  child: Image.asset("assets/Images/logo3.png"),
+                  child: SvgPicture.asset(ImageConstant.logo3),
                 ),
                 actions: [
                   Icon(

@@ -1,3 +1,4 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/controllers/ForgotControllers/forgot_email_controller.dart';
 
@@ -68,10 +69,7 @@ class ForgotEmail extends StatelessWidget {
               Container(
                 height: 192,
                 width: 154,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage(
-                            "assets/Images/Forgot Password Illustration.png"))),
+               child: SvgPicture.asset("assets/SvgPictures/Forgot Password Illustration.svg"),
               ),
               SizedBox(height: 20),
               Container(

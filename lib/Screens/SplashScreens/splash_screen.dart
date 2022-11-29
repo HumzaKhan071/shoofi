@@ -1,5 +1,6 @@
 import 'package:flip_card/flip_card.dart';
 import 'package:flip_card/flip_card_controller.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Routes/routes.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -31,8 +32,8 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
           child: FlipCard(
               controller: _controller,
-              front: Image.asset("assets/Images/logo1.png"),
-              back: Image.asset("assets/Images/logo2.png"))),
+              front: SvgPicture.asset("assets/SvgPictures/logo1.svg"),
+              back: SvgPicture.asset("assets/SvgPictures/logo2.svg"))),
     );
   }
 }

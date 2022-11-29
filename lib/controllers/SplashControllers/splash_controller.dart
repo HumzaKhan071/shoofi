@@ -1,7 +1,7 @@
 import 'package:shoofi/Routes/routes.dart';
 
 class SplashController extends GetxController {
-  String imgPath = "assets/Images/logo1.png";
+  String imgPath = "assets/SvgPictures/logo1.svg";
 
   @override
   void onInit() {
@@ -15,7 +15,7 @@ class SplashController extends GetxController {
   }
 
   updateImage() {
-    imgPath = "assets/Images/logo2.png";
+    imgPath = "assets/SvgPictures/logo2.svg";
     update();
   }
 }

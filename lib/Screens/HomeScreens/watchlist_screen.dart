@@ -1,4 +1,6 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 
 class HomeWatchlistScreen extends StatelessWidget {
   HomeWatchListControler controler = Get.find(tag: "watchlist");
@@ -16,8 +18,8 @@ class HomeWatchlistScreen extends StatelessWidget {
               Icons.arrow_back_ios,
               color: black,
             )),
-        title: Image.asset(
-          "assets/Images/logo5.png",
+        title: SvgPicture.asset(
+          ImageConstant.logo3,
         ),
         actions: [
           Icon(
@@ -34,10 +36,9 @@ class HomeWatchlistScreen extends StatelessWidget {
                     underline: Container(),
                     value: controler.dropdownvalue.value,
                     style: TextStyle(
-                      color: black,
-                      fontSize: 15,
-                       fontWeight: FontWeight.bold
-                    ),
+                        color: black,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold),
                     items: controler.items.map((String item) {
                       return DropdownMenuItem(
                         value: item,
@@ -68,10 +69,9 @@ class HomeWatchlistScreen extends StatelessWidget {
                                 Text(
                                   controler.watchListTiles[index],
                                   style: TextStyle(
-                                    color: black,
-                                    fontSize: 22,
-                                     fontWeight: FontWeight.bold
-                                  ),
+                                      color: black,
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.bold),
                                 ),
                                 GestureDetector(
                                   onTap: () {
@@ -82,11 +82,10 @@ class HomeWatchlistScreen extends StatelessWidget {
                                   child: Text(
                                     "view all",
                                     style: TextStyle(
-                                      color: yellow,
-                                      fontSize: 13,
-                                      decoration: TextDecoration.underline,
-                                       fontWeight: FontWeight.bold
-                                    ),
+                                        color: yellow,
+                                        fontSize: 13,
+                                        decoration: TextDecoration.underline,
+                                        fontWeight: FontWeight.bold),
                                   ),
                                 )
                               ]),

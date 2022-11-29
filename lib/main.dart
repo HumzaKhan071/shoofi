@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Archivo",
       ),
       debugShowCheckedModeBanner: false,
-      home: HomeBottomNavigationBar(),
+      home: SplashScreen()
     );
   }
 }

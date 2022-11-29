@@ -1,5 +1,6 @@
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/Widgets/PaymentCardInfo.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 import 'package:shoofi/controllers/BillingAndPaymentController/billing_payment_controller.dart';
 
 class BillingPaymentScreen extends StatelessWidget {
@@ -166,8 +167,8 @@ class BillingPaymentScreen extends StatelessWidget {
                             !controller.isBillingEnabled.value;
                       },
                       icon: controller.isBillingEnabled.value
-                          ? Image.asset("assets/Images/arrow_upward.png")
-                          : Image.asset("assets/Images/arrow_downward.png")))
+                          ? Image.asset(ImageConstant.arrowForward)
+                          : Image.asset(ImageConstant.arrowDownward)))
                 ],
               ),
               SizedBox(height: 10),

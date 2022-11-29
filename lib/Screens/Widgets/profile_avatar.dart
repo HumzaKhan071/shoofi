@@ -4,6 +4,8 @@ class ProfileAvatar extends StatelessWidget {
   final String? backgroundImagePath;
   final String title;
   final double radius;
+  final Color iconColor;
+  final double iconSize;
   final void Function() onTap;
   const ProfileAvatar({
     Key? key,
@@ -11,6 +13,7 @@ class ProfileAvatar extends StatelessWidget {
     this.title = "Add Profile",
     required this.onTap,
     this.radius = 50,
+    this.iconColor = yellow,  this.iconSize = 40,
   }) : super(key: key);
 
   @override
@@ -28,18 +31,15 @@ class ProfileAvatar extends StatelessWidget {
               child: backgroundImagePath == null
                   ? Icon(
                       Icons.add,
-                      color: yellow,
-                      size: 40,
+                      color: iconColor,
+                      size: iconSize,
                     )
                   : SizedBox()),
           SizedBox(height: 5),
           Text(
             title,
             style: TextStyle(
-              color: black,
-              fontSize: 14,
-               fontWeight: FontWeight.bold
-            ),
+                color: black, fontSize: 14, fontWeight: FontWeight.bold),
           )
         ],
       ),

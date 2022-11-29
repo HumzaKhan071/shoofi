@@ -1,4 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 
 class AllCategorySheet extends StatelessWidget {
   const AllCategorySheet({super.key});
@@ -73,7 +74,7 @@ class AllCategorySheet extends StatelessWidget {
               ],
             ),
             SizedBox(height: 20),
-            Image.asset("assets/Images/circle_cross.png")
+            Image.asset(ImageConstant.circleCross)
           ],
         ),
       ),

@@ -1,4 +1,7 @@
+import 'package:shoofi/Account/MyAccount.dart';
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/HomeScreens/reels.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
 
 class HomeBottomNavigationBar extends StatelessWidget {
@@ -10,6 +13,13 @@ class HomeBottomNavigationBar extends StatelessWidget {
         Get.put(HomeWatchListControler(), tag: "watchlist");
     HomeBottomNavigationBarController controller =
        Get.put( HomeBottomNavigationBarController(), tag: "bottomNavigation");
+       List<Widget> screens = [
+    HomeTrendingScreen(),
+    Reels(),
+    HomeSearchScreen(),
+    HomeWatchlistScreen(),
+    MyAccount(),
+  ];
     return WillPopScope(
       onWillPop: () async {
         if (watchListControler.extended.value &&
@@ -31,7 +41,9 @@ class HomeBottomNavigationBar extends StatelessWidget {
                     items: <BottomNavigationBarItem>[
                       BottomNavigationBarItem(
                           icon: Image.asset(
-                            "assets/Images/homeTrendingIcon.png",
+
+                            ImageConstant.homeTrendingicon
+                            ,
                             color: controller.currentIndex.value == 0
                                 ? yellow
                                 : null,
@@ -39,7 +51,7 @@ class HomeBottomNavigationBar extends StatelessWidget {
                           label: "Trending"),
                       BottomNavigationBarItem(
                           icon: Image.asset(
-                            "assets/Images/homeShortIcon.png",
+                             ImageConstant.homeShorticon,
                             color: controller.currentIndex.value == 1
                                 ? yellow
                                 : null,
@@ -47,7 +59,7 @@ class HomeBottomNavigationBar extends StatelessWidget {
                           label: "Shorts"),
                       BottomNavigationBarItem(
                           icon: Image.asset(
-                            "assets/Images/homeSearchIcon.png",
+                             ImageConstant.homeSearchicon,
                             color: controller.currentIndex.value == 2
                                 ? yellow
                                 : null,
@@ -55,7 +67,7 @@ class HomeBottomNavigationBar extends StatelessWidget {
                           label: "Search"),
                       BottomNavigationBarItem(
                           icon: Image.asset(
-                            "assets/Images/HomeWatchlistIcon.png",
+                             ImageConstant.homeWatchlisticon,
                             color: controller.currentIndex.value == 3
                                 ? yellow
                                 : null,
@@ -84,7 +96,7 @@ class HomeBottomNavigationBar extends StatelessWidget {
                 : SizedBox(),
           ),
           body: Obx(
-            () => controller.screens[controller.currentIndex.value],
+            () => screens[controller.currentIndex.value],
           )),
     );
   }

@@ -4,6 +4,7 @@ import 'package:shoofi/Screens/GeneralSetting/GeneralSettingScreen.dart';
 import 'package:shoofi/Screens/History/HistoryScreen.dart';
 import 'package:shoofi/Screens/VideoQualityPreferences/VideoQualityPreference.dart';
 import 'package:shoofi/Screens/Widgets/customAppBar.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 
 class AppSetting extends StatelessWidget {
   const AppSetting({super.key});
@@ -25,7 +26,7 @@ class AppSetting extends StatelessWidget {
             valueColor: AlwaysStoppedAnimation<Color>(yellow),
           ),
           ListTile(
-            leading: Image.asset("assets/Images/appSettingIcon1.png"),
+            leading: Image.asset(ImageConstant.appSettingicon1),
             onTap: () {
               Get.to(GeneralSettingScreen());
             },
@@ -39,7 +40,7 @@ class AppSetting extends StatelessWidget {
             trailing: Icon(Icons.arrow_forward_ios_rounded),
           ),
           ListTile(
-            leading: Image.asset("assets/Images/appSettingIcon2.png"),
+            leading: Image.asset(ImageConstant.appSettingicon2),
             onTap: () {
               Get.to(VideoQualityPreference());
             },
@@ -53,7 +54,7 @@ class AppSetting extends StatelessWidget {
             trailing: Icon(Icons.arrow_forward_ios_rounded),
           ),
           ListTile(
-            leading: Image.asset("assets/Images/appSettingIcon3.png"),
+            leading: Image.asset(ImageConstant.appSettingicon3),
             onTap: () {
               Get.to(HistoryScreen());
             },
@@ -67,7 +68,7 @@ class AppSetting extends StatelessWidget {
             trailing: Icon(Icons.arrow_forward_ios_rounded),
           ),
           ListTile(
-            leading: Image.asset("assets/Images/appSettingIcon4.png"),
+            leading: Image.asset(ImageConstant.appSettingicon4),
             onTap: () {
               Get.to(PrivacyScreen());
             },
@@ -84,7 +85,7 @@ class AppSetting extends StatelessWidget {
             onTap: () {
               Get.to(BillingPaymentScreen());
             },
-            leading: Image.asset("assets/Images/appSettingIcon5.png"),
+            leading: Image.asset(ImageConstant.appSettingicon5),
             title: Text("Billing and payments"),
             trailing: Icon(Icons.arrow_forward_ios_rounded),
           ),
@@ -92,7 +93,7 @@ class AppSetting extends StatelessWidget {
             onTap: () {
               Get.to(ChatSupportScreen());
             },
-            leading: Image.asset("assets/Images/appSettingIcon6.png"),
+            leading: Image.asset(ImageConstant.appSettingicon6),
             title: Text(
               "Chat and support",
               style: TextStyle(
@@ -106,7 +107,7 @@ class AppSetting extends StatelessWidget {
             onTap: () {
               Get.to(UserAgreementScreen());
             },
-            leading: Image.asset("assets/Images/appSettingIcon7.png"),
+            leading: Image.asset(ImageConstant.appSettingicon7),
             title: Text(
               "About",
               style: TextStyle(
