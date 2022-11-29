@@ -76,15 +76,32 @@ class _VerifyScreenState extends State<VerifyScreen> {
               SizedBox(
                 height: 30,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  MyTextFieldContainer(),
-                  MyTextFieldContainer(),
-                  MyTextFieldContainer(),
-                  MyTextFieldContainer(),
-                ],
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //   children: [
+              //     MyTextFieldContainer(),
+              //     MyTextFieldContainer(),
+              //     MyTextFieldContainer(),
+              // MyTextFieldContainer(),
+              //   ],
+              // ),
+              Pinput(
+                preFilledWidget: Text(
+                  "--",
+                  style: TextStyle(color: Colors.grey),
+                ),
+                autofocus: true,
+                showCursor: false,
+                defaultPinTheme: PinTheme(
+                    height: 60,
+                    width: 60,
+                    margin: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        border: Border.all(color: grey),
+                        color: Colors.white)),
               ),
+
               SizedBox(
                 height: 30,
               ),

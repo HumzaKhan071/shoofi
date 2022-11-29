@@ -19,16 +19,17 @@ class _MyCountryListState extends State<MyCountryList> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Row(children: [
-          CircleAvatar(
-            radius: 15,
-            backgroundImage: AssetImage(widget.countryFlag),
-          ),
+          Text(widget.countryFlag),
           SizedBox(
             width: 10,
           ),
-          Text(widget.countryName,
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 16, fontWeight: FontWeight.bold)),
+          RichText(
+            overflow: TextOverflow.ellipsis,
+            strutStyle: StrutStyle(fontSize: 14.0),
+            text: TextSpan(
+                style: TextStyle(color: Colors.black, fontSize: 14),
+                text: widget.countryName),
+          ),
         ]),
         Container(
           height: 23,

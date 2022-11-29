@@ -1,21 +1,22 @@
+import 'package:country_list_pick/country_list_pick.dart';
+import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/HomeScreens/all_categories.dart';
+import 'package:shoofi/Screens/HomeScreens/reels.dart';
 
 import 'Screens/SplashScreens/splash_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    final heroController = HeroController();
     return GetMaterialApp(
-      navigatorObservers: [heroController],
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),

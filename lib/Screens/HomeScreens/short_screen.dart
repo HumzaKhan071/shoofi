@@ -1,20 +1,14 @@
-import 'dart:math';
-
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/HomeScreens/bgVideo.dart';
 
 class HomeShortScreen extends StatelessWidget {
-  final String videoLink;
-  const HomeShortScreen({required this.videoLink, super.key});
+  const HomeShortScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        VideoApp(
-          videoLink: videoLink,
-        
-        ),
+        VideoApp(),
         Container(
           child: Padding(
             padding: const EdgeInsets.all(15.0),
