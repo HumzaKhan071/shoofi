@@ -49,29 +49,25 @@ class RegisterScreen extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
-                    CircleAvatar(
-                      radius: 80,
-                      child: GetBuilder<RegistrationController>(
-                          builder: (context) {
-                        return controller.imageFile == null
-                            ? InkWell(
-                                onTap: () {
-                                  controller.getFromGallery();
-                                },
-                                child: Image.asset("assets/Images/circle.png"))
-                            : InkWell(
-                                onTap: () {
-                                  controller.getFromGallery();
-                                },
-                                child: CircleAvatar(
-                                  radius: 80,
-                                  backgroundImage: FileImage(
-                                    controller.imageFile!,
-                                  ),
+                    GetBuilder<RegistrationController>(builder: (context) {
+                      return controller.imageFile == null
+                          ? InkWell(
+                              onTap: () {
+                                controller.getFromGallery();
+                              },
+                              child: Image.asset("assets/Images/circle.png"))
+                          : InkWell(
+                              onTap: () {
+                                controller.getFromGallery();
+                              },
+                              child: CircleAvatar(
+                                radius: 80,
+                                backgroundImage: FileImage(
+                                  controller.imageFile!,
                                 ),
-                              );
-                      }),
-                    ),
+                              ),
+                            );
+                    }),
                     const SizedBox(
                       height: 10,
                     ),
