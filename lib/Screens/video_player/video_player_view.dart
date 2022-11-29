@@ -5,7 +5,6 @@ import 'package:shoofi/Screens/video_player/video_player_card.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../Utils/Colors.dart';
-import '../Widgets/MyButtonContainer.dart';
 
 // void main() {
 //   WidgetsFlutterBinding.ensureInitialized();
@@ -22,6 +21,7 @@ class VideoPlayerView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // VideoPlayerController controller = Get.put(VideoPlayerController());
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Youtube Player Flutter',
@@ -31,7 +31,7 @@ class VideoPlayerView extends StatelessWidget {
           color: Colors.blueAccent,
           titleTextStyle: TextStyle(
             color: Colors.white,
-             fontWeight: FontWeight.w300,           
+            fontWeight: FontWeight.w300,
             fontSize: 20,
           ),
         ),
@@ -115,6 +115,12 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return YoutubePlayerBuilder(
+      onEnterFullScreen: () {
+        SystemChrome.setPreferredOrientations([
+          DeviceOrientation.landscapeRight,
+          DeviceOrientation.landscapeLeft,
+        ]);
+      },
       onExitFullScreen: () {
         // The player forces portraitUp after exiting fullscreen. This overrides the behaviour.
         SystemChrome.setPreferredOrientations(DeviceOrientation.values);
@@ -171,10 +177,9 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Text(
                               'Vivamus mattis sapien vel eros cursus a venenatis duiincidunt',
                               style: TextStyle(
-                                color: black,
-                                fontSize: 16,
-                                 fontWeight: FontWeight.bold
-                              ),
+                                  color: black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold),
                             ),
                           ),
                         ],
@@ -246,11 +251,7 @@ class _MyHomePageState extends State<MyHomePage> {
         content: Text(
           message,
           textAlign: TextAlign.center,
-          style: const TextStyle(
-           
-            fontSize: 16.0,
-             fontWeight: FontWeight.w300
-          ),
+          style: const TextStyle(fontSize: 16.0, fontWeight: FontWeight.w300),
         ),
         backgroundColor: Colors.blueAccent,
         behavior: SnackBarBehavior.floating,
@@ -280,10 +281,7 @@ moreOptions() {
           SizedBox(height: 20),
           Text("More Options",
               style: TextStyle(
-                color: black,
-                fontSize: 24,
-                 fontWeight: FontWeight.bold
-              )),
+                  color: black, fontSize: 24, fontWeight: FontWeight.bold)),
           SizedBox(height: 15),
           Divider(
             thickness: 1,
