@@ -1,6 +1,7 @@
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Utils/country_json.dart';
 import 'package:shoofi/Utils/flags.dart';
+import 'package:shoofi/controllers/register_location/resgister_location_controller.dart';
 
 class RegisterScreenLocation extends StatelessWidget {
   final bool showBtn;
@@ -8,6 +9,8 @@ class RegisterScreenLocation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    RegisterLocationController controllerLocation =
+        Get.put(RegisterLocationController());
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -75,35 +78,43 @@ class RegisterScreenLocation extends StatelessWidget {
                             width: 1,
                           )),
                       child: TextFormField(
+                          onChanged: (value) {
+                            controllerLocation.filterSearchResults(value);
+                            print(controllerLocation.items);
+                          },
+                          controller: controllerLocation.editingController,
                           decoration: InputDecoration(
-                        border: InputBorder.none,
-                        contentPadding: EdgeInsets.all(7),
-                        hintText: "Search",
-                        hintStyle: TextStyle(
-                            color: black,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold),
-                      )),
+                            border: InputBorder.none,
+                            contentPadding: EdgeInsets.all(7),
+                            hintText: "Search",
+                            hintStyle: TextStyle(
+                                color: black,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold),
+                          )),
                     ),
                     SizedBox(
                       height: 20,
                     ),
-                    ListView.separated(
-                      separatorBuilder: (context, index) {
-                        return SizedBox(
-                          height: 10,
-                        );
-                      },
-                      shrinkWrap: true,
-                      primary: false,
-                      itemCount: countryCodes.length,
-                      itemBuilder: (context, index) {
-                        return MyCountryList(
-                            countryFlag: Utils.countryCodeToEmoji(
-                                countryCodes[index]["iso2_cc"]),
-                            countryName: countryCodes[index]["name"]);
-                      },
-                    ),
+                    Obx(() {
+                      return ListView.separated(
+                        separatorBuilder: (context, index) {
+                          return SizedBox(
+                            height: 10,
+                          );
+                        },
+                        shrinkWrap: true,
+                        primary: false,
+                        itemCount: controllerLocation.items.length,
+                        itemBuilder: (context, index) {
+                          return MyCountryList(
+                              countryFlag: Utils.countryCodeToEmoji(
+                                  controllerLocation.items[index]["iso2_cc"]),
+                              countryName: controllerLocation.items[index]
+                                  ["name"]);
+                        },
+                      );
+                    }),
                     SizedBox(
                       height: 20,
                     ),
