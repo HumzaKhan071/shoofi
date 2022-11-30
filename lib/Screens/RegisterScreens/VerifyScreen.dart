@@ -1,5 +1,6 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 
 class VerifyScreen extends StatefulWidget {
   final String title;
@@ -73,7 +74,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
               SizedBox(
                 height: 20,
               ),
-              Image.asset("assets/images/Varification_illustration.png"),
+              Image.asset(ImageConstant.varificationIllustration),
               SizedBox(
                 height: 30,
               ),

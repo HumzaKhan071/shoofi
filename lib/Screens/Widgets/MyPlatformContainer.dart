@@ -1,3 +1,5 @@
+import 'package:shoofi/Utils/image_constant.dart';
+
 import '../../Routes/routes.dart';
 
 class MyPlatformContainer extends StatefulWidget {
@@ -27,15 +29,15 @@ class _MyPlatformContainerState extends State<MyPlatformContainer> {
       child: Column(
         children: [
           MyRow(
-            image: "assets/images/youtube.png",
+            image: ImageConstant.youtube,
             title: "Youtube",
           ),
           MyRow(
-            image: "assets/images/facebook.png",
+            image: ImageConstant.facebook,
             title: "Facebook",
           ),
           MyRow(
-            image: "assets/images/Instagram.png",
+            image: ImageConstant.instagram,
             title: "Instagram",
           ),
           Row(
@@ -43,7 +45,7 @@ class _MyPlatformContainerState extends State<MyPlatformContainer> {
             children: [
               Row(
                 children: [
-                  Image.asset("assets/images/fit_screen.png"),
+                  Image.asset(ImageConstant.fitScreen),
                   SizedBox(width: 5),
                   Text("Screen Time",
                       style: TextStyle(

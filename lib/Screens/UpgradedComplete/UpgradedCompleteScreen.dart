@@ -1,5 +1,7 @@
 import 'package:shoofi/Routes/routes.dart';
 
+import '../../Utils/image_constant.dart';
+
 class UpgradedCompletedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -56,11 +58,11 @@ class UpgradedCompletedScreen extends StatelessWidget {
                 width: 256,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/images/firework.png"),
+                    image: AssetImage(ImageConstant.firework),
                     fit: BoxFit.fill,
                   ),
                 ),
-                child: Image.asset("assets/images/a.png"),
+                child: Image.asset(ImageConstant.a),
               ),
               SizedBox(height: 20),
               SizedBox(

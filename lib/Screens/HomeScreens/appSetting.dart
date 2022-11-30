@@ -26,6 +26,7 @@ class AppSetting extends StatelessWidget {
             valueColor: AlwaysStoppedAnimation<Color>(yellow),
           ),
           ListTile(
+            minLeadingWidth: 0,
             leading: Image.asset(ImageConstant.appSettingicon1),
             onTap: () {
               Get.to(GeneralSettingScreen());
@@ -40,6 +41,7 @@ class AppSetting extends StatelessWidget {
             trailing: Icon(Icons.arrow_forward_ios_rounded),
           ),
           ListTile(
+            minLeadingWidth: 0,
             leading: Image.asset(ImageConstant.appSettingicon2),
             onTap: () {
               Get.to(VideoQualityPreference());
@@ -54,6 +56,7 @@ class AppSetting extends StatelessWidget {
             trailing: Icon(Icons.arrow_forward_ios_rounded),
           ),
           ListTile(
+            minLeadingWidth: 0,
             leading: Image.asset(ImageConstant.appSettingicon3),
             onTap: () {
               Get.to(HistoryScreen());
@@ -68,6 +71,7 @@ class AppSetting extends StatelessWidget {
             trailing: Icon(Icons.arrow_forward_ios_rounded),
           ),
           ListTile(
+            minLeadingWidth: 0,
             leading: Image.asset(ImageConstant.appSettingicon4),
             onTap: () {
               Get.to(PrivacyScreen());
@@ -82,6 +86,7 @@ class AppSetting extends StatelessWidget {
             trailing: Icon(Icons.arrow_forward_ios_rounded),
           ),
           ListTile(
+            minLeadingWidth: 0,
             onTap: () {
               Get.to(BillingPaymentScreen());
             },
@@ -90,6 +95,7 @@ class AppSetting extends StatelessWidget {
             trailing: Icon(Icons.arrow_forward_ios_rounded),
           ),
           ListTile(
+            minLeadingWidth: 0,
             onTap: () {
               Get.to(ChatSupportScreen());
             },
@@ -104,6 +110,7 @@ class AppSetting extends StatelessWidget {
             trailing: Icon(Icons.arrow_forward_ios_rounded),
           ),
           ListTile(
+            minLeadingWidth: 0,
             onTap: () {
               Get.to(UserAgreementScreen());
             },

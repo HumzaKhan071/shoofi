@@ -1,4 +1,10 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/DeleteAccount/DeleteAccountScreen.dart';
+import 'package:shoofi/Screens/ForgotScreens/change_password.dart';
+import 'package:shoofi/Screens/Widgets/pin_dialog.dart';
+
+import '../../Utils/image_constant.dart';
 
 class GeneralSettingScreen extends StatelessWidget {
   const GeneralSettingScreen({super.key});
@@ -24,6 +30,13 @@ class GeneralSettingScreen extends StatelessWidget {
             ),
             SizedBox(height: 20),
             ListTile(
+              onTap: (() => pinDialog(
+                    context,
+                    onCompleted: (p0) {
+                      Get.to(() => ChangePaswword());
+                    },
+                  )),
+              minLeadingWidth: 0,
               leading: Icon(
                 Icons.password,
                 color: black,
@@ -42,8 +55,10 @@ class GeneralSettingScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             ListTile(
-              leading: Icon(
-                Icons.subscriptions,
+              onTap: () => Get.to(() => SelectPlan()),
+              minLeadingWidth: 0,
+              leading: SvgPicture.asset(
+                ImageConstant.myAccountCards,
                 color: black,
               ),
               title: Text(
@@ -60,8 +75,10 @@ class GeneralSettingScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             ListTile(
-              leading: Icon(
-                Icons.supervised_user_circle_rounded,
+              onTap: () => Get.to(() => UserAgreementScreen()),
+              minLeadingWidth: 0,
+              leading: SvgPicture.asset(
+                ImageConstant.myAccountAgreements,
                 color: black,
               ),
               title: Text(
@@ -78,6 +95,12 @@ class GeneralSettingScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             ListTile(
+              onTap: 
+                () => pinDialog(context, onCompleted: ((pin) {
+                  Get.to(() => DeleteAccountScreen());
+                })),
+              
+              minLeadingWidth: 0,
               leading: Icon(
                 Icons.delete_outline,
                 color: black,

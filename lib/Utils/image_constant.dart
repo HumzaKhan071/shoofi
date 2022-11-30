@@ -5,10 +5,12 @@ class ImageConstant {
   static String forgotPassword = "assets/svgPictures/forgot_password.svg";
 
   static String illustration = "assets/svgPictures/illustration.svg";
+  static String illustration1 = "assets/images/illustration1.png";
   static String americanExpress = "assets/cards/americanExpress.png";
   static String discover = "assets/cards/discover.png";
   static String visa = "assets/cards/visa.png";
   static String circle = "assets/images/circle.png";
+  static String avatar = "assets/images/avatar.png";
 
   static String paypal = "assets/cards/paypal.png";
   static String afghanistan = "assets/flags/afghanistan.png";
@@ -34,6 +36,7 @@ class ImageConstant {
   static String moreicon = "assets/icons/moreIcon.png";
   static String notificationImportant =
       "assets/icons/notification_important.png";
+
   static String notInterested = "assets/icons/notInterested.png";
   static String homeSearchicon = "assets/icons/homeSearchIcon.png";
   static String homeAccounticon = "assets/icons/homeAccountIcon.png";
@@ -54,18 +57,20 @@ class ImageConstant {
   static String report = "assets/icons/report.png";
   static String instagram = "assets/icons/instagram.png";
   static String location = "assets/icons/location.png";
-  static String share = "assets/icons/share.png";
-  static String likeIcon = "assets/icons/likeIcon.png";
+  static String share = "assets/svgPictures/watchlater.svg";
+  static String likebutton = "assets/svgPictures/likebutton.svg";
+   static String likeIcon = "assets/icons/likeIcon.png";
   static String removeCircle = "assets/icons/remove_circle_outline.png";
-  static String forwardIcon = "assets/icons/forwardIcon.png";
+  static String forwardIcon = "assets/svgPictures/share.svg";
   static String moreIcon = "assets/icons/moreIcon.png";
   static String fitScreen = "assets/icons/fit_screen.png";
   static String clock = "assets/icons/clock.png";
+  static String moreVert = "assets/svgPictures/more_vert.svg";
   static String block = "assets/icons/block.png";
   static String captions = "assets/icons/captions.png";
   static String circleCross = "assets/icons/circle_cross.png";
   static String disLikeicon = "assets/icons/dislikeIcon.png";
-  static String disLikeicon2 = "assets/icons/dislikeIcon2.png";
+  static String disLikeicon2 = "assets/svgPictures/dislikebutton.svg";
   static String action = "assets/categories/action.png";
   static String art = "assets/categories/art.png";
   static String comedy = "assets/categories/comedy.png";
@@ -116,4 +121,23 @@ class ImageConstant {
   static String zeemusic = "assets/youtube/zeemusic.png";
   static String zeetv = "assets/youtube/zeetv.png";
   static String divider = "assets/images/divider.png";
+  static String img1 = "assets/images/img1.png";
+  static String img2 = "assets/images/img2.png";
+  static String img3 = "assets/images/img3.png";
+  static String a = "assets/images/a.png";
+  static String movie = "assets/images/movie.png";
+  static String shortbg = "assets/images/shortbg.png";
+  static String trendingReels = "assets/images/trending_reels.png";
+  static String youtubeTrending = "assets/images/youtube_trending.png";
+  static String videoThumbnail = "assets/images/video_thumbnail.png";
+  static String firework = "assets/images/firework.png";
+  static String epic = "assets/images/epic.png";
+  static String varificationIllustration =
+      "assets/images/Varification_illustration.png";
+
+  static String logo4 = "assets/images/logo4.png";
+  static String chat1 = "assets/images/chat1.png";
+  static String chat2 = "assets/images/chat2.png";
+  static String myAccountAgreements ="assets/svgPictures/my account - agreement.svg";
+  static String myAccountCards ="assets/svgPictures/my account - cards.svg";
 }

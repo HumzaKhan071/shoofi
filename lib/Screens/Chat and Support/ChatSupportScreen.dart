@@ -1,4 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 
 class ChatSupportScreen extends StatelessWidget {
   const ChatSupportScreen({super.key});
@@ -62,7 +63,7 @@ class ChatSupportScreen extends StatelessWidget {
                   children: [
                     Positioned(
                         bottom: 0,
-                        child: Image.asset("assets/images/chat1.png")),
+                        child: Image.asset(ImageConstant.chat1)),
                     Positioned(
                       right: 0,
                       child: Container(
@@ -153,7 +154,7 @@ class ChatSupportScreen extends StatelessWidget {
                   children: [
                     Positioned(
                         top: Get.height * 0.1,
-                        child: Image.asset("assets/images/chat2.png")),
+                        child: Image.asset(ImageConstant.chat2)),
                     Positioned(
                       right: 0,
                       child: Container(

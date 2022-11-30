@@ -1,4 +1,6 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 import 'package:shoofi/controllers/registration/registration_controller.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -55,7 +57,7 @@ class RegisterScreen extends StatelessWidget {
                               onTap: () {
                                 controller.getFromGallery();
                               },
-                              child: Image.asset("assets/images/circle.png"))
+                              child: Image.asset(ImageConstant.circle))
                           : InkWell(
                               onTap: () {
                                 controller.getFromGallery();

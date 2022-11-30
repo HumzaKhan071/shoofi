@@ -1,4 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 
 remvoeWatchListBottomSheet() {
   Get.bottomSheet(Container(
@@ -12,7 +13,7 @@ remvoeWatchListBottomSheet() {
     child: Column(
       children: [
         SizedBox(height: 10),
-        Image.asset("assets/images/divider.png"),
+        Image.asset(ImageConstant.divider),
         SizedBox(height: 20),
         Text("Remove from List",
             style: TextStyle(

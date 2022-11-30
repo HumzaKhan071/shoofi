@@ -19,6 +19,6 @@ class MyApp extends StatelessWidget {
           fontFamily: "Archivo",
         ),
         debugShowCheckedModeBanner: false,
-        home: RegisterScreenLocation());
+        home: SplashScreen());
   }
 }

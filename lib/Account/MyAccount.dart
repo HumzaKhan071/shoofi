@@ -33,15 +33,25 @@ class MyAccount extends StatelessWidget {
                 children: [
                   ProfileAvatar(
                       radius: 30,
-                      backgroundImagePath: "assets/images/a.png",
+                      backgroundImagePath: ImageConstant.a,
                       onTap: () {
-                        pinDialog(context);
+                        pinDialog(
+                          context,
+                          onCompleted: (pin) {
+                            Get.to(() => HomeBottomNavigationBar());
+                          },
+                        );
                       }),
                   ProfileAvatar(
                       radius: 30,
-                      backgroundImagePath: "assets/images/a.png",
+                      backgroundImagePath: ImageConstant.a,
                       onTap: () {
-                        pinDialog(context);
+                        pinDialog(
+                          context,
+                          onCompleted: (pin) {
+                            Get.to(() => HomeBottomNavigationBar());
+                          },
+                        );
                       }),
                   ProfileAvatar(
                       radius: 30,
@@ -283,7 +293,7 @@ class MyNotificationsLisTile extends StatelessWidget {
     return Column(
       children: [
         ListTile(
-            leading: Image.asset("assets/images/img2.png"),
+            leading: Image.asset(ImageConstant.img2),
             title: Text("The Most Perfect Co...",
                 style: TextStyle(
                   color: black,
@@ -296,7 +306,7 @@ class MyNotificationsLisTile extends StatelessWidget {
             trailing: Image.asset(ImageConstant.removeCircle)),
         ListTile(
             minLeadingWidth: 0,
-            leading: Image.asset("assets/images/img2.png"),
+            leading: Image.asset(ImageConstant.img2),
             title: Text("The Most Perfect Co...",
                 style: TextStyle(
                   color: black,

@@ -23,7 +23,7 @@ class GetStarted extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              SvgPicture.asset(ImageConstant.illustration),
+              Image.asset(ImageConstant.illustration1),
               Expanded(
                   child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,

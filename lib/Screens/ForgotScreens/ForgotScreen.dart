@@ -1,6 +1,6 @@
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/ForgotScreens/ForgotEmail.dart';
-import 'package:shoofi/Screens/ForgotScreens/RetypePassword.dart';
+import 'package:shoofi/Screens/ForgotScreens/change_password.dart';
 import 'package:shoofi/controllers/ForgotControllers/forgot_controller.dart';
 
 class ForgotScreen extends StatelessWidget {

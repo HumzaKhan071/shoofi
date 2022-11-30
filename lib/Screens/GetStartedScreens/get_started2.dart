@@ -1,5 +1,6 @@
 import 'package:intro_slider/intro_slider.dart';
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 import 'package:shoofi/controllers/GetStartedControllers/get_started2_controller.dart';
 
 class GetStarted2 extends StatelessWidget {
@@ -12,7 +13,7 @@ class GetStarted2 extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(height: Get.height * 0.1),
-          Image.asset("assets/images/logo3.png"),
+          Image.asset(ImageConstant.logo3),
           SizedBox(height: Get.height * 0.1),
           SizedBox(
             height: Get.height * 0.58,

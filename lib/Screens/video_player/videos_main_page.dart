@@ -1,5 +1,6 @@
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/video_player/video_player_card.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 
 class VideoMainPage extends StatelessWidget {
   const VideoMainPage({super.key});
@@ -16,7 +17,7 @@ class VideoMainPage extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Image.asset("assets/images/epic.png"),
+              Image.asset(ImageConstant.epic),
               Text("9.5 M Subscribers",
                   style: TextStyle(
                       color: grey, fontSize: 16, fontWeight: FontWeight.bold)),

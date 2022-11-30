@@ -181,7 +181,7 @@ adBanner() {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(25), // Image border
           child: Image.asset(
-            'assets/images/video_thumbnail.png',
+            ImageConstant.videoThumbnail,
             fit: BoxFit.cover,
           ),
         ),

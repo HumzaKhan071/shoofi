@@ -1,6 +1,8 @@
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/Widgets/pin_dialog.dart';
 
+import '../../Utils/image_constant.dart';
+
 class CreateUserProfileScreen extends StatefulWidget {
   const CreateUserProfileScreen({super.key});
 
@@ -57,10 +59,13 @@ class _CreateUserProfileScreenState extends State<CreateUserProfileScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ProfileAvatar(
-                        backgroundImagePath: "assets/images/a.png",
+                        backgroundImagePath: ImageConstant.a,
                         title: "Shoofista",
                         onTap: () {
-                          pinDialog(context);
+                          pinDialog(context,onCompleted: (pin) {
+                          Get.to(() => HomeBottomNavigationBar());
+                        
+                        }, );
                         },
                       ),
                       ProfileAvatar(

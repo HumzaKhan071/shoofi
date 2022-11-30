@@ -1,4 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/LoginScreens/login_screen.dart';
 
 class DeleteAccountScreen extends StatelessWidget {
   const DeleteAccountScreen({super.key});
@@ -22,7 +23,11 @@ class DeleteAccountScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Delete my Account",
-          style: TextStyle(color: black, fontSize: 14, fontWeight: FontWeight.w500,  ),
+          style: TextStyle(
+            color: black,
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+          ),
         ),
       ),
       body: Padding(
@@ -34,7 +39,7 @@ class DeleteAccountScreen extends StatelessWidget {
               backgroundColor: grey,
               valueColor: AlwaysStoppedAnimation<Color>(yellow),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: Get.height * 0.2),
             SizedBox(
               height: 31,
               width: 293,
@@ -48,14 +53,48 @@ class DeleteAccountScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: Get.height * 0.4),
+            SizedBox(
+              height: 20,
+            ),
             MyButtonContainer(
               text: "Delete",
               conColor: deleteBtn,
               textColor: Colors.white,
+              press: () {
+                Get.offAll(() => LoginScreen());
+              },
             ),
             SizedBox(height: 10),
-            Agreements()
+            Agreements(),
+            SizedBox(height: 60),
+            SizedBox(
+              height: 71,
+              width: 293,
+              child: Text(
+                textAlign: TextAlign.center,
+                "Your account will be deleted within 15days you can login with same credentials winthin the time duration of your account removal before its permanently deleted",
+                style: TextStyle(
+                  color: black,
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            SizedBox(height: 10),
+            Container(
+                height: 14,
+                width: 118,
+                child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      textAlign: TextAlign.center,
+                      "Give your feedback!",
+                      style: TextStyle(
+                        color: blue,
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )))
           ],
         ),
       ),

@@ -1,31 +1,24 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 
 class CompletedScreen extends StatelessWidget {
-  const CompletedScreen({super.key});
+  final String title;
+  final String subtitle;
+  final String subtitle2;
+
+  const CompletedScreen(
+      {super.key,
+      this.title = "Congratulation your signup is completed",
+      this.subtitle = "Enjoy your",
+      this.subtitle2 = "90 Days free trail"});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        leadingWidth: 40,
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: Icon(
-              Icons.arrow_back_ios_new,
-              color: grey,
-            )),
-        centerTitle: true,
-        title: Text(
-          "Sign Up",
-          style: TextStyle(
-              color: black, fontSize: 14, fontWeight: FontWeight.w500),
-        ),
-      ),
+      appBar: PreferredSize(
+          preferredSize: Size.fromHeight(50),
+          child: CustomAppBar(title: "Sign Up")),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(8),
@@ -43,7 +36,7 @@ class CompletedScreen extends StatelessWidget {
                 height: 31,
                 width: 293,
                 child: Center(
-                  child: Text("Congratulation your signup is completed",
+                  child: Text(title,
                       style: TextStyle(
                           color: black,
                           fontSize: 14,
@@ -58,11 +51,11 @@ class CompletedScreen extends StatelessWidget {
                 width: 256,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/images/firework.png"),
+                    image: AssetImage(ImageConstant.firework),
                     fit: BoxFit.fill,
                   ),
                 ),
-                child: Image.asset("assets/images/a.png"),
+                child: Image.asset(ImageConstant.a),
               ),
               SizedBox(height: 20),
               SizedBox(
@@ -72,14 +65,14 @@ class CompletedScreen extends StatelessWidget {
                     child: Column(
                   children: [
                     Text(
-                      "Enjoy your".toUpperCase(),
+                      subtitle.toUpperCase(),
                       style: TextStyle(
                           color: black,
                           fontSize: 16,
                           fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      "90 Days free trail".toUpperCase(),
+                      subtitle2.toUpperCase(),
                       style: TextStyle(
                           color: black,
                           fontSize: 16,

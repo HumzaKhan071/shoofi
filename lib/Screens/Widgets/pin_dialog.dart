@@ -1,8 +1,8 @@
 import 'package:shoofi/Routes/routes.dart';
 
-pinDialog(context) {
+pinDialog(context, {Function(String)? onCompleted}) {
   showDialog(
-    barrierDismissible: false,
+      barrierDismissible: false,
       context: context,
       builder: (context) => Dialog(
             shape:
@@ -15,25 +15,17 @@ pinDialog(context) {
                 Text(
                   "Enter your pin to access",
                   style: TextStyle(
-                    color: black,
-                    fontSize: 17,
-                     fontWeight: FontWeight.bold
-                  ),
+                      color: black, fontSize: 17, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 5),
                 Text(
                   "this profile",
                   style: TextStyle(
-                    color: black,
-                    fontSize: 17,
-                     fontWeight: FontWeight.bold
-                  ),
+                      color: black, fontSize: 17, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 15),
                 Pinput(
-                  onCompleted: (String val) {
-                    Get.to(HomeBottomNavigationBar());
-                  },
+                  onCompleted: onCompleted,
                   defaultPinTheme: PinTheme(
                       width: 50,
                       height: 50,
@@ -47,10 +39,7 @@ pinDialog(context) {
                     child: Text(
                   "Forgot PIN?",
                   style: TextStyle(
-                    color: blue,
-                    fontSize: 16,
-                     fontWeight: FontWeight.bold
-                  ),
+                      color: blue, fontSize: 16, fontWeight: FontWeight.bold),
                 )),
                 Divider(),
                 GestureDetector(
@@ -60,10 +49,9 @@ pinDialog(context) {
                     child: Text(
                       "Cancel",
                       style: TextStyle(
-                        color: blue,
-                        fontSize: 16,
-                         fontWeight: FontWeight.bold
-                      ),
+                          color: blue,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold),
                     )),
                 SizedBox(height: 15),
               ],

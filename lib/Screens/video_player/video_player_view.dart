@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:shoofi/Screens/video_player/video_player_card.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
@@ -168,8 +169,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       Row(
                         children: [
                           CircleAvatar(
-                            backgroundImage:
-                                AssetImage('assets/images/avatar.png'),
+                            backgroundImage: AssetImage(ImageConstant.avatar),
                           ),
                           SizedBox(
                             width: 10,
@@ -219,10 +219,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Image.asset(ImageConstant.likeIcon),
-                          Image.asset(ImageConstant.disLikeicon2),
-                          Image.asset(ImageConstant.forwardIcon),
-                          Image.asset(ImageConstant.share),
+                          SvgPicture.asset(ImageConstant.likebutton),
+                          SvgPicture.asset(ImageConstant.disLikeicon2),
+                          SvgPicture.asset(ImageConstant.forwardIcon),
+                          SvgPicture.asset(ImageConstant.share),
                           InkWell(
                               onTap: () {
                                 moreOptions();
@@ -278,7 +278,7 @@ moreOptions() {
       child: Column(
         children: [
           SizedBox(height: 10),
-          Image.asset("assets/images/divider.png"),
+          Image.asset(ImageConstant.divider),
           SizedBox(height: 20),
           Text("More Options",
               style: TextStyle(
@@ -291,27 +291,27 @@ moreOptions() {
           ),
           ListTile(
               dense: true,
-              leading: Image.asset('assets/images/clock.png'),
+              leading: Image.asset(ImageConstant.clock),
               title: Text("Video Quality")),
           ListTile(
               dense: true,
-              leading: Image.asset('assets/images/captions.png'),
+              leading: Image.asset(ImageConstant.captions),
               title: Text("Captions")),
           ListTile(
               dense: true,
-              leading: Image.asset('assets/images/share.png'),
+              leading: Image.asset(ImageConstant.shareForwardIcon),
               title: Text("Share")),
           ListTile(
               dense: true,
-              leading: Image.asset('assets/images/notInterested.png'),
+              leading: Image.asset(ImageConstant.notInterested),
               title: Text("Not Interested")),
           ListTile(
               dense: true,
-              leading: Image.asset('assets/images/report.png'),
+              leading: Image.asset(ImageConstant.report),
               title: Text("Report")),
           ListTile(
               dense: true,
-              leading: Image.asset('assets/images/helpCenter.png'),
+              leading: Image.asset(ImageConstant.helpCenter),
               title: Text("Help Center")),
         ],
       ),

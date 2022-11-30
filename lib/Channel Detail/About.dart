@@ -1,6 +1,7 @@
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 
 class About extends StatelessWidget {
   const About({super.key});
@@ -16,7 +17,7 @@ class About extends StatelessWidget {
           Center(
               child: Column(
             children: [
-              Image.asset("assets/images/epic.png"),
+              Image.asset(ImageConstant.epic),
               Text("9.5 M Subscribers",
                   style: TextStyle(
                       color: grey, fontSize: 16, fontWeight: FontWeight.bold)),

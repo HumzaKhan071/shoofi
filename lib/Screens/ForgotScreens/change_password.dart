@@ -1,32 +1,16 @@
 import 'package:shoofi/Routes/routes.dart';
 
-class RetypePassword extends StatelessWidget {
-  const RetypePassword({super.key});
+class ChangePaswword extends StatelessWidget {
+  const ChangePaswword({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        leadingWidth: 40,
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: Icon(
-              Icons.arrow_back_ios_new,
-              color: grey,
-            )),
-        centerTitle: true,
-        title: Text(
-          "Forgot Password",
-          style: TextStyle(
-            color: black,
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
-          ),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(50),
+        child: CustomAppBar(
+          title: "Re -Create Password",
         ),
       ),
       body: SingleChildScrollView(
@@ -35,13 +19,17 @@ class RetypePassword extends StatelessWidget {
           child: Column(
             children: [
               LinearProgressIndicator(
-                value: 0.9,
+                value: 0.0,
                 backgroundColor: grey,
                 valueColor: AlwaysStoppedAnimation<Color>(yellow),
               ),
               SizedBox(
                 height: Get.height * 0.3,
               ),
+              MyPasswordField(
+                text: "Current Password",
+              ),
+              SizedBox(height: 10),
               MyPasswordField(
                 text: "New Password",
               ),
@@ -102,11 +90,8 @@ class _MyPasswordFieldState extends State<MyPasswordField> {
                 valueObsecure ? Icons.visibility_off : Icons.visibility,
                 color: grey,
               )),
-          hintStyle: TextStyle(
-            color: grey,
-            fontSize: 16,
-            fontWeight: FontWeight.bold
-          ),
+          hintStyle:
+              TextStyle(color: grey, fontSize: 16, fontWeight: FontWeight.bold),
           contentPadding: EdgeInsets.all(10),
         ),
       ),

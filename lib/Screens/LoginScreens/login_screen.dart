@@ -24,7 +24,7 @@ class LoginScreen extends StatelessWidget {
                 child: Container(
                   color: black,
                   height: Get.height * 0.28,
-                  child: Center(child: Image.asset("assets/images/logo4.png")),
+                  child: Center(child: Image.asset(ImageConstant.logo4)),
                 ),
               ),
               Padding(
