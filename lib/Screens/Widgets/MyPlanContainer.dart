@@ -15,7 +15,6 @@ class MyPlanContainer extends StatelessWidget {
     Key? key,
     required this.title,
     this.price,
-
     required this.description,
     required this.totalScreens,
     required this.perMonth,
@@ -33,9 +32,7 @@ class MyPlanContainer extends StatelessWidget {
           if (lastSelected != -1) {
             controller.isSelected[lastSelected] = false;
           }
-          print(controller.isSelected[lastSelected]);
           controller.isSelected[index] = true;
-          print(controller.isSelected[lastSelected]);
         },
         child: Obx(
           () => Container(
@@ -73,12 +70,16 @@ class MyPlanContainer extends StatelessWidget {
                   if (price != null)
                     Text(price!,
                         style: TextStyle(
-                            color: controller.isSelected[index] ? Colors.white : black,
+                            color: controller.isSelected[index]
+                                ? Colors.white
+                                : black,
                             fontSize: 8,
                             fontWeight: FontWeight.bold)),
                   Text(description,
                       style: TextStyle(
-                          color: controller.isSelected[index] ? Colors.white : black,
+                          color: controller.isSelected[index]
+                              ? Colors.white
+                              : black,
                           fontSize: 8,
                           fontWeight: FontWeight.bold)),
                 ]),

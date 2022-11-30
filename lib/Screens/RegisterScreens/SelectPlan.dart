@@ -5,7 +5,7 @@ class SelectPlan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SelectPlanController controller =
-        Get.put(SelectPlanController(), tag: "select_plan");
+        Get.put(SelectPlanController(), tag: "selectPlan");
     return DefaultTabController(
       length: controller.tabController.length,
       child: Scaffold(
