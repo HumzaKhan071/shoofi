@@ -1,5 +1,3 @@
-import 'package:country_list_pick/country_list_pick.dart';
-import 'package:country_picker/country_picker.dart';
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/controllers/Reels/reel_controller.dart';
 import 'package:tiktoklikescroller/tiktoklikescroller.dart';

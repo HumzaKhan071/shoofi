@@ -27,15 +27,15 @@ class _MyPlatformContainerState extends State<MyPlatformContainer> {
       child: Column(
         children: [
           MyRow(
-            image: "assets/Images/youtube.png",
+            image: "assets/images/youtube.png",
             title: "Youtube",
           ),
           MyRow(
-            image: "assets/Images/facebook.png",
+            image: "assets/images/facebook.png",
             title: "Facebook",
           ),
           MyRow(
-            image: "assets/Images/Instagram.png",
+            image: "assets/images/Instagram.png",
             title: "Instagram",
           ),
           Row(
@@ -43,10 +43,10 @@ class _MyPlatformContainerState extends State<MyPlatformContainer> {
             children: [
               Row(
                 children: [
-                  Image.asset("assets/Images/fit_screen.png"),
+                  Image.asset("assets/images/fit_screen.png"),
                   SizedBox(width: 5),
                   Text("Screen Time",
-                      style: GoogleFonts.archivo(
+                      style: TextStyle(
                           color: black,
                           fontSize: 14,
                           fontWeight: FontWeight.w500))
@@ -55,7 +55,7 @@ class _MyPlatformContainerState extends State<MyPlatformContainer> {
               Row(
                 children: [
                   Text("Daily",
-                      style: GoogleFonts.archivo(
+                      style: TextStyle(
                           color: black,
                           fontSize: 14,
                           fontWeight: FontWeight.w500)),
@@ -121,7 +121,7 @@ class _MyRowState extends State<MyRow> {
             Image.asset(widget.image),
             SizedBox(width: 5),
             Text(widget.title,
-                style: GoogleFonts.archivo(
+                style: TextStyle(
                     color: black, fontSize: 14, fontWeight: FontWeight.w500))
           ],
         ),

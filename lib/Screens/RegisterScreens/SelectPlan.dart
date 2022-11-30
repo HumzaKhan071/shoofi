@@ -44,7 +44,7 @@ class _SelectPlanState extends State<SelectPlan>
           centerTitle: true,
           title: Text(
             "Sign Up",
-            style: GoogleFonts.archivo(
+            style: TextStyle(
                 color: black, fontSize: 14, fontWeight: FontWeight.w500),
           ),
         ),
@@ -67,7 +67,7 @@ class _SelectPlanState extends State<SelectPlan>
                     child: Center(
                       child: Text(
                         "Activate you 90 days trail now",
-                        style: GoogleFonts.archivo(
+                        style: TextStyle(
                             color: black,
                             fontSize: 14,
                             fontWeight: FontWeight.w500),
@@ -92,7 +92,7 @@ class _SelectPlanState extends State<SelectPlan>
                     children: [
                       Text(
                         "Activate you 90 days trail now",
-                        style: GoogleFonts.archivo(
+                        style: TextStyle(
                             color: black,
                             fontSize: 14,
                             fontWeight: FontWeight.w500),
@@ -165,7 +165,7 @@ class _SelectPlanState extends State<SelectPlan>
                       SizedBox(height: 20),
                       SizedBox(
                         height: 116,
-                        width: 225,
+                        width: 227,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -200,7 +200,7 @@ class _SelectPlanState extends State<SelectPlan>
                   },
                 ),
                 SizedBox(height: 10),
-              Agreements()
+                Agreements()
               ],
             ),
           ),

@@ -22,7 +22,7 @@ class NotificationScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Notifications",
-          style: GoogleFonts.archivo(
+          style: TextStyle(
               color: black, fontSize: 14, fontWeight: FontWeight.w500),
         ),
       ),
@@ -61,24 +61,24 @@ class MyListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: Image.asset(
-        "assets/Images/img2.png",
+        "assets/images/img2.png",
       ),
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             "The Most Perfect Co...",
-            style: GoogleFonts.archivo(
+            style: TextStyle(
                 color: black, fontSize: 14, fontWeight: FontWeight.w500),
           ),
           Text(
             "Your order has been shipped",
-            style: GoogleFonts.archivo(
+            style: TextStyle(
                 color: grey, fontSize: 12, fontWeight: FontWeight.w500),
           ),
           Text(
             "Your order has been shipped",
-            style: GoogleFonts.archivo(
+            style: TextStyle(
                 color: grey, fontSize: 12, fontWeight: FontWeight.w500),
           ),
         ],

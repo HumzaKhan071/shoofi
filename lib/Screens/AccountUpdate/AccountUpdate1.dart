@@ -42,7 +42,7 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
               centerTitle: true,
               title: Text(
                 "Sign Up",
-                style: GoogleFonts.archivo(
+                style: TextStyle(
                     color: black, fontSize: 14, fontWeight: FontWeight.w500),
               ),
             ),
@@ -66,7 +66,7 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
                         child: CircleAvatar(
                           radius: 50,
                           backgroundImage: AssetImage(
-                            "assets/Images/a.png",
+                            "assets/images/a.png",
                           ),
                         ),
                       ),
@@ -76,7 +76,7 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
                     ),
                     Text(
                       "Click to select avatar",
-                      style: GoogleFonts.archivo(
+                      style: TextStyle(
                           color: black,
                           fontSize: 13,
                           fontWeight: FontWeight.w500),
@@ -176,7 +176,7 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
                       leading: Icon(Icons.people),
                       title: Text(
                         "Profile Lock",
-                        style: GoogleFonts.archivo(
+                        style: TextStyle(
                             color: black,
                             fontSize: 13,
                             fontWeight: FontWeight.w500),
@@ -185,9 +185,7 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
                     MyButtonContainer(
                       text: "Update",
                       conColor: yellow,
-                      press: () {
-                      
-                      },
+                      press: () {},
                     ),
                     const SizedBox(
                       height: 10,

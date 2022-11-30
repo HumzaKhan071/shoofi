@@ -28,7 +28,7 @@ class ChannelPlaylist extends StatelessWidget {
                               children: [
                                 Text(
                                   controller.watchListTiles[index],
-                                  style: GoogleFonts.archivo(
+                                  style: TextStyle(
                                       color: black,
                                       fontSize: 22,
                                       fontWeight: FontWeight.bold),
@@ -42,7 +42,7 @@ class ChannelPlaylist extends StatelessWidget {
                                   },
                                   child: Text(
                                     "view all",
-                                    style: GoogleFonts.archivo(
+                                    style: TextStyle(
                                         color: yellow,
                                         fontSize: 13,
                                         decoration: TextDecoration.underline,
@@ -56,9 +56,9 @@ class ChannelPlaylist extends StatelessWidget {
                         spacing: 10,
                         alignment: WrapAlignment.center,
                         children: [
-                          VideoThumbnail(imgPath: "assets/Images/img1.png"),
-                          VideoThumbnail(imgPath: "assets/Images/img2.png"),
-                          VideoThumbnail(imgPath: "assets/Images/img3.png"),
+                          VideoThumbnail(imgPath: "assets/images/img1.png"),
+                          VideoThumbnail(imgPath: "assets/images/img2.png"),
+                          VideoThumbnail(imgPath: "assets/images/img3.png"),
                         ],
                       ),
                     ],

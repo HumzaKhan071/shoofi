@@ -24,13 +24,13 @@ class AccountUpdate2 extends StatelessWidget {
                       child: CircleAvatar(
                         radius: 50,
                         backgroundImage: AssetImage(
-                          "assets/Images/a.png",
+                          "assets/images/a.png",
                         ),
                       ),
                     ),
                     Text(
                       "Shoofista",
-                      style: GoogleFonts.archivo(
+                      style: TextStyle(
                           color: black,
                           fontSize: 16,
                           fontWeight: FontWeight.bold),
@@ -42,12 +42,15 @@ class AccountUpdate2 extends StatelessWidget {
               MyTextField(text: "User Name"),
               SizedBox(height: 20),
               Text("Create Pin",
-                  style: GoogleFonts.archivo(
-                      color: black, fontSize: 16, fontWeight: FontWeight.bold)),
+                  style: TextStyle(
+                    color: black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  )),
               MyPasswordField(text: "***"),
               SizedBox(height: 20),
               Text("Confirm Pin",
-                  style: GoogleFonts.archivo(
+                  style: TextStyle(
                       color: black, fontSize: 16, fontWeight: FontWeight.bold)),
               MyPasswordField(
                 text: "***",

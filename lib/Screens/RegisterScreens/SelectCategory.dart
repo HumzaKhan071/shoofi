@@ -1,7 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
 
-
-
 class SelectCategory extends StatefulWidget {
   const SelectCategory({super.key});
 
@@ -29,8 +27,11 @@ class _SelectCategoryState extends State<SelectCategory> {
         centerTitle: true,
         title: Text(
           "Sign Up",
-          style: GoogleFonts.archivo(
-              color: black, fontSize: 14, fontWeight: FontWeight.w500),
+          style: TextStyle(
+            color: black,
+            fontSize: 14,
+             fontWeight: FontWeight.w500
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -52,24 +53,27 @@ class _SelectCategoryState extends State<SelectCategory> {
                 child: Column(
                   children: [
                     Text("Welcome to Shoofi",
-                        style: GoogleFonts.archivo(
-                            color: grey,
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold)),
+                        style: TextStyle(
+                          color: grey,
+                          fontSize: 12,
+                           fontWeight: FontWeight.bold
+                        )),
                     Text.rich(
                       TextSpan(
                           text: "Pick Your favourite",
-                          style: GoogleFonts.archivo(
-                              color: grey,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500),
+                          style: TextStyle(
+                            color: grey,
+                            fontSize: 12,
+                             fontWeight: FontWeight.w500
+                          ),
                           children: [
                             TextSpan(
                               text: " Content Category",
-                              style: GoogleFonts.archivo(
-                                  color: black,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                color: black,
+                                fontSize: 12,
+                                 fontWeight: FontWeight.bold
+                              ),
                             ),
                           ]),
                     ),
@@ -101,7 +105,7 @@ class _SelectCategoryState extends State<SelectCategory> {
               SizedBox(
                 height: 10,
               ),
-            Agreements()
+              Agreements()
             ],
           ),
         ),

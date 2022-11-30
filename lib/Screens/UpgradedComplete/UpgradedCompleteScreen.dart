@@ -20,7 +20,7 @@ class UpgradedCompletedScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Sign Up",
-          style: GoogleFonts.archivo(
+          style: TextStyle(
               color: black, fontSize: 14, fontWeight: FontWeight.w500),
         ),
       ),
@@ -42,7 +42,7 @@ class UpgradedCompletedScreen extends StatelessWidget {
                 width: 293,
                 child: Center(
                   child: Text("Upgraded Succesfully",
-                      style: GoogleFonts.archivo(
+                      style: TextStyle(
                           color: black,
                           fontSize: 14,
                           fontWeight: FontWeight.w500)),
@@ -56,11 +56,11 @@ class UpgradedCompletedScreen extends StatelessWidget {
                 width: 256,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/Images/firework.png"),
+                    image: AssetImage("assets/images/firework.png"),
                     fit: BoxFit.fill,
                   ),
                 ),
-                child: Image.asset("assets/Images/a.png"),
+                child: Image.asset("assets/images/a.png"),
               ),
               SizedBox(height: 20),
               SizedBox(
@@ -71,14 +71,14 @@ class UpgradedCompletedScreen extends StatelessWidget {
                   children: [
                     Text(
                       "Congratulation".toUpperCase(),
-                      style: GoogleFonts.archivo(
+                      style: TextStyle(
                           color: black,
                           fontSize: 16,
                           fontWeight: FontWeight.bold),
                     ),
                     Text(
                       "your subscription is upgraded".toUpperCase(),
-                      style: GoogleFonts.archivo(
+                      style: TextStyle(
                           color: black,
                           fontSize: 16,
                           fontWeight: FontWeight.bold),

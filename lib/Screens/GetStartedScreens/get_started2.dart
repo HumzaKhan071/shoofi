@@ -12,7 +12,7 @@ class GetStarted2 extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(height: Get.height * 0.1),
-          Image.asset("assets/Images/logo3.png"),
+          Image.asset("assets/images/logo3.png"),
           SizedBox(height: Get.height * 0.1),
           SizedBox(
             height: Get.height * 0.58,

@@ -1,8 +1,8 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/controllers/RegisterControllers/completed_screen.dart';
 
 class CompletedScreen extends StatelessWidget {
-  CompletedScreenController controller = CompletedScreenController();
+  const CompletedScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class CompletedScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Sign Up",
-          style: GoogleFonts.archivo(
+          style: TextStyle(
               color: black, fontSize: 14, fontWeight: FontWeight.w500),
         ),
       ),
@@ -44,7 +44,7 @@ class CompletedScreen extends StatelessWidget {
                 width: 293,
                 child: Center(
                   child: Text("Congratulation your signup is completed",
-                      style: GoogleFonts.archivo(
+                      style: TextStyle(
                           color: black,
                           fontSize: 14,
                           fontWeight: FontWeight.w500)),
@@ -58,11 +58,11 @@ class CompletedScreen extends StatelessWidget {
                 width: 256,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/Images/firework.png"),
+                    image: AssetImage("assets/images/firework.png"),
                     fit: BoxFit.fill,
                   ),
                 ),
-                child: Image.asset("assets/Images/a.png"),
+                child: Image.asset("assets/images/a.png"),
               ),
               SizedBox(height: 20),
               SizedBox(
@@ -73,14 +73,14 @@ class CompletedScreen extends StatelessWidget {
                   children: [
                     Text(
                       "Enjoy your".toUpperCase(),
-                      style: GoogleFonts.archivo(
+                      style: TextStyle(
                           color: black,
                           fontSize: 16,
                           fontWeight: FontWeight.bold),
                     ),
                     Text(
                       "90 Days free trail".toUpperCase(),
-                      style: GoogleFonts.archivo(
+                      style: TextStyle(
                           color: black,
                           fontSize: 16,
                           fontWeight: FontWeight.bold),

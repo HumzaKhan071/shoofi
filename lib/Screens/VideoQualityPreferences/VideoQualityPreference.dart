@@ -6,28 +6,15 @@ class VideoQualityPreference extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leadingWidth: 40,
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: Icon(
-              Icons.arrow_back_ios_new,
-              color: grey,
-            )),
-        centerTitle: true,
-        title: Text(
-          "Video Quality Preferences",
-          style: GoogleFonts.archivo(
-              color: black, fontSize: 14, fontWeight: FontWeight.w500),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(50),
+        child: CustomAppBar(
+          title: "Video Quality Preference",
         ),
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(8),
+          padding: EdgeInsets.all(15),
           child: Column(
             children: [
               LinearProgressIndicator(
@@ -75,11 +62,8 @@ class _MyVPRowState extends State<MyVPRow> {
       children: [
         Text(
           widget.title,
-          style: GoogleFonts.archivo(
-            color: black,
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
-          ),
+          style: TextStyle(
+              color: black, fontSize: 14, fontWeight: FontWeight.w500),
         ),
         Container(
           height: 26,

@@ -31,7 +31,7 @@ class _CreateUserProfileScreenState extends State<CreateUserProfileScreen> {
         centerTitle: true,
         title: Text(
           "Who is watching?",
-          style: GoogleFonts.archivo(
+          style: TextStyle(
               color: black, fontSize: 14, fontWeight: FontWeight.w500),
         ),
       ),
@@ -57,7 +57,7 @@ class _CreateUserProfileScreenState extends State<CreateUserProfileScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ProfileAvatar(
-                        backgroundImagePath: "assets/Images/a.png",
+                        backgroundImagePath: "assets/images/a.png",
                         title: "Shoofista",
                         onTap: () {
                           pinDialog(context);

@@ -1,7 +1,6 @@
 export '../../Utils/Colors.dart';
 export 'package:flutter/material.dart';
 export 'package:get/get.dart';
-export 'package:google_fonts/google_fonts.dart';
 export 'package:shoofi/Screens/RegisterScreens/InstagramScreen.dart';
 export 'package:shoofi/Screens/Widgets/MyButtonContainer.dart';
 export 'package:shoofi/Screens/Widgets/MyYoutubeContainer.dart';
@@ -55,3 +54,4 @@ export 'package:shoofi/Screens/HomeScreens/bottom_navigation_bar.dart';
 export 'package:shoofi/controllers/Home/watchlist_controller.dart';
 export 'package:shoofi/Screens/HomeScreens/extended_watchlist.dart';
 export 'package:shoofi/Screens/Widgets/removeWatchListBottomSheet.dart';
+export 'package:shoofi/Screens/Widgets/customAppBar.dart';

@@ -1,3 +1,4 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Routes/routes.dart';
 
 class VerifyScreen extends StatefulWidget {
@@ -29,7 +30,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
         centerTitle: true,
         title: Text(
           "Sign Up",
-          style: GoogleFonts.archivo(
+          style: TextStyle(
               color: black, fontSize: 14, fontWeight: FontWeight.w500),
         ),
       ),
@@ -48,7 +49,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
               ),
               Center(
                 child: Text(widget.title,
-                    style: GoogleFonts.archivo(color: black, fontSize: 24)),
+                    style: TextStyle(color: black, fontSize: 24)),
               ),
               SizedBox(
                 height: 20,
@@ -62,7 +63,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
                     children: [
                       Text(
                         widget.subTitle,
-                        style: GoogleFonts.archivo(color: black, fontSize: 14),
+                        style: TextStyle(color: black, fontSize: 14),
                         textAlign: TextAlign.center,
                       ),
                     ],
@@ -72,7 +73,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
               SizedBox(
                 height: 20,
               ),
-              Image.asset("assets/Images/Varification_illustration.png"),
+              Image.asset("assets/images/Varification_illustration.png"),
               SizedBox(
                 height: 30,
               ),
@@ -107,11 +108,11 @@ class _VerifyScreenState extends State<VerifyScreen> {
               ),
               Text.rich(TextSpan(
                   text: "Code expires in ",
-                  style: GoogleFonts.archivo(color: black, fontSize: 12),
+                  style: TextStyle(color: black, fontSize: 12),
                   children: [
                     TextSpan(
                       text: "00:59",
-                      style: GoogleFonts.archivo(color: red, fontSize: 12),
+                      style: TextStyle(color: red, fontSize: 12),
                     ),
                   ])),
               SizedBox(
@@ -119,11 +120,11 @@ class _VerifyScreenState extends State<VerifyScreen> {
               ),
               Text.rich(TextSpan(
                   text: "Didn’t receive code? ",
-                  style: GoogleFonts.archivo(color: black, fontSize: 12),
+                  style: TextStyle(color: black, fontSize: 12),
                   children: [
                     TextSpan(
                       text: " Resend Code",
-                      style: GoogleFonts.archivo(color: red, fontSize: 12),
+                      style: TextStyle(color: red, fontSize: 12),
                     ),
                   ])),
               SizedBox(
@@ -167,8 +168,8 @@ class MyTextFieldContainer extends StatelessWidget {
         textAlign: TextAlign.center,
         decoration: InputDecoration(
           hintText: "-",
-          hintStyle: GoogleFonts.archivo(
-              color: grey, fontSize: 14, fontWeight: FontWeight.w500),
+          hintStyle:
+              TextStyle(color: grey, fontSize: 14, fontWeight: FontWeight.w500),
         ),
       ),
     );

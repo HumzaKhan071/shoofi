@@ -39,7 +39,7 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
               centerTitle: true,
               title: Text(
                 "Sign Up",
-                style: GoogleFonts.archivo(
+                style: TextStyle(
                     color: black, fontSize: 14, fontWeight: FontWeight.w500),
               ),
             ),
@@ -63,7 +63,7 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                         child: CircleAvatar(
                           radius: 50,
                           backgroundImage: AssetImage(
-                            "assets/Images/avatar.png",
+                            "assets/images/avatar.png",
                           ),
                         ),
                       ),
@@ -73,7 +73,7 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                     ),
                     Text(
                       "Click to select avatar",
-                      style: GoogleFonts.archivo(
+                      style: TextStyle(
                           color: black,
                           fontSize: 13,
                           fontWeight: FontWeight.w500),
@@ -106,7 +106,7 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: "+  01  234 567 890",
-                          hintStyle: GoogleFonts.archivo(
+                          hintStyle: TextStyle(
                               color: grey,
                               fontSize: 16,
                               fontWeight: FontWeight.bold),

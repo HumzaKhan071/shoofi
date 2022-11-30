@@ -17,7 +17,7 @@ class ExtendedWatchList extends StatelessWidget {
                 padding: EdgeInsets.only(left: 24.0, bottom: 15, top: 20),
                 child: Text(
                   controler.selectedTile,
-                  style: GoogleFonts.archivo(
+                  style: TextStyle(
                       color: black, fontSize: 22, fontWeight: FontWeight.bold),
                 ),
               ),
@@ -33,17 +33,17 @@ class ExtendedWatchList extends StatelessWidget {
                 alignment: WrapAlignment.center,
                 children: [
                   VideoThumbnail(
-                      imgPath: "assets/Images/img1.png",
+                      imgPath: "assets/images/img1.png",
                       onLongPress: () {
                         remvoeWatchListBottomSheet();
                       }),
                   VideoThumbnail(
-                      imgPath: "assets/Images/img2.png",
+                      imgPath: "assets/images/img2.png",
                       onLongPress: () {
                         remvoeWatchListBottomSheet();
                       }),
                   VideoThumbnail(
-                      imgPath: "assets/Images/img3.png",
+                      imgPath: "assets/images/img3.png",
                       onLongPress: () {
                         remvoeWatchListBottomSheet();
                       }),

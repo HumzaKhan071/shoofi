@@ -1,7 +1,9 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/HomeScreens/all_categories.dart';
 import 'package:shoofi/Screens/youtube_home/youtube_home.dart';
 import 'package:shoofi/controllers/Home/trending_controller.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 
 class HomeTrendingScreen extends StatelessWidget {
   @override
@@ -21,27 +23,22 @@ class HomeTrendingScreen extends StatelessWidget {
             appBar: AppBar(
               backgroundColor: Colors.white,
               elevation: 0,
-              leading: Image.asset(
-                "assets/Images/logo2.png",
-                height: 15,
-              ),
-              title: Text(
-                "Shoofi",
-                style: GoogleFonts.archivo(
-                    fontSize: 30, color: black, fontWeight: FontWeight.bold),
+              leadingWidth: 100,
+              leading: Padding(
+                padding: const EdgeInsets.only(left: 15.0),
+                child: SvgPicture.asset(ImageConstant.logo3),
               ),
               actions: [
                 Icon(
-                  Icons.cast,
+                  Icons.connected_tv_rounded,
                   color: black,
                 ),
-                SizedBox(width: 10),
                 IconButton(
                   onPressed: () {
                     Get.to(RegisterScreenLocation(showBtn: false));
                   },
                   icon: Icon(
-                    Icons.pin_drop,
+                    Icons.add_location_outlined,
                     color: black,
                   ),
                 ),
@@ -70,7 +67,7 @@ class HomeTrendingScreen extends StatelessWidget {
               ],
               bottom: TabBar(
                   labelColor: black,
-                  labelStyle: GoogleFonts.archivo(
+                  labelStyle: TextStyle(
                     fontSize: 14,
                     color: black,
                     fontWeight: FontWeight.bold,

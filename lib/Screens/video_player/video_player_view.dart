@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:shoofi/Screens/video_player/video_player_card.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../Utils/Colors.dart';
-import '../Widgets/MyButtonContainer.dart';
+import '../../Utils/image_constant.dart';
 
 // void main() {
 //   WidgetsFlutterBinding.ensureInitialized();
@@ -23,6 +22,7 @@ class VideoPlayerView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // VideoPlayerController controller = Get.put(VideoPlayerController());
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Youtube Player Flutter',
@@ -116,6 +116,12 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return YoutubePlayerBuilder(
+      onEnterFullScreen: () {
+        SystemChrome.setPreferredOrientations([
+          DeviceOrientation.landscapeRight,
+          DeviceOrientation.landscapeLeft,
+        ]);
+      },
       onExitFullScreen: () {
         // The player forces portraitUp after exiting fullscreen. This overrides the behaviour.
         SystemChrome.setPreferredOrientations(DeviceOrientation.values);
@@ -163,7 +169,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           CircleAvatar(
                             backgroundImage:
-                                AssetImage('assets/Images/avatar.png'),
+                                AssetImage('assets/images/avatar.png'),
                           ),
                           SizedBox(
                             width: 10,
@@ -171,7 +177,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           Flexible(
                             child: Text(
                               'Vivamus mattis sapien vel eros cursus a venenatis duiincidunt',
-                              style: GoogleFonts.archivo(
+                              style: TextStyle(
                                   color: black,
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold),
@@ -189,24 +195,21 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           Text(
                             '1.5k views',
-                            style:
-                                GoogleFonts.archivo(color: grey, fontSize: 14),
+                            style: TextStyle(color: grey, fontSize: 14),
                           ),
                           SizedBox(
                             width: 10,
                           ),
                           Text(
                             '|',
-                            style:
-                                GoogleFonts.archivo(color: grey, fontSize: 14),
+                            style: TextStyle(color: grey, fontSize: 14),
                           ),
                           SizedBox(
                             width: 10,
                           ),
                           Text(
                             '26 Sept 2021',
-                            style:
-                                GoogleFonts.archivo(color: grey, fontSize: 14),
+                            style: TextStyle(color: grey, fontSize: 14),
                           ),
                         ],
                       ),
@@ -216,15 +219,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Image.asset('assets/Images/likeIcon.png'),
-                          Image.asset('assets/Images/dislikeIcon2.png'),
-                          Image.asset('assets/Images/forwardIcon.png'),
-                          Image.asset('assets/Images/savedIcon.png'),
+                          Image.asset(ImageConstant.likeIcon),
+                          Image.asset(ImageConstant.disLikeicon2),
+                          Image.asset(ImageConstant.forwardIcon),
+                          Image.asset(ImageConstant.share),
                           InkWell(
                               onTap: () {
                                 moreOptions();
                               },
-                              child: Image.asset('assets/Images/moreIcon.png')),
+                              child: Image.asset(ImageConstant.moreIcon)),
                         ],
                       ),
                       //
@@ -249,10 +252,7 @@ class _MyHomePageState extends State<MyHomePage> {
         content: Text(
           message,
           textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontWeight: FontWeight.w300,
-            fontSize: 16.0,
-          ),
+          style: const TextStyle(fontSize: 16.0, fontWeight: FontWeight.w300),
         ),
         backgroundColor: Colors.blueAccent,
         behavior: SnackBarBehavior.floating,
@@ -278,10 +278,10 @@ moreOptions() {
       child: Column(
         children: [
           SizedBox(height: 10),
-          Image.asset("assets/Images/divider.png"),
+          Image.asset("assets/images/divider.png"),
           SizedBox(height: 20),
           Text("More Options",
-              style: GoogleFonts.archivo(
+              style: TextStyle(
                   color: black, fontSize: 24, fontWeight: FontWeight.bold)),
           SizedBox(height: 15),
           Divider(
@@ -291,27 +291,27 @@ moreOptions() {
           ),
           ListTile(
               dense: true,
-              leading: Image.asset('assets/Images/clock.png'),
+              leading: Image.asset('assets/images/clock.png'),
               title: Text("Video Quality")),
           ListTile(
               dense: true,
-              leading: Image.asset('assets/Images/captions.png'),
+              leading: Image.asset('assets/images/captions.png'),
               title: Text("Captions")),
           ListTile(
               dense: true,
-              leading: Image.asset('assets/Images/share.png'),
+              leading: Image.asset('assets/images/share.png'),
               title: Text("Share")),
           ListTile(
               dense: true,
-              leading: Image.asset('assets/Images/notInterested.png'),
+              leading: Image.asset('assets/images/notInterested.png'),
               title: Text("Not Interested")),
           ListTile(
               dense: true,
-              leading: Image.asset('assets/Images/report.png'),
+              leading: Image.asset('assets/images/report.png'),
               title: Text("Report")),
           ListTile(
               dense: true,
-              leading: Image.asset('assets/Images/helpCenter.png'),
+              leading: Image.asset('assets/images/helpCenter.png'),
               title: Text("Help Center")),
         ],
       ),

@@ -25,7 +25,7 @@ class RegisterScreenLocation extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Sign Up",
-          style: GoogleFonts.archivo(
+          style: TextStyle(
               color: black, fontSize: 14, fontWeight: FontWeight.w500),
         ),
       ),
@@ -50,12 +50,12 @@ class RegisterScreenLocation extends StatelessWidget {
                       child: Column(
                         children: [
                           Text("This helps us find you more relevant content",
-                              style: GoogleFonts.archivo(
+                              style: TextStyle(
                                   color: black,
                                   fontSize: 12,
                                   fontWeight: FontWeight.bold)),
                           Text("Select one or multiple countries",
-                              style: GoogleFonts.archivo(
+                              style: TextStyle(
                                   color: black,
                                   fontSize: 12,
                                   fontWeight: FontWeight.bold)),
@@ -79,7 +79,7 @@ class RegisterScreenLocation extends StatelessWidget {
                         border: InputBorder.none,
                         contentPadding: EdgeInsets.all(7),
                         hintText: "Search",
-                        hintStyle: GoogleFonts.archivo(
+                        hintStyle: TextStyle(
                             color: black,
                             fontSize: 16,
                             fontWeight: FontWeight.bold),

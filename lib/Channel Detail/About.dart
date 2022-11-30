@@ -16,25 +16,25 @@ class About extends StatelessWidget {
           Center(
               child: Column(
             children: [
-              Image.asset("assets/Images/epic.png"),
+              Image.asset("assets/images/epic.png"),
               Text("9.5 M Subscribers",
-                  style: GoogleFonts.archivo(
+                  style: TextStyle(
                       color: grey, fontSize: 16, fontWeight: FontWeight.bold)),
               Text("769 Videos",
-                  style: GoogleFonts.archivo(
+                  style: TextStyle(
                       color: grey, fontSize: 16, fontWeight: FontWeight.bold)),
             ],
           )),
           SizedBox(height: 20),
           Text(
             "Description",
-            style: GoogleFonts.archivo(
+            style: TextStyle(
                 color: black, fontSize: 18, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 10),
           Text(
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed semper nunc. Sed euismod, nunc sit amet aliquam lacinia, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl. Sed euismod, nunc sit amet aliquam lacinia, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.",
-            style: GoogleFonts.archivo(
+            style: TextStyle(
                 color: black,
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
@@ -43,13 +43,13 @@ class About extends StatelessWidget {
           SizedBox(height: 20),
           Text(
             "Details",
-            style: GoogleFonts.archivo(
+            style: TextStyle(
                 color: black, fontSize: 18, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 10),
           Text(
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed semper nunc. Sed euismod, nunc sit amet aliquam lacinia, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl. Sed euismod, nunc sit amet aliquam lacinia, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.",
-            style: GoogleFonts.archivo(
+            style: TextStyle(
                 color: black,
                 fontSize: 16,
                 fontWeight: FontWeight.w500,

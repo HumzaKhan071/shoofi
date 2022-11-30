@@ -1,12 +1,12 @@
 import '../../Routes/routes.dart';
 
 class MyPlanRow extends StatelessWidget {
-  final FontWeight fontWeight;
+ final FontWeight fontWeight;
   final String text;
   const MyPlanRow({
     Key? key,
-    required this.text,
-    required this.fontWeight,
+    required this.text, required this.fontWeight,
+
   }) : super(key: key);
 
   @override
@@ -25,8 +25,7 @@ class MyPlanRow extends StatelessWidget {
         SizedBox(width: 10),
         Text(
           text,
-          style: GoogleFonts.archivo(
-              color: black, fontSize: 12, fontWeight: fontWeight),
+          style: TextStyle(color: black, fontSize: 12,fontWeight: fontWeight ),
         )
       ],
     );

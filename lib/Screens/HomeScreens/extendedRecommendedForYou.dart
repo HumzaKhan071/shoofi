@@ -13,7 +13,7 @@ class ExtendRecommendedForYou extends StatelessWidget {
         backgroundColor: Colors.transparent,
         centerTitle: true,
         title: Text("Recommended for you",
-            style: GoogleFonts.archivo(
+            style: TextStyle(
                 color: black, fontSize: 18, fontWeight: FontWeight.bold)),
         leading: IconButton(
             onPressed: (() {
@@ -37,9 +37,9 @@ class ExtendRecommendedForYou extends StatelessWidget {
                   spacing: 10,
                   alignment: WrapAlignment.center,
                   children: [
-                    VideoThumbnail(imgPath: "assets/Images/img1.png"),
-                    VideoThumbnail(imgPath: "assets/Images/img2.png"),
-                    VideoThumbnail(imgPath: "assets/Images/img3.png"),
+                    VideoThumbnail(imgPath: "assets/images/img1.png"),
+                    VideoThumbnail(imgPath: "assets/images/img2.png"),
+                    VideoThumbnail(imgPath: "assets/images/img3.png"),
                   ],
                 );
               },

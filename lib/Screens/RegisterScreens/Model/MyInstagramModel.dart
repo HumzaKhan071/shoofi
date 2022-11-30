@@ -1,3 +1,5 @@
+import '../../../Utils/image_constant.dart';
+
 class MyInstagramModel {
   final String image;
 
@@ -5,20 +7,20 @@ class MyInstagramModel {
 }
 
 List<MyInstagramModel> myInstagramModel = [
-  MyInstagramModel("assets/Channels/akon.png"),
-  MyInstagramModel("assets/Channels/bieber.png"),
-  MyInstagramModel("assets/Channels/bts.png"),
-  MyInstagramModel("assets/Channels/bucks.png"),
-  MyInstagramModel("assets/Channels/cartoon.png"),
-  MyInstagramModel("assets/Channels/coke.png"),
-  MyInstagramModel("assets/Channels/eclipse.png"),
-  MyInstagramModel("assets/Channels/fox.png"),
-  MyInstagramModel("assets/Channels/girl.png"),
-  MyInstagramModel("assets/Channels/italy.png"),
-  MyInstagramModel("assets/Channels/men.png"),
-  MyInstagramModel("assets/Channels/obama.png"),
-  MyInstagramModel("assets/Channels/peppes.png"),
-  MyInstagramModel("assets/Channels/rock.png"),
-  MyInstagramModel("assets/Channels/ronaldo.png"),
-  MyInstagramModel("assets/Channels/spark.png"),
+  MyInstagramModel(ImageConstant.akon),
+  MyInstagramModel(ImageConstant.bieber),
+  MyInstagramModel(ImageConstant.bts),
+  MyInstagramModel(ImageConstant.bucks),
+  MyInstagramModel(ImageConstant.cartoon),
+  MyInstagramModel(ImageConstant.coke),
+  MyInstagramModel(ImageConstant.eclipse),
+  MyInstagramModel(ImageConstant.fox),
+  MyInstagramModel(ImageConstant.girl),
+  MyInstagramModel(ImageConstant.italy),
+  MyInstagramModel(ImageConstant.men),
+  MyInstagramModel(ImageConstant.obama),
+  MyInstagramModel(ImageConstant.peppes),
+  MyInstagramModel(ImageConstant.rock),
+  MyInstagramModel(ImageConstant.ronaldo),
+  MyInstagramModel(ImageConstant.spark),
 ];

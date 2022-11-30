@@ -1,4 +1,6 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
 
 class HomeWatchlistScreen extends StatelessWidget {
@@ -20,8 +22,8 @@ class HomeWatchlistScreen extends StatelessWidget {
               Icons.arrow_back_ios,
               color: black,
             )),
-        title: Image.asset(
-          "assets/Images/logo5.png",
+        title: SvgPicture.asset(
+          ImageConstant.logo3,
         ),
         actions: [
           Icon(
@@ -70,7 +72,7 @@ class HomeWatchlistScreen extends StatelessWidget {
                               children: [
                                 Text(
                                   controler.watchListTiles[index],
-                                  style: GoogleFonts.archivo(
+                                  style: TextStyle(
                                       color: black,
                                       fontSize: 22,
                                       fontWeight: FontWeight.bold),
@@ -84,7 +86,7 @@ class HomeWatchlistScreen extends StatelessWidget {
                                   },
                                   child: Text(
                                     "view all",
-                                    style: GoogleFonts.archivo(
+                                    style: TextStyle(
                                         color: yellow,
                                         fontSize: 13,
                                         decoration: TextDecoration.underline,
@@ -98,9 +100,9 @@ class HomeWatchlistScreen extends StatelessWidget {
                         spacing: 10,
                         alignment: WrapAlignment.center,
                         children: [
-                          VideoThumbnail(imgPath: "assets/Images/img1.png"),
-                          VideoThumbnail(imgPath: "assets/Images/img2.png"),
-                          VideoThumbnail(imgPath: "assets/Images/img3.png"),
+                          VideoThumbnail(imgPath: "assets/images/img1.png"),
+                          VideoThumbnail(imgPath: "assets/images/img2.png"),
+                          VideoThumbnail(imgPath: "assets/images/img3.png"),
                         ],
                       ),
                     ],

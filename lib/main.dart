@@ -1,5 +1,3 @@
-import 'package:country_list_pick/country_list_pick.dart';
-import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shoofi/Routes/routes.dart';
@@ -17,9 +15,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
-    );
+        theme: ThemeData(
+          fontFamily: "Archivo",
+        ),
+        debugShowCheckedModeBanner: false,
+        home: SplashScreen());
   }
 }

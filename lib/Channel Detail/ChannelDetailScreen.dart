@@ -1,8 +1,10 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Channel%20Detail/About.dart';
 import 'package:shoofi/Channel%20Detail/playlist.dart';
 import 'package:shoofi/Channel%20Detail/videos.dart';
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/video_player/videos_main_page.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 import 'package:shoofi/controllers/ChannelDetails/playlist_controller.dart';
 import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
 
@@ -53,7 +55,7 @@ class _ChanneledDetailState extends State<ChanneledDetail>
                 appBar: AppBar(
                   backgroundColor: Colors.white,
                   elevation: 0,
-                  title: Image.asset("assets/Images/logo3.png"),
+                  title: SvgPicture.asset(ImageConstant.logo3),
                   leading: IconButton(
                       onPressed: () {
                         Get.back();
@@ -80,10 +82,7 @@ class _ChanneledDetailState extends State<ChanneledDetail>
                           isExpanded: true,
                           underline: Container(),
                           value: dropdownvalue,
-                          style: TextStyle(
-                              color: black,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold),
+                          style: TextStyle(color: black, fontSize: 15, fontWeight: FontWeight.bold ),
                           items: items.map((String items) {
                             return DropdownMenuItem(
                               value: items,
@@ -100,10 +99,11 @@ class _ChanneledDetailState extends State<ChanneledDetail>
                   bottom: TabBar(
                       controller: _tabController,
                       labelColor: black,
-                      labelStyle: GoogleFonts.archivo(
+                      labelStyle: TextStyle(
                         fontSize: 14,
                         color: black,
-                        fontWeight: FontWeight.bold,
+                         fontWeight: FontWeight.bold
+                       
                       ),
                       indicatorColor: yellow,
                       tabs: [

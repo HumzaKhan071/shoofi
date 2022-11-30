@@ -1,5 +1,7 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/LoginScreens/login_screen.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 import 'package:shoofi/controllers/GetStartedControllers/get_started_controller.dart';
 
 class GetStarted extends StatelessWidget {
@@ -17,11 +19,11 @@ class GetStarted extends StatelessWidget {
               SizedBox(
                 height: Get.height * 0.1,
               ),
-              Image.asset("assets/Images/logo3.png"),
+              SvgPicture.asset(ImageConstant.logo3),
               const SizedBox(
                 height: 30,
               ),
-              Image.asset("assets/Images/illustration1.png"),
+              SvgPicture.asset(ImageConstant.illustration),
               Expanded(
                   child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,

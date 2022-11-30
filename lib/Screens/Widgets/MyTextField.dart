@@ -44,8 +44,11 @@ class MyTextField extends StatelessWidget {
           prefix: prefix,
           border: InputBorder.none,
           hintText: text,
-          hintStyle: GoogleFonts.archivo(
-              color: grey, fontSize: 16, fontWeight: FontWeight.bold),
+          hintStyle: TextStyle(
+            color: grey,
+            fontSize: 16,
+             fontWeight: FontWeight.bold
+          ),
           contentPadding: EdgeInsets.only(
               left: contentLeftPadding,
               right: contentRightPadding,

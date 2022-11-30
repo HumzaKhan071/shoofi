@@ -1,3 +1,5 @@
+import 'package:shoofi/Utils/image_constant.dart';
+
 class MySelectCategoryModel {
   final String image;
   final String title;
@@ -6,24 +8,24 @@ class MySelectCategoryModel {
 }
 
 List<MySelectCategoryModel> mySelectCategoryModel = [
-  MySelectCategoryModel("assets/Categories/action.png", "Action"),
-  MySelectCategoryModel("assets/Categories/music.png", "Music"),
-  MySelectCategoryModel("assets/Categories/entertainment.png", "Entertainment"),
-  MySelectCategoryModel("assets/Categories/sports.png", "Sports"),
-  MySelectCategoryModel("assets/Categories/Vlogs.png", "Vlogs"),
-  MySelectCategoryModel("assets/Categories/buisness.png", "Buisness"),
-  MySelectCategoryModel("assets/Categories/gaming.png", "Gaming"),
-  MySelectCategoryModel("assets/Categories/motivation.png", "Motivation"),
-  MySelectCategoryModel("assets/Categories/food.png", "Food"),
-  MySelectCategoryModel("assets/Categories/beverage.png", "Beverage"),
-  MySelectCategoryModel("assets/Categories/sweet.png", "Sweet"),
-  MySelectCategoryModel("assets/Categories/health.png", "Health"),
-  MySelectCategoryModel("assets/Categories/art.png", "Art"),
-  MySelectCategoryModel("assets/Categories/clothing.png", "Clothing"),
-  MySelectCategoryModel("assets/Categories/relegious.png", "Relegious"),
-  MySelectCategoryModel("assets/Categories/comedy.png", "Comedy"),
-  MySelectCategoryModel("assets/Categories/action.png", "Action"),
-  MySelectCategoryModel("assets/Categories/music.png", "Music"),
-  MySelectCategoryModel("assets/Categories/entertainment.png", "Entertainment"),
-  MySelectCategoryModel("assets/Categories/sports.png", "Sports"),
+  MySelectCategoryModel(ImageConstant.action, "Action"),
+  MySelectCategoryModel(ImageConstant.music, "Music"),
+  MySelectCategoryModel(ImageConstant.entertainment, "Entertainment"),
+  MySelectCategoryModel(ImageConstant.sports, "Sports"),
+  MySelectCategoryModel(ImageConstant.vlogs, "Vlogs"),
+  MySelectCategoryModel(ImageConstant.buisness, "Buisness"),
+  MySelectCategoryModel(ImageConstant.gaming, "Gaming"),
+  MySelectCategoryModel(ImageConstant.motivation, "Motivation"),
+  MySelectCategoryModel(ImageConstant.food, "Food"),
+  MySelectCategoryModel(ImageConstant.beverage, "Beverage"),
+  MySelectCategoryModel(ImageConstant.sweet, "Sweet"),
+  MySelectCategoryModel(ImageConstant.health, "Health"),
+  MySelectCategoryModel(ImageConstant.art, "Art"),
+  MySelectCategoryModel(ImageConstant.clothing, "Clothing"),
+  MySelectCategoryModel(ImageConstant.relegious, "Relegious"),
+  MySelectCategoryModel(ImageConstant.comedy, "Comedy"),
+  MySelectCategoryModel(ImageConstant.action, "Action"),
+  MySelectCategoryModel(ImageConstant.music, "Music"),
+  MySelectCategoryModel(ImageConstant.entertainment, "Entertainment"),
+  MySelectCategoryModel(ImageConstant.sports, "Sports"),
 ];

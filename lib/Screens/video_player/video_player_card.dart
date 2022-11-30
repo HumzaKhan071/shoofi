@@ -14,7 +14,7 @@ class VideoPlayerCard extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20), // Image border
               child: Image.asset(
-                'assets/Images/video_thumbnail.png',
+                'assets/images/video_thumbnail.png',
                 fit: BoxFit.cover,
               ),
             ),
@@ -28,7 +28,7 @@ class VideoPlayerCard extends StatelessWidget {
               Flexible(
                 child: Text(
                   'Vivamus mattis sapien vel eros cursus a venenatis duiincidunt',
-                  style: GoogleFonts.archivo(
+                  style: TextStyle(
                       color: black, fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
@@ -45,21 +45,21 @@ class VideoPlayerCard extends StatelessWidget {
             children: [
               Text(
                 '1.5k views',
-                style: GoogleFonts.archivo(color: grey, fontSize: 14),
+                style: TextStyle(color: grey, fontSize: 14),
               ),
               SizedBox(
                 width: 10,
               ),
               Text(
                 '|',
-                style: GoogleFonts.archivo(color: grey, fontSize: 14),
+                style: TextStyle(color: grey, fontSize: 14),
               ),
               SizedBox(
                 width: 10,
               ),
               Text(
                 '26 Sept 2021',
-                style: GoogleFonts.archivo(color: grey, fontSize: 14),
+                style: TextStyle(color: grey, fontSize: 14),
               ),
             ],
           ),

@@ -4,12 +4,16 @@ class ProfileAvatar extends StatelessWidget {
   final String? backgroundImagePath;
   final String title;
   final double radius;
+  final Color iconColor;
+  final double iconSize;
   final void Function() onTap;
   const ProfileAvatar({
     Key? key,
     this.backgroundImagePath,
     this.title = "Add Profile",
-    required this.onTap, this.radius =50,
+    required this.onTap,
+    this.radius = 50,
+    this.iconColor = yellow,  this.iconSize = 40,
   }) : super(key: key);
 
   @override
@@ -27,14 +31,14 @@ class ProfileAvatar extends StatelessWidget {
               child: backgroundImagePath == null
                   ? Icon(
                       Icons.add,
-                      color: yellow,
-                      size: 40,
+                      color: iconColor,
+                      size: iconSize,
                     )
                   : SizedBox()),
           SizedBox(height: 5),
           Text(
             title,
-            style: GoogleFonts.archivo(
+            style: TextStyle(
                 color: black, fontSize: 14, fontWeight: FontWeight.bold),
           )
         ],

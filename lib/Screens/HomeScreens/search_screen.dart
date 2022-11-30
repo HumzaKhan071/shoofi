@@ -1,4 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 
 class HomeSearchScreen extends StatefulWidget {
   const HomeSearchScreen({super.key});
@@ -11,17 +12,17 @@ class _HomeSearchScreenState extends State<HomeSearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(15.0),
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 20.0),
-            child: MyTextField(
+      padding: const EdgeInsets.all(10.0),
+      child: SafeArea(
+        child: Column(
+          children: [
+            MyTextField(
               text: "Search or Paste URL",
               prefixIcon: Icon(
                 Icons.search,
                 color: Colors.grey,
               ),
+              contentTopPadding: 13,
               suffixIcon: IconButton(
                 onPressed: () {
                   Get.bottomSheet(Container(
@@ -35,10 +36,10 @@ class _HomeSearchScreenState extends State<HomeSearchScreen> {
                     child: Column(
                       children: [
                         SizedBox(height: 10),
-                        Image.asset("assets/Images/divider.png"),
+                        Image.asset(ImageConstant.divider),
                         SizedBox(height: 20),
                         Text("Filters",
-                            style: GoogleFonts.archivo(
+                            style: TextStyle(
                                 color: black,
                                 fontSize: 24,
                                 fontWeight: FontWeight.bold)),
@@ -69,25 +70,26 @@ class _HomeSearchScreenState extends State<HomeSearchScreen> {
                 ),
               ),
             ),
-          ),
-          SizedBox(height: 15),
-          Flexible(
-            child: ListView.builder(
-              itemCount: 5,
-              itemBuilder: (context, index) {
-                return Wrap(
-                  spacing: 10,
-                  alignment: WrapAlignment.center,
-                  children: [
-                    VideoThumbnail(imgPath: "assets/Images/img1.png"),
-                    VideoThumbnail(imgPath: "assets/Images/img2.png"),
-                    VideoThumbnail(imgPath: "assets/Images/img3.png"),
-                  ],
-                );
-              },
-            ),
-          )
-        ],
+            SizedBox(height: 15),
+            Flexible(
+              child: ListView.builder(
+                padding: EdgeInsets.all(0),
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return Wrap(
+                    spacing: 10,
+                    alignment: WrapAlignment.center,
+                    children: [
+                      VideoThumbnail(imgPath: "assets/images/img1.png"),
+                      VideoThumbnail(imgPath: "assets/images/img2.png"),
+                      VideoThumbnail(imgPath: "assets/images/img3.png"),
+                    ],
+                  );
+                },
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -111,7 +113,7 @@ class _MyFilterRowState extends State<MyFilterRow> {
       children: [
         Text(
           widget.text,
-          style: GoogleFonts.archivo(
+          style: TextStyle(
               color: black, fontWeight: FontWeight.bold, fontSize: 18),
         ),
         Container(

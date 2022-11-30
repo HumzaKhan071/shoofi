@@ -7,23 +7,10 @@ class GeneralSettingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        leadingWidth: 40,
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: Icon(
-              Icons.arrow_back_ios_new,
-              color: grey,
-            )),
-        centerTitle: true,
-        title: Text(
-          "General Settings",
-          style: GoogleFonts.archivo(
-              color: black, fontSize: 14, fontWeight: FontWeight.bold),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(50),
+        child: CustomAppBar(
+          title: "General Settings",
         ),
       ),
       body: Padding(
@@ -43,8 +30,10 @@ class GeneralSettingScreen extends StatelessWidget {
               ),
               title: Text(
                 "Change Password",
-                style: GoogleFonts.archivo(
-                    color: black, fontSize: 14, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  color: black,
+                  fontSize: 14,
+                ),
               ),
               trailing: Icon(
                 Icons.arrow_forward_ios_outlined,
@@ -59,8 +48,10 @@ class GeneralSettingScreen extends StatelessWidget {
               ),
               title: Text(
                 "Manage Subscriptions",
-                style: GoogleFonts.archivo(
-                    color: black, fontSize: 14, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  color: black,
+                  fontSize: 14,
+                ),
               ),
               trailing: Icon(
                 Icons.arrow_forward_ios_outlined,
@@ -75,8 +66,10 @@ class GeneralSettingScreen extends StatelessWidget {
               ),
               title: Text(
                 "User Agreement",
-                style: GoogleFonts.archivo(
-                    color: black, fontSize: 14, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  color: black,
+                  fontSize: 14,
+                ),
               ),
               trailing: Icon(
                 Icons.arrow_forward_ios_outlined,
@@ -91,8 +84,10 @@ class GeneralSettingScreen extends StatelessWidget {
               ),
               title: Text(
                 "Delete Account",
-                style: GoogleFonts.archivo(
-                    color: black, fontSize: 14, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  color: black,
+                  fontSize: 14,
+                ),
               ),
               trailing: Icon(
                 Icons.arrow_forward_ios_outlined,
@@ -124,8 +119,10 @@ class GeneralSettingScreen extends StatelessWidget {
             Center(
               child: Text(
                 "More Options",
-                style: GoogleFonts.archivo(
-                    color: black, fontSize: 28, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  color: black,
+                  fontSize: 28,
+                ),
               ),
             ),
             SizedBox(height: 20),
@@ -140,7 +137,7 @@ class GeneralSettingScreen extends StatelessWidget {
               ),
               title: Text(
                 "Save to watch later",
-                style: GoogleFonts.archivo(
+                style: TextStyle(
                   color: black,
                   fontSize: 14,
                 ),
@@ -153,7 +150,7 @@ class GeneralSettingScreen extends StatelessWidget {
               ),
               title: Text(
                 "Save to my list",
-                style: GoogleFonts.archivo(
+                style: TextStyle(
                   color: black,
                   fontSize: 14,
                 ),
@@ -166,7 +163,7 @@ class GeneralSettingScreen extends StatelessWidget {
               ),
               title: Text(
                 "Share",
-                style: GoogleFonts.archivo(
+                style: TextStyle(
                   color: black,
                   fontSize: 14,
                 ),
@@ -179,7 +176,7 @@ class GeneralSettingScreen extends StatelessWidget {
               ),
               title: Text(
                 "Not interested",
-                style: GoogleFonts.archivo(
+                style: TextStyle(
                   color: black,
                   fontSize: 14,
                 ),
@@ -192,7 +189,7 @@ class GeneralSettingScreen extends StatelessWidget {
               ),
               title: Text(
                 "Report",
-                style: GoogleFonts.archivo(
+                style: TextStyle(
                   color: black,
                   fontSize: 14,
                 ),
@@ -217,8 +214,10 @@ void WatchlistsBottomModalSheet() {
           Center(
             child: Text(
               "Watchlists",
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 28, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: black,
+                fontSize: 28,
+              ),
             ),
           ),
           SizedBox(height: 20),
@@ -242,10 +241,10 @@ void WatchlistsBottomModalSheet() {
                     Center(
                       child: Text(
                         "Add New Watchlist",
-                        style: GoogleFonts.archivo(
-                            color: black,
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                          color: black,
+                          fontSize: 28,
+                        ),
                       ),
                     ),
                     SizedBox(height: 20),
@@ -257,10 +256,10 @@ void WatchlistsBottomModalSheet() {
                       height: 30,
                     ),
                     Text("Watch list tile",
-                        style: GoogleFonts.archivo(
-                            color: black,
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold)),
+                        style: TextStyle(
+                          color: black,
+                          fontSize: 14,
+                        )),
                     SizedBox(
                       height: 10,
                     ),
@@ -273,10 +272,10 @@ void WatchlistsBottomModalSheet() {
                         decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: "Enter Watchlist Title",
-                            hintStyle: GoogleFonts.archivo(
-                                color: black,
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold),
+                            hintStyle: TextStyle(
+                              color: black,
+                              fontSize: 14,
+                            ),
                             contentPadding: EdgeInsets.all(10)),
                       ),
                     ),
@@ -293,10 +292,9 @@ void WatchlistsBottomModalSheet() {
             minLeadingWidth: 5,
             title: Text(
               "Create a Watchlist",
-              style: GoogleFonts.archivo(
+              style: TextStyle(
                 color: black,
                 fontSize: 14,
-                fontWeight: FontWeight.bold,
               ),
             ),
           ),
@@ -330,8 +328,10 @@ void ReportBottomModalSheet() {
         Center(
           child: Text(
             "Report",
-            style: GoogleFonts.archivo(
-                color: black, fontSize: 28, fontWeight: FontWeight.bold),
+            style: TextStyle(
+              color: black,
+              fontSize: 28,
+            ),
           ),
         ),
         SizedBox(height: 20),
@@ -380,7 +380,7 @@ class _MyReportRowState extends State<MyReportRow> {
         ),
         Text(
           widget.title,
-          style: GoogleFonts.archivo(
+          style: TextStyle(
             color: black,
             fontSize: 14,
           ),
@@ -401,13 +401,13 @@ class MyWatchlistTIle extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: Image.asset(
-        "assets/Images/img2.png",
+        "assets/images/img2.png",
         height: 20,
       ),
       minLeadingWidth: 5,
       title: Text(
         title,
-        style: GoogleFonts.archivo(
+        style: TextStyle(
           color: black,
           fontSize: 14,
         ),

@@ -1,24 +1,16 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/controllers/registration/registration_controller.dart';
 
-class RegisterScreen extends StatefulWidget {
+class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
 
   @override
-  State<RegisterScreen> createState() => _RegisterScreenState();
-}
-
-class _RegisterScreenState extends State<RegisterScreen> {
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _numberController = TextEditingController();
-
-  String dropdownvalue = 'Male';
-  var items = ['Male', 'Female'];
-  @override
   Widget build(BuildContext context) {
+    RegistrationController controller = Get.put(RegistrationController());
+
     return GestureDetector(
         onTap: () {
           FocusScopeNode currentFocus = FocusScope.of(context);
-
           if (!currentFocus.hasPrimaryFocus) {
             currentFocus.unfocus();
           }
@@ -40,7 +32,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               centerTitle: true,
               title: Text(
                 "Sign Up",
-                style: GoogleFonts.archivo(
+                style: TextStyle(
                     color: black, fontSize: 14, fontWeight: FontWeight.w500),
               ),
             ),
@@ -57,13 +49,31 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     const SizedBox(
                       height: 10,
                     ),
-                    Center(child: Image.asset("assets/Images/circle.png")),
+                    GetBuilder<RegistrationController>(builder: (context) {
+                      return controller.imageFile == null
+                          ? InkWell(
+                              onTap: () {
+                                controller.getFromGallery();
+                              },
+                              child: Image.asset("assets/images/circle.png"))
+                          : InkWell(
+                              onTap: () {
+                                controller.getFromGallery();
+                              },
+                              child: CircleAvatar(
+                                radius: 80,
+                                backgroundImage: FileImage(
+                                  controller.imageFile!,
+                                ),
+                              ),
+                            );
+                    }),
                     const SizedBox(
                       height: 10,
                     ),
                     Text(
                       "Click to select avatar or upload picture",
-                      style: GoogleFonts.archivo(
+                      style: TextStyle(
                           color: black,
                           fontSize: 13,
                           fontWeight: FontWeight.w500),
@@ -79,11 +89,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         borderRadius: BorderRadius.circular(100),
                       ),
                       child: TextFormField(
-                        controller: _emailController,
+                        controller: controller.emailController,
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: "Email",
-                          hintStyle: GoogleFonts.archivo(
+                          hintStyle: TextStyle(
                               color: grey,
                               fontSize: 16,
                               fontWeight: FontWeight.bold),
@@ -102,12 +112,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         borderRadius: BorderRadius.circular(100),
                       ),
                       child: TextFormField(
-                        controller: _numberController,
+                        controller: controller.numberController,
                         keyboardType: TextInputType.number,
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: "+  01  234 567 890",
-                          hintStyle: GoogleFonts.archivo(
+                          hintStyle: TextStyle(
                               color: grey,
                               fontSize: 16,
                               fontWeight: FontWeight.bold),
@@ -126,34 +136,34 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     const SizedBox(
                       height: 10,
                     ),
-                    Container(
-                      height: 48,
-                      width: double.infinity,
-                      padding: EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: grey, width: 1),
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      child: DropdownButton(
-                          isExpanded: true,
-                          underline: Container(),
-                          value: dropdownvalue,
-                          style: TextStyle(
-                              color: grey,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                          items: items.map((String items) {
-                            return DropdownMenuItem(
-                              value: items,
-                              child: Text(items),
-                            );
-                          }).toList(),
-                          onChanged: (String? newValue) {
-                            setState(() {
-                              dropdownvalue = newValue!;
-                            });
-                          }),
-                    ),
+                    GetBuilder<RegistrationController>(builder: (context) {
+                      return Container(
+                        height: 48,
+                        width: double.infinity,
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          border: Border.all(color: grey, width: 1),
+                          borderRadius: BorderRadius.circular(100),
+                        ),
+                        child: DropdownButton(
+                            isExpanded: true,
+                            underline: Container(),
+                            value: controller.dropdownvalue,
+                            style: TextStyle(
+                                color: grey,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold),
+                            items: controller.gender.map((String i) {
+                              return DropdownMenuItem(
+                                value: i,
+                                child: Text(i),
+                              );
+                            }).toList(),
+                            onChanged: (String? newValue) {
+                              controller.dropDownValueChange(newValue);
+                            }),
+                      );
+                    }),
                     const SizedBox(
                       height: 30,
                     ),

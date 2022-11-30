@@ -34,11 +34,13 @@ class _MyPasswordFieldState extends State<MyPasswordField> {
                 });
               },
               icon: Icon(
-                valueObsecure ? Icons.visibility : Icons.visibility_off,
+                valueObsecure
+                    ? Icons.visibility_off_outlined
+                    : Icons.visibility_outlined,
                 color: grey,
               )),
-          hintStyle: GoogleFonts.archivo(
-              color: grey, fontSize: 16, fontWeight: FontWeight.bold),
+          hintStyle:
+              TextStyle(color: grey, fontSize: 16, fontWeight: FontWeight.bold),
           contentPadding: EdgeInsets.all(10),
         ),
       ),

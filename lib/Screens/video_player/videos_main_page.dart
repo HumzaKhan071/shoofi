@@ -16,17 +16,18 @@ class VideoMainPage extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Image.asset("assets/Images/epic.png"),
+              Image.asset("assets/images/epic.png"),
               Text("9.5 M Subscribers",
-                  style: GoogleFonts.archivo(
+                  style: TextStyle(
                       color: grey, fontSize: 16, fontWeight: FontWeight.bold)),
               Text("769 Videos",
-                  style: GoogleFonts.archivo(
+                  style: TextStyle(
                       color: grey, fontSize: 16, fontWeight: FontWeight.bold)),
             ],
           )),
           ListView.builder(
               shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
               itemCount: 5,
               itemBuilder: (context, index) {
                 return VideoPlayerCard();

@@ -1,4 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 
 class CreateProfile extends StatefulWidget {
   const CreateProfile({super.key});
@@ -28,7 +29,7 @@ class _CreateProfileState extends State<CreateProfile> {
         centerTitle: true,
         title: Text(
           "Create Profile",
-          style: GoogleFonts.archivo(
+          style: TextStyle(
               color: black, fontSize: 14, fontWeight: FontWeight.w500),
         ),
       ),
@@ -47,10 +48,10 @@ class _CreateProfileState extends State<CreateProfile> {
               Center(
                 child: Column(
                   children: [
-                    Image.asset("assets/Images/circle.png"),
+                    Image.asset(ImageConstant.circle),
                     SizedBox(height: 5),
                     Text("Click to select avatar or upload picture",
-                        style: GoogleFonts.archivo(
+                        style: TextStyle(
                             color: black,
                             fontSize: 14,
                             fontWeight: FontWeight.w500)),
@@ -58,13 +59,12 @@ class _CreateProfileState extends State<CreateProfile> {
                 ),
               ),
               SizedBox(height: 20),
-              
               SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("For Kids",
-                      style: GoogleFonts.archivo(
+                      style: TextStyle(
                           color: black,
                           fontSize: 14,
                           fontWeight: FontWeight.w500)),
@@ -84,7 +84,7 @@ class _CreateProfileState extends State<CreateProfile> {
               if (isSwitched == true) ...[
                 Text(
                   "Platforms",
-                  style: GoogleFonts.archivo(
+                  style: TextStyle(
                       color: black, fontSize: 14, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 5),
@@ -98,7 +98,7 @@ class _CreateProfileState extends State<CreateProfile> {
                 SizedBox(height: 10),
                 Text(
                   "Platforms",
-                  style: GoogleFonts.archivo(
+                  style: TextStyle(
                       color: black, fontSize: 14, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 5),
@@ -109,7 +109,7 @@ class _CreateProfileState extends State<CreateProfile> {
                 Container(
                     padding: EdgeInsets.all(5),
                     child: MyRow(
-                        image: "assets/Images/block.png",
+                        image: ImageConstant.block,
                         title: "Sensitive Content")),
               ],
               SizedBox(height: 20),
@@ -123,9 +123,7 @@ class _CreateProfileState extends State<CreateProfile> {
               SizedBox(height: 10),
               Center(
                   child: Column(
-                children: [
-               Agreements()
-                ],
+                children: [Agreements()],
               ))
             ],
           ),

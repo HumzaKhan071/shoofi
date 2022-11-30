@@ -6,4 +6,6 @@ class HomeBottomNavigationBarController extends GetxController {
   Rx<bool> extended = false.obs;
   Rx<int> currentIndex = 0.obs;
   int? indexBeforeShort;
+  Rx<bool> isSwitched = false.obs;
+  Rx<bool> valueBox = false.obs;
 }

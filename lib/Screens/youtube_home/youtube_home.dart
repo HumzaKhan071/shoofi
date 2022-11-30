@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:shoofi/Screens/HomeScreens/extendedRecommendedForYou.dart';
 import 'package:shoofi/Screens/HomeScreens/extendingMostTrendingScreen.dart';
 import 'package:shoofi/Screens/HomeScreens/reels.dart';
@@ -8,6 +8,7 @@ import 'package:shoofi/Screens/Widgets/MyButtonContainer.dart';
 import 'package:shoofi/Screens/Widgets/video_thumbnail.dart';
 
 import '../../Utils/Colors.dart';
+import '../../Utils/image_constant.dart';
 
 class YouTubeHome extends StatelessWidget {
   const YouTubeHome({super.key});
@@ -26,13 +27,13 @@ class YouTubeHome extends StatelessWidget {
             ),
             recommandBanner(
                 title: 'Recommended Channels picked for you 💥',
-                imagePath: 'assets/Images/movie.png'),
+                imagePath: 'assets/images/movie.png'),
             trendingBanner(
                 title: "Most Trending",
-                imgPath: 'assets/Images/trending_reels.png'),
+                imgPath: 'assets/images/trending_reels.png'),
             recommandBanner(
                 title: 'Trending on Youtube',
-                imagePath: 'assets/Images/youtube_trending.png'),
+                imagePath: 'assets/images/youtube_trending.png'),
           ],
         ),
       ),
@@ -49,8 +50,10 @@ recommandBanner({required String title, required String imagePath}) {
           Flexible(
             child: Text(
               title,
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: black,
+                fontSize: 16,
+              ),
             ),
           ),
           TextButton(
@@ -59,8 +62,10 @@ recommandBanner({required String title, required String imagePath}) {
             },
             child: Text(
               'See all',
-              style: GoogleFonts.archivo(
-                  color: yellow, fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: yellow,
+                fontSize: 16,
+              ),
             ),
           ),
         ],
@@ -98,8 +103,10 @@ trendingBanner({required String title, required String imgPath}) {
           Flexible(
             child: Text(
               title,
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: black,
+                fontSize: 16,
+              ),
             ),
           ),
           TextButton(
@@ -108,8 +115,10 @@ trendingBanner({required String title, required String imgPath}) {
             },
             child: Text(
               'See all',
-              style: GoogleFonts.archivo(
-                  color: yellow, fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: yellow,
+                fontSize: 16,
+              ),
             ),
           ),
         ],
@@ -122,28 +131,28 @@ trendingBanner({required String title, required String imgPath}) {
               onTap: () {
                 Get.to(Reels());
               },
-              child: trendingImage(imgPath: 'assets/Images/trending_reels.png'),
+              child: trendingImage(imgPath: 'assets/images/trending_reels.png'),
             ),
             SizedBox(width: 15),
             InkWell(
               onTap: () {
                 Get.to(Reels());
               },
-              child: trendingImage(imgPath: 'assets/Images/trending_reels.png'),
+              child: trendingImage(imgPath: 'assets/images/trending_reels.png'),
             ),
             SizedBox(width: 15),
             InkWell(
               onTap: () {
                 Get.to(Reels());
               },
-              child: trendingImage(imgPath: 'assets/Images/trending_reels.png'),
+              child: trendingImage(imgPath: 'assets/images/trending_reels.png'),
             ),
             SizedBox(width: 15),
             InkWell(
               onTap: () {
                 Get.to(Reels());
               },
-              child: trendingImage(imgPath: 'assets/Images/trending_reels.png'),
+              child: trendingImage(imgPath: 'assets/images/trending_reels.png'),
             ),
             SizedBox(width: 15),
           ],
@@ -172,7 +181,7 @@ adBanner() {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(25), // Image border
           child: Image.asset(
-            'assets/Images/video_thumbnail.png',
+            'assets/images/video_thumbnail.png',
             fit: BoxFit.cover,
           ),
         ),
@@ -183,7 +192,7 @@ adBanner() {
       Row(
         children: [
           CircleAvatar(
-            backgroundImage: AssetImage('assets/Images/grammarly.png'),
+            backgroundImage: AssetImage(ImageConstant.grammarly),
           ),
           SizedBox(
             width: 10,
@@ -191,8 +200,10 @@ adBanner() {
           Flexible(
             child: Text(
               'Vivamus mattis sapien vel eros cursus a venenatis duiincidunt',
-              style: GoogleFonts.archivo(
-                  color: black, fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: black,
+                fontSize: 16,
+              ),
             ),
           ),
         ],
@@ -207,7 +218,7 @@ adBanner() {
           ),
           Text(
             'Ad - UAE',
-            style: GoogleFonts.archivo(color: black, fontSize: 14),
+            style: TextStyle(color: black, fontSize: 14),
           ),
         ],
       ),

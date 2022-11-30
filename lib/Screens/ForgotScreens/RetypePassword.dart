@@ -22,8 +22,11 @@ class RetypePassword extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Forgot Password",
-          style: GoogleFonts.archivo(
-              color: black, fontSize: 14, fontWeight: FontWeight.w500),
+          style: TextStyle(
+            color: black,
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -53,9 +56,7 @@ class RetypePassword extends StatelessWidget {
               SizedBox(height: 10),
               Center(
                   child: Column(
-                children: [
-               Agreements()
-                ],
+                children: [Agreements()],
               ))
             ],
           ),
@@ -101,8 +102,11 @@ class _MyPasswordFieldState extends State<MyPasswordField> {
                 valueObsecure ? Icons.visibility_off : Icons.visibility,
                 color: grey,
               )),
-          hintStyle: GoogleFonts.archivo(
-              color: grey, fontSize: 16, fontWeight: FontWeight.bold),
+          hintStyle: TextStyle(
+            color: grey,
+            fontSize: 16,
+            fontWeight: FontWeight.bold
+          ),
           contentPadding: EdgeInsets.all(10),
         ),
       ),

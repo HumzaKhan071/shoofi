@@ -1,4 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 import 'package:shoofi/controllers/Home/trending_controller.dart';
 
 class AllCategorySheet extends StatelessWidget {
@@ -23,7 +24,7 @@ class AllCategorySheet extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 "All Categories",
-                style: GoogleFonts.archivo(
+                style: TextStyle(
                     color: black, fontSize: 24, fontWeight: FontWeight.bold),
               ),
               Expanded(
@@ -41,7 +42,7 @@ class AllCategorySheet extends StatelessWidget {
                         onTap: () {
                           Get.back();
                         },
-                        child: Image.asset("assets/Images/circle_cross.png")),
+                        child: Image.asset(ImageConstant.circleCross)),
                   ],
                 ),
               )

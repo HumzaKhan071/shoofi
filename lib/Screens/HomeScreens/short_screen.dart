@@ -1,5 +1,6 @@
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/HomeScreens/bgVideo.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 
 class HomeShortScreen extends StatelessWidget {
   const HomeShortScreen({super.key});
@@ -21,12 +22,12 @@ class HomeShortScreen extends StatelessWidget {
                     direction: Axis.vertical,
                     spacing: Get.height * 0.05,
                     children: [
-                      Image.asset("assets/Images/moreHorizontalIcon.png"),
-                      Image.asset("assets/Images/addListIcon.png"),
-                      Image.asset("assets/Images/shareForwardIcon.png"),
-                      Image.asset("assets/Images/dislikeIcon.png"),
+                      Image.asset(ImageConstant.moreHorizontalIcon),
+                      Image.asset(ImageConstant.addListicon),
+                      Image.asset(ImageConstant.shareForwardIcon),
+                      Image.asset(ImageConstant.disLikeicon),
                       Image.asset(
-                        "assets/Images/likeIcon.png",
+                        ImageConstant.likeIcon,
                         color: Colors.white,
                       ),
                     ],
@@ -35,10 +36,10 @@ class HomeShortScreen extends StatelessWidget {
                 SizedBox(height: Get.height * 0.04),
                 Text(
                   "Vivamus mattis sapien vel eros cursus, a venenatis duiincidunt",
-                  style: GoogleFonts.archivo(
+                  style: TextStyle(
                       color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 10),
                 Row(
@@ -47,20 +48,19 @@ class HomeShortScreen extends StatelessWidget {
                       opacity: 0.5,
                       child: Text(
                         "1,234,567 views",
-                        style: GoogleFonts.archivo(color: white, fontSize: 11),
+                        style: TextStyle(color: white, fontSize: 11),
                       ),
                     ),
                     SizedBox(width: 10),
                     Text(
                       "|",
-                      style: GoogleFonts.archivo(color: white, fontSize: 11),
+                      style: TextStyle(color: white, fontSize: 11),
                     ),
                     SizedBox(width: 10),
                     Opacity(
                       opacity: 0.5,
                       child: Text("September 1, 2020",
-                          style:
-                              GoogleFonts.archivo(color: white, fontSize: 11)),
+                          style: TextStyle(color: white, fontSize: 11)),
                     ),
                   ],
                 )

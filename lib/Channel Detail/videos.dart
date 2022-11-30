@@ -13,9 +13,9 @@ class ChannelVideos extends StatelessWidget {
             spacing: 10,
             alignment: WrapAlignment.center,
             children: [
-              VideoThumbnail(imgPath: "assets/Images/img1.png"),
-              VideoThumbnail(imgPath: "assets/Images/img2.png"),
-              VideoThumbnail(imgPath: "assets/Images/img3.png"),
+              VideoThumbnail(imgPath: "assets/images/img1.png"),
+              VideoThumbnail(imgPath: "assets/images/img2.png"),
+              VideoThumbnail(imgPath: "assets/images/img3.png"),
             ],
           );
         },
