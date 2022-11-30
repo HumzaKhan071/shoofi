@@ -6,6 +6,7 @@ import 'package:shoofi/Screens/HomeScreens/extendingMostTrendingScreen.dart';
 import 'package:shoofi/Screens/HomeScreens/reels.dart';
 import 'package:shoofi/Screens/Widgets/MyButtonContainer.dart';
 import 'package:shoofi/Screens/Widgets/video_thumbnail.dart';
+import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
 
 import '../../Utils/Colors.dart';
 import '../../Utils/image_constant.dart';
@@ -95,6 +96,8 @@ recommandBanner({required String title, required String imagePath}) {
 }
 
 trendingBanner({required String title, required String imgPath}) {
+  HomeBottomNavigationBarController homeBottomNavigationBarController =
+      Get.find(tag: "bottomNavigation");
   return Column(
     children: [
       Row(
@@ -129,7 +132,8 @@ trendingBanner({required String title, required String imgPath}) {
           children: [
             InkWell(
               onTap: () {
-                Get.to(Reels());
+                homeBottomNavigationBarController.currentIndex.value = 1;
+                homeBottomNavigationBarController.indexBeforeShort = 0;
               },
               child: trendingImage(imgPath: 'assets/images/trending_reels.png'),
             ),

@@ -1,32 +1,13 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/controllers/Plan/select_plan_controller.dart';
 
-class SelectPlan extends StatefulWidget {
-  const SelectPlan({super.key});
-
-  @override
-  State<SelectPlan> createState() => _SelectPlanState();
-}
-
-class _SelectPlanState extends State<SelectPlan>
-    with SingleTickerProviderStateMixin {
-  TabController? _tabController;
-
-  @override
-  void initState() {
-    _tabController = TabController(length: 2, vsync: this);
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    _tabController!.dispose();
-  }
-
+class SelectPlan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SelectPlanController controller =
+        Get.put(SelectPlanController(), tag: "select_plan");
     return DefaultTabController(
-      length: _tabController!.length,
+      length: controller.tabController.length,
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
@@ -106,7 +87,7 @@ class _SelectPlanState extends State<SelectPlan>
                           borderRadius: BorderRadius.circular(21),
                         ),
                         child: TabBar(
-                            controller: _tabController,
+                            controller: controller.tabController,
                             padding: EdgeInsets.all(5),
                             labelColor: black,
                             indicator: BoxDecoration(
@@ -123,45 +104,50 @@ class _SelectPlanState extends State<SelectPlan>
                       ),
                       SizedBox(height: 10),
                       Expanded(
-                          child:
-                              TabBarView(controller: _tabController, children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            MyMonthlyPlanContainer(
-                                title: "Essential Plan",
-                                color: yellow,
-                                description: "save 16% with annual blilling",
-                                totalScreens: "Create 2 Screens",
-                                perMonth: "\$8/Month"),
-                            MyMonthlyPlanContainer(
-                                title: "Premuim Plan",
-                                color: yellow,
-                                description: "save 16% with annual blilling",
-                                totalScreens: "Create 4 Screens",
-                                perMonth: "\$9/Month"),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            MyYearlyPlanContainer(
-                                title: "Essential Plan",
-                                price: "Annually billed \$48",
-                                color: yellow,
-                                description: "save 16% with annual blilling",
-                                totalScreens: "Create 2 Screens",
-                                perMonth: "\$4/Month"),
-                            MyYearlyPlanContainer(
-                                title: "Premuim Plan",
-                                price: "Annually billed \$72",
-                                color: yellow,
-                                description: "save 16% with annual blilling",
-                                totalScreens: "Create 4 Screens",
-                                perMonth: "\$6/Month")
-                          ],
-                        )
-                      ])),
+                          child: TabBarView(
+                              controller: controller.tabController,
+                              children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                MyPlanContainer(
+                                    title: "Essential Plan",
+                                    index: 0,
+                                    description:
+                                        "save 16% with annual blilling",
+                                    totalScreens: "Create 2 Screens",
+                                    perMonth: "\$8/Month"),
+                                MyPlanContainer(
+                                    title: "Premuim Plan",
+                                    index: 1,
+                                    description:
+                                        "save 16% with annual blilling",
+                                    totalScreens: "Create 4 Screens",
+                                    perMonth: "\$9/Month"),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                MyPlanContainer(
+                                    title: "Essential Plan",
+                                    price: "Annually billed \$48",
+                                    index: 2,
+                                    description:
+                                        "save 16% with annual blilling",
+                                    totalScreens: "Create 2 Screens",
+                                    perMonth: "\$4/Month"),
+                                MyPlanContainer(
+                                    title: "Premuim Plan",
+                                    price: "Annually billed \$72",
+                                    index: 3,
+                                    description:
+                                        "save 16% with annual blilling",
+                                    totalScreens: "Create 4 Screens",
+                                    perMonth: "\$6/Month")
+                              ],
+                            )
+                          ])),
                       SizedBox(height: 20),
                       SizedBox(
                         height: 116,

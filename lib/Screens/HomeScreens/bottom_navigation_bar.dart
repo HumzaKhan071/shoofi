@@ -23,12 +23,12 @@ class HomeBottomNavigationBar extends StatelessWidget {
 
     return WillPopScope(
       onWillPop: () async {
-        if (controller.extended.value) {
-          controller.extended.value = false;
-          return false;
-        }
         if (controller.currentIndex.value == 1) {
           controller.currentIndex.value = controller.indexBeforeShort!;
+          return false;
+        }
+        if (controller.extended.value) {
+          controller.extended.value = false;
           return false;
         }
         return true;
