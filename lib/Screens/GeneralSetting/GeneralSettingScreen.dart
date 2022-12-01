@@ -424,7 +424,7 @@ class MyWatchlistTIle extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: Image.asset(
-        "assets/images/img2.png",
+        ImageConstant.img2,
         height: 20,
       ),
       minLeadingWidth: 5,

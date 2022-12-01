@@ -1,4 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 
 class VideoPlayerCard extends StatelessWidget {
   const VideoPlayerCard({super.key});
@@ -14,7 +15,7 @@ class VideoPlayerCard extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20), // Image border
               child: Image.asset(
-                'assets/images/video_thumbnail.png',
+                ImageConstant.videoThumbnail,
                 fit: BoxFit.cover,
               ),
             ),
