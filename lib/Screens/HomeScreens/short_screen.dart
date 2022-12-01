@@ -1,15 +1,35 @@
+import 'dart:math';
+
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/HomeScreens/bgVideo.dart';
 import 'package:shoofi/Utils/image_constant.dart';
+import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
+import 'package:tiktoklikescroller/controller.dart';
 
 class HomeShortScreen extends StatelessWidget {
-  const HomeShortScreen({super.key});
+  final String videoLink;
+  const HomeShortScreen({required this.videoLink, super.key});
 
   @override
   Widget build(BuildContext context) {
+    HomeBottomNavigationBarController homeBottomNavigationBarController =
+        Get.find(tag: "bottomNavigation");
     return Stack(
       children: [
-        VideoApp(),
+        VideoApp(
+          videoLink: videoLink,
+        ),
+        Positioned(
+          top: 40,
+          left: 20,
+          child: IconButton(
+              onPressed: () {
+                homeBottomNavigationBarController.currentIndex.value =
+                    homeBottomNavigationBarController.indexBeforeShort!;
+              },
+              color: white,
+              icon: Icon(Icons.arrow_back_ios)),
+        ),
         Container(
           child: Padding(
             padding: const EdgeInsets.all(15.0),
@@ -38,8 +58,8 @@ class HomeShortScreen extends StatelessWidget {
                   "Vivamus mattis sapien vel eros cursus, a venenatis duiincidunt",
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16),
                 ),
                 SizedBox(height: 10),
                 Row(

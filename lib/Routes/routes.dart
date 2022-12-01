@@ -29,7 +29,6 @@ export 'package:shoofi/Screens/RegisterScreens/SelectPlan.dart';
 export 'package:shoofi/Screens/Widgets/MyPlanContainer.dart';
 export 'package:shoofi/Screens/Widgets/MyPlanRow.dart';
 export 'package:shoofi/Screens/RegisterScreens/PaymentsScreen.dart';
-export 'package:shoofi/Screens/Widgets/MyMonthlyPlanContainer.dart';
 export 'package:shoofi/Screens/RegisterScreens/CompletedScreen.dart';
 export 'package:shoofi/Screens/RegisterScreens/CreateUserProfileScreen.dart';
 export 'package:shoofi/Screens/RegisterScreens/CreateProfile.dart';
