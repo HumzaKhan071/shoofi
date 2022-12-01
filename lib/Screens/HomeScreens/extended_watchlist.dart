@@ -1,4 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/video_player/video_player_view.dart';
 
 class ExtendedWatchList extends StatelessWidget {
   const ExtendedWatchList({
@@ -34,16 +35,25 @@ class ExtendedWatchList extends StatelessWidget {
                 children: [
                   VideoThumbnail(
                       imgPath: "assets/images/img1.png",
+                      onTap: () {
+                        Get.to(VideoPlayerView());
+                      },
                       onLongPress: () {
                         remvoeWatchListBottomSheet();
                       }),
                   VideoThumbnail(
                       imgPath: "assets/images/img2.png",
+                      onTap: () {
+                        Get.to(VideoPlayerView());
+                      },
                       onLongPress: () {
                         remvoeWatchListBottomSheet();
                       }),
                   VideoThumbnail(
                       imgPath: "assets/images/img3.png",
+                      onTap: () {
+                        Get.to(VideoPlayerView());
+                      },
                       onLongPress: () {
                         remvoeWatchListBottomSheet();
                       }),

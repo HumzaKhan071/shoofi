@@ -29,7 +29,10 @@ class MyPlanContainer extends StatelessWidget {
         ),
         onPressed: () {
           int lastSelected = controller.isSelected.indexOf(true);
-          if (lastSelected != -1) {
+          if (lastSelected == index) {
+            controller.isSelected[index] = false;
+            return;
+          } else if (lastSelected != -1) {
             controller.isSelected[lastSelected] = false;
           }
           controller.isSelected[index] = true;
@@ -57,7 +60,8 @@ class MyPlanContainer extends StatelessWidget {
                   SizedBox(height: 5),
                   Text(totalScreens,
                       style: TextStyle(
-                        color: grey,
+                        color:
+                            controller.isSelected[index] ? Colors.white : grey,
                         fontSize: 12,
                       )),
                   SizedBox(height: 5),

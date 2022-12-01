@@ -38,7 +38,7 @@ class MyAccount extends StatelessWidget {
                         pinDialog(
                           context,
                           onCompleted: (pin) {
-                            Get.to(() => HomeBottomNavigationBar());
+                            Get.offAll(() => HomeBottomNavigationBar());
                           },
                         );
                       }),
@@ -49,7 +49,7 @@ class MyAccount extends StatelessWidget {
                         pinDialog(
                           context,
                           onCompleted: (pin) {
-                            Get.to(() => HomeBottomNavigationBar());
+                            Get.offAll(() => HomeBottomNavigationBar());
                           },
                         );
                       }),

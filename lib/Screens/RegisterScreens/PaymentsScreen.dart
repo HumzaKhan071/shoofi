@@ -2,7 +2,8 @@ import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/Widgets/PaymentCardInfo.dart';
 
 class PaymentsScreen extends StatefulWidget {
-  const PaymentsScreen({super.key});
+  final bool fromManageSubscription;
+  const PaymentsScreen({super.key, required this.fromManageSubscription});
 
   @override
   State<PaymentsScreen> createState() => _PaymentsScreenState();
@@ -141,7 +142,7 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
                 text: "Next",
                 conColor: yellow,
                 press: () {
-                  Get.to(() => CompletedScreen());
+                  Get.to(() => CompletedScreen(fromManageSubscription: widget.fromManageSubscription));
                 },
               ),
               SizedBox(height: 10),

@@ -26,6 +26,7 @@ pinDialog(context, {Function(String)? onCompleted}) {
                 SizedBox(height: 15),
                 Pinput(
                   onCompleted: onCompleted,
+                  autofocus: true,
                   defaultPinTheme: PinTheme(
                       width: 50,
                       height: 50,

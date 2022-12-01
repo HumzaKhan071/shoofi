@@ -25,7 +25,11 @@ class ForgotEmail extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Forgot Password",
-          style: TextStyle(color: black, fontSize: 14,fontWeight: FontWeight.w500,   ),
+          style: TextStyle(
+            color: black,
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -50,7 +54,7 @@ class ForgotEmail extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 14,
                         color: black,
-                          fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                     Text(
@@ -59,7 +63,6 @@ class ForgotEmail extends StatelessWidget {
                         fontSize: 14,
                         color: black,
                         fontWeight: FontWeight.w500,
-                          
                       ),
                     ),
                   ],
@@ -69,7 +72,8 @@ class ForgotEmail extends StatelessWidget {
               Container(
                 height: 192,
                 width: 154,
-               child: SvgPicture.asset("assets/SvgPictures/Forgot Password Illustration.svg"),
+                child: SvgPicture.asset(
+                    "assets/SvgPictures/Forgot Password Illustration.svg"),
               ),
               SizedBox(height: 20),
               Container(
@@ -98,7 +102,7 @@ class ForgotEmail extends StatelessWidget {
                 text: "Search",
                 conColor: yellow,
                 press: () {
-                  Get.to(() => CompletedScreen());
+                  Get.to(() => CompletedScreen(fromManageSubscription: false));
                 },
               ),
               SizedBox(height: 10),
@@ -106,7 +110,7 @@ class ForgotEmail extends StatelessWidget {
                 text: "Cancel",
                 conColor: grey,
                 press: () {
-                  Get.to(() => CompletedScreen());
+                  Get.to(() => CompletedScreen(fromManageSubscription: false));
                 },
               ),
               SizedBox(height: Get.height * 0.1),

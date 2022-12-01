@@ -59,7 +59,7 @@ class ImageConstant {
   static String location = "assets/icons/location.png";
   static String share = "assets/svgPictures/watchlater.svg";
   static String likebutton = "assets/svgPictures/likebutton.svg";
-   static String likeIcon = "assets/icons/likeIcon.png";
+  static String likeIcon = "assets/icons/likeIcon.png";
   static String removeCircle = "assets/icons/remove_circle_outline.png";
   static String forwardIcon = "assets/svgPictures/share.svg";
   static String moreIcon = "assets/icons/moreIcon.png";
@@ -138,6 +138,7 @@ class ImageConstant {
   static String logo4 = "assets/images/logo4.png";
   static String chat1 = "assets/images/chat1.png";
   static String chat2 = "assets/images/chat2.png";
-  static String myAccountAgreements ="assets/svgPictures/my account - agreement.svg";
-  static String myAccountCards ="assets/svgPictures/my account - cards.svg";
+  static String myAccountAgreements =
+      "assets/svgPictures/my account - agreement.svg";
+  static String myAccountCards = "assets/svgPictures/my account - cards.svg";
 }

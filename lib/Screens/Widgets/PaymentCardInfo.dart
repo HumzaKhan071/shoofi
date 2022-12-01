@@ -133,7 +133,7 @@ class PaymentCardInfo extends StatelessWidget {
                     Column(
                       children: [
                         Text(
-                          "Expired Date",
+                          "Expiration",
                           style: TextStyle(
                               color: black,
                               fontSize: 14,

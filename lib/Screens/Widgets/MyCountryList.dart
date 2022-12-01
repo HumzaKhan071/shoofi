@@ -34,11 +34,6 @@ class _MyCountryListState extends State<MyCountryList> {
         Container(
           height: 23,
           width: 23,
-          decoration: BoxDecoration(
-              border: Border.all(
-            color: yellow,
-            width: 1,
-          )),
           child: Checkbox(
               fillColor: MaterialStateProperty.all(yellow),
               checkColor: black,

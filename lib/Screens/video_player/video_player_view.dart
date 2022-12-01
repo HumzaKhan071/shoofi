@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:shoofi/Channel%20Detail/ChannelDetailScreen.dart';
+import 'package:shoofi/Screens/GeneralSetting/GeneralSettingScreen.dart';
+import 'package:shoofi/Screens/ModalSheets/more_option.dart';
+import 'package:shoofi/Screens/ModalSheets/watchlist.dart';
 import 'package:shoofi/Screens/video_player/video_player_card.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -168,8 +172,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: [
                       Row(
                         children: [
-                          CircleAvatar(
-                            backgroundImage: AssetImage(ImageConstant.avatar),
+                          InkWell(
+                            onTap: () {
+                              Get.to(ChanneledDetail());
+                            },
+                            child: CircleAvatar(
+                              backgroundImage: AssetImage(ImageConstant.avatar),
+                            ),
                           ),
                           SizedBox(
                             width: 10,
@@ -219,15 +228,40 @@ class _MyHomePageState extends State<MyHomePage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          SvgPicture.asset(ImageConstant.likebutton),
-                          SvgPicture.asset(ImageConstant.disLikeicon2),
-                          SvgPicture.asset(ImageConstant.forwardIcon),
-                          SvgPicture.asset(ImageConstant.share),
+                          SvgPicture.asset(
+                            ImageConstant.likebutton,
+                            width: 19,
+                            height: 19,
+                          ),
+                          SvgPicture.asset(
+                            ImageConstant.disLikeicon2,
+                            width: 19,
+                            height: 19,
+                          ),
+                          SvgPicture.asset(
+                            ImageConstant.forwardIcon,
+                            width: 19,
+                            height: 19,
+                          ),
+                          InkWell(
+                            onTap: () {
+                              WatchlistsBottomModalSheet();
+                            },
+                            child: SvgPicture.asset(
+                              ImageConstant.share,
+                              width: 19,
+                              height: 19,
+                            ),
+                          ),
                           InkWell(
                               onTap: () {
                                 moreOptions();
                               },
-                              child: Image.asset(ImageConstant.moreIcon)),
+                              child: Image.asset(
+                                ImageConstant.moreIcon,
+                                width: 19,
+                                height: 19,
+                              )),
                         ],
                       ),
                       //
@@ -265,57 +299,22 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-moreOptions() {
-  return Get.bottomSheet(
-    Container(
-      decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(35),
-            topRight: Radius.circular(35),
-          )),
-      height: Get.height * 0.55,
-      child: Column(
+
+
+Widget customListTileForMoreOptions(
+    {required Widget textWidget, required String imagePath, required onTap}) {
+  return InkWell(
+    onTap: onTap,
+    child: Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: Row(
         children: [
-          SizedBox(height: 10),
-          Image.asset(ImageConstant.divider),
-          SizedBox(height: 20),
-          Text("More Options",
-              style: TextStyle(
-                  color: black, fontSize: 24, fontWeight: FontWeight.bold)),
-          SizedBox(height: 15),
-          Divider(
-            thickness: 1,
-            indent: 15,
-            endIndent: 15,
-          ),
-          ListTile(
-              dense: true,
-              leading: Image.asset(ImageConstant.clock),
-              title: Text("Video Quality")),
-          ListTile(
-              dense: true,
-              leading: Image.asset(ImageConstant.captions),
-              title: Text("Captions")),
-          ListTile(
-              dense: true,
-              leading: Image.asset(ImageConstant.shareForwardIcon),
-              title: Text("Share")),
-          ListTile(
-              dense: true,
-              leading: Image.asset(ImageConstant.notInterested),
-              title: Text("Not Interested")),
-          ListTile(
-              dense: true,
-              leading: Image.asset(ImageConstant.report),
-              title: Text("Report")),
-          ListTile(
-              dense: true,
-              leading: Image.asset(ImageConstant.helpCenter),
-              title: Text("Help Center")),
+          SizedBox(width: 20),
+          Image.asset(imagePath, color: Colors.black),
+          SizedBox(width: 20),
+          textWidget
         ],
       ),
     ),
-    isScrollControlled: true,
   );
 }

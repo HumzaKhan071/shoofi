@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shoofi/Channel%20Detail/ChannelDetailScreen.dart';
 
 import 'package:shoofi/Screens/HomeScreens/extendedRecommendedForYou.dart';
 import 'package:shoofi/Screens/HomeScreens/extendingMostTrendingScreen.dart';
 import 'package:shoofi/Screens/HomeScreens/reels.dart';
 import 'package:shoofi/Screens/Widgets/MyButtonContainer.dart';
 import 'package:shoofi/Screens/Widgets/video_thumbnail.dart';
+import 'package:shoofi/Screens/video_player/video_player_view.dart';
 import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
 
 import '../../Utils/Colors.dart';
@@ -28,13 +30,25 @@ class YouTubeHome extends StatelessWidget {
             ),
             recommandBanner(
                 title: 'Recommended Channels picked for you 💥',
-                imagePath: 'assets/images/movie.png'),
+                imagePath: 'assets/images/movie.png',
+                onTap: () {
+                  Get.to(ChanneledDetail());
+                }),
             trendingBanner(
                 title: "Most Trending",
                 imgPath: 'assets/images/trending_reels.png'),
             recommandBanner(
                 title: 'Trending on Youtube',
-                imagePath: 'assets/images/youtube_trending.png'),
+                imagePath: 'assets/images/youtube_trending.png',
+                onTap: () {
+                  Get.to(VideoPlayerView());
+                }),
+            recommandBanner(
+                title: 'Trending on Facebook',
+                imagePath: 'assets/images/youtube_trending.png',
+                onTap: () {
+                  Get.to(VideoPlayerView());
+                }),
           ],
         ),
       ),
@@ -42,7 +56,10 @@ class YouTubeHome extends StatelessWidget {
   }
 }
 
-recommandBanner({required String title, required String imagePath}) {
+recommandBanner(
+    {required String title,
+    required String imagePath,
+    required void Function()? onTap}) {
   return Column(
     children: [
       Row(
@@ -54,13 +71,12 @@ recommandBanner({required String title, required String imagePath}) {
               style: TextStyle(
                 color: black,
                 fontSize: 16,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),
           TextButton(
-            onPressed: () {
-              Get.to(ExtendRecommendedForYou());
-            },
+            onPressed: () {},
             child: Text(
               'See all',
               style: TextStyle(
@@ -75,19 +91,31 @@ recommandBanner({required String title, required String imagePath}) {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            VideoThumbnail(imgPath: imagePath),
+            VideoThumbnail(
+              imgPath: imagePath,
+              onTap: onTap,
+            ),
             SizedBox(
               width: 10,
             ),
-            VideoThumbnail(imgPath: imagePath),
+            VideoThumbnail(
+              imgPath: imagePath,
+              onTap: onTap,
+            ),
             SizedBox(
               width: 10,
             ),
-            VideoThumbnail(imgPath: imagePath),
+            VideoThumbnail(
+              imgPath: imagePath,
+              onTap: onTap,
+            ),
             SizedBox(
               width: 10,
             ),
-            VideoThumbnail(imgPath: imagePath)
+            VideoThumbnail(
+              imgPath: imagePath,
+              onTap: onTap,
+            )
           ],
         ),
       )
@@ -109,6 +137,7 @@ trendingBanner({required String title, required String imgPath}) {
               style: TextStyle(
                 color: black,
                 fontSize: 16,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),

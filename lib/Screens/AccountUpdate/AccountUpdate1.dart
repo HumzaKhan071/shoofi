@@ -1,5 +1,7 @@
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/AccountUpdate/AccountUpdate2.dart';
+import 'package:shoofi/Utils/country_json.dart';
+import 'package:shoofi/Utils/flags.dart';
 
 class AccountUpdate1 extends StatefulWidget {
   const AccountUpdate1({super.key});
@@ -15,6 +17,7 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
   var items = ['Male', 'Female'];
   String dropdownvalue1 = 'UAE';
   var items1 = ['UAE', 'USA'];
+  var selectedCountry = 'Select Country';
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -92,6 +95,7 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
                     ),
                     MyTextField(
                       text: "shaista_isru",
+                      enabled: false,
                     ),
                     const SizedBox(
                       height: 10,
@@ -103,33 +107,15 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
                     const SizedBox(
                       height: 10,
                     ),
-                    Container(
-                      height: 48,
-                      width: double.infinity,
-                      padding: EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: grey, width: 1),
-                        borderRadius: BorderRadius.circular(100),
+                    InkWell(
+                      onTap: () {
+                        selectCountryDialog(context);
+                      },
+                      child: MyTextField(
+                        text: selectedCountry,
+                        suffixIcon: Icon(Icons.arrow_drop_down),
+                        enabled: false,
                       ),
-                      child: DropdownButton(
-                          isExpanded: true,
-                          underline: Container(),
-                          value: dropdownvalue,
-                          style: TextStyle(
-                              color: grey,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                          items: items.map((String items) {
-                            return DropdownMenuItem(
-                              value: items,
-                              child: Text(items),
-                            );
-                          }).toList(),
-                          onChanged: (String? newValue) {
-                            setState(() {
-                              dropdownvalue = newValue!;
-                            });
-                          }),
                     ),
                     const SizedBox(
                       height: 10,
@@ -161,6 +147,9 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
                               dropdownvalue = newValue!;
                             });
                           }),
+                    ),
+                    const SizedBox(
+                      height: 10,
                     ),
                     const SizedBox(
                       height: 30,
@@ -173,7 +162,7 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
                         Icons.arrow_forward_ios_outlined,
                         color: black,
                       ),
-                      leading: Icon(Icons.people),
+                      leading: Icon(Icons.check_circle_outline),
                       title: Text(
                         "Profile Lock",
                         style: TextStyle(
@@ -195,5 +184,46 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
                 ),
               ),
             )));
+  }
+
+  Future<dynamic> selectCountryDialog(BuildContext context) {
+    return showDialog(
+        context: context,
+        builder: (c) {
+          return Dialog(
+            child: Container(
+              height: Get.height * 0.7,
+              width: Get.width * 0.8,
+              child: Column(
+                children: [
+                  SizedBox(height: 10),
+                  Center(
+                      child: Text("Select Country",
+                          style: TextStyle(
+                              fontSize: 24, fontWeight: FontWeight.bold))),
+                  SizedBox(height: 10),
+                  Divider(thickness: 2),
+                  SizedBox(height: 10),
+                  Expanded(
+                    child: ListView.builder(
+                        itemCount: countryCodes.length,
+                        itemBuilder: (context, index) {
+                          return ListTile(
+                              leading: Text(Utils.countryCodeToEmoji(
+                                  countryCodes[index]["iso2_cc"])),
+                              title: Text(countryCodes[index]["name"]),
+                              onTap: () {
+                                setState(() {
+                                  selectedCountry = countryCodes[index]["name"];
+                                });
+                                Get.back();
+                              });
+                        }),
+                  ),
+                ],
+              ),
+            ),
+          );
+        });
   }
 }

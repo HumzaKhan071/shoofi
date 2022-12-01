@@ -63,7 +63,7 @@ class _CreateUserProfileScreenState extends State<CreateUserProfileScreen> {
                         title: "Shoofista",
                         onTap: () {
                           pinDialog(context,onCompleted: (pin) {
-                          Get.to(() => HomeBottomNavigationBar());
+                          Get.offAll(() => HomeBottomNavigationBar());
                         
                         }, );
                         },

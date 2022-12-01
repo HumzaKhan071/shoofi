@@ -2,15 +2,9 @@ import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Utils/image_constant.dart';
 
 class CompletedScreen extends StatelessWidget {
-  final String title;
-  final String subtitle;
-  final String subtitle2;
+  final bool fromManageSubscription;
 
-  const CompletedScreen(
-      {super.key,
-      this.title = "Congratulation your signup is completed",
-      this.subtitle = "Enjoy your",
-      this.subtitle2 = "90 Days free trail"});
+  const CompletedScreen({super.key, required this.fromManageSubscription});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +30,10 @@ class CompletedScreen extends StatelessWidget {
                 height: 31,
                 width: 293,
                 child: Center(
-                  child: Text(title,
+                  child: Text(
+                      fromManageSubscription
+                          ? "Upgraded Successfully"
+                          : "Congratulation your signup is completed",
                       style: TextStyle(
                           color: black,
                           fontSize: 14,
@@ -65,14 +62,16 @@ class CompletedScreen extends StatelessWidget {
                     child: Column(
                   children: [
                     Text(
-                      subtitle.toUpperCase(),
+                      fromManageSubscription ? "CONGRATULATION" : "ENJOY YOUR",
                       style: TextStyle(
                           color: black,
                           fontSize: 16,
                           fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      subtitle2.toUpperCase(),
+                      fromManageSubscription
+                          ? "YOUR SUBSCRIPTION IS UPGRADED"
+                          : "90 DAYS FREE TRAIL",
                       style: TextStyle(
                           color: black,
                           fontSize: 16,
@@ -82,13 +81,15 @@ class CompletedScreen extends StatelessWidget {
                 )),
               ),
               SizedBox(height: 20),
-              MyButtonContainer(
-                text: "Next",
-                conColor: yellow,
-                press: () {
-                  Get.to(() => CreateUserProfileScreen());
-                },
-              ),
+              if (!fromManageSubscription) ...[
+                MyButtonContainer(
+                  text: "Next",
+                  conColor: yellow,
+                  press: () {
+                    Get.to(() => CreateUserProfileScreen());
+                  },
+                ),
+              ],
               SizedBox(height: 10),
               Agreements()
             ],

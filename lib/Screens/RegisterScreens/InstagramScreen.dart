@@ -12,28 +12,9 @@ class _InstagramScreenState extends State<InstagramScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        leadingWidth: 40,
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: Icon(
-              Icons.arrow_back_ios_new,
-              color: grey,
-            )),
-        centerTitle: true,
-        title: Text(
-          "Sign Up",
-          style: TextStyle(
-            color: black,
-            fontSize: 14,
-             fontWeight: FontWeight.w500
-          ),
-        ),
-      ),
+      appBar: PreferredSize(
+          preferredSize: Size.fromHeight(50),
+          child: CustomAppBar(title: "Sign Up")),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(8),
@@ -45,49 +26,42 @@ class _InstagramScreenState extends State<InstagramScreen> {
                 valueColor: AlwaysStoppedAnimation<Color>(yellow),
               ),
               SizedBox(
-                height: 20,
+                height: 40,
               ),
-              SizedBox(
-                height: 31,
-                width: 293,
-                child: Column(
-                  children: [
-                    Text("Welcome to Shoofi",
+              Column(
+                children: [
+                  Text("Welcome to Shoofi",
+                      style: TextStyle(
+                          color: grey,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold)),
+                  Text.rich(
+                    TextSpan(
+                        text: "Pick Your favourite ",
                         style: TextStyle(
                           color: grey,
                           fontSize: 12,
-                           fontWeight: FontWeight.bold
-                        )),
-                    Text.rich(
-                      TextSpan(
-                          text: "Pick Your favourite ",
-                          style: TextStyle(
-                            color: grey,
-                            fontSize: 12,
-                          ),
-                          children: [
-                            TextSpan(
-                              text: "Instagram ",
-                              style: TextStyle(
+                        ),
+                        children: [
+                          TextSpan(
+                            text: "Instagram ",
+                            style: TextStyle(
                                 color: black,
                                 fontSize: 12,
-                                 fontWeight: FontWeight.bold
-                              ),
-                            ),
-                            TextSpan(
-                              text: "Channels",
-                              style: TextStyle(
+                                fontWeight: FontWeight.bold),
+                          ),
+                          TextSpan(
+                            text: "Channels",
+                            style: TextStyle(
                                 color: grey,
                                 fontSize: 12,
-                                 fontWeight: FontWeight.w500
-                              ),
-                            ),
-                          ]),
-                    ),
-                  ],
-                ),
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ]),
+                  ),
+                ],
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 40),
               GridView.count(
                 crossAxisCount: 4,
                 crossAxisSpacing: 10,
@@ -101,20 +75,27 @@ class _InstagramScreenState extends State<InstagramScreen> {
                           image: myInstagramModel[index].image,
                         )),
               ),
-              SizedBox(height: 20),
-              MyButtonContainer(
-                text: "Next",
-                conColor: yellow,
-                press: () {
-                  Get.to(() => SelectPlan());
-                },
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Agreements()
             ],
           ),
+        ),
+      ),
+      bottomNavigationBar: Container(
+        height: 135,
+        child: Column(
+          children: [
+            SizedBox(height: 20),
+            MyButtonContainer(
+              text: "Next",
+              conColor: yellow,
+              press: () {
+                Get.to(() => SelectPlan());
+              },
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Agreements()
+          ],
         ),
       ),
     );

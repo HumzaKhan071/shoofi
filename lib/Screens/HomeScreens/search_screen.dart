@@ -1,4 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/video_player/video_player_view.dart';
 import 'package:shoofi/Utils/image_constant.dart';
 
 class HomeSearchScreen extends StatefulWidget {
@@ -43,13 +44,13 @@ class _HomeSearchScreenState extends State<HomeSearchScreen> {
                                 color: black,
                                 fontSize: 24,
                                 fontWeight: FontWeight.bold)),
-                        SizedBox(height: 15),
+                        SizedBox(height: 10),
                         Divider(
                           thickness: 1,
                           indent: 15,
                           endIndent: 15,
                         ),
-                        SizedBox(height: 15),
+                        SizedBox(height: 5),
                         MyFilterRow(
                           text: "Sort by",
                         ),
@@ -80,9 +81,24 @@ class _HomeSearchScreenState extends State<HomeSearchScreen> {
                     spacing: 10,
                     alignment: WrapAlignment.center,
                     children: [
-                      VideoThumbnail(imgPath: "assets/images/img1.png"),
-                      VideoThumbnail(imgPath: "assets/images/img2.png"),
-                      VideoThumbnail(imgPath: "assets/images/img3.png"),
+                      VideoThumbnail(
+                        imgPath: "assets/images/img1.png",
+                        onTap: () {
+                          Get.to(VideoPlayerView());
+                        },
+                      ),
+                      VideoThumbnail(
+                        imgPath: "assets/images/img2.png",
+                        onTap: () {
+                          Get.to(VideoPlayerView());
+                        },
+                      ),
+                      VideoThumbnail(
+                        imgPath: "assets/images/img3.png",
+                        onTap: () {
+                          Get.to(VideoPlayerView());
+                        },
+                      ),
                     ],
                   );
                 },

@@ -1,5 +1,6 @@
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Utils/image_constant.dart';
+import 'package:shoofi/controllers/registration/registration_controller.dart';
 
 class CreateProfile extends StatefulWidget {
   const CreateProfile({super.key});
@@ -10,6 +11,7 @@ class CreateProfile extends StatefulWidget {
 
 class _CreateProfileState extends State<CreateProfile> {
   bool isSwitched = true;
+  RegistrationController controller = Get.put(RegistrationController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,9 +50,27 @@ class _CreateProfileState extends State<CreateProfile> {
               Center(
                 child: Column(
                   children: [
-                    Image.asset(ImageConstant.circle),
-                    SizedBox(height: 5),
-                    Text("Click to select avatar or upload picture",
+                    GetBuilder<RegistrationController>(builder: (context) {
+                      return controller.imageFile == null
+                          ? InkWell(
+                              onTap: () {
+                                controller.getFromGallery();
+                              },
+                              child: Image.asset(ImageConstant.circle))
+                          : InkWell(
+                              onTap: () {
+                                controller.getFromGallery();
+                              },
+                              child: CircleAvatar(
+                                radius: 80,
+                                backgroundImage: FileImage(
+                                  controller.imageFile!,
+                                ),
+                              ),
+                            );
+                    }),
+                    SizedBox(height: 10),
+                    Text("Select Your Avatar",
                         style: TextStyle(
                             color: black,
                             fontSize: 14,
@@ -97,7 +117,7 @@ class _CreateProfileState extends State<CreateProfile> {
                 MyPlatformContainer(),
                 SizedBox(height: 10),
                 Text(
-                  "Platforms",
+                  "Content",
                   style: TextStyle(
                       color: black, fontSize: 14, fontWeight: FontWeight.bold),
                 ),
@@ -117,7 +137,7 @@ class _CreateProfileState extends State<CreateProfile> {
                 text: "Continue",
                 conColor: yellow,
                 press: () {
-                  Get.to(() => CompletedScreen());
+                  Get.to(() => CompletedScreen(fromManageSubscription: false));
                 },
               ),
               SizedBox(height: 10),

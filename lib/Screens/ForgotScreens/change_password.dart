@@ -1,5 +1,7 @@
 import 'package:shoofi/Routes/routes.dart';
 
+import '../LoginScreens/login_screen.dart';
+
 class ChangePaswword extends StatelessWidget {
   const ChangePaswword({super.key});
 
@@ -40,7 +42,9 @@ class ChangePaswword extends StatelessWidget {
               SizedBox(
                 height: Get.height * 0.1,
               ),
-              MyButtonContainer(text: "Reset Password", conColor: yellow),
+              MyButtonContainer(text: "Reset Password", conColor: yellow,press: (){
+                Get.offAll(()=>LoginScreen());
+              },),
               SizedBox(height: 10),
               Center(
                   child: Column(

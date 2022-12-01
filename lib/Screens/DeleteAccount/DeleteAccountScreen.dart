@@ -8,28 +8,7 @@ class DeleteAccountScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        leadingWidth: 40,
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: Icon(
-              Icons.arrow_back_ios_new,
-              color: grey,
-            )),
-        centerTitle: true,
-        title: Text(
-          "Delete my Account",
-          style: TextStyle(
-            color: black,
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ),
+      appBar: PreferredSize(child: CustomAppBar(title: "Delete My Account"), preferredSize: Size.fromHeight(50)),
       body: Padding(
         padding: EdgeInsets.all(8),
         child: Column(

@@ -11,6 +11,7 @@ class MyTextField extends StatelessWidget {
   final double contentBottomPadding;
   final double contentRightPadding;
   final double contentLeftPadding;
+  final bool enabled;
   const MyTextField(
       {Key? key,
       required this.text,
@@ -22,7 +23,8 @@ class MyTextField extends StatelessWidget {
       this.contentTopPadding = 10,
       this.contentBottomPadding = 10,
       this.contentLeftPadding = 10,
-      this.contentRightPadding = 10})
+      this.contentRightPadding = 10,
+      this.enabled = true})
       : super(key: key);
 
   @override
@@ -37,6 +39,7 @@ class MyTextField extends StatelessWidget {
       ),
       child: TextFormField(
         controller: nameController,
+        enabled: enabled,
         decoration: InputDecoration(
           prefixIcon: prefixIcon,
           suffixIcon: suffixIcon,
@@ -44,11 +47,8 @@ class MyTextField extends StatelessWidget {
           prefix: prefix,
           border: InputBorder.none,
           hintText: text,
-          hintStyle: TextStyle(
-            color: grey,
-            fontSize: 16,
-             fontWeight: FontWeight.bold
-          ),
+          hintStyle:
+              TextStyle(color: grey, fontSize: 16, fontWeight: FontWeight.bold),
           contentPadding: EdgeInsets.only(
               left: contentLeftPadding,
               right: contentRightPadding,

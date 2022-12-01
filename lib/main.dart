@@ -1,4 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/GeneralSetting/GeneralSettingScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,6 +14,6 @@ class MyApp extends StatelessWidget {
           fontFamily: "Archivo",
         ),
         debugShowCheckedModeBanner: false,
-        home: SplashScreen());
+        home: GeneralSettingScreen());
   }
 }

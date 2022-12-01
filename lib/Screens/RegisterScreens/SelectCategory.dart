@@ -28,10 +28,7 @@ class _SelectCategoryState extends State<SelectCategory> {
         title: Text(
           "Sign Up",
           style: TextStyle(
-            color: black,
-            fontSize: 14,
-             fontWeight: FontWeight.w500
-          ),
+              color: black, fontSize: 14, fontWeight: FontWeight.w500),
         ),
       ),
       body: SingleChildScrollView(
@@ -45,42 +42,35 @@ class _SelectCategoryState extends State<SelectCategory> {
                 valueColor: AlwaysStoppedAnimation<Color>(yellow),
               ),
               SizedBox(
-                height: 20,
+                height: 40,
               ),
-              SizedBox(
-                height: 31,
-                width: 293,
-                child: Column(
-                  children: [
-                    Text("Welcome to Shoofi",
-                        style: TextStyle(
+              Column(
+                children: [
+                  Text("Welcome to Shoofi",
+                      style: TextStyle(
                           color: grey,
-                          fontSize: 12,
-                           fontWeight: FontWeight.bold
-                        )),
-                    Text.rich(
-                      TextSpan(
-                          text: "Pick Your favourite",
-                          style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold)),
+                  Text.rich(
+                    TextSpan(
+                        text: "Pick Your favourite",
+                        style: TextStyle(
                             color: grey,
-                            fontSize: 12,
-                             fontWeight: FontWeight.w500
-                          ),
-                          children: [
-                            TextSpan(
-                              text: " Content Category",
-                              style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500),
+                        children: [
+                          TextSpan(
+                            text: " Content Category",
+                            style: TextStyle(
                                 color: black,
-                                fontSize: 12,
-                                 fontWeight: FontWeight.bold
-                              ),
-                            ),
-                          ]),
-                    ),
-                  ],
-                ),
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ]),
+                  ),
+                ],
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 40),
               GridView.count(
                 crossAxisCount: 4,
                 crossAxisSpacing: 10,
@@ -94,20 +84,27 @@ class _SelectCategoryState extends State<SelectCategory> {
                         image: mySelectCategoryModel[index].image,
                         title: mySelectCategoryModel[index].title)),
               ),
-              SizedBox(height: 20),
-              MyButtonContainer(
-                text: "Next",
-                conColor: yellow,
-                press: () {
-                  Get.to(() => YoutubeScreen());
-                },
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Agreements()
             ],
           ),
+        ),
+      ),
+      bottomNavigationBar: Container(
+        height: 135,
+        child: Column(
+          children: [
+            SizedBox(height: 20),
+            MyButtonContainer(
+              text: "Next",
+              conColor: yellow,
+              press: () {
+                Get.to(() => YoutubeScreen());
+              },
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Agreements()
+          ],
         ),
       ),
     );

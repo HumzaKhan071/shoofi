@@ -19,25 +19,9 @@ class RegisterScreen extends StatelessWidget {
         },
         child: Scaffold(
             backgroundColor: Colors.white,
-            appBar: AppBar(
-              leadingWidth: 40,
-              backgroundColor: Colors.white,
-              elevation: 0,
-              leading: IconButton(
-                  onPressed: () {
-                    Get.back();
-                  },
-                  icon: Icon(
-                    Icons.arrow_back_ios_new,
-                    color: grey,
-                  )),
-              centerTitle: true,
-              title: Text(
-                "Sign Up",
-                style: TextStyle(
-                    color: black, fontSize: 14, fontWeight: FontWeight.w500),
-              ),
-            ),
+            appBar: PreferredSize(
+                preferredSize: Size.fromHeight(50),
+                child: CustomAppBar(title: "Sign Up")),
             body: SingleChildScrollView(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -74,14 +58,14 @@ class RegisterScreen extends StatelessWidget {
                       height: 10,
                     ),
                     Text(
-                      "Click to select avatar or upload picture",
+                      "Click to upload your Pic",
                       style: TextStyle(
                           color: black,
                           fontSize: 13,
                           fontWeight: FontWeight.w500),
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 30,
                     ),
                     Container(
                       height: 48,
@@ -103,6 +87,10 @@ class RegisterScreen extends StatelessWidget {
                         ),
                       ),
                     ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    MyTextField(text: "Username"),
                     const SizedBox(
                       height: 10,
                     ),

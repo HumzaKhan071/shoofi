@@ -1,4 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/video_player/video_player_view.dart';
 
 class ExtendedMostTrendingScreen extends StatelessWidget {
   const ExtendedMostTrendingScreen({super.key});
@@ -36,9 +37,24 @@ class ExtendedMostTrendingScreen extends StatelessWidget {
                   spacing: 10,
                   alignment: WrapAlignment.center,
                   children: [
-                    VideoThumbnail(imgPath: "assets/images/img1.png"),
-                    VideoThumbnail(imgPath: "assets/images/img2.png"),
-                    VideoThumbnail(imgPath: "assets/images/img3.png"),
+                    VideoThumbnail(
+                      imgPath: "assets/images/img1.png",
+                      onTap: () {
+                        Get.to(VideoPlayerView());
+                      },
+                    ),
+                    VideoThumbnail(
+                      imgPath: "assets/images/img2.png",
+                      onTap: () {
+                        Get.to(VideoPlayerView());
+                      },
+                    ),
+                    VideoThumbnail(
+                      imgPath: "assets/images/img3.png",
+                      onTap: () {
+                        Get.to(VideoPlayerView());
+                      },
+                    ),
                   ],
                 );
               },

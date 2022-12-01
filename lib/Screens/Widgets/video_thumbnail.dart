@@ -3,20 +3,20 @@ import 'package:shoofi/Screens/video_player/video_player_view.dart';
 
 class VideoThumbnail extends StatelessWidget {
   final String imgPath;
-  final onLongPress;
+  final void Function()? onLongPress;
+  final void Function()? onTap;
   const VideoThumbnail({
     Key? key,
     required this.imgPath,
     this.onLongPress,
+    this.onTap,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onLongPress: onLongPress,
-      onTap: () {
-        Get.to(VideoPlayerView());
-      },
+      onTap: onTap,
       child: Container(
         width: Get.width * 0.27,
         child: Column(
