@@ -1,5 +1,6 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/ModalSheets/create_watch_list.dart';
 import 'package:shoofi/Screens/video_player/video_player_view.dart';
 import 'package:shoofi/Utils/image_constant.dart';
 import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
@@ -32,28 +33,13 @@ class HomeWatchlistScreen extends StatelessWidget {
             color: black,
           ),
           SizedBox(width: 10),
-          SizedBox(
-              height: 48,
-              width: 50,
-              child: Obx(
-                () => DropdownButton(
-                    isExpanded: true,
-                    underline: Container(),
-                    value: controler.dropdownvalue.value,
-                    style: TextStyle(
-                        color: black,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold),
-                    items: controler.items.map((String item) {
-                      return DropdownMenuItem(
-                        value: item,
-                        child: Text(item),
-                      );
-                    }).toList(),
-                    onChanged: (newValue) {
-                      controler.dropdownvalue.value = newValue as String;
-                    }),
-              )),
+          IconButton(
+            icon: Icon(Icons.add, color: black, size: 30),
+            onPressed: () {
+              createWatchListBottomSheet();
+            },
+          ),
+          SizedBox(width: 10),
         ],
       ),
       body: Obx(() {
