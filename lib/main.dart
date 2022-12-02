@@ -1,5 +1,4 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/ForgotScreens/ForgotEmail.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,6 +13,6 @@ class MyApp extends StatelessWidget {
           fontFamily: "Archivo",
         ),
         debugShowCheckedModeBanner: false,
-        home: ChatSupportScreen());
+        home: SplashScreen());
   }
 }
