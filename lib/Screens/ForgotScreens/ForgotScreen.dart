@@ -44,16 +44,17 @@ class ForgotScreen extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Center(
-                  child: SizedBox(
-                    height: 40,
-                    width: 213,
+                SizedBox(
+                  height: 40,
+                  width: 213,
+                  child: Center(
                     child: Text(
                       "How do you want to receive the  code to reset your password?",
+                      textAlign: TextAlign.center,
                       style: TextStyle(
                         color: black,
                         fontSize: 14,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
@@ -61,27 +62,33 @@ class ForgotScreen extends StatelessWidget {
                 SizedBox(
                   height: Get.height * 0.3,
                 ),
-                SizedBox(
-                  height: 106,
-                  width: 252,
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Obx(() => Checkbox(
-                                shape: CircleBorder(),
-                                fillColor: MaterialStateProperty.all(yellow),
-                                value: controller.valueBox.value,
-                                onChanged: (valueBox) {
-                                  controller.valueBox1.value = false;
-                                  controller.valueBox.value = valueBox!;
-                                })),
-                            Column(
+                Padding(
+                  padding: const EdgeInsets.only(left: 14.0),
+                  child: SizedBox(
+                    height: 106,
+                    child: Column(children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Obx(() => Checkbox(
+                              shape: CircleBorder(),
+                              fillColor: MaterialStateProperty.all(yellow),
+                              value: controller.valueBox.value,
+                              onChanged: (valueBox) {
+                                controller.valueBox1.value = false;
+                                controller.valueBox.value = valueBox!;
+                              })),
+                          InkWell(
+                            onTap: () {
+                              controller.valueBox1.value = false;
+                              controller.valueBox.value =
+                                  !(controller.valueBox.value);
+                            },
+                            child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Send reset link via email",
+                                  "Send verification link via email",
                                   style: TextStyle(
                                     color: black,
                                     fontSize: 16,
@@ -97,26 +104,33 @@ class ForgotScreen extends StatelessWidget {
                                 ),
                               ],
                             ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Row(
-                          children: [
-                            Obx(() => Checkbox(
-                                shape: CircleBorder(),
-                                fillColor: MaterialStateProperty.all(yellow),
-                                value: controller.valueBox1.value,
-                                onChanged: (valueBox1) {
-                                  controller.valueBox.value = false;
-                                  controller.valueBox1.value = valueBox1!;
-                                })),
-                            Column(
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: [
+                          Obx(() => Checkbox(
+                              shape: CircleBorder(),
+                              fillColor: MaterialStateProperty.all(yellow),
+                              value: controller.valueBox1.value,
+                              onChanged: (valueBox1) {
+                                controller.valueBox.value = false;
+                                controller.valueBox1.value = valueBox1!;
+                              })),
+                          InkWell(
+                            onTap: () {
+                              controller.valueBox.value = false;
+                              controller.valueBox1.value =
+                                  !(controller.valueBox1.value);
+                            },
+                            child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Send reset code via phone",
+                                  "Send confirmation code via phone",
                                   style: TextStyle(
                                     color: black,
                                     fontSize: 16,
@@ -132,9 +146,11 @@ class ForgotScreen extends StatelessWidget {
                                 ),
                               ],
                             ),
-                          ],
-                        ),
-                      ]),
+                          ),
+                        ],
+                      ),
+                    ]),
+                  ),
                 ),
                 SizedBox(
                   height: 20,

@@ -189,14 +189,17 @@ class SelectPlan extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 MyButtonContainer(
-                  text: appBarTitle == "Sign Up" ? "Activate Trial" : "Next",
+                  text:
+                      appBarTitle == "Sign Up" ? "Activate Free Trial" : "Next",
                   conColor: yellow,
                   press: () {
-                    if (!(controller.isSelected.contains(true))) {
-                      Get.snackbar("Error", "Please select a plan");
-                      return;
+                    if (appBarTitle == "Sign Up") {
+                      Get.offAll(() => HomeBottomNavigationBar());
+                    } else {
+                      Get.to(() => PaymentsScreen(
+                            fromManageSubscription: true,
+                          ));
                     }
-                    Get.to(() => PaymentsScreen(fromManageSubscription: appBarTitle == "Sign Up" ? false : true,));
                   },
                 ),
                 SizedBox(height: 10),

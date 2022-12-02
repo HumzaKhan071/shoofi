@@ -36,6 +36,7 @@ class MyPlanContainer extends StatelessWidget {
             controller.isSelected[lastSelected] = false;
           }
           controller.isSelected[index] = true;
+          Get.to(PaymentsScreen(fromManageSubscription: false));
         },
         child: Obx(
           () => Container(

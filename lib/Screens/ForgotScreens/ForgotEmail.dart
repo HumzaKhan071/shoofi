@@ -1,5 +1,6 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Utils/image_constant.dart';
 import 'package:shoofi/controllers/ForgotControllers/forgot_email_controller.dart';
 
 class ForgotEmail extends StatelessWidget {
@@ -70,11 +71,10 @@ class ForgotEmail extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Container(
-                height: 192,
-                width: 154,
-                child: SvgPicture.asset(
-                    "assets/SvgPictures/Forgot Password Illustration.svg"),
-              ),
+                  height: 192,
+                  width: 154,
+                  child: Image.asset(
+                      "assets/images/Forgot Password Illustration.png")),
               SizedBox(height: 20),
               Container(
                 height: 48,
@@ -102,7 +102,7 @@ class ForgotEmail extends StatelessWidget {
                 text: "Search",
                 conColor: yellow,
                 press: () {
-                  Get.to(() => CompletedScreen(fromManageSubscription: false));
+                  Get.to(() => ForgotScreen());
                 },
               ),
               SizedBox(height: 10),
@@ -110,7 +110,7 @@ class ForgotEmail extends StatelessWidget {
                 text: "Cancel",
                 conColor: grey,
                 press: () {
-                  Get.to(() => CompletedScreen(fromManageSubscription: false));
+                  Get.back();
                 },
               ),
               SizedBox(height: Get.height * 0.1),

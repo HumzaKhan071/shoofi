@@ -1,5 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/GeneralSetting/GeneralSettingScreen.dart';
+import 'package:shoofi/Screens/ForgotScreens/ForgotEmail.dart';
 
 void main() {
   runApp(MyApp());

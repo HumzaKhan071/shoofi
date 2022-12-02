@@ -83,69 +83,103 @@ class BillingPaymentScreen extends StatelessWidget {
                       color: grey,
                       thickness: 1,
                     ),
-                    Text.rich(
-                      TextSpan(children: [
-                        TextSpan(
-                            text: "Subscription Plan :",
-                            style: TextStyle(
-                                color: black,
-                                fontSize: 10,
-                                fontWeight: FontWeight.bold)),
-                        TextSpan(
-                            text: " Monthly",
-                            style: TextStyle(
-                              color: black,
-                              fontSize: 9,
-                            )),
-                      ]),
-                    ),
-                    Text.rich(
-                      TextSpan(children: [
-                        TextSpan(
-                            text: "Account Title :",
-                            style: TextStyle(
-                              color: black,
-                              fontSize: 10,
-                            )),
-                        TextSpan(
-                            text: " Shoofista",
-                            style: TextStyle(
-                              color: black,
-                              fontSize: 9,
-                            )),
-                      ]),
-                    ),
-                    Text.rich(
-                      TextSpan(children: [
-                        TextSpan(
-                            text: "Card :",
-                            style: TextStyle(
-                              color: black,
-                              fontSize: 10,
-                            )),
-                        TextSpan(
-                            text: " **** **** **** ***45",
-                            style: TextStyle(
-                              color: black,
-                              fontSize: 9,
-                            )),
-                      ]),
-                    ),
-                    Text.rich(
-                      TextSpan(children: [
-                        TextSpan(
-                            text: "Date :",
-                            style: TextStyle(
-                              color: black,
-                              fontSize: 10,
-                            )),
-                        TextSpan(
-                            text: " 10-18-2022",
-                            style: TextStyle(
-                              color: black,
-                              fontSize: 9,
-                            )),
-                      ]),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text.rich(
+                              TextSpan(children: [
+                                TextSpan(
+                                    text: "Subscription Plan :",
+                                    style: TextStyle(
+                                        color: black,
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.bold)),
+                                TextSpan(
+                                    text: " Monthly",
+                                    style: TextStyle(
+                                      color: black,
+                                      fontSize: 9,
+                                    )),
+                              ]),
+                            ),
+                            Text.rich(
+                              TextSpan(children: [
+                                TextSpan(
+                                    text: "Account Title :",
+                                    style: TextStyle(
+                                      color: black,
+                                      fontSize: 10,
+                                    )),
+                                TextSpan(
+                                    text: " Shoofista",
+                                    style: TextStyle(
+                                      color: black,
+                                      fontSize: 9,
+                                    )),
+                              ]),
+                            ),
+                            Text.rich(
+                              TextSpan(children: [
+                                TextSpan(
+                                    text: "Card :",
+                                    style: TextStyle(
+                                      color: black,
+                                      fontSize: 10,
+                                    )),
+                                TextSpan(
+                                    text: " **** **** **** ***45",
+                                    style: TextStyle(
+                                      color: black,
+                                      fontSize: 9,
+                                    )),
+                              ]),
+                            ),
+                            Text.rich(
+                              TextSpan(children: [
+                                TextSpan(
+                                    text: "Date :",
+                                    style: TextStyle(
+                                      color: black,
+                                      fontSize: 10,
+                                    )),
+                                TextSpan(
+                                    text: " 10-18-2022",
+                                    style: TextStyle(
+                                      color: black,
+                                      fontSize: 9,
+                                    )),
+                              ]),
+                            ),
+                          ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 10.0),
+                          child: InkWell(
+                              onTap: () {
+                                Get.snackbar("Done!",
+                                    "Your subscription plan has been changed successfully");
+                              },
+                              child: Container(
+                                height: 30,
+                                width: 70,
+                                decoration: BoxDecoration(
+                                  color: red,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    "Cancel",
+                                    style: TextStyle(
+                                        color: white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              )),
+                        )
+                      ],
                     ),
                   ],
                 ),
