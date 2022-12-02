@@ -74,7 +74,7 @@ class AppSetting extends StatelessWidget {
             minLeadingWidth: 0,
             leading: Image.asset(ImageConstant.appSettingicon4),
             onTap: () {
-              Get.to(PrivacyScreen());
+              // Get.to(PrivacyScreen());
             },
             title: Text(
               "Privacy policy",
