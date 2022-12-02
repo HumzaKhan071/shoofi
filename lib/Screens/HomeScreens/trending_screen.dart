@@ -43,9 +43,12 @@ class HomeTrendingScreen extends StatelessWidget {
             SizedBox(width: 10),
             SizedBox(
               height: 48,
-              width: 50,
+              width: 75,
               child: Obx(() => DropdownButton(
+                  dropdownColor: yellow,
+                  menuMaxHeight: 120,
                   isExpanded: true,
+                  borderRadius: BorderRadius.circular(21),
                   underline: Container(),
                   value: controller.dropdownvalue.value,
                   style: TextStyle(

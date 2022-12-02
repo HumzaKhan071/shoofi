@@ -4,8 +4,8 @@ class HomeTrendingController extends GetxController
     with GetSingleTickerProviderStateMixin {
   int previousIndex = 0;
   late TabController tabController;
-  Rx<String> dropdownvalue = 'EN'.obs;
-  var items = ['EN', 'US', 'UR'];
+  Rx<String> dropdownvalue = 'English'.obs;
+  var items = ['English', 'Arabic',];
 
   @override
   void onInit() {

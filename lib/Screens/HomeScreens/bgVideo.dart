@@ -45,9 +45,12 @@ class _VideoAppState extends State<VideoApp> {
               ))
           : Container(
               color: Colors.black,
-              child:
-                  Center(child: Image.asset("assets/gifs/Shoofi-Loader.gif")),
-            ),
+              child: Center(
+                  child: Image.asset(
+                "assets/gifs/loader.gif",
+                height: 100,
+                width: 100,
+              ))),
     );
   }
 

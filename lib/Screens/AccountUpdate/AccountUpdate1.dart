@@ -129,6 +129,9 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
                         borderRadius: BorderRadius.circular(100),
                       ),
                       child: DropdownButton(
+                        dropdownColor: yellow,
+                        menuMaxHeight: 120,
+
                           isExpanded: true,
                           underline: Container(),
                           value: dropdownvalue,
