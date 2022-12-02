@@ -32,13 +32,16 @@ class HomeWatchlistScreen extends StatelessWidget {
             color: black,
           ),
           SizedBox(width: 10),
-          SizedBox(
+          Container(
               height: 48,
               width: 50,
               child: Obx(
                 () => DropdownButton(
+                    dropdownColor: yellow,
+                    borderRadius: BorderRadius.circular(7),
+                    menuMaxHeight: 120,
                     isExpanded: true,
-                    underline: Container(),
+                    underline: SizedBox(),
                     value: controler.dropdownvalue.value,
                     style: TextStyle(
                         color: black,
