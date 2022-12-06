@@ -45,7 +45,6 @@ export 'package:shoofi/Screens/Chat%20and%20Support/ChatSupportScreen.dart';
 export 'package:shoofi/Screens/Widgets/video_thumbnail.dart';
 export 'package:shoofi/Screens/HomeScreens/appSetting.dart';
 export 'package:shoofi/Screens/HomeScreens/search_screen.dart';
-export 'package:shoofi/Screens/HomeScreens/short_screen.dart';
 export 'package:shoofi/Screens/HomeScreens/trending_screen.dart';
 export 'package:shoofi/Screens/HomeScreens/watchlist_screen.dart';
 export 'package:shoofi/Screens/HomeScreens/bottom_navigation_bar.dart';

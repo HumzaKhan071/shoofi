@@ -1,5 +1,6 @@
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/video_player/video_player_view.dart';
+import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
 
 class VideoThumbnail extends StatelessWidget {
   final String imgPath;
@@ -14,9 +15,15 @@ class VideoThumbnail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    HomeBottomNavigationBarController homeBottomNavigationBarController =
+        Get.find(tag: "bottomNavigation");
     return InkWell(
       onLongPress: onLongPress,
-      onTap: onTap,
+      onTap: () async {
+        await Get.bottomSheet(VideoPlayerView(), isScrollControlled: true);
+        homeBottomNavigationBarController.isVideoPlayingInMiniplayer.value =
+            true;
+      },
       child: Container(
         width: Get.width * 0.27,
         child: Column(

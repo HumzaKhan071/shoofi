@@ -1,10 +1,10 @@
 import 'package:shoofi/Account/MyAccount.dart';
-import 'package:shoofi/Account/MyAccount.dart';
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/HomeScreens/reels.dart';
+import 'package:shoofi/Screens/video_player/video_player_view.dart';
 import 'package:shoofi/Utils/image_constant.dart';
-import 'package:shoofi/Screens/HomeScreens/reels.dart';
 import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
+import 'package:shoofi/Screens/Reels/reels.dart';
+import 'package:video_player/video_player.dart';
 
 class HomeBottomNavigationBar extends StatelessWidget {
   const HomeBottomNavigationBar({super.key});
@@ -34,6 +34,61 @@ class HomeBottomNavigationBar extends StatelessWidget {
         return true;
       },
       child: Scaffold(
+          persistentFooterButtons: [
+            Obx(() => controller.currentIndex.value != 1
+                ? controller.isVideoPlayingInMiniplayer.value
+                    ? InkWell(
+                        onTap: () {
+                          Get.bottomSheet(VideoPlayerView(),
+                              isScrollControlled: true);
+                        },
+                        child: SizedBox(
+                          height: 50,
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                width: 80,
+                                child: VideoPlayer(
+                                    controller.playerController.value),
+                              ),
+                              SizedBox(width: 20),
+                              Expanded(
+                                child: Text(
+                                  controller.title,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              IconButton(
+                                icon: Obx(() => Icon(
+                                    controller.isPlayingVideo.value
+                                        ? Icons.pause
+                                        : Icons.play_arrow)),
+                                onPressed: () {
+                                  if (controller.isPlayingVideo.value) {
+                                    controller.playerController.value.pause();
+                                    controller.isPlayingVideo.value = false;
+                                  } else {
+                                    controller.playerController.value.play();
+                                    controller.isPlayingVideo.value = true;
+                                  }
+                                },
+                              ),
+                              IconButton(
+                                icon: Icon(Icons.close),
+                                onPressed: () {
+                                  controller.isVideoPlayingInMiniplayer.value =
+                                      false;
+                                  controller.playerController.value.dispose();
+                                },
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
+                    : Container()
+                : Container())
+          ],
           bottomNavigationBar: Obx(
             () => controller.currentIndex.value != 1
                 ? BottomNavigationBar(
@@ -87,6 +142,7 @@ class HomeBottomNavigationBar extends StatelessWidget {
                       if (newIndex == 1) {
                         controller.indexBeforeShort =
                             controller.currentIndex.value;
+                        print(controller.indexBeforeShort);
                       }
                       controller.currentIndex.value = newIndex;
                     },
