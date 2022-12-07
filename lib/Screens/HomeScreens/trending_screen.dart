@@ -1,6 +1,7 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/HomeScreens/all_categories.dart';
+import 'package:shoofi/Screens/Widgets/language_dropdown.dart';
 import 'package:shoofi/Screens/youtube_home/youtube_home.dart';
 import 'package:shoofi/controllers/Home/trending_controller.dart';
 import 'package:shoofi/Utils/image_constant.dart';
@@ -44,24 +45,7 @@ class HomeTrendingScreen extends StatelessWidget {
             SizedBox(
               height: 48,
               width: 75,
-              child: Obx(() => DropdownButton(
-                  dropdownColor: yellow,
-                  menuMaxHeight: 120,
-                  isExpanded: true,
-                  borderRadius: BorderRadius.circular(21),
-                  underline: Container(),
-                  value: controller.dropdownvalue.value,
-                  style: TextStyle(
-                      color: black, fontSize: 15, fontWeight: FontWeight.bold),
-                  items: controller.items.map((String items) {
-                    return DropdownMenuItem(
-                      value: items,
-                      child: Text(items),
-                    );
-                  }).toList(),
-                  onChanged: (newValue) {
-                    controller.dropdownvalue.value = newValue as String;
-                  })),
+              child: languageDropDown(controller),
             ),
           ],
           bottom: TabBar(

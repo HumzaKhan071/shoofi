@@ -3,10 +3,14 @@ import 'package:shoofi/Channel%20Detail/About.dart';
 import 'package:shoofi/Channel%20Detail/playlist.dart';
 import 'package:shoofi/Channel%20Detail/videos.dart';
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/Widgets/language_dropdown.dart';
+import 'package:shoofi/Screens/Widgets/mini_video_player.dart';
+import 'package:shoofi/Screens/video_player/video_player_view.dart';
 import 'package:shoofi/Screens/video_player/videos_main_page.dart';
 import 'package:shoofi/Utils/image_constant.dart';
 import 'package:shoofi/controllers/ChannelDetails/playlist_controller.dart';
 import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
+import 'package:video_player/video_player.dart';
 
 class ChanneledDetail extends StatefulWidget {
   const ChanneledDetail({super.key});
@@ -17,8 +21,6 @@ class ChanneledDetail extends StatefulWidget {
 
 class _ChanneledDetailState extends State<ChanneledDetail>
     with SingleTickerProviderStateMixin {
-  String dropdownvalue = 'EN';
-  var items = ['EN', 'US', 'UR'];
   TabController? _tabController;
 
   @override
@@ -48,6 +50,9 @@ class _ChanneledDetailState extends State<ChanneledDetail>
         return true;
       },
       child: Scaffold(
+        persistentFooterButtons: [
+          miniVideoPlayer(homeBottomNavigationBarController)
+        ],
         body: DefaultTabController(
             length: _tabController!.length,
             child: Scaffold(
@@ -77,34 +82,17 @@ class _ChanneledDetailState extends State<ChanneledDetail>
                     SizedBox(width: 10),
                     SizedBox(
                       height: 48,
-                      width: 50,
-                      child: DropdownButton(
-                          isExpanded: true,
-                          underline: Container(),
-                          value: dropdownvalue,
-                          style: TextStyle(color: black, fontSize: 15, fontWeight: FontWeight.bold ),
-                          items: items.map((String items) {
-                            return DropdownMenuItem(
-                              value: items,
-                              child: Text(items),
-                            );
-                          }).toList(),
-                          onChanged: (String? newValue) {
-                            setState(() {
-                              dropdownvalue = newValue!;
-                            });
-                          }),
+                      width: 80,
+                      child: languageDropDown(watchListControler),
                     ),
                   ],
                   bottom: TabBar(
                       controller: _tabController,
                       labelColor: black,
                       labelStyle: TextStyle(
-                        fontSize: 14,
-                        color: black,
-                         fontWeight: FontWeight.bold
-                       
-                      ),
+                          fontSize: 14,
+                          color: black,
+                          fontWeight: FontWeight.bold),
                       indicatorColor: yellow,
                       tabs: [
                         Tab(

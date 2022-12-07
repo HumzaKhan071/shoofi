@@ -1,11 +1,14 @@
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/video_player/video_player_view.dart';
+import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
 
 class ChannelVideos extends StatelessWidget {
   const ChannelVideos({super.key});
 
   @override
   Widget build(BuildContext context) {
+    HomeBottomNavigationBarController homeBottomNavigationBarController =
+        Get.find(tag: "bottomNavigation");
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(top: 15),
@@ -18,20 +21,29 @@ class ChannelVideos extends StatelessWidget {
               children: [
                 VideoThumbnail(
                   imgPath: "assets/images/img1.png",
-                  onTap: () {
-                    Get.to(VideoPlayerView());
+                  onTap: () async {
+                    await Get.bottomSheet(VideoPlayerView(),
+                        isScrollControlled: true);
+                    homeBottomNavigationBarController
+                        .isVideoPlayingInMiniplayer.value = true;
                   },
                 ),
                 VideoThumbnail(
                   imgPath: "assets/images/img2.png",
-                  onTap: () {
-                    Get.to(VideoPlayerView());
+                  onTap: () async {
+                    await Get.bottomSheet(VideoPlayerView(),
+                        isScrollControlled: true);
+                    homeBottomNavigationBarController
+                        .isVideoPlayingInMiniplayer.value = true;
                   },
                 ),
                 VideoThumbnail(
                   imgPath: "assets/images/img3.png",
-                  onTap: () {
-                    Get.to(VideoPlayerView());
+                  onTap: () async {
+                    await Get.bottomSheet(VideoPlayerView(),
+                        isScrollControlled: true);
+                    homeBottomNavigationBarController
+                        .isVideoPlayingInMiniplayer.value = true;
                   },
                 ),
               ],

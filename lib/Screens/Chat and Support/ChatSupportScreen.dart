@@ -27,7 +27,7 @@ class ChatSupportScreen extends StatelessWidget {
                     border: InputBorder.none,
                     hintText: "Write a comment",
                     hintStyle: TextStyle(
-                      color: grey,
+                      color: Colors.black.withOpacity(0.7),
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
                     ),

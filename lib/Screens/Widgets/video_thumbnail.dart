@@ -19,11 +19,7 @@ class VideoThumbnail extends StatelessWidget {
         Get.find(tag: "bottomNavigation");
     return InkWell(
       onLongPress: onLongPress,
-      onTap: () async {
-        await Get.bottomSheet(VideoPlayerView(), isScrollControlled: true);
-        homeBottomNavigationBarController.isVideoPlayingInMiniplayer.value =
-            true;
-      },
+      onTap: onTap,
       child: Container(
         width: Get.width * 0.27,
         child: Column(

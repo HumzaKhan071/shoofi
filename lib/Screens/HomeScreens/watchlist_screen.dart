@@ -28,16 +28,22 @@ class HomeWatchlistScreen extends StatelessWidget {
           ImageConstant.logo3,
         ),
         actions: [
-          Icon(
-            Icons.add_location_outlined,
-            color: black,
-          ),
           SizedBox(width: 10),
-          IconButton(
-            icon: Icon(Icons.add, color: black, size: 30),
-            onPressed: () {
+          InkWell(
+            onTap: () {
               createWatchListBottomSheet();
             },
+            child: Row(
+              children: [
+                Icon(Icons.add, color: black, size: 30),
+                SizedBox(width: 2),
+                Text(
+                  "Create",
+                  style: TextStyle(
+                      color: black, fontSize: 17, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
           ),
           SizedBox(width: 10),
         ],
@@ -89,20 +95,29 @@ class HomeWatchlistScreen extends StatelessWidget {
                         children: [
                           VideoThumbnail(
                             imgPath: "assets/images/img1.png",
-                            onTap: () {
-                              Get.to(VideoPlayerView());
+                            onTap: () async {
+                              await Get.bottomSheet(VideoPlayerView(),
+                                  isScrollControlled: true);
+                              homeBottomNavigationBarController
+                                  .isVideoPlayingInMiniplayer.value = true;
                             },
                           ),
                           VideoThumbnail(
                             imgPath: "assets/images/img2.png",
-                            onTap: () {
-                              Get.to(VideoPlayerView());
+                            onTap: () async {
+                              await Get.bottomSheet(VideoPlayerView(),
+                                  isScrollControlled: true);
+                              homeBottomNavigationBarController
+                                  .isVideoPlayingInMiniplayer.value = true;
                             },
                           ),
                           VideoThumbnail(
                             imgPath: "assets/images/img3.png",
-                            onTap: () {
-                              Get.to(VideoPlayerView());
+                            onTap: () async {
+                              await Get.bottomSheet(VideoPlayerView(),
+                                  isScrollControlled: true);
+                              homeBottomNavigationBarController
+                                  .isVideoPlayingInMiniplayer.value = true;
                             },
                           ),
                         ],

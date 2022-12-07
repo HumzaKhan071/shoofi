@@ -15,6 +15,8 @@ class YouTubeHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    HomeBottomNavigationBarController homeBottomNavigationBarController =
+        Get.find(tag: "bottomNavigation");
     return Scaffold(
         body: SingleChildScrollView(
       child: Padding(
@@ -37,14 +39,20 @@ class YouTubeHome extends StatelessWidget {
             recommandBanner(
                 title: 'Trending on Youtube',
                 imagePath: 'assets/images/youtube_trending.png',
-                onTap: () {
-                  Get.to(VideoPlayerView());
+                onTap: () async {
+                  await Get.bottomSheet(VideoPlayerView(),
+                      isScrollControlled: true);
+                  homeBottomNavigationBarController
+                      .isVideoPlayingInMiniplayer.value = true;
                 }),
             recommandBanner(
                 title: 'Trending on Facebook',
                 imagePath: 'assets/images/youtube_trending.png',
-                onTap: () {
-                  Get.to(VideoPlayerView());
+                onTap: () async {
+                  await Get.bottomSheet(VideoPlayerView(),
+                      isScrollControlled: true);
+                  homeBottomNavigationBarController
+                      .isVideoPlayingInMiniplayer.value = true;
                 }),
           ],
         ),

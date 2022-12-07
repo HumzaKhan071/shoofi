@@ -31,7 +31,6 @@ class _VideoPlayerViewState extends State<VideoPlayerView> {
       });
       homeController.playerController.value.play();
       homeController.isPlayingVideo.value = true;
-      ;
     }
   }
 
@@ -42,12 +41,48 @@ class _VideoPlayerViewState extends State<VideoPlayerView> {
         children: [
           Obx(() => homeController.playerController.value.value.isInitialized
               ? Stack(
+                  alignment: AlignmentDirectional.bottomCenter,
                   children: [
                     SizedBox(
                         height: 250,
                         child: VideoPlayer(
                           homeController.playerController.value,
                         )),
+                    VideoProgressIndicator(
+                        homeController.playerController.value,
+                        allowScrubbing: true),
+                    Positioned(
+                      bottom: 100,
+                      child: Center(
+                          child: CircleAvatar(
+                        radius: 25,
+                        backgroundColor: black.withOpacity(0.5),
+                        child: Center(
+                          child: IconButton(
+                            onPressed: () {
+                              if (homeController.isPlayingVideo.value) {
+                                homeController.playerController.value.pause();
+                                homeController.isPlayingVideo.value = false;
+                              } else {
+                                homeController.playerController.value.play();
+                                homeController.isPlayingVideo.value = true;
+                              }
+                            },
+                            icon: homeController.isPlayingVideo.value
+                                ? Icon(
+                                    Icons.pause,
+                                    // size: 40,
+                                    color: white,
+                                  )
+                                : Icon(
+                                    Icons.play_arrow,
+                                    // size: 40,
+                                    color: white,
+                                  ),
+                          ),
+                        ),
+                      )),
+                    ),
                   ],
                 )
               : Container(

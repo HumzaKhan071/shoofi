@@ -2,6 +2,7 @@ import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/Widgets/filter_bottom_sheet.dart';
 import 'package:shoofi/Screens/video_player/video_player_view.dart';
 import 'package:shoofi/Utils/image_constant.dart';
+import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
 
 class HomeSearchScreen extends StatefulWidget {
   const HomeSearchScreen({super.key});
@@ -11,65 +12,74 @@ class HomeSearchScreen extends StatefulWidget {
 }
 
 class _HomeSearchScreenState extends State<HomeSearchScreen> {
+  HomeBottomNavigationBarController homeBottomNavigationBarController =
+      Get.find(tag: "bottomNavigation");
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
-      child: SafeArea(
-        child: Column(
-          children: [
-            MyTextField(
-              text: "Search or Paste URL",
-              prefixIcon: Icon(
-                Icons.search,
+      child: Column(
+        children: [
+          MyTextField(
+            text: "Search or Paste URL",
+            prefixIcon: Icon(
+              Icons.search,
+              color: Colors.grey,
+            ),
+            contentTopPadding: 13,
+            suffixIcon: IconButton(
+              onPressed: () {
+                filterBottomSheet();
+              },
+              icon: Icon(
+                Icons.filter_list_alt,
                 color: Colors.grey,
               ),
-              contentTopPadding: 13,
-              suffixIcon: IconButton(
-                onPressed: () {
-                  filterBottomSheet();
-                },
-                icon: Icon(
-                  Icons.filter_list_alt,
-                  color: Colors.grey,
-                ),
-              ),
             ),
-            SizedBox(height: 15),
-            Flexible(
-              child: ListView.builder(
-                padding: EdgeInsets.all(0),
-                itemCount: 5,
-                itemBuilder: (context, index) {
-                  return Wrap(
-                    spacing: 10,
-                    alignment: WrapAlignment.center,
-                    children: [
-                      VideoThumbnail(
-                        imgPath: "assets/images/img1.png",
-                        onTap: () {
-                          Get.to(VideoPlayerView());
-                        },
-                      ),
-                      VideoThumbnail(
-                        imgPath: "assets/images/img2.png",
-                        onTap: () {
-                          Get.to(VideoPlayerView());
-                        },
-                      ),
-                      VideoThumbnail(
-                        imgPath: "assets/images/img3.png",
-                        onTap: () {
-                          Get.to(VideoPlayerView());
-                        },
-                      ),
-                    ],
-                  );
-                },
-              ),
-            )
-          ],
-        ),
+          ),
+          SizedBox(height: 15),
+          Flexible(
+            child: ListView.builder(
+              padding: EdgeInsets.all(0),
+              itemCount: 5,
+              itemBuilder: (context, index) {
+                return Wrap(
+                  spacing: 10,
+                  alignment: WrapAlignment.center,
+                  children: [
+                    VideoThumbnail(
+                      imgPath: "assets/images/img1.png",
+                      onTap: () async {
+                        await Get.bottomSheet(VideoPlayerView(),
+                            isScrollControlled: true);
+                        homeBottomNavigationBarController
+                            .isVideoPlayingInMiniplayer.value = true;
+                      },
+                    ),
+                    VideoThumbnail(
+                      imgPath: "assets/images/img2.png",
+                      onTap: () async {
+                        await Get.bottomSheet(VideoPlayerView(),
+                            isScrollControlled: true);
+                        homeBottomNavigationBarController
+                            .isVideoPlayingInMiniplayer.value = true;
+                      },
+                    ),
+                    VideoThumbnail(
+                      imgPath: "assets/images/img3.png",
+                      onTap: () async {
+                        await Get.bottomSheet(VideoPlayerView(),
+                            isScrollControlled: true);
+                        homeBottomNavigationBarController
+                            .isVideoPlayingInMiniplayer.value = true;
+                      },
+                    ),
+                  ],
+                );
+              },
+            ),
+          )
+        ],
       ),
     );
   }

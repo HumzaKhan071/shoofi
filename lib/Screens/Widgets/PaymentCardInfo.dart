@@ -6,12 +6,16 @@ import '../../Utils/image_constant.dart';
 class PaymentCardInfo extends StatelessWidget {
   PaymentCardController controller = PaymentCardController();
 
+  PaymentCardInfo({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
@@ -70,11 +74,7 @@ class PaymentCardInfo extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              "Cardholder’s Name",
-              style: TextStyle(
-                  color: black, fontSize: 14, fontWeight: FontWeight.bold),
-            ),
+            textFieldLabel("Cardholder's Name"),
             SizedBox(height: 5),
             Container(
               height: 48,
@@ -97,11 +97,7 @@ class PaymentCardInfo extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10),
-            Text(
-              "Card Number",
-              style: TextStyle(
-                  color: black, fontSize: 14, fontWeight: FontWeight.bold),
-            ),
+            textFieldLabel("Card Number"),
             SizedBox(height: 5),
             Container(
               height: 48,
@@ -212,6 +208,17 @@ class PaymentCardInfo extends StatelessWidget {
           ],
         ),
       ],
+    );
+  }
+
+  Padding textFieldLabel(text) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 15.0),
+      child: Text(
+        text,
+        style:
+            TextStyle(color: black, fontSize: 14, fontWeight: FontWeight.bold),
+      ),
     );
   }
 }

@@ -79,6 +79,10 @@ class _CreateProfileState extends State<CreateProfile> {
                 ),
               ),
               SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+                child: MyTextField(text: "Username"),
+              ),
               SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -133,12 +137,15 @@ class _CreateProfileState extends State<CreateProfile> {
                         title: "Sensitive Content")),
               ],
               SizedBox(height: 20),
-              MyButtonContainer(
-                text: "Continue",
-                conColor: yellow,
-                press: () {
-                  Get.to(() => CompletedScreen(fromManageSubscription: false));
-                },
+              Center(
+                child: MyButtonContainer(
+                  text: "Continue",
+                  conColor: yellow,
+                  press: () {
+                    Get.to(
+                        () => CompletedScreen(fromManageSubscription: false));
+                  },
+                ),
               ),
               SizedBox(height: 10),
               Center(

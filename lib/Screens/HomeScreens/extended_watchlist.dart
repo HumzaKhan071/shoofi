@@ -1,5 +1,6 @@
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/video_player/video_player_view.dart';
+import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
 
 class ExtendedWatchList extends StatelessWidget {
   const ExtendedWatchList({
@@ -9,6 +10,8 @@ class ExtendedWatchList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     HomeWatchListControler controler = Get.find(tag: "watchlist");
+    HomeBottomNavigationBarController homeBottomNavigationBarController =
+        Get.find(tag: "bottomNavigation");
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -35,24 +38,33 @@ class ExtendedWatchList extends StatelessWidget {
                 children: [
                   VideoThumbnail(
                       imgPath: "assets/images/img1.png",
-                      onTap: () {
-                        Get.to(VideoPlayerView());
+                      onTap: () async {
+                        await Get.bottomSheet(VideoPlayerView(),
+                            isScrollControlled: true);
+                        homeBottomNavigationBarController
+                            .isVideoPlayingInMiniplayer.value = true;
                       },
                       onLongPress: () {
                         remvoeWatchListBottomSheet();
                       }),
                   VideoThumbnail(
                       imgPath: "assets/images/img2.png",
-                      onTap: () {
-                        Get.to(VideoPlayerView());
+                      onTap: () async {
+                        await Get.bottomSheet(VideoPlayerView(),
+                            isScrollControlled: true);
+                        homeBottomNavigationBarController
+                            .isVideoPlayingInMiniplayer.value = true;
                       },
                       onLongPress: () {
                         remvoeWatchListBottomSheet();
                       }),
                   VideoThumbnail(
                       imgPath: "assets/images/img3.png",
-                      onTap: () {
-                        Get.to(VideoPlayerView());
+                      onTap: () async {
+                        await Get.bottomSheet(VideoPlayerView(),
+                            isScrollControlled: true);
+                        homeBottomNavigationBarController
+                            .isVideoPlayingInMiniplayer.value = true;
                       },
                       onLongPress: () {
                         remvoeWatchListBottomSheet();

@@ -1,10 +1,5 @@
-import 'package:chewie/chewie.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:shoofi/Routes/routes.dart';
 import 'package:video_player/video_player.dart';
-import 'package:shoofi/Screens/Reels/like_icon.dart';
-import 'package:shoofi/Screens/Reels/options_screen.dart';
 
 class ContentScreen extends StatefulWidget {
   final String? src;
@@ -16,8 +11,7 @@ class ContentScreen extends StatefulWidget {
 }
 
 class _ContentScreenState extends State<ContentScreen> {
-  late VideoPlayerController _videoPlayerController;
-  ChewieController? _chewieController;
+  late VideoPlayerController videoPlayerController;
   @override
   void initState() {
     super.initState();
@@ -25,29 +19,31 @@ class _ContentScreenState extends State<ContentScreen> {
   }
 
   Future initializePlayer() async {
-    _videoPlayerController = VideoPlayerController.network(widget.src!);
-    await Future.wait([_videoPlayerController.initialize()]);
-    _chewieController = ChewieController(
-      videoPlayerController: _videoPlayerController,
-      autoPlay: true,
-      showControls: false,
-      looping: true,
-    );
+    videoPlayerController = VideoPlayerController.network(widget.src!);
+    await Future.wait([videoPlayerController.initialize()]);
+    videoPlayerController.setLooping(true);
+
+    videoPlayerController.play();
     setState(() {});
   }
 
   @override
   void dispose() {
-    _videoPlayerController.dispose();
-    _chewieController!.dispose();
+    videoPlayerController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return _chewieController != null &&
-            _chewieController!.videoPlayerController.value.isInitialized
-        ? Container(child: VideoPlayer(_videoPlayerController))
+    return videoPlayerController.value.isInitialized
+        ? Stack(
+            alignment: Alignment.bottomCenter,
+            children: [
+              VideoPlayer(videoPlayerController),
+              VideoProgressIndicator(videoPlayerController,
+                  allowScrubbing: false),
+            ],
+          )
         : Container(
             color: Colors.black,
             child: Center(

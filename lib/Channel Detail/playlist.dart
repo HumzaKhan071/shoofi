@@ -59,20 +59,29 @@ class ChannelPlaylist extends StatelessWidget {
                         children: [
                           VideoThumbnail(
                             imgPath: "assets/images/img1.png",
-                            onTap: () {
-                              Get.to(VideoPlayerView());
+                            onTap: () async {
+                              await Get.bottomSheet(VideoPlayerView(),
+                                  isScrollControlled: true);
+                              homeBottomNavigationBarController
+                                  .isVideoPlayingInMiniplayer.value = true;
                             },
                           ),
                           VideoThumbnail(
                             imgPath: "assets/images/img2.png",
-                            onTap: () {
-                              Get.to(VideoPlayerView());
+                            onTap: () async {
+                              await Get.bottomSheet(VideoPlayerView(),
+                                  isScrollControlled: true);
+                              homeBottomNavigationBarController
+                                  .isVideoPlayingInMiniplayer.value = true;
                             },
                           ),
                           VideoThumbnail(
                             imgPath: "assets/images/img3.png",
-                            onTap: () {
-                              Get.to(VideoPlayerView());
+                            onTap: () async {
+                              await Get.bottomSheet(VideoPlayerView(),
+                                  isScrollControlled: true);
+                              homeBottomNavigationBarController
+                                  .isVideoPlayingInMiniplayer.value = true;
                             },
                           ),
                         ],

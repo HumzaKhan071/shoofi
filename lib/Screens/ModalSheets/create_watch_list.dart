@@ -30,11 +30,14 @@ void createWatchListBottomSheet() {
         SizedBox(
           height: 30,
         ),
-        Text("Watch list tile",
-            style: TextStyle(
-              color: black,
-              fontSize: 14,
-            )),
+        Padding(
+          padding: const EdgeInsets.only(left: 8.0),
+          child: Text("Watchlist title",
+              style: TextStyle(
+                color: black,
+                fontSize: 14,
+              )),
+        ),
         SizedBox(
           height: 10,
         ),

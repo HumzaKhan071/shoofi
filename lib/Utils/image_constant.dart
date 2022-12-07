@@ -19,6 +19,7 @@ class ImageConstant {
   static String argentina = "assets/flags/argentina.png";
   static String accountCircle = "assets/icons/account_circle.png";
   static String arrowForward = "assets/icons/arrow_forward.png";
+  static String lock = "assets/icons/lock.png";
   static String arrowUpward = "assets/icons/arrow_upward.png";
   static String arrowDownward = "assets/icons/arrow_downward.png";
   static String helpOutline = "assets/icons/help_outline.png";

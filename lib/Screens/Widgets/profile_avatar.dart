@@ -13,7 +13,8 @@ class ProfileAvatar extends StatelessWidget {
     this.title = "Add Profile",
     required this.onTap,
     this.radius = 50,
-    this.iconColor = yellow,  this.iconSize = 40,
+    this.iconColor = yellow,
+    this.iconSize = 40,
   }) : super(key: key);
 
   @override
@@ -39,7 +40,7 @@ class ProfileAvatar extends StatelessWidget {
           Text(
             title,
             style: TextStyle(
-                color: black, fontSize: 14, fontWeight: FontWeight.bold),
+                color: black, fontSize: 12, fontWeight: FontWeight.bold),
           )
         ],
       ),
