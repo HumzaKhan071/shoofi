@@ -16,70 +16,72 @@ class _HomeSearchScreenState extends State<HomeSearchScreen> {
       Get.find(tag: "bottomNavigation");
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(10.0),
-      child: Column(
-        children: [
-          MyTextField(
-            text: "Search or Paste URL",
-            prefixIcon: Icon(
-              Icons.search,
-              color: Colors.grey,
-            ),
-            contentTopPadding: 13,
-            suffixIcon: IconButton(
-              onPressed: () {
-                filterBottomSheet();
-              },
-              icon: Icon(
-                Icons.filter_list_alt,
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+          children: [
+            MyTextField(
+              text: "Search or Paste URL",
+              prefixIcon: Icon(
+                Icons.search,
                 color: Colors.grey,
               ),
+              contentTopPadding: 13,
+              suffixIcon: IconButton(
+                onPressed: () {
+                  filterBottomSheet();
+                },
+                icon: Icon(
+                  Icons.filter_list_alt,
+                  color: Colors.grey,
+                ),
+              ),
             ),
-          ),
-          SizedBox(height: 15),
-          Flexible(
-            child: ListView.builder(
-              padding: EdgeInsets.all(0),
-              itemCount: 5,
-              itemBuilder: (context, index) {
-                return Wrap(
-                  spacing: 10,
-                  alignment: WrapAlignment.center,
-                  children: [
-                    VideoThumbnail(
-                      imgPath: "assets/images/img1.png",
-                      onTap: () async {
-                        await Get.bottomSheet(VideoPlayerView(),
-                            isScrollControlled: true);
-                        homeBottomNavigationBarController
-                            .isVideoPlayingInMiniplayer.value = true;
-                      },
-                    ),
-                    VideoThumbnail(
-                      imgPath: "assets/images/img2.png",
-                      onTap: () async {
-                        await Get.bottomSheet(VideoPlayerView(),
-                            isScrollControlled: true);
-                        homeBottomNavigationBarController
-                            .isVideoPlayingInMiniplayer.value = true;
-                      },
-                    ),
-                    VideoThumbnail(
-                      imgPath: "assets/images/img3.png",
-                      onTap: () async {
-                        await Get.bottomSheet(VideoPlayerView(),
-                            isScrollControlled: true);
-                        homeBottomNavigationBarController
-                            .isVideoPlayingInMiniplayer.value = true;
-                      },
-                    ),
-                  ],
-                );
-              },
-            ),
-          )
-        ],
+            SizedBox(height: 15),
+            Flexible(
+              child: ListView.builder(
+                padding: EdgeInsets.all(0),
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return Wrap(
+                    spacing: 10,
+                    alignment: WrapAlignment.center,
+                    children: [
+                      VideoThumbnail(
+                        imgPath: "assets/images/img1.png",
+                        onTap: () async {
+                          await Get.bottomSheet(VideoPlayerView(),
+                              isScrollControlled: true);
+                          homeBottomNavigationBarController
+                              .isVideoPlayingInMiniplayer.value = true;
+                        },
+                      ),
+                      VideoThumbnail(
+                        imgPath: "assets/images/img2.png",
+                        onTap: () async {
+                          await Get.bottomSheet(VideoPlayerView(),
+                              isScrollControlled: true);
+                          homeBottomNavigationBarController
+                              .isVideoPlayingInMiniplayer.value = true;
+                        },
+                      ),
+                      VideoThumbnail(
+                        imgPath: "assets/images/img3.png",
+                        onTap: () async {
+                          await Get.bottomSheet(VideoPlayerView(),
+                              isScrollControlled: true);
+                          homeBottomNavigationBarController
+                              .isVideoPlayingInMiniplayer.value = true;
+                        },
+                      ),
+                    ],
+                  );
+                },
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

@@ -16,7 +16,8 @@ class CustomAppBar extends StatelessWidget {
           },
           icon: Icon(
             Icons.arrow_back_ios_new,
-            color: grey,
+            color: black.withOpacity(0.6),
+            size: 15,
           )),
       centerTitle: true,
       title: Text(

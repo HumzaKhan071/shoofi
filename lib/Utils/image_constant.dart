@@ -31,16 +31,16 @@ class ImageConstant {
   static String facebook = "assets/icons/facebook.png";
   static String facebook1 = "assets/icons/facebook1.png";
   static String addLocation = "assets/icons/add_location.png";
-  static String homeShorticon = "assets/icons/homeShortIcon.png";
-  static String homeTrendingicon = "assets/icons/homeTrendingIcon.png";
-  static String homeWatchlisticon = "assets/icons/HomeWatchlistIcon.png";
+  static String homeShorticon = "assets/svgPictures/bottom2.svg";
+  static String homeTrendingicon = "assets/svgPictures/bottom1.svg";
+  static String homeWatchlisticon = "assets/svgPictures/bottom4.svg";
   static String moreicon = "assets/icons/moreIcon.png";
   static String notificationImportant =
       "assets/icons/notification_important.png";
 
   static String notInterested = "assets/icons/notInterested.png";
-  static String homeSearchicon = "assets/icons/homeSearchIcon.png";
-  static String homeAccounticon = "assets/icons/homeAccountIcon.png";
+  static String homeSearchicon = "assets/svgPictures/bottom3.svg";
+  static String homeAccounticon = "assets/svgPictures/bottom5.svg";
   static String helpCenter = "assets/icons/helpCenter.png";
   static String grammarly = "assets/icons/grammarly.png";
   static String addListicon = "assets/icons/addListIcon.png";

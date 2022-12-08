@@ -28,6 +28,7 @@ class AccountUpdate2 extends StatelessWidget {
                         ),
                       ),
                     ),
+                    SizedBox(height: 7),
                     Text(
                       "Shoofista",
                       style: TextStyle(
@@ -38,20 +39,28 @@ class AccountUpdate2 extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 25),
               MyTextField(text: "User Name"),
               SizedBox(height: 20),
-              Text("Create Pin",
-                  style: TextStyle(
-                    color: black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  )),
+              Padding(
+                padding: const EdgeInsets.only(left: 8.0),
+                child: Text("Create Pin",
+                    style: TextStyle(
+                      color: black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    )),
+              ),
               MyPasswordField(text: "***"),
               SizedBox(height: 20),
-              Text("Confirm Pin",
-                  style: TextStyle(
-                      color: black, fontSize: 16, fontWeight: FontWeight.bold)),
+              Padding(
+                padding: const EdgeInsets.only(left: 8.0),
+                child: Text("Confirm Pin",
+                    style: TextStyle(
+                        color: black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold)),
+              ),
               MyPasswordField(
                 text: "***",
               ),

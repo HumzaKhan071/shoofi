@@ -58,8 +58,8 @@ class GeneralSettingScreen extends StatelessWidget {
             SizedBox(height: 10),
             ListTile(
               onTap: () => Get.to(() => SelectPlan(
-                appBarTitle: "Upgrade Subscription Plan",
-              )),
+                    appBarTitle: "Upgrade Subscription Plan",
+                  )),
               minLeadingWidth: 0,
               leading: SvgPicture.asset(
                 ImageConstant.myAccountCards,
@@ -79,7 +79,8 @@ class GeneralSettingScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             ListTile(
-              onTap: () => Get.to(() => UserAgreementScreen()),
+              onTap: () =>
+                  Get.to(() => UserAgreementScreen(title: "User Agreement")),
               minLeadingWidth: 0,
               leading: SvgPicture.asset(
                 ImageConstant.myAccountAgreements,

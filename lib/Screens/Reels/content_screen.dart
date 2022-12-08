@@ -27,6 +27,9 @@ class _ContentScreenState extends State<ContentScreen> {
     setState(() {});
   }
 
+  Rx<bool> isPlaying = true.obs;
+  Rx<bool> showPauseResumeBtn = false.obs;
+
   @override
   void dispose() {
     videoPlayerController.dispose();
@@ -37,11 +40,39 @@ class _ContentScreenState extends State<ContentScreen> {
   Widget build(BuildContext context) {
     return videoPlayerController.value.isInitialized
         ? Stack(
-            alignment: Alignment.bottomCenter,
+            alignment: AlignmentDirectional.center,
             children: [
-              VideoPlayer(videoPlayerController),
-              VideoProgressIndicator(videoPlayerController,
-                  allowScrubbing: false),
+              Stack(
+                alignment: Alignment.bottomCenter,
+                children: [
+                  InkWell(
+                      onTap: () {
+                        if (isPlaying.value) {
+                          videoPlayerController.pause();
+                          isPlaying.value = false;
+                        } else {
+                          videoPlayerController.play();
+                          isPlaying.value = true;
+                        }
+                        showPauseResumeBtn.value = true;
+                        if (isPlaying.value) {
+                          Timer(Duration(seconds: 3), () {
+                            showPauseResumeBtn.value = false;
+                          });
+                        }
+                      },
+                      child: VideoPlayer(videoPlayerController)),
+                  VideoProgressIndicator(videoPlayerController,
+                      allowScrubbing: false),
+                ],
+              ),
+              Obx(() => showPauseResumeBtn.value
+                  ? Icon(
+                      isPlaying.value ? Icons.pause : Icons.play_arrow,
+                      color: black.withOpacity(0.7),
+                      size: 40,
+                    )
+                  : SizedBox())
             ],
           )
         : Container(

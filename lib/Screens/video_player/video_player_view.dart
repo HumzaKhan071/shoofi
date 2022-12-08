@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/Widgets/recommended_videos.dart';
 import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
@@ -50,7 +51,7 @@ class _VideoPlayerViewState extends State<VideoPlayerView> {
                         ? pauseResumeBtn(vertical)
                         : SizedBox(),
                     homeController.showPauseResumeBtn.value
-                        ? fullScreenBtn()
+                        ? fullScreenBtn(vertical)
                         : SizedBox(),
                   ],
                 )
@@ -61,11 +62,21 @@ class _VideoPlayerViewState extends State<VideoPlayerView> {
     );
   }
 
-  Positioned fullScreenBtn() {
+  Positioned fullScreenBtn(vertical) {
     return Positioned(
       right: 0,
       child: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            if (vertical) {
+              SystemChrome.setPreferredOrientations([
+                DeviceOrientation.landscapeLeft,
+              ]);
+            } else {
+              SystemChrome.setPreferredOrientations([
+                DeviceOrientation.portraitUp,
+              ]);
+            }
+          },
           icon: Icon(Icons.rectangle_outlined, color: white.withOpacity(0.8))),
     );
   }
@@ -105,7 +116,7 @@ class _VideoPlayerViewState extends State<VideoPlayerView> {
 
   pauseResumeBtn(vertical) {
     return Positioned(
-      bottom: vertical ? 250 / 2 : Get.height / 2,
+      bottom: ((vertical ? 250 / 2 : Get.height / 2) - 25),
       child: Center(
           child: CircleAvatar(
         radius: 25,

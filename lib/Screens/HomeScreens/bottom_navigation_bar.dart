@@ -1,3 +1,4 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Account/MyAccount.dart';
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/Widgets/mini_video_player.dart';
@@ -45,7 +46,7 @@ class HomeBottomNavigationBar extends StatelessWidget {
                     currentIndex: controller.currentIndex.value,
                     items: <BottomNavigationBarItem>[
                       BottomNavigationBarItem(
-                          icon: Image.asset(
+                          icon: SvgPicture.asset(
                             ImageConstant.homeTrendingicon,
                             color: controller.currentIndex.value == 0
                                 ? yellow
@@ -53,7 +54,7 @@ class HomeBottomNavigationBar extends StatelessWidget {
                           ),
                           label: "Trending"),
                       BottomNavigationBarItem(
-                          icon: Image.asset(
+                          icon: SvgPicture.asset(
                             ImageConstant.homeShorticon,
                             color: controller.currentIndex.value == 1
                                 ? yellow
@@ -61,7 +62,7 @@ class HomeBottomNavigationBar extends StatelessWidget {
                           ),
                           label: "Shorts"),
                       BottomNavigationBarItem(
-                          icon: Image.asset(
+                          icon: SvgPicture.asset(
                             ImageConstant.homeSearchicon,
                             color: controller.currentIndex.value == 2
                                 ? yellow
@@ -69,7 +70,7 @@ class HomeBottomNavigationBar extends StatelessWidget {
                           ),
                           label: "Search"),
                       BottomNavigationBarItem(
-                          icon: Image.asset(
+                          icon: SvgPicture.asset(
                             ImageConstant.homeWatchlisticon,
                             color: controller.currentIndex.value == 3
                                 ? yellow
@@ -77,7 +78,7 @@ class HomeBottomNavigationBar extends StatelessWidget {
                           ),
                           label: "Watchlist"),
                       BottomNavigationBarItem(
-                          icon: Image.asset(
+                          icon: SvgPicture.asset(
                             ImageConstant.homeAccounticon,
                             color: controller.currentIndex.value == 4
                                 ? yellow
@@ -98,10 +99,6 @@ class HomeBottomNavigationBar extends StatelessWidget {
                     },
                   )
                 : SizedBox(),
-            body: Container(
-              color: Colors.red,
-              height: Get.height,
-              child: screens[controller.currentIndex.value],
-            ))));
+            body: screens[controller.currentIndex.value])));
   }
 }

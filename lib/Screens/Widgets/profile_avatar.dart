@@ -23,19 +23,29 @@ class ProfileAvatar extends StatelessWidget {
       onTap: onTap,
       child: Column(
         children: [
-          CircleAvatar(
-              radius: radius,
-              backgroundColor: grey,
-              backgroundImage: backgroundImagePath != null
-                  ? AssetImage(backgroundImagePath!)
-                  : null,
-              child: backgroundImagePath == null
-                  ? Icon(
-                      Icons.add,
-                      color: iconColor,
-                      size: iconSize,
-                    )
-                  : SizedBox()),
+          Container(
+            padding: EdgeInsets.all(3),
+            decoration: BoxDecoration(
+                border: Border.all(
+                    color: backgroundImagePath != null
+                        ? yellow
+                        : grey.withOpacity(0.5),
+                    width: 2),
+                shape: BoxShape.circle),
+            child: CircleAvatar(
+                radius: radius,
+                backgroundColor: grey,
+                backgroundImage: backgroundImagePath != null
+                    ? AssetImage(backgroundImagePath!)
+                    : null,
+                child: backgroundImagePath == null
+                    ? Icon(
+                        Icons.add,
+                        color: iconColor,
+                        size: iconSize,
+                      )
+                    : SizedBox()),
+          ),
           SizedBox(height: 5),
           Text(
             title,

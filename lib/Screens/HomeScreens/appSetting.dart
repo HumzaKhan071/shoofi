@@ -1,3 +1,4 @@
+import 'package:shoofi/Channel%20Detail/About.dart';
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/Screens/Billing%20and%20payments/BillingPaymentScreen.dart';
 import 'package:shoofi/Screens/GeneralSetting/GeneralSettingScreen.dart';
@@ -74,7 +75,7 @@ class AppSetting extends StatelessWidget {
             minLeadingWidth: 0,
             leading: Image.asset(ImageConstant.appSettingicon4),
             onTap: () {
-              // Get.to(PrivacyScreen());
+              Get.to(() => UserAgreementScreen(title: "Privacy Policy"));
             },
             title: Text(
               "Privacy policy",
@@ -112,7 +113,7 @@ class AppSetting extends StatelessWidget {
           ListTile(
             minLeadingWidth: 0,
             onTap: () {
-              Get.to(UserAgreementScreen());
+              Get.to(UserAgreementScreen(title: "User Agreement"));
             },
             leading: Image.asset(ImageConstant.appSettingicon7),
             title: Text(

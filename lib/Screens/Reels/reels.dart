@@ -34,14 +34,14 @@ class Reels extends StatelessWidget {
           ),
           Positioned(
             top: 30,
-            left: 20,
+            left: 5,
             child: IconButton(
                 onPressed: () {
                   homeBottomNavigationBarController.currentIndex.value =
                       homeBottomNavigationBarController.indexBeforeShort!;
                 },
                 color: white,
-                icon: Icon(Icons.arrow_back_ios)),
+                icon: Icon(Icons.arrow_back_ios, size: 15)),
           ),
           Padding(
             padding: const EdgeInsets.all(15.0),

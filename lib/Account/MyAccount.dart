@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:shoofi/Notification/NotificationScreen.dart';
 import 'package:shoofi/Screens/AccountUpdate/AccountUpdate1.dart';
+import 'package:shoofi/Screens/AccountUpdate/AccountUpdate2.dart';
 import 'package:shoofi/Screens/HelpCenter/help_center.dart';
 
 import 'package:shoofi/Screens/Widgets/notification_list_tile_in_account_setting.dart';
@@ -93,6 +94,9 @@ class MyAccount extends StatelessWidget {
                   SizedBox(height: 20),
                   ListTile(
                     minLeadingWidth: 0,
+                    onTap: () {
+                      Get.to(() => AccountUpdate2());
+                    },
                     leading: Image.asset(ImageConstant.lock),
                     title: Text("Profile Lock",
                         style: TextStyle(

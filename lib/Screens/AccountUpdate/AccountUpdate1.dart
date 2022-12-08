@@ -129,9 +129,8 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
                         borderRadius: BorderRadius.circular(100),
                       ),
                       child: DropdownButton(
-                        dropdownColor: yellow,
-                        menuMaxHeight: 120,
-
+                          dropdownColor: yellow,
+                          menuMaxHeight: 120,
                           isExpanded: true,
                           underline: Container(),
                           value: dropdownvalue,
@@ -156,23 +155,6 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
                     ),
                     const SizedBox(
                       height: 30,
-                    ),
-                    ListTile(
-                      onTap: () {
-                        Get.to(AccountUpdate2());
-                      },
-                      trailing: Icon(
-                        Icons.arrow_forward_ios_outlined,
-                        color: black,
-                      ),
-                      leading: Icon(Icons.check_circle_outline),
-                      title: Text(
-                        "Profile Lock",
-                        style: TextStyle(
-                            color: black,
-                            fontSize: 13,
-                            fontWeight: FontWeight.w500),
-                      ),
                     ),
                     MyButtonContainer(
                       text: "Update",

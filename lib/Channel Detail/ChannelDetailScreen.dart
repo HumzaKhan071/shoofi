@@ -42,80 +42,82 @@ class _ChanneledDetailState extends State<ChanneledDetail>
     HomeBottomNavigationBarController homeBottomNavigationBarController =
         Get.find(tag: "bottomNavigation");
     return WillPopScope(
-      onWillPop: () async {
-        if (homeBottomNavigationBarController.extended.value) {
-          homeBottomNavigationBarController.extended.value = false;
-          return false;
-        }
-        return true;
-      },
-      child: Scaffold(
-        persistentFooterButtons: [
-          miniVideoPlayer(homeBottomNavigationBarController)
-        ],
-        body: DefaultTabController(
-            length: _tabController!.length,
-            child: Scaffold(
-                backgroundColor: Colors.white,
-                appBar: AppBar(
-                  backgroundColor: Colors.white,
-                  elevation: 0,
-                  title: SvgPicture.asset(ImageConstant.logo3),
-                  leading: IconButton(
-                      onPressed: () {
-                        Get.back();
-                      },
-                      icon: Icon(
-                        Icons.arrow_back_ios_new,
-                        color: black,
-                      )),
-                  actions: [
-                    Icon(
-                      Icons.cast,
-                      color: black,
-                    ),
-                    SizedBox(width: 10),
-                    Icon(
-                      Icons.pin_drop,
-                      color: black,
-                    ),
-                    SizedBox(width: 10),
-                    SizedBox(
-                      height: 48,
-                      width: 80,
-                      child: languageDropDown(watchListControler),
-                    ),
-                  ],
-                  bottom: TabBar(
-                      controller: _tabController,
-                      labelColor: black,
-                      labelStyle: TextStyle(
-                          fontSize: 14,
+        onWillPop: () async {
+          if (homeBottomNavigationBarController.extended.value) {
+            homeBottomNavigationBarController.extended.value = false;
+            return false;
+          }
+          return true;
+        },
+        child: Obx(
+          () => Scaffold(
+            persistentFooterButtons: homeBottomNavigationBarController
+                    .isVideoPlayingInMiniplayer.value
+                ? [miniVideoPlayer(homeBottomNavigationBarController)]
+                : null,
+            body: DefaultTabController(
+                length: _tabController!.length,
+                child: Scaffold(
+                    backgroundColor: Colors.white,
+                    appBar: AppBar(
+                      backgroundColor: Colors.white,
+                      elevation: 0,
+                      title: SvgPicture.asset(ImageConstant.logo3),
+                      leading: IconButton(
+                          onPressed: () {
+                            Get.back();
+                          },
+                          icon: Icon(
+                            Icons.arrow_back_ios_new,
+                            color: black,
+                          )),
+                      actions: [
+                        Icon(
+                          Icons.cast,
                           color: black,
-                          fontWeight: FontWeight.bold),
-                      indicatorColor: yellow,
-                      tabs: [
-                        Tab(
-                          text: "Home",
                         ),
-                        Tab(
-                          text: "Videos",
+                        SizedBox(width: 10),
+                        Icon(
+                          Icons.pin_drop,
+                          color: black,
                         ),
-                        Tab(
-                          text: "Playlists",
+                        SizedBox(width: 10),
+                        SizedBox(
+                          height: 48,
+                          width: 80,
+                          child: languageDropDown(watchListControler),
                         ),
-                        Tab(
-                          text: "About",
-                        ),
-                      ]),
-                ),
-                body: TabBarView(controller: _tabController, children: [
-                  VideoMainPage(),
-                  ChannelVideos(),
-                  ChannelPlaylist(),
-                  About(),
-                ]))),
-      ),
-    );
+                      ],
+                      bottom: TabBar(
+                          controller: _tabController,
+                          labelColor: black,
+                          labelStyle: TextStyle(
+                              fontSize: 14,
+                              color: black,
+                              fontWeight: FontWeight.bold),
+                          indicatorColor: yellow,
+                          tabs: [
+                            Tab(
+                              text: "Home",
+                            ),
+                            Tab(
+                              text: "Videos",
+                            ),
+                            Tab(
+                              text: "Playlists",
+                            ),
+                            Tab(
+                              text: "About",
+                            ),
+                          ]),
+                    ),
+                    body: TabBarView(controller: _tabController, children: [
+                      VideoMainPage(),
+                      ChannelVideos(),
+                      ChannelPlaylist(),
+                      About(),
+                    ]))),
+          ),
+        ));
   }
 }
