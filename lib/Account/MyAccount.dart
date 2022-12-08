@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:shoofi/Notification/NotificationScreen.dart';
 import 'package:shoofi/Screens/AccountUpdate/AccountUpdate1.dart';
 import 'package:shoofi/Screens/HelpCenter/help_center.dart';
-import 'package:shoofi/Screens/LoginScreens/login_screen.dart';
+
 import 'package:shoofi/Screens/Widgets/notification_list_tile_in_account_setting.dart';
 import 'package:shoofi/Screens/Widgets/pin_dialog.dart';
 import 'package:shoofi/Screens/Widgets/signout_dialog.dart';

@@ -52,3 +52,4 @@ export 'package:shoofi/controllers/Home/watchlist_controller.dart';
 export 'package:shoofi/Screens/HomeScreens/extended_watchlist.dart';
 export 'package:shoofi/Screens/Widgets/removeWatchListBottomSheet.dart';
 export 'package:shoofi/Screens/Widgets/customAppBar.dart';
+export 'package:shoofi/Screens/Billing%20and%20payments/BillingPaymentScreen.dart';
