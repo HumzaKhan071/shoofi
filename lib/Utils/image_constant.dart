@@ -6,13 +6,13 @@ class ImageConstant {
 
   static String illustration = "assets/svgPictures/illustration.svg";
   static String illustration1 = "assets/images/illustration1.png";
-  static String americanExpress = "assets/cards/americanExpress.png";
-  static String discover = "assets/cards/discover.png";
-  static String visa = "assets/cards/visa.png";
+  static String americanExpress = "assets/cards/americanExpress.svg";
+  static String discover = "assets/cards/discover.svg";
+  static String visa = "assets/cards/visa.svg";
   static String circle = "assets/images/circle.png";
   static String avatar = "assets/images/avatar.png";
 
-  static String paypal = "assets/cards/paypal.png";
+  static String paypal = "assets/cards/paypal.svg";
   static String afghanistan = "assets/flags/afghanistan.png";
   static String albania = "assets/flags/albania.png";
   static String america = "assets/flags/america.png";

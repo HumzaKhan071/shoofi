@@ -1,3 +1,4 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/controllers/PaymentInfoCardController/payment_card_controller.dart';
 
@@ -36,7 +37,7 @@ class PaymentCardInfo extends StatelessWidget {
                 ),
               ],
             ),
-            Image.asset(ImageConstant.paypal)
+            SvgPicture.asset(ImageConstant.paypal)
           ],
         ),
         Row(
@@ -61,11 +62,11 @@ class PaymentCardInfo extends StatelessWidget {
             ),
             Row(
               children: [
-                Image.asset(ImageConstant.americanExpress),
+                SvgPicture.asset(ImageConstant.americanExpress),
                 SizedBox(width: 2),
-                Image.asset(ImageConstant.discover),
+                SvgPicture.asset(ImageConstant.discover),
                 SizedBox(width: 2),
-                Image.asset(ImageConstant.visa),
+                SvgPicture.asset(ImageConstant.visa),
               ],
             )
           ],
