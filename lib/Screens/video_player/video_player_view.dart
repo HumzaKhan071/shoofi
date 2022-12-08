@@ -1,10 +1,5 @@
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shoofi/Channel%20Detail/ChannelDetailScreen.dart';
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/ModalSheets/more_option.dart';
-import 'package:shoofi/Screens/ModalSheets/watchlist.dart';
-import 'package:shoofi/Screens/video_player/video_player_card.dart';
-import 'package:shoofi/Utils/image_constant.dart';
+import 'package:shoofi/Screens/Widgets/recommended_videos.dart';
 import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
 import 'package:video_player/video_player.dart';
 
@@ -36,6 +31,12 @@ class _VideoPlayerViewState extends State<VideoPlayerView> {
 
   @override
   Widget build(BuildContext context) {
+    return OrientationBuilder(builder: (context, orientation) {
+      return youtubeView(vertical: orientation == Orientation.portrait);
+    });
+  }
+
+  youtubeView({required bool vertical}) {
     return Scaffold(
       body: Column(
         children: [
@@ -43,167 +44,97 @@ class _VideoPlayerViewState extends State<VideoPlayerView> {
               ? Stack(
                   alignment: AlignmentDirectional.bottomCenter,
                   children: [
-                    SizedBox(
-                        height: 250,
-                        child: VideoPlayer(
-                          homeController.playerController.value,
-                        )),
-                    VideoProgressIndicator(
-                        homeController.playerController.value,
-                        allowScrubbing: true),
-                    Positioned(
-                      bottom: 100,
-                      child: Center(
-                          child: CircleAvatar(
-                        radius: 25,
-                        backgroundColor: black.withOpacity(0.5),
-                        child: Center(
-                          child: IconButton(
-                            onPressed: () {
-                              if (homeController.isPlayingVideo.value) {
-                                homeController.playerController.value.pause();
-                                homeController.isPlayingVideo.value = false;
-                              } else {
-                                homeController.playerController.value.play();
-                                homeController.isPlayingVideo.value = true;
-                              }
-                            },
-                            icon: homeController.isPlayingVideo.value
-                                ? Icon(
-                                    Icons.pause,
-                                    // size: 40,
-                                    color: white,
-                                  )
-                                : Icon(
-                                    Icons.play_arrow,
-                                    // size: 40,
-                                    color: white,
-                                  ),
-                          ),
-                        ),
-                      )),
-                    ),
+                    videoPlayer(vertical),
+                    progressBar(),
+                    homeController.showPauseResumeBtn.value
+                        ? pauseResumeBtn(vertical)
+                        : SizedBox(),
+                    homeController.showPauseResumeBtn.value
+                        ? fullScreenBtn()
+                        : SizedBox(),
                   ],
                 )
-              : Container(
-                  height: 250,
-                  color: Colors.black,
-                  child: Center(child: CircularProgressIndicator()),
-                )),
-          Expanded(
-              child: ListView(
-            padding: EdgeInsets.all(0),
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            Get.to(ChanneledDetail());
-                          },
-                          child: CircleAvatar(
-                            backgroundImage: AssetImage(ImageConstant.avatar),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Flexible(
-                          child: Text(
-                            'Vivamus mattis sapien vel eros cursus a venenatis duiincidunt',
-                            style: TextStyle(
-                                color: black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 2.5,
-                    ),
-                    Row(
-                      children: [
-                        SizedBox(
-                          width: 50,
-                        ),
-                        Text(
-                          '1.5k views',
-                          style: TextStyle(color: grey, fontSize: 14),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          '|',
-                          style: TextStyle(color: grey, fontSize: 14),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          '26 Sept 2021',
-                          style: TextStyle(color: grey, fontSize: 14),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        SvgPicture.asset(
-                          ImageConstant.likebutton,
-                          width: 19,
-                          height: 19,
-                        ),
-                        SvgPicture.asset(
-                          ImageConstant.disLikeicon2,
-                          width: 19,
-                          height: 19,
-                        ),
-                        SvgPicture.asset(
-                          ImageConstant.forwardIcon,
-                          width: 19,
-                          height: 19,
-                        ),
-                        InkWell(
-                          onTap: () {
-                            WatchlistsBottomModalSheet();
-                          },
-                          child: SvgPicture.asset(
-                            ImageConstant.share,
-                            width: 19,
-                            height: 19,
-                          ),
-                        ),
-                        InkWell(
-                            onTap: () {
-                              moreOptions();
-                            },
-                            child: Image.asset(
-                              ImageConstant.moreIcon,
-                              width: 19,
-                              height: 19,
-                            )),
-                      ],
-                    ),
-                    //
-                  ],
-                ),
-              ),
-              VideoPlayerCard(),
-              VideoPlayerCard(),
-              VideoPlayerCard(),
-              VideoPlayerCard(),
-            ],
-          ))
+              : loadingWidget()),
+          vertical ? recommendedVideos() : SizedBox()
         ],
       ),
+    );
+  }
+
+  Positioned fullScreenBtn() {
+    return Positioned(
+      right: 0,
+      child: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.rectangle_outlined, color: white.withOpacity(0.8))),
+    );
+  }
+
+  videoPlayer(vertical) {
+    return GestureDetector(
+      onTap: () {
+        homeController.showPauseResumeBtn.value =
+            !(homeController.showPauseResumeBtn.value);
+        if (homeController.showPauseResumeBtn.value) {
+          Timer(Duration(seconds: 2), () {
+            homeController.showPauseResumeBtn.value = false;
+          });
+        }
+      },
+      child: SizedBox(
+          height: vertical ? 250 : Get.height,
+          width: Get.width,
+          child: VideoPlayer(
+            homeController.playerController.value,
+          )),
+    );
+  }
+
+  loadingWidget() {
+    return Container(
+      height: 250,
+      color: Colors.black,
+      child: Center(child: CircularProgressIndicator()),
+    );
+  }
+
+  progressBar() {
+    return VideoProgressIndicator(homeController.playerController.value,
+        allowScrubbing: true);
+  }
+
+  pauseResumeBtn(vertical) {
+    return Positioned(
+      bottom: vertical ? 250 / 2 : Get.height / 2,
+      child: Center(
+          child: CircleAvatar(
+        radius: 25,
+        backgroundColor: black.withOpacity(0.5),
+        child: Center(
+          child: IconButton(
+            onPressed: () {
+              if (homeController.isPlayingVideo.value) {
+                homeController.playerController.value.pause();
+                homeController.isPlayingVideo.value = false;
+              } else {
+                homeController.playerController.value.play();
+                homeController.isPlayingVideo.value = true;
+              }
+            },
+            icon: homeController.isPlayingVideo.value
+                ? Icon(
+                    Icons.pause,
+                    // size: 40,
+                    color: white,
+                  )
+                : Icon(
+                    Icons.play_arrow,
+                    // size: 40,
+                    color: white,
+                  ),
+          ),
+        ),
+      )),
     );
   }
 }

@@ -13,4 +13,5 @@ class HomeBottomNavigationBarController extends GetxController {
   Rx<bool> isVideoPlayingInMiniplayer = false.obs;
   String title =
       "Vivamus mattis sapien vel eros cursus, a venenatis duiincidunt";
+  Rx<bool> showPauseResumeBtn = true.obs;
 }
