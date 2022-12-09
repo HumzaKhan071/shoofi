@@ -31,7 +31,7 @@ class _MyCountryListState extends State<MyCountryList> {
                 text: widget.countryName),
           ),
         ]),
-        Container(
+        SizedBox(
           height: 23,
           width: 23,
           child: Checkbox(
