@@ -1,5 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/Widgets/PaymentCardInfo.dart';
+
 
 class PaymentsScreen extends StatefulWidget {
   final bool fromManageSubscription;

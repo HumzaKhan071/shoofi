@@ -1,6 +1,6 @@
 import 'package:shoofi/Routes/routes.dart';
 
-import '../../Utils/image_constant.dart';
+
 
 class UpgradedCompletedScreen extends StatelessWidget {
   @override
@@ -39,7 +39,7 @@ class UpgradedCompletedScreen extends StatelessWidget {
               SizedBox(
                 height: 40,
               ),
-              Container(
+              SizedBox(
                 height: 31,
                 width: 293,
                 child: Center(

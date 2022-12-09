@@ -1,8 +1,7 @@
-import 'package:flutter/services.dart';
+
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/Widgets/recommended_videos.dart';
-import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
-import 'package:video_player/video_player.dart';
+
+
 
 class VideoPlayerView extends StatefulWidget {
   VideoPlayerView({super.key});

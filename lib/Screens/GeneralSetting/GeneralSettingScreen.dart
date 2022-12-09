@@ -1,12 +1,11 @@
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/DeleteAccount/DeleteAccountScreen.dart';
-import 'package:shoofi/Screens/ForgotScreens/change_password.dart';
-import 'package:shoofi/Screens/ModalSheets/create_watch_list.dart';
-import 'package:shoofi/Screens/Widgets/pin_dialog.dart';
-import 'package:shoofi/controllers/ForgotControllers/forgot_controller.dart';
 
-import '../../Utils/image_constant.dart';
+import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/ForgotScreens/change_password.dart';
+
+
+
+
+
 
 class GeneralSettingScreen extends StatelessWidget {
   const GeneralSettingScreen({super.key});

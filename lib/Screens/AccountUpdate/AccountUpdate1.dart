@@ -1,7 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/AccountUpdate/AccountUpdate2.dart';
-import 'package:shoofi/Utils/country_json.dart';
-import 'package:shoofi/Utils/flags.dart';
+
 
 class AccountUpdate1 extends StatefulWidget {
   const AccountUpdate1({super.key});
@@ -176,7 +174,7 @@ class _AccountUpdate1State extends State<AccountUpdate1> {
         context: context,
         builder: (c) {
           return Dialog(
-            child: Container(
+            child: SizedBox(
               height: Get.height * 0.7,
               width: Get.width * 0.8,
               child: Column(

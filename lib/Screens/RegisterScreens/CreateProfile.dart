@@ -1,6 +1,6 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Utils/image_constant.dart';
-import 'package:shoofi/controllers/registration/registration_controller.dart';
+
+
 
 class CreateProfile extends StatefulWidget {
   const CreateProfile({super.key});

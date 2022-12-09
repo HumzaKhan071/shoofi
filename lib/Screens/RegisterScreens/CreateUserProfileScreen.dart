@@ -1,7 +1,4 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/Widgets/pin_dialog.dart';
-
-import '../../Utils/image_constant.dart';
 
 class CreateUserProfileScreen extends StatefulWidget {
   const CreateUserProfileScreen({super.key});
@@ -49,7 +46,7 @@ class _CreateUserProfileScreenState extends State<CreateUserProfileScreen> {
             SizedBox(
               height: 40,
             ),
-            Container(
+            SizedBox(
               height: 276,
               width: 238,
               child: Column(

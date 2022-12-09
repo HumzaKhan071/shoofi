@@ -12,7 +12,7 @@ class MyReportRow extends StatefulWidget {
 }
 
 class _MyReportRowState extends State<MyReportRow> {
-  int _groupValue = 0;
+  final int _groupValue = 0;
   bool isSelected = false;
   @override
   Widget build(BuildContext context) {

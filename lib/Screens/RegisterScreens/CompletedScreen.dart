@@ -1,5 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Utils/image_constant.dart';
+
 
 class CompletedScreen extends StatelessWidget {
   final bool fromManageSubscription;
@@ -26,7 +26,7 @@ class CompletedScreen extends StatelessWidget {
               SizedBox(
                 height: 40,
               ),
-              Container(
+              SizedBox(
                 height: 31,
                 width: 293,
                 child: Center(

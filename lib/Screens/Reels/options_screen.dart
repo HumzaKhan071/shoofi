@@ -18,8 +18,8 @@ class OptionsScreen extends StatelessWidget {
                   Row(
                     children: [
                       CircleAvatar(
-                        child: Icon(Icons.person, size: 18),
                         radius: 16,
+                        child: Icon(Icons.person, size: 18),
                       ),
                       SizedBox(width: 6),
                       Text('flutter_developer02'),

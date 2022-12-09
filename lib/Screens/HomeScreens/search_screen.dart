@@ -1,8 +1,6 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/Widgets/filter_bottom_sheet.dart';
-import 'package:shoofi/Screens/video_player/video_player_view.dart';
-import 'package:shoofi/Utils/image_constant.dart';
-import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
+
+
 
 class HomeSearchScreen extends StatefulWidget {
   const HomeSearchScreen({super.key});

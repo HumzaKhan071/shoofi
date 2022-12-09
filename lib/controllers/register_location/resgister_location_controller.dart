@@ -1,6 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:shoofi/Utils/country_json.dart';
+
+
+
+
+import '../../Routes/routes.dart';
 
 class RegisterLocationController extends GetxController {
   TextEditingController editingController = TextEditingController();

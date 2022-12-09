@@ -1,7 +1,6 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Utils/image_constant.dart';
+
 
 class About extends StatelessWidget {
   const About({super.key});

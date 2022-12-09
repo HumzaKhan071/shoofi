@@ -1,7 +1,7 @@
-import 'package:intro_slider/intro_slider.dart';
+
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Utils/image_constant.dart';
-import 'package:shoofi/controllers/GetStartedControllers/get_started2_controller.dart';
+
+
 
 class GetStarted2 extends StatelessWidget {
   const GetStarted2({super.key});

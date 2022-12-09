@@ -1,9 +1,7 @@
-import 'package:card_swiper/card_swiper.dart';
-import 'package:flutter/material.dart';
+
+
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/Reels/content_screen.dart';
-import 'package:shoofi/Utils/image_constant.dart';
-import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
+
 
 class Reels extends StatelessWidget {
   final List<String> videos = [

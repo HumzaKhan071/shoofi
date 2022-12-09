@@ -1,4 +1,4 @@
-import 'package:shoofi/Utils/image_constant.dart';
+import 'package:shoofi/Routes/routes.dart';
 
 class MyFacebookModel {
   final String image;

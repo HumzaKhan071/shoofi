@@ -1,7 +1,7 @@
-import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Utils/image_constant.dart';
-import 'package:shoofi/controllers/ForgotControllers/forgot_email_controller.dart';
+
+
 
 class ForgotEmail extends StatelessWidget {
   const ForgotEmail({super.key});
@@ -70,7 +70,7 @@ class ForgotEmail extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              Container(
+              SizedBox(
                   height: 192,
                   width: 154,
                   child: Image.asset(

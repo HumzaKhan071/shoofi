@@ -79,7 +79,7 @@ class _FacebookScreenState extends State<FacebookScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 135,
         child: Column(
           children: [

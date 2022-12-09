@@ -1,11 +1,7 @@
-import 'package:shoofi/Channel%20Detail/About.dart';
+
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/Billing%20and%20payments/BillingPaymentScreen.dart';
-import 'package:shoofi/Screens/GeneralSetting/GeneralSettingScreen.dart';
-import 'package:shoofi/Screens/History/HistoryScreen.dart';
-import 'package:shoofi/Screens/VideoQualityPreferences/VideoQualityPreference.dart';
-import 'package:shoofi/Screens/Widgets/customAppBar.dart';
-import 'package:shoofi/Utils/image_constant.dart';
+
+
 
 class AppSetting extends StatelessWidget {
   const AppSetting({super.key});

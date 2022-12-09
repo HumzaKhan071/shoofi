@@ -1,5 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/video_player/video_player_card.dart';
+
 
 class HistoryScreen extends StatelessWidget {
   const HistoryScreen({super.key});

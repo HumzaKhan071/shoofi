@@ -1,5 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/controllers/Plan/select_plan_controller.dart';
+
 
 class SelectPlan extends StatelessWidget {
   final String appBarTitle;
@@ -14,8 +14,8 @@ class SelectPlan extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: PreferredSize(
-            child: CustomAppBar(title: appBarTitle),
-            preferredSize: Size.fromHeight(50)),
+            preferredSize: Size.fromHeight(50),
+            child: CustomAppBar(title: appBarTitle)),
         body: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.all(8),
@@ -106,7 +106,7 @@ class SelectPlan extends StatelessWidget {
                               ]),
                         ),
                         SizedBox(height: 10),
-                        Container(
+                        SizedBox(
                           height: 200,
                           child: TabBarView(
                               controller: controller.tabController,

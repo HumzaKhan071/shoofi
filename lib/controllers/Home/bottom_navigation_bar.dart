@@ -1,5 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:video_player/video_player.dart';
+
 
 class HomeBottomNavigationBarController extends GetxController {
   Rx<bool> extended = false.obs;

@@ -7,7 +7,7 @@ class AccountUpdateScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(child: CustomAppBar(title: "Account"), preferredSize: Size.fromHeight(50)),
+      appBar: PreferredSize(preferredSize: Size.fromHeight(50), child: CustomAppBar(title: "Account")),
       body: Column(
         children: [
           LinearProgressIndicator(

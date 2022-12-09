@@ -1,7 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/video_player/video_player_view.dart';
-import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
-import 'package:video_player/video_player.dart';
+
 
 Widget miniVideoPlayer(
     HomeBottomNavigationBarController homeBottomNavigationBarController) {

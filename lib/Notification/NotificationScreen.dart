@@ -7,7 +7,7 @@ class NotificationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: PreferredSize(child: CustomAppBar(title: "Notifications"), preferredSize: Size.fromHeight(50)),
+      appBar: PreferredSize(preferredSize: Size.fromHeight(50), child: CustomAppBar(title: "Notifications")),
       body: SingleChildScrollView(
         child: Column(
           children: [

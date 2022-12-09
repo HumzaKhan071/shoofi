@@ -1,7 +1,6 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Utils/country_json.dart';
-import 'package:shoofi/Utils/flags.dart';
-import 'package:shoofi/controllers/register_location/resgister_location_controller.dart';
+
+
 
 class RegisterScreenLocation extends StatelessWidget {
   final bool showBtn;

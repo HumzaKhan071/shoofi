@@ -1,4 +1,4 @@
-import '../../../Utils/image_constant.dart';
+import 'package:shoofi/Routes/routes.dart';
 
 class MyInstagramModel {
   final String image;

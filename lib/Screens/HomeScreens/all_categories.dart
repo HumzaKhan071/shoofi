@@ -1,6 +1,6 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Utils/image_constant.dart';
-import 'package:shoofi/controllers/Home/trending_controller.dart';
+
+
 
 class AllCategorySheet extends StatelessWidget {
   final int previousIndex;

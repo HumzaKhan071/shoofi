@@ -1,8 +1,6 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/ModalSheets/report.dart';
-import 'package:shoofi/Screens/Widgets/list_tile_for_more_option_modal.dart';
-import 'package:shoofi/Screens/video_player/video_player_view.dart';
-import 'package:shoofi/Utils/image_constant.dart';
+
+
 
 moreOptions() {
   return Get.bottomSheet(

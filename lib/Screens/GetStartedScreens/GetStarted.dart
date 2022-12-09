@@ -1,8 +1,7 @@
-import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/LoginScreens/login_screen.dart';
-import 'package:shoofi/Utils/image_constant.dart';
-import 'package:shoofi/controllers/GetStartedControllers/get_started_controller.dart';
+
+
 
 class GetStarted extends StatelessWidget {
   const GetStarted({super.key});

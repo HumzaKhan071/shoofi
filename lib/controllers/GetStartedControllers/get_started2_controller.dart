@@ -1,6 +1,7 @@
-import 'package:flutter_svg/flutter_svg.dart';
+
+
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Utils/image_constant.dart';
+
 
 class GetStarted2Controller extends GetxController {
   List<Widget> listCustomTabs = [];

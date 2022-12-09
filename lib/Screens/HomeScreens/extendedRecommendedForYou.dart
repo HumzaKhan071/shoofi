@@ -1,8 +1,6 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/video_player/video_player_view.dart';
-import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
+
 
 class ExtendRecommendedForYou extends StatelessWidget {
   const ExtendRecommendedForYou({super.key});

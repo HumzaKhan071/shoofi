@@ -1,12 +1,8 @@
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shoofi/Account/MyAccount.dart';
+
+
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/Widgets/mini_video_player.dart';
-import 'package:shoofi/Screens/video_player/video_player_view.dart';
-import 'package:shoofi/Utils/image_constant.dart';
-import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
-import 'package:shoofi/Screens/Reels/reels.dart';
-import 'package:video_player/video_player.dart';
+
+
 
 class HomeBottomNavigationBar extends StatelessWidget {
   const HomeBottomNavigationBar({super.key});

@@ -1,5 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/LoginScreens/login_screen.dart';
+
 
 class DeleteAccountScreen extends StatelessWidget {
   const DeleteAccountScreen({super.key});
@@ -8,7 +8,7 @@ class DeleteAccountScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: PreferredSize(child: CustomAppBar(title: "Delete My Account"), preferredSize: Size.fromHeight(50)),
+      appBar: PreferredSize(preferredSize: Size.fromHeight(50), child: CustomAppBar(title: "Delete My Account")),
       body: Padding(
         padding: EdgeInsets.all(8),
         child: Column(
@@ -60,7 +60,7 @@ class DeleteAccountScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10),
-            Container(
+            SizedBox(
                 height: 14,
                 width: 118,
                 child: TextButton(

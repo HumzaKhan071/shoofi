@@ -1,14 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:shoofi/Channel%20Detail/ChannelDetailScreen.dart';
-import 'package:shoofi/Screens/HomeScreens/extendingMostTrendingScreen.dart';
-import 'package:shoofi/Screens/Widgets/MyButtonContainer.dart';
-import 'package:shoofi/Screens/Widgets/video_thumbnail.dart';
-import 'package:shoofi/Screens/video_player/video_player_view.dart';
-import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
-import 'package:shoofi/Screens/Reels/reels.dart';
-import '../../Utils/Colors.dart';
-import '../../Utils/image_constant.dart';
+
+
+import 'package:shoofi/Routes/routes.dart';
+
 
 class YouTubeHome extends StatelessWidget {
   const YouTubeHome({super.key});

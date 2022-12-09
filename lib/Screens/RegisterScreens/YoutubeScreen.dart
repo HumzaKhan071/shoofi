@@ -6,8 +6,8 @@ class YoutubeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: PreferredSize(
-          child: CustomAppBar(title: "Sign Up"),
-          preferredSize: Size.fromHeight(50)),
+          preferredSize: Size.fromHeight(50),
+          child: CustomAppBar(title: "Sign Up")),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(8),
@@ -72,7 +72,7 @@ class YoutubeScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 135,
         child: Column(
           children: [

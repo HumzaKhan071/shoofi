@@ -1,6 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/LoginScreens/login_screen.dart';
-import 'package:shoofi/Utils/image_constant.dart';
+
 
 signoutDialog(controller) {
     Get.defaultDialog(

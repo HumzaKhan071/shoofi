@@ -1,6 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/video_player/video_player_view.dart';
-import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
+
 
 class VideoThumbnail extends StatelessWidget {
   final String imgPath;
@@ -20,7 +19,7 @@ class VideoThumbnail extends StatelessWidget {
     return InkWell(
       onLongPress: onLongPress,
       onTap: onTap,
-      child: Container(
+      child: SizedBox(
         width: Get.width * 0.27,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

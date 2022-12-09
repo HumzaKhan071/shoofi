@@ -1,8 +1,7 @@
-import 'package:flip_card/flip_card.dart';
-import 'package:flip_card/flip_card_controller.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
+
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Utils/image_constant.dart';
+
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

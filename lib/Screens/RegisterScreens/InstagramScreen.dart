@@ -79,7 +79,7 @@ class _InstagramScreenState extends State<InstagramScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 135,
         child: Column(
           children: [

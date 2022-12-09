@@ -1,8 +1,8 @@
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/controllers/PaymentInfoCardController/payment_card_controller.dart';
 
-import '../../Utils/image_constant.dart';
+import 'package:shoofi/Routes/routes.dart';
+
+
+
 
 class PaymentCardInfo extends StatelessWidget {
   PaymentCardController controller = PaymentCardController();

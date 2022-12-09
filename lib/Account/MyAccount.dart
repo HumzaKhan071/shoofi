@@ -1,14 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:shoofi/Notification/NotificationScreen.dart';
-import 'package:shoofi/Screens/AccountUpdate/AccountUpdate1.dart';
-import 'package:shoofi/Screens/AccountUpdate/AccountUpdate2.dart';
-import 'package:shoofi/Screens/HelpCenter/help_center.dart';
-
-import 'package:shoofi/Screens/Widgets/notification_list_tile_in_account_setting.dart';
-import 'package:shoofi/Screens/Widgets/pin_dialog.dart';
-import 'package:shoofi/Screens/Widgets/signout_dialog.dart';
-import 'package:shoofi/Utils/image_constant.dart';
-import 'package:shoofi/controllers/Home/bottom_navigation_bar.dart';
 
 import '../Routes/routes.dart';
 
@@ -124,7 +114,7 @@ class MyAccount extends StatelessWidget {
                         verticalDirection: VerticalDirection.up,
                         spacing: 10,
                         children: [
-                          Container(
+                          SizedBox(
                               height: 20,
                               width: 33,
                               child: FittedBox(

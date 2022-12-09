@@ -1,7 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/Widgets/PaymentCardInfo.dart';
-import 'package:shoofi/Utils/image_constant.dart';
-import 'package:shoofi/controllers/BillingAndPaymentController/billing_payment_controller.dart';
+
 
 class BillingPaymentScreen extends StatelessWidget {
   BillingPaymentController controller = BillingPaymentController();

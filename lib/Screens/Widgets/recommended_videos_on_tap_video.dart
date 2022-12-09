@@ -1,11 +1,8 @@
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shoofi/Channel%20Detail/ChannelDetailScreen.dart';
+
+
 import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/Screens/ModalSheets/more_option.dart';
-import 'package:shoofi/Screens/ModalSheets/watchlist.dart';
-import 'package:shoofi/Screens/video_player/video_player_card.dart';
-import 'package:shoofi/Utils/image_constant.dart';
-import 'package:video_player/video_player.dart';
+
+
 
 recommendedVideosOnTapVideo(VideoPlayerController playerController) {
   return Column(
