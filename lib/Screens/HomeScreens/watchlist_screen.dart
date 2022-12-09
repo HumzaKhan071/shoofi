@@ -1,7 +1,4 @@
-
 import 'package:shoofi/Routes/routes.dart';
-
-
 
 class HomeWatchlistScreen extends StatelessWidget {
   HomeWatchListControler controler =
@@ -12,6 +9,7 @@ class HomeWatchlistScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leadingWidth: 20,
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: IconButton(
