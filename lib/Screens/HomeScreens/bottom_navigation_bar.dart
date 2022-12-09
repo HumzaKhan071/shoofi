@@ -28,12 +28,15 @@ class HomeBottomNavigationBar extends StatelessWidget {
           if (controller.currentIndex.value == 1) {
             controller.currentIndex.value = controller.indexBeforeShort!;
             return false;
-          }
-          if (controller.extended.value) {
+          } else if (controller.extended.value) {
             controller.extended.value = false;
             return false;
+          } else if (controller.currentIndex.value != 0) {
+            controller.currentIndex.value = 0;
+            return false;
+          } else {
+            return true;
           }
-          return true;
         },
         child: Obx(() => Scaffold(
             persistentFooterButtons: controller.currentIndex.value != 1
@@ -89,7 +92,9 @@ class HomeBottomNavigationBar extends StatelessWidget {
                     type: BottomNavigationBarType.fixed,
                     showSelectedLabels: false,
                     showUnselectedLabels: false,
+                    
                     onTap: (newIndex) {
+                      controller.extended.value = false;
                       if (newIndex == 1) {
                         controller.indexBeforeShort =
                             controller.currentIndex.value;
