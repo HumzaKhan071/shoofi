@@ -1,6 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
 
-
 class ContentScreen extends StatefulWidget {
   final String? src;
 
@@ -56,7 +55,7 @@ class _ContentScreenState extends State<ContentScreen> {
                         }
                         showPauseResumeBtn.value = true;
                         if (isPlaying.value) {
-                          Timer(Duration(seconds: 3), () {
+                          Timer(Duration(seconds: 1), () {
                             showPauseResumeBtn.value = false;
                           });
                         }
@@ -70,7 +69,7 @@ class _ContentScreenState extends State<ContentScreen> {
                   ? Icon(
                       isPlaying.value ? Icons.pause : Icons.play_arrow,
                       color: black.withOpacity(0.7),
-                      size: 40,
+                      size: 50,
                     )
                   : SizedBox())
             ],
