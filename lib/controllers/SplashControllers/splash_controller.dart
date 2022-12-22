@@ -1,4 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/views/get_started/get_started_view.dart';
 
 class SplashController extends GetxController {
   String imgPath = "assets/SvgPictures/logo1.svg";
@@ -10,7 +11,7 @@ class SplashController extends GetxController {
       updateImage();
     }));
     Timer(Duration(seconds: 4), (() {
-      Get.offAll(() => const GetStarted());
+      Get.offAll(() => const GetStartedView());
     }));
   }
 
