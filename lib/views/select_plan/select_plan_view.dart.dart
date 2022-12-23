@@ -1,5 +1,5 @@
-import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/views/home/bottom_navigation_bar.dart';
+import '../../Routes/routes.dart';
+import '../home/bottom_navigation_bar.dart';
 
 import '../payment_card_registration/payment_card_registration_view.dart';
 
@@ -117,14 +117,14 @@ class SelectPlanView extends StatelessWidget {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    MyPlanContainer(
+                                    SelectPlanContainer(
                                         title: "Essential Plan",
                                         index: 0,
                                         description:
                                             "save 16% with annual blilling",
                                         totalScreens: "Create 2 Screens",
                                         perMonth: "\$8/Month"),
-                                    MyPlanContainer(
+                                    SelectPlanContainer(
                                         title: "Premuim Plan",
                                         index: 1,
                                         description:
@@ -137,7 +137,7 @@ class SelectPlanView extends StatelessWidget {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    MyPlanContainer(
+                                    SelectPlanContainer(
                                         title: "Essential Plan",
                                         price: "Annually billed \$48",
                                         index: 2,
@@ -145,7 +145,7 @@ class SelectPlanView extends StatelessWidget {
                                             "save 16% with annual blilling",
                                         totalScreens: "Create 2 Screens",
                                         perMonth: "\$4/Month"),
-                                    MyPlanContainer(
+                                    SelectPlanContainer(
                                         title: "Premuim Plan",
                                         price: "Annually billed \$72",
                                         index: 3,
@@ -166,19 +166,19 @@ class SelectPlanView extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                MyPlanRow(
+                                SelectPlanFeature(
                                     text: "No credit card required",
                                     fontWeight: FontWeight.w500),
                                 SizedBox(height: 5),
-                                MyPlanRow(
+                                SelectPlanFeature(
                                     text: "90 Days free trail version included",
                                     fontWeight: FontWeight.bold),
                                 SizedBox(height: 5),
-                                MyPlanRow(
+                                SelectPlanFeature(
                                     text: "Cancel anytime you want",
                                     fontWeight: FontWeight.w500),
                                 SizedBox(height: 5),
-                                MyPlanRow(
+                                SelectPlanFeature(
                                     text: "90 Days free trail version included",
                                     fontWeight: FontWeight.w500),
                               ],

@@ -1,9 +1,9 @@
-import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/views/register_location/register_location_view.dart';
-import 'package:shoofi/views/trending/all_category_view.dart';
-import 'package:shoofi/views/trending/facebook_trending_view.dart';
-import 'package:shoofi/views/trending/instagram_trending_view.dart';
-import 'package:shoofi/views/trending/youtube_trending_view.dart';
+import '../../Routes/routes.dart';
+import '../register_location/register_location_view.dart';
+import '../trending/all_category_view.dart';
+import '../trending/facebook_trending_view.dart';
+import '../trending/instagram_trending_view.dart';
+import '../trending/youtube_trending_view.dart';
 
 class HomeTrendingView extends StatelessWidget {
   const HomeTrendingView({super.key});

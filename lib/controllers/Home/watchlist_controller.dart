@@ -1,4 +1,4 @@
-import 'package:shoofi/Routes/routes.dart';
+import '../../Routes/routes.dart';
 
 class HomeWatchListControler extends GetxController {
   List<String> watchListTiles = [
@@ -7,7 +7,10 @@ class HomeWatchListControler extends GetxController {
     "Documentary",
     "Iconic"
   ];
- Rx<String> dropdownvalue = 'English'.obs;
-  var items = ['English', 'Arabic',];
+  Rx<String> dropdownvalue = 'English'.obs;
+  var items = [
+    'English',
+    'Arabic',
+  ];
   String selectedTile = "";
 }

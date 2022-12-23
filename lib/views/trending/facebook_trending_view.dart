@@ -1,7 +1,6 @@
-
-import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/views/trending/widgets/recommanded_banner.dart';
-import 'package:shoofi/views/trending/widgets/trending_banner.dart';
+import '../../Routes/routes.dart';
+import 'widgets/recommanded_banner.dart';
+import 'widgets/trending_banner.dart';
 
 class FacebookTrendingView extends StatelessWidget {
   const FacebookTrendingView({super.key});
@@ -24,7 +23,7 @@ class FacebookTrendingView extends StatelessWidget {
                 title: 'Recommended Channels picked for you 💥',
                 imagePath: 'assets/images/movie.png',
                 onTap: () {
-                  Get.to(ChanneledDetail());
+                  Get.to(ChannelMainPage());
                 }),
             trendingBanner(
                 title: "Most Trending",

@@ -1,3 +1,3 @@
-import 'package:shoofi/Routes/routes.dart';
+import '../../Routes/routes.dart';
 
 class GetStartedController extends GetxController {}

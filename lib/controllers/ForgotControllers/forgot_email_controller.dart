@@ -1,4 +1,4 @@
-import 'package:shoofi/Routes/routes.dart';
+import '../../Routes/routes.dart';
 
 class ForgotEmailController extends GetxController {
   TextEditingController emailController = TextEditingController();

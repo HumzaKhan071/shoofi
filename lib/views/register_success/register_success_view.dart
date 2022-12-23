@@ -1,5 +1,5 @@
-import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/views/add_new_profile/add_new_profile_view.dart';
+import '../../Routes/routes.dart';
+import '../add_new_profile/add_new_profile_view.dart';
 
 class RegisterSuccessView extends StatelessWidget {
   final bool fromManageSubscription;

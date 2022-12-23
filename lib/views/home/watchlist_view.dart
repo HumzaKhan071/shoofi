@@ -1,4 +1,4 @@
-import 'package:shoofi/Routes/routes.dart';
+import '../../Routes/routes.dart';
 
 class HomeWatchlistView extends StatelessWidget {
   HomeWatchListControler controler =
@@ -131,7 +131,7 @@ class HomeWatchlistView extends StatelessWidget {
                     );
                   },
                 )
-              : ExtendedWatchList();
+              : ExtendedWatchListView();
         }),
       ),
     );

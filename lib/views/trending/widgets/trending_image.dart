@@ -1,4 +1,4 @@
-import 'package:shoofi/Routes/routes.dart';
+import '../../../Routes/routes.dart';
 
 trendingImage({required String imgPath}) {
   return Container(

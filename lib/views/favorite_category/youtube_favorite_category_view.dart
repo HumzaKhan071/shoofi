@@ -1,5 +1,5 @@
-import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/views/favorite_category/facebook_favorite_category_view.dart';
+import '../../Routes/routes.dart';
+import 'facebook_favorite_category_view.dart';
 
 class YoutubeFavoriteCategoryView extends StatelessWidget {
   List<MyYoutubeModel> myYoutubeModel = [
@@ -90,7 +90,7 @@ class YoutubeFavoriteCategoryView extends StatelessWidget {
                 physics: BouncingScrollPhysics(),
                 children: List.generate(
                     myYoutubeModel.length,
-                    (index) => MyYoutubeContainer(
+                    (index) => CategoryContainer(
                           image: myYoutubeModel[index].image,
                         )),
               ),

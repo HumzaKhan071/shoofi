@@ -1,5 +1,5 @@
-import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/views/reset_password/reset_password_view.dart';
+import '../../Routes/routes.dart';
+import '../reset_password/reset_password_view.dart';
 
 class ForgotPasswordSearchAccountView extends StatelessWidget {
   const ForgotPasswordSearchAccountView({super.key});

@@ -1,4 +1,4 @@
-import 'package:shoofi/Routes/routes.dart';
+import '../../Routes/routes.dart';
 
 class HomeReelView extends StatelessWidget {
   final List<String> videos = [
@@ -11,7 +11,7 @@ class HomeReelView extends StatelessWidget {
     'https://assets.mixkit.co/videos/preview/mixkit-a-girl-blowing-a-bubble-gum-at-an-amusement-park-1226-large.mp4'
   ];
 
-   HomeReelView({super.key});
+  HomeReelView({super.key});
   @override
   Widget build(BuildContext context) {
     HomeBottomNavigationBarController homeBottomNavigationBarController =

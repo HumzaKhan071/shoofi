@@ -1,7 +1,7 @@
-import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/views/add_new_profile/add_new_profile_view.dart';
-import 'package:shoofi/views/forgot_password_search_account/forgot_password_search_account_view.dart';
-import 'package:shoofi/views/register_profile/register_profile_view.dart';
+import '../../Routes/routes.dart';
+import '../add_new_profile/add_new_profile_view.dart';
+import '../forgot_password_search_account/forgot_password_search_account_view.dart';
+import '../register_profile/register_profile_view.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -30,11 +30,11 @@ class LoginView extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.all(10),
-                child: MyTextField(text: "Email"),
+                child: CustomTextField(text: "Email"),
               ),
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: MyPasswordField(text: "Password"),
+                child: PasswordTextField(text: "Password"),
               ),
               MyButtonContainer(
                 text: "Sign in",

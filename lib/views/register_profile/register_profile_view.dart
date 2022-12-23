@@ -88,7 +88,7 @@ class RegisterProfileView extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
-                    MyTextField(text: "Username"),
+                    CustomTextField(text: "Username"),
                     const SizedBox(
                       height: 10,
                     ),
@@ -116,11 +116,11 @@ class RegisterProfileView extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
-                    MyPasswordField(text: "Password"),
+                    PasswordTextField(text: "Password"),
                     const SizedBox(
                       height: 10,
                     ),
-                    MyPasswordField(text: "Confirm Password"),
+                    PasswordTextField(text: "Confirm Password"),
                     const SizedBox(
                       height: 10,
                     ),

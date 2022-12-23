@@ -1,4 +1,5 @@
-import 'package:shoofi/Routes/routes.dart';
+import '../../../Routes/routes.dart';
+import '../../extended_views/extendedRecommendedForYou.dart';
 
 recommandBanner(
     {required String title,
@@ -20,7 +21,9 @@ recommandBanner(
             ),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.to(() => ExtendRecommendedForYou());
+            },
             child: Text(
               'See all',
               style: TextStyle(

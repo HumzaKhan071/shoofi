@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:shoofi/views/create_user_profile/create_user_profile_view.dart';
-import 'package:shoofi/views/home/bottom_navigation_bar.dart';
+import '../account/help_center_view.dart';
+import '../create_user_profile/widgets/create_user_profile_view.dart';
+import 'bottom_navigation_bar.dart';
 
 import '../../Routes/routes.dart';
 
@@ -87,7 +88,7 @@ class HomeAccountView extends StatelessWidget {
                   ListTile(
                     minLeadingWidth: 0,
                     onTap: () {
-                      Get.to(() => AccountUpdate2());
+                      Get.to(() => ProfileLockView());
                     },
                     leading: Image.asset(ImageConstant.lock),
                     title: Text("Profile Lock",
@@ -100,7 +101,7 @@ class HomeAccountView extends StatelessWidget {
                   ),
                   ListTile(
                     onTap: () {
-                      Get.to(() => NotificationScreen());
+                      Get.to(() => NotificationView());
                     },
                     minLeadingWidth: 0,
                     leading: Image.asset(ImageConstant.notificationImportant),
@@ -139,7 +140,7 @@ class HomeAccountView extends StatelessWidget {
                       ),
                     ),
                   ),
-                  MyNotificationsLisTile(),
+                  AccountNotificationListTiles(),
                   ListTile(
                     minLeadingWidth: 0,
                     leading: Image.asset(ImageConstant.featurePlaylist),
@@ -157,7 +158,7 @@ class HomeAccountView extends StatelessWidget {
                     minLeadingWidth: 0,
                     leading: Image.asset(ImageConstant.settings),
                     onTap: () {
-                      Get.to(AppSetting());
+                      Get.to(AppSettingView());
                     },
                     title: Text("App Setting",
                         style: TextStyle(
@@ -169,7 +170,7 @@ class HomeAccountView extends StatelessWidget {
                   ListTile(
                     minLeadingWidth: 0,
                     onTap: (() {
-                      Get.to(AccountUpdate1());
+                      Get.to(UpdateAccountView());
                     }),
                     leading: Image.asset(ImageConstant.accountCircle),
                     title: Text("Account",
@@ -182,7 +183,7 @@ class HomeAccountView extends StatelessWidget {
                   ListTile(
                     minLeadingWidth: 0,
                     onTap: () {
-                      Get.to(HelpCenter());
+                      Get.to(HelpCenterView());
                     },
                     leading: Image.asset(ImageConstant.helpOutline),
                     title: Text("Help Center",

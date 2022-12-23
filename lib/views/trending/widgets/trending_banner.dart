@@ -1,5 +1,5 @@
-import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/views/home/reel_view.dart';
+import '../../../Routes/routes.dart';
+import '../../home/reel_view.dart';
 
 trendingBanner({required String title, required String imgPath}) {
   HomeBottomNavigationBarController homeBottomNavigationBarController =

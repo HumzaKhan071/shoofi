@@ -23,7 +23,7 @@ class YoutubeTrendingView extends StatelessWidget {
                 title: 'Recommended Channels picked for you 💥',
                 imagePath: 'assets/images/movie.png',
                 onTap: () {
-                  Get.to(ChanneledDetail());
+                  Get.to(ChannelMainPage());
                 }),
             trendingBanner(
                 title: "Most Trending",

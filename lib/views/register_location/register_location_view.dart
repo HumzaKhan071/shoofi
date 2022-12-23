@@ -1,5 +1,5 @@
-import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/views/favorite_category/youtube_favorite_category_view.dart';
+import '../../Routes/routes.dart';
+import '../favorite_category/youtube_favorite_category_view.dart';
 
 class RegisterLocationView extends StatelessWidget {
   final bool showBtn;
@@ -116,7 +116,7 @@ class RegisterLocationView extends StatelessWidget {
                         primary: false,
                         itemCount: controllerLocation.items.length,
                         itemBuilder: (context, index) {
-                          return MyCountryList(
+                          return CountryListTile(
                               countryFlag: Utils.countryCodeToEmoji(
                                   controllerLocation.items[index]["iso2_cc"]),
                               countryName: controllerLocation.items[index]

@@ -1,5 +1,5 @@
-import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/views/favorite_category/instagram_favorite_category_view.dart';
+import '../../Routes/routes.dart';
+import 'instagram_favorite_category_view.dart';
 
 class FacebookFavoriteCategoryView extends StatefulWidget {
   const FacebookFavoriteCategoryView({super.key});
@@ -93,7 +93,7 @@ class _FacebookFavoriteCategoryViewState
                 physics: BouncingScrollPhysics(),
                 children: List.generate(
                     myFacebookModel.length,
-                    (index) => MyFacebookContainer(
+                    (index) => CategoryContainer(
                           image: myFacebookModel[index].image,
                         )),
               ),

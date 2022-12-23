@@ -1,4 +1,4 @@
-import 'package:shoofi/Routes/routes.dart';
+import '../../Routes/routes.dart';
 
 class HomeSearchView extends StatefulWidget {
   const HomeSearchView({super.key});
@@ -17,7 +17,7 @@ class _HomeSearchViewState extends State<HomeSearchView> {
         padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
-            MyTextField(
+            CustomTextField(
               text: "Search or Paste URL",
               prefixIcon: Icon(
                 Icons.search,

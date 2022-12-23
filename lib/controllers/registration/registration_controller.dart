@@ -1,7 +1,6 @@
 import 'dart:io';
 
-
-import 'package:shoofi/Routes/routes.dart';
+import '../../Routes/routes.dart';
 
 class RegistrationController extends GetxController {
   TextEditingController emailController = TextEditingController();

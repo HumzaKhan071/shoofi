@@ -1,6 +1,6 @@
-import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/views/create_user_profile/create_user_profile_view.dart';
-import 'package:shoofi/views/home/bottom_navigation_bar.dart';
+import '../../Routes/routes.dart';
+import '../create_user_profile/widgets/create_user_profile_view.dart';
+import '../home/bottom_navigation_bar.dart';
 
 class AddNewProfileView extends StatefulWidget {
   const AddNewProfileView({super.key});

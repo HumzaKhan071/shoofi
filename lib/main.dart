@@ -1,5 +1,5 @@
-import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/views/splash/splash_view.dart';
+import 'Routes/routes.dart';
+import 'views/splash/splash_view.dart';
 
 void main() {
   runApp(MyApp());

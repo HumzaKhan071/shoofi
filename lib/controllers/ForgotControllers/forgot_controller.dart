@@ -1,4 +1,4 @@
-import 'package:shoofi/Routes/routes.dart';
+import '../../Routes/routes.dart';
 
 class ForgotController extends GetxController {
   Rx<bool> valueBox = false.obs;

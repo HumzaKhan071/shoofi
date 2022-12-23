@@ -1,9 +1,9 @@
-import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/views/home/account_view.dart';
-import 'package:shoofi/views/home/reel_view.dart';
-import 'package:shoofi/views/home/search_view.dart';
-import 'package:shoofi/views/home/trending_view.dart';
-import 'package:shoofi/views/home/watchlist_view.dart';
+import '../../Routes/routes.dart';
+import 'account_view.dart';
+import 'reel_view.dart';
+import 'search_view.dart';
+import 'trending_view.dart';
+import 'watchlist_view.dart';
 
 class HomeBottomNavigationBar extends StatelessWidget {
   const HomeBottomNavigationBar({super.key});

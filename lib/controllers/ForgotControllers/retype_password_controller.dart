@@ -1,5 +1,3 @@
-import 'package:shoofi/Routes/routes.dart';
+import '../../Routes/routes.dart';
 
-class RetypePasswordController extends GetxController {
-  
-}
+class RetypePasswordController extends GetxController {}

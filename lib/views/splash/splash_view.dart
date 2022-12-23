@@ -1,5 +1,5 @@
-import 'package:shoofi/Routes/routes.dart';
-import 'package:shoofi/views/get_started/get_started_view.dart';
+import '../../Routes/routes.dart';
+import '../get_started/get_started_view.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
