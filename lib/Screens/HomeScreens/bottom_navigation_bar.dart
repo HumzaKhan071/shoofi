@@ -1,8 +1,4 @@
-
-
 import 'package:shoofi/Routes/routes.dart';
-
-
 
 class HomeBottomNavigationBar extends StatelessWidget {
   const HomeBottomNavigationBar({super.key});
@@ -88,7 +84,6 @@ class HomeBottomNavigationBar extends StatelessWidget {
                     type: BottomNavigationBarType.fixed,
                     showSelectedLabels: false,
                     showUnselectedLabels: false,
-                    
                     onTap: (newIndex) {
                       controller.extended.value = false;
                       if (newIndex == 1) {

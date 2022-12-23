@@ -1,6 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
 
-
 class VideoThumbnail extends StatelessWidget {
   final String imgPath;
   final void Function()? onLongPress;
@@ -25,7 +24,7 @@ class VideoThumbnail extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: Get.height * 0.14,
+              height: Get.height * 0.30,
               width: Get.width * 0.27,
               decoration: BoxDecoration(
                 image: DecorationImage(image: AssetImage(imgPath)),
@@ -36,13 +35,13 @@ class VideoThumbnail extends StatelessWidget {
               "The most Perfect continue",
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
-                  color: black, fontSize: 11, fontWeight: FontWeight.bold),
+                  color: black, fontSize: 13, fontWeight: FontWeight.bold),
             ),
             Text(
               "11/10/2022",
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
-                  color: grey, fontSize: 9, fontWeight: FontWeight.bold),
+                  color: grey, fontSize: 11, fontWeight: FontWeight.bold),
             ),
           ],
         ),

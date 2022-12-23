@@ -1,7 +1,4 @@
-
-
 import 'package:shoofi/Routes/routes.dart';
-
 
 class YouTubeHome extends StatelessWidget {
   const YouTubeHome({super.key});
@@ -22,30 +19,18 @@ class YouTubeHome extends StatelessWidget {
             ),
             recommandBanner(
                 title: 'Recommended Channels picked for you 💥',
-                imagePath: 'assets/images/movie.png',
+                imagePath: 'assets/images/fairytale.png',
                 onTap: () {
                   Get.to(ChanneledDetail());
                 }),
             trendingBanner(
-                title: "Most Trending",
+                title: "Recommended Shorts picked for you 💥",
                 imgPath: 'assets/images/trending_reels.png'),
             recommandBanner(
-                title: 'Trending on Youtube',
-                imagePath: 'assets/images/youtube_trending.png',
-                onTap: () async {
-                  await Get.bottomSheet(VideoPlayerView(),
-                      isScrollControlled: true);
-                  homeBottomNavigationBarController
-                      .isVideoPlayingInMiniplayer.value = true;
-                }),
-            recommandBanner(
-                title: 'Trending on Facebook',
-                imagePath: 'assets/images/youtube_trending.png',
-                onTap: () async {
-                  await Get.bottomSheet(VideoPlayerView(),
-                      isScrollControlled: true);
-                  homeBottomNavigationBarController
-                      .isVideoPlayingInMiniplayer.value = true;
+                title: 'Recommended Channels picked for you 💥',
+                imagePath: 'assets/images/fairytale.png',
+                onTap: () {
+                  Get.to(ChanneledDetail());
                 }),
           ],
         ),
@@ -153,41 +138,66 @@ trendingBanner({required String title, required String imgPath}) {
           ),
         ],
       ),
-      SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(
-          children: [
-            InkWell(
-              onTap: () {
-                homeBottomNavigationBarController.currentIndex.value = 1;
-                homeBottomNavigationBarController.indexBeforeShort = 0;
-              },
-              child: trendingImage(imgPath: 'assets/images/trending_reels.png'),
-            ),
-            SizedBox(width: 15),
-            InkWell(
-              onTap: () {
-                Get.to(Reels());
-              },
-              child: trendingImage(imgPath: 'assets/images/trending_reels.png'),
-            ),
-            SizedBox(width: 15),
-            InkWell(
-              onTap: () {
-                Get.to(Reels());
-              },
-              child: trendingImage(imgPath: 'assets/images/trending_reels.png'),
-            ),
-            SizedBox(width: 15),
-            InkWell(
-              onTap: () {
-                Get.to(Reels());
-              },
-              child: trendingImage(imgPath: 'assets/images/trending_reels.png'),
-            ),
-            SizedBox(width: 15),
-          ],
-        ),
+      Row(
+        children: [
+          InkWell(
+            onTap: () {
+              homeBottomNavigationBarController.currentIndex.value = 1;
+              homeBottomNavigationBarController.indexBeforeShort = 0;
+            },
+            child: trendingImage(imgPath: ImageConstant.short1),
+          ),
+          SizedBox(width: 15),
+          InkWell(
+            onTap: () {
+              Get.to(Reels());
+            },
+            child: trendingImage(imgPath: ImageConstant.short2),
+          ),
+          SizedBox(width: 15),
+          InkWell(
+            onTap: () {
+              Get.to(Reels());
+            },
+            child: trendingImage(imgPath: ImageConstant.short3),
+          ),
+          SizedBox(width: 15),
+          InkWell(
+            onTap: () {
+              Get.to(Reels());
+            },
+            child: trendingImage(imgPath: ImageConstant.short1),
+          ),
+          SizedBox(width: 15),
+          InkWell(
+            onTap: () {
+              Get.to(Reels());
+            },
+            child: trendingImage(imgPath: ImageConstant.short2),
+          ),
+          SizedBox(width: 15),
+          InkWell(
+            onTap: () {
+              Get.to(Reels());
+            },
+            child: trendingImage(imgPath: ImageConstant.short3),
+          ),
+          SizedBox(width: 15),
+          InkWell(
+            onTap: () {
+              Get.to(Reels());
+            },
+            child: trendingImage(imgPath: ImageConstant.short1),
+          ),
+          SizedBox(width: 15),
+          InkWell(
+            onTap: () {
+              Get.to(Reels());
+            },
+            child: trendingImage(imgPath: ImageConstant.short2),
+          ),
+          SizedBox(width: 15),
+        ],
       ),
     ],
   );
@@ -195,8 +205,8 @@ trendingBanner({required String title, required String imgPath}) {
 
 trendingImage({required String imgPath}) {
   return Container(
-    height: Get.height * 0.18,
-    width: Get.width * 0.3,
+    height: Get.height * 0.3,
+    width: Get.width * 0.1,
     decoration: BoxDecoration(
       image: DecorationImage(image: AssetImage(imgPath), fit: BoxFit.cover),
       borderRadius: BorderRadius.circular(16),
@@ -212,7 +222,7 @@ adBanner() {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(25), // Image border
           child: Image.asset(
-            ImageConstant.videoThumbnail,
+            ImageConstant.videoThumbnailTv,
             fit: BoxFit.cover,
           ),
         ),
@@ -258,7 +268,7 @@ adBanner() {
       ),
       MyButtonContainer(
         text: "Start a free trail",
-        conColor: yellow,
+        conColor: yellow.withOpacity(0.2),
         height: 40,
       )
     ],

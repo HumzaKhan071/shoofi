@@ -49,6 +49,7 @@ dependencies:
   chewie: ^1.3.6
   swipe: ^0.0.1
   flick_video_player: ^0.5.0
+  responsive_builder: ^0.4.3
 
 icons_launcher:
   image_path: 'assets/images/03.png'
@@ -94,6 +95,7 @@ flutter:
     - assets/icons/
     - assets/svgPictures/
     - assets/gifs/
+    - assets/shortImages/
 
 
 

@@ -11,28 +11,30 @@ class MyTextField extends StatelessWidget {
   final double contentBottomPadding;
   final double contentRightPadding;
   final double contentLeftPadding;
+  final double containerwidth;
   final bool enabled;
-  const MyTextField(
-      {Key? key,
-      required this.text,
-      this.prefixIcon,
-      this.suffix,
-      this.prefix,
-      this.suffixIcon,
-      this.borderColor,
-      this.contentTopPadding = 10,
-      this.contentBottomPadding = 10,
-      this.contentLeftPadding = 10,
-      this.contentRightPadding = 10,
-      this.enabled = true})
-      : super(key: key);
+  const MyTextField({
+    Key? key,
+    required this.text,
+    this.prefixIcon,
+    this.containerwidth = double.infinity,
+    this.suffix,
+    this.prefix,
+    this.suffixIcon,
+    this.borderColor,
+    this.contentTopPadding = 10,
+    this.contentBottomPadding = 10,
+    this.contentLeftPadding = 10,
+    this.contentRightPadding = 10,
+    this.enabled = true,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     TextEditingController nameController = TextEditingController();
     return Container(
       height: 48,
-      width: double.infinity,
+      width: containerwidth,
       decoration: BoxDecoration(
         border: Border.all(color: borderColor ?? grey, width: 1),
         borderRadius: BorderRadius.circular(100),

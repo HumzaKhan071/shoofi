@@ -1,7 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
 
-
-
 class AllCategorySheet extends StatelessWidget {
   final int previousIndex;
   const AllCategorySheet({super.key, required this.previousIndex});

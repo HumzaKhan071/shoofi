@@ -29,6 +29,8 @@ class MyButtonContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(100),
       ),
       child: TextButton(
+          style: ButtonStyle(
+              overlayColor: MaterialStateProperty.all(Colors.transparent)),
           onPressed: () {
             press();
           },
@@ -40,10 +42,9 @@ class MyButtonContainer extends StatelessWidget {
               Text(
                 text,
                 style: TextStyle(
-                  color: textColor,
-                  fontSize: 16,
-                   fontWeight: FontWeight.bold
-                ),
+                    color: textColor,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold),
               ),
             ],
           )),

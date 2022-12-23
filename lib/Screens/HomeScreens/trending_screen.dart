@@ -1,7 +1,4 @@
-
 import 'package:shoofi/Routes/routes.dart';
-
-
 
 class HomeTrendingScreen extends StatelessWidget {
   @override

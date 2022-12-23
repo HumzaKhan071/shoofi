@@ -6,8 +6,10 @@ class ProfileAvatar extends StatelessWidget {
   final double radius;
   final Color iconColor;
   final double iconSize;
+  bool isEditShow;
+
   final void Function() onTap;
-  const ProfileAvatar({
+  ProfileAvatar({
     Key? key,
     this.backgroundImagePath,
     this.title = "Add Profile",
@@ -15,6 +17,7 @@ class ProfileAvatar extends StatelessWidget {
     this.radius = 50,
     this.iconColor = yellow,
     this.iconSize = 40,
+    this.isEditShow = false,
   }) : super(key: key);
 
   @override
@@ -47,11 +50,31 @@ class ProfileAvatar extends StatelessWidget {
                     : SizedBox()),
           ),
           SizedBox(height: 5),
-          Text(
-            title,
-            style: TextStyle(
-                color: black, fontSize: 12, fontWeight: FontWeight.bold),
-          )
+          Row(
+            children: [
+              if (title != "Add Profile")
+                Icon(
+                  Icons.lock_outline,
+                  color: black,
+                  size: 13,
+                ),
+              SizedBox(width: 5),
+              Text(
+                title,
+                style: TextStyle(
+                    color: black, fontSize: 12, fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+          if (backgroundImagePath != null && isEditShow)
+            IconButton(
+                onPressed: () {
+                  Get.to(() => EditProfile());
+                },
+                icon: Icon(
+                  Icons.edit_outlined,
+                  size: 15,
+                ))
         ],
       ),
     );

@@ -1,7 +1,4 @@
-
 import 'package:shoofi/Routes/routes.dart';
-
-
 
 class GetStarted extends StatelessWidget {
   const GetStarted({super.key});

@@ -1,4 +1,7 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/Screens/GetStartedScreens/get_started_desktop.dart';
+import 'package:shoofi/Screens/RegisterScreens/tv/create_user_profile_tv.dart';
+import 'package:shoofi/Screens/RegisterScreens/tv/location_tv.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,6 +16,6 @@ class MyApp extends StatelessWidget {
           fontFamily: "Archivo",
         ),
         debugShowCheckedModeBanner: false,
-        home: SplashScreen());
+        home: GetStartedDesktop());
   }
 }
