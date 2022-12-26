@@ -76,7 +76,9 @@ class _ChannelMainPageState extends State<ChannelMainPage>
                     SizedBox(
                       height: 48,
                       width: 80,
-                      child: languageDropDown(watchListControler),
+                      child: languageDropDown(
+                          dropdownvalue: watchListControler.dropdownvalue,
+                          items: watchListControler.items),
                     ),
                   ],
                   bottom: TabBar(

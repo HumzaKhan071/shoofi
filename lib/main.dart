@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: ResponsiveBuilder(
           builder: (context, sizingInformation) {
-            print(sizingInformation.screenSize);
+          
             if (sizingInformation.deviceScreenType ==
                 DeviceScreenType.desktop) {
               return RailNavigation();

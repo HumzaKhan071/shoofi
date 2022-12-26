@@ -46,7 +46,9 @@ class HomeTrendingView extends StatelessWidget {
             SizedBox(
               height: 48,
               width: 75,
-              child: languageDropDown(controller),
+              child: languageDropDown(
+                  dropdownvalue: controller.dropdownvalue,
+                  items: controller.items),
             ),
           ],
           bottom: TabBar(
