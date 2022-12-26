@@ -44,10 +44,11 @@ class HomeTrendingTvView extends StatelessWidget {
             ),
             SizedBox(width: 10),
             SizedBox(
-              height: 48,
-              width: 75,
-              child: languageDropDown(controller),
-            ),
+                height: 48,
+                width: 75,
+                child: languageDropDown(
+                    dropdownvalue: controller.dropdownvalue,
+                    items: controller.items)),
           ],
           bottom: TabBar(
             physics: NeverScrollableScrollPhysics(),
@@ -74,9 +75,7 @@ class HomeTrendingTvView extends StatelessWidget {
               ),
             ],
             onTap: (index) {
-              
-                controller.previousIndex = index;
-              
+              controller.previousIndex = index;
             },
           ),
         ),

@@ -1,21 +1,21 @@
 import 'package:shoofi/routes/routes.dart';
 
-languageDropDown(controller) {
+languageDropDown({required Rx<String> dropdownvalue, required List<String> items}) {
   return Obx(() => DropdownButton(
       dropdownColor: yellow,
       menuMaxHeight: 120,
       isExpanded: true,
       borderRadius: BorderRadius.circular(21),
       underline: Container(),
-      value: controller.dropdownvalue.value,
+      value: dropdownvalue.value,
       style: TextStyle(color: black, fontSize: 15, fontWeight: FontWeight.bold),
-      items: controller.items.map<DropdownMenuItem<Object>>((String items) {
+      items: items.map<DropdownMenuItem<Object>>((String items) {
         return DropdownMenuItem(
           value: items,
           child: Text(items),
         );
       }).toList(),
       onChanged: (newValue) {
-        controller.dropdownvalue.value = newValue as String;
+        dropdownvalue.value = newValue as String;
       }));
 }
