@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 import '../add_new_profile/add_new_profile_view.dart';
 
 class RegisterSuccessView extends StatelessWidget {

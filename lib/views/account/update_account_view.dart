@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 
 class UpdateAccountView extends StatefulWidget {
   const UpdateAccountView({super.key});

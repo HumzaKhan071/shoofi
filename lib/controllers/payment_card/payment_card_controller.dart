@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 
 class PaymentCardController extends GetxController {
   Rx<bool> valueBox = false.obs;

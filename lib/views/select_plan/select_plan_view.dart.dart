@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 import '../home/bottom_navigation_bar.dart';
 
 import '../payment_card_registration/payment_card_registration_view.dart';

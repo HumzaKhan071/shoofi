@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 import 'widgets/recommanded_banner.dart';
 import 'widgets/trending_banner.dart';
 

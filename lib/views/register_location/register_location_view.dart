@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 import '../favorite_category/youtube_favorite_category_view.dart';
 
 class RegisterLocationView extends StatelessWidget {

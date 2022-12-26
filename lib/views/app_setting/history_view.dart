@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 
 class HistoryView extends StatelessWidget {
   const HistoryView({super.key});

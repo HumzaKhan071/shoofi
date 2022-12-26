@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 import '../help_center/faq_view.dart';
 
 class HelpCenterView extends StatefulWidget {

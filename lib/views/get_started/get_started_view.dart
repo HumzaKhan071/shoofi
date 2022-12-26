@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 import '../register_profile/register_profile_view.dart';
 
 class GetStartedView extends StatelessWidget {

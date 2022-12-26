@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 import '../add_new_profile/add_new_profile_view.dart';
 import '../forgot_password_search_account/forgot_password_search_account_view.dart';
 import '../register_profile/register_profile_view.dart';

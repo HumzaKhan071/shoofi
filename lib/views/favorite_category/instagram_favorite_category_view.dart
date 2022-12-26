@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 import '../select_plan/select_plan_view.dart.dart';
 
 class InstagramFavoriteCategoryView extends StatefulWidget {

@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 import 'channel_about_view.dart';
 import 'channel_home_view.dart';
 import 'channel_playlist_view.dart';

@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 import '../register_location/register_location_view.dart';
 import '../trending/all_category_view.dart';
 import '../trending/facebook_trending_view.dart';

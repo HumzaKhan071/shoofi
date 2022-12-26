@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 
 class SelectPlanController extends GetxController
     with GetSingleTickerProviderStateMixin {

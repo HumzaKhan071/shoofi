@@ -1,4 +1,5 @@
-import 'package:shoofi/Routes/routes.dart';
+
+import 'package:shoofi/routes/routes.dart';
 import 'package:shoofi/views/verification/verification_view.dart';
 
 class ResetPasswordView extends StatelessWidget {

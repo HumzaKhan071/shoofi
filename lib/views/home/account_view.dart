@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import '../account/help_center_view.dart';
 import '../create_user_profile/widgets/create_user_profile_view.dart';
 import 'bottom_navigation_bar.dart';
 
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 
 class HomeAccountView extends StatelessWidget {
   HomeAccountView({super.key});

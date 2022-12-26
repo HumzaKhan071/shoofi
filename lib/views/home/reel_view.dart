@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 
 class HomeReelView extends StatelessWidget {
   final List<String> videos = [

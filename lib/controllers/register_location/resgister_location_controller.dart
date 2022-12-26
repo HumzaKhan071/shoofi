@@ -1,8 +1,4 @@
-
-
-
-
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 
 class RegisterLocationController extends GetxController {
   TextEditingController editingController = TextEditingController();

@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 
 class PlayListController extends GetxController {
   List<String> watchListTiles = [

@@ -1,4 +1,5 @@
-import '../../Routes/routes.dart';
+
+import 'package:shoofi/routes/routes.dart';
 
 class ChannelPlaylist extends StatelessWidget {
   const ChannelPlaylist({super.key});

@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 
 class ExtendedMostTrendingScreen extends StatelessWidget {
   const ExtendedMostTrendingScreen({super.key});

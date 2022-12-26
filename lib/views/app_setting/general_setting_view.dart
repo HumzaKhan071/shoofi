@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 import '../../utils/about.dart';
 import '../general_setting/change_password_view.dart';
 import '../select_plan/select_plan_view.dart.dart';

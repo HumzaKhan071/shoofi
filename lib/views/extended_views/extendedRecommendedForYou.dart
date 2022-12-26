@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 
 class ExtendRecommendedForYou extends StatelessWidget {
   const ExtendRecommendedForYou({super.key});

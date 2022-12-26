@@ -1,5 +1,4 @@
 import '../../../Routes/routes.dart';
-import '../../extended_views/extendedRecommendedForYou.dart';
 
 recommandBanner(
     {required String title,

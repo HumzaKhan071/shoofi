@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 
 class HomeBottomNavigationBarController extends GetxController {
   Rx<bool> extended = false.obs;

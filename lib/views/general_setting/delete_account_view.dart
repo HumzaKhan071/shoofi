@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 
 class DeleteAccountView extends StatelessWidget {
   const DeleteAccountView({super.key});

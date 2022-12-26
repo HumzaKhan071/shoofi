@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 import '../create_user_profile/widgets/create_user_profile_view.dart';
 import '../home/bottom_navigation_bar.dart';
 

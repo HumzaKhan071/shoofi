@@ -1,4 +1,4 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 import '../get_started/get_started_view.dart';
 
 class SplashView extends StatefulWidget {

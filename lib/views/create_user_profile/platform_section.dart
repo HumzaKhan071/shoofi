@@ -1,15 +1,13 @@
-import '../../Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 
 class PlatformSection extends StatefulWidget {
   const PlatformSection({super.key});
 
   @override
-  State<PlatformSection> createState() =>
-      _PlatformSectionState();
+  State<PlatformSection> createState() => _PlatformSectionState();
 }
 
-class _PlatformSectionState
-    extends State<PlatformSection> {
+class _PlatformSectionState extends State<PlatformSection> {
   String dropdownvalue = '30 mints';
 
   // List of items in our dropdown menu
