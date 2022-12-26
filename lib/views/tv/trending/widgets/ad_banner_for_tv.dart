@@ -1,6 +1,6 @@
 import 'package:shoofi/routes/routes.dart';
 
-adBannerForTv() {
+Widget adBannerForTv() {
   return Column(
     children: [
       SizedBox(
@@ -24,30 +24,30 @@ adBannerForTv() {
           SizedBox(
             width: 10,
           ),
-          Flexible(
-            child: Text(
-              'Vivamus mattis sapien vel eros cursus a venenatis duiincidunt',
-              style: TextStyle(
-                color: black,
-                fontSize: 16,
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Vivamus mattis sapien vel eros cursus a venenatis duiincidunt',
+                style: TextStyle(
+                  color: black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
               ),
-            ),
+              SizedBox(
+                height: 5,
+              ),
+              Text(
+                'Ad - UAE',
+                style: TextStyle(color: grey, fontSize: 14),
+              ),
+            ],
           ),
         ],
       ),
       SizedBox(
         height: 2.5,
-      ),
-      Row(
-        children: [
-          SizedBox(
-            width: 50,
-          ),
-          Text(
-            'Ad - UAE',
-            style: TextStyle(color: black, fontSize: 14),
-          ),
-        ],
       ),
       SizedBox(
         height: 10,

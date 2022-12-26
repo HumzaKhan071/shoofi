@@ -127,6 +127,7 @@ class ImageConstant {
   static String img1 = "assets/images/img1.png";
   static String img2 = "assets/images/img2.png";
   static String img3 = "assets/images/img3.png";
+  static String fairytail = "assets/images/fairytale.png";
   static String a = "assets/images/a.png";
   static String movie = "assets/images/movie.png";
   static String shortbg = "assets/images/shortbg.png";

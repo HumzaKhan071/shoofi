@@ -31,17 +31,20 @@ class VideoThumbnailForTv extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16),
               ),
             ),
+            SizedBox(
+              height: 10,
+            ),
             Text(
               "The most Perfect continue",
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
-                  color: black, fontSize: 13, fontWeight: FontWeight.bold),
+                  color: black, fontSize: 18, fontWeight: FontWeight.bold),
             ),
             Text(
               "11/10/2022",
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
-                  color: grey, fontSize: 11, fontWeight: FontWeight.bold),
+                  color: grey, fontSize: 16, fontWeight: FontWeight.bold),
             ),
           ],
         ),

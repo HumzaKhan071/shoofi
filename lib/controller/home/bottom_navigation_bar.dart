@@ -6,6 +6,7 @@ class HomeBottomNavigationBarController extends GetxController {
   int? indexBeforeShort;
   Rx<bool> isSwitched = false.obs;
   Rx<bool> valueBox = false.obs;
+  Widget extendedWidget = Container();
 
   late Rx<VideoPlayerController> playerController;
   Rx<bool> isPlayingVideo = false.obs;

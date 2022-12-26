@@ -80,7 +80,10 @@ class RailNavigation extends StatelessWidget {
                   },
                 ),
                 const VerticalDivider(thickness: 1, width: 1),
-                Expanded(child: screens[controller.currentIndex.value])
+                Expanded(
+                    child: Obx(() => controller.extended.value
+                        ? controller.extendedWidget
+                        : screens[controller.currentIndex.value]))
               ],
             )));
   }

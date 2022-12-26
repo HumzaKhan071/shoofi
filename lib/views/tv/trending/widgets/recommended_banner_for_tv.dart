@@ -1,10 +1,13 @@
 import 'package:shoofi/routes/routes.dart';
+import 'package:shoofi/views/tv/extended_views/extended_watchlist_tv_view.dart';
 import 'package:shoofi/views/tv/trending/widgets/video_thumbnail_for_tv.dart';
 
-recommendedBannerForTv(
+Widget recommendedBannerForTv(
     {required String title,
     required String imagePath,
     required void Function()? onTap}) {
+  HomeBottomNavigationBarController homeBottomNavigationBarController =
+      Get.find(tag: "bottomNavigation");
   return Column(
     children: [
       Row(
@@ -15,13 +18,17 @@ recommendedBannerForTv(
               title,
               style: TextStyle(
                 color: black,
-                fontSize: 16,
+                fontSize: 22,
                 fontWeight: FontWeight.bold,
               ),
             ),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              homeBottomNavigationBarController.extendedWidget =
+                  ExtendedWatchListTvView();
+              homeBottomNavigationBarController.extended.value = true;
+            },
             child: Text(
               'See all',
               style: TextStyle(
@@ -31,6 +38,9 @@ recommendedBannerForTv(
             ),
           ),
         ],
+      ),
+      SizedBox(
+        height: 15,
       ),
       SingleChildScrollView(
         scrollDirection: Axis.horizontal,
