@@ -1,4 +1,4 @@
-import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 
 class CustomAppBar extends StatelessWidget {
   final String title;

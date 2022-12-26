@@ -1,5 +1,9 @@
-import 'Routes/routes.dart';
-import 'views/splash/splash_view.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+import 'package:shoofi/views/mobile/splash/splash_view.dart';
+import 'package:shoofi/views/tv/rail_navigation/rail_navigation.dart';
+import 'package:shoofi/views/tv/splash/splash_tv_view.dart';
+
+import 'routes/routes.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,6 +18,20 @@ class MyApp extends StatelessWidget {
           fontFamily: "Archivo",
         ),
         debugShowCheckedModeBanner: false,
-        home: SplashView());
+        home: ResponsiveBuilder(
+          builder: (context, sizingInformation) {
+            print(sizingInformation.screenSize);
+            if (sizingInformation.deviceScreenType ==
+                DeviceScreenType.desktop) {
+              return RailNavigation();
+            }
+            if (sizingInformation.deviceScreenType == DeviceScreenType.mobile) {
+              return SplashView();
+            }
+            return Center(
+              child: Text("No Size"),
+            );
+          },
+        ));
   }
 }

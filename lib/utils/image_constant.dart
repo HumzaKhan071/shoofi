@@ -6,16 +6,18 @@ class ImageConstant {
 
   static String illustration = "assets/svgPictures/illustration.svg";
   static String illustration1 = "assets/images/illustration1.png";
+  static String illustration1Tv = "assets/images/illustration1_tv.png";
   static String americanExpress = "assets/cards/americanExpress.svg";
   static String discover = "assets/cards/discover.svg";
   static String visa = "assets/cards/visa.svg";
   static String circle = "assets/images/circle.png";
   static String avatar = "assets/images/avatar.png";
-
+  static String indicator = "assets/images/indicator.png";
   static String paypal = "assets/cards/paypal.svg";
   static String afghanistan = "assets/flags/afghanistan.png";
   static String albania = "assets/flags/albania.png";
   static String america = "assets/flags/america.png";
+  static String videoThumbnailTv = "assets/images/video_thumbnail_tv.png";
   static String argentina = "assets/flags/argentina.png";
   static String accountCircle = "assets/icons/account_circle.png";
   static String arrowForward = "assets/icons/arrow_forward.png";
@@ -142,4 +144,10 @@ class ImageConstant {
   static String myAccountAgreements =
       "assets/svgPictures/my account - agreement.svg";
   static String myAccountCards = "assets/svgPictures/my account - cards.svg";
+  static String qrcode = "assets/images/qr-code.png";
+
+  static String channelBg = "assets/images/channel_bg.png";
+  static String short1 = "assets/shortImages/1.png";
+  static String short2 = "assets/shortImages/2.png";
+  static String short3 = "assets/shortImages/3.png";
 }

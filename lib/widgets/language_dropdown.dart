@@ -1,4 +1,4 @@
-import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 
 languageDropDown(controller) {
   return Obx(() => DropdownButton(

@@ -1,4 +1,4 @@
-import '../Routes/routes.dart';
+import '../routes/routes.dart';
 
 class CustomTextField extends StatelessWidget {
   final String text;
@@ -12,6 +12,7 @@ class CustomTextField extends StatelessWidget {
   final double contentRightPadding;
   final double contentLeftPadding;
   final bool enabled;
+  final double containerWidth;
   const CustomTextField(
       {Key? key,
       required this.text,
@@ -24,6 +25,7 @@ class CustomTextField extends StatelessWidget {
       this.contentBottomPadding = 10,
       this.contentLeftPadding = 10,
       this.contentRightPadding = 10,
+      this.containerWidth = double.infinity,
       this.enabled = true})
       : super(key: key);
 
@@ -32,7 +34,7 @@ class CustomTextField extends StatelessWidget {
     TextEditingController nameController = TextEditingController();
     return Container(
       height: 48,
-      width: double.infinity,
+      width: containerWidth,
       decoration: BoxDecoration(
         border: Border.all(color: borderColor ?? grey, width: 1),
         borderRadius: BorderRadius.circular(100),

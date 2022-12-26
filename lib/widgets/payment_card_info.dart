@@ -1,9 +1,4 @@
-
-import 'package:shoofi/Routes/routes.dart';
-
-
-
-
+import 'package:shoofi/routes/routes.dart';
 
 class PaymentCardInfo extends StatelessWidget {
   PaymentCardController controller = PaymentCardController();

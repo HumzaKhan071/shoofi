@@ -1,5 +1,5 @@
 import 'package:shoofi/routes/routes.dart';
-import '../../views/get_started/get_started_view.dart';
+import 'package:shoofi/views/mobile/get_started/get_started_view.dart';
 
 class SplashController extends GetxController {
   String imgPath = "assets/SvgPictures/logo1.svg";

@@ -1,8 +1,9 @@
-import '../Routes/routes.dart';
+import '../routes/routes.dart';
 
 class PasswordTextField extends StatefulWidget {
   final String text;
-  const PasswordTextField({super.key, required this.text});
+  final double containerWidth;
+  const PasswordTextField({super.key, required this.text, this.containerWidth = double.infinity});
 
   @override
   State<PasswordTextField> createState() => _PasswordTextFieldState();
@@ -16,7 +17,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
   Widget build(BuildContext context) {
     return Container(
       height: 48,
-      width: double.infinity,
+      width: widget.containerWidth,
       decoration: BoxDecoration(
         border: Border.all(color: grey, width: 1),
         borderRadius: BorderRadius.circular(100),

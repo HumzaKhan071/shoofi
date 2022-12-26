@@ -1,4 +1,4 @@
-import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 
 class MyButtonContainer extends StatelessWidget {
   final String text;
@@ -40,10 +40,9 @@ class MyButtonContainer extends StatelessWidget {
               Text(
                 text,
                 style: TextStyle(
-                  color: textColor,
-                  fontSize: 16,
-                   fontWeight: FontWeight.bold
-                ),
+                    color: textColor,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold),
               ),
             ],
           )),
