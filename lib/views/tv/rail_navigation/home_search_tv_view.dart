@@ -8,173 +8,175 @@ class HomeSearchTvView extends StatelessWidget {
   Widget build(BuildContext context) {
     FilterController controller = FilterController();
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-                height: 48,
-                width: double.infinity,
-                padding: EdgeInsets.symmetric(horizontal: 2),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(100),
-                    border: Border.all(
-                      width: 1,
-                      color: Colors.grey,
-                    )),
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    suffixIcon: Wrap(
-                      crossAxisAlignment: WrapCrossAlignment.center,
-                      children: [
-                        Text(
-                          "|",
-                          style: TextStyle(
-                            color: Colors.grey,
-                          ),
-                        ),
-                        // Obx(
-                        //   () =>
-
-                        IconButton(
-                            onPressed: () {
-                              controller.isDisplayFilter.value =
-                                  !controller.isDisplayFilter.value;
-                              // controller.press.value =
-                              //     !controller.press.value;
-                            },
-                            icon: Icon(
-                              Icons.filter_alt_outlined,
-                              size: 18,
-                            )),
-                        // ),
-                      ],
-                    ),
-                    prefixIcon: Icon(
-                      Icons.search,
-                      size: 18,
-                    ),
-                    hintText: "Search or paste URL",
-                  ),
-                )),
-            SizedBox(
-              height: 30,
-            ),
-            Obx(() {
-              return controller.isDisplayFilter.value
-                  ? SizedBox(
-                      width: double.infinity,
-                      child: Column(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                  height: 48,
+                  width: double.infinity,
+                  padding: EdgeInsets.symmetric(horizontal: 2),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(
+                        width: 1,
+                        color: Colors.grey,
+                      )),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      suffixIcon: Wrap(
+                        crossAxisAlignment: WrapCrossAlignment.center,
                         children: [
                           Text(
-                            "Filters",
+                            "|",
                             style: TextStyle(
-                                color: black,
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold),
+                              color: Colors.grey,
+                            ),
                           ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Divider(
-                            color: black.withOpacity(0.1),
-                            thickness: 1,
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              FilterRow(
-                                controller: controller,
-                                text: "Sort by",
-                                dropDownValue: controller.sortBydropdownvalue,
-                                items: controller.sortbyItems,
-                              ),
-                              FilterRow(
-                                controller: controller,
-                                text: "Type",
-                                dropDownValue: controller.typedropdownvalue,
-                                items: controller.typeItems,
-                              ),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              FilterRow(
-                                  items: controller.locationItems,
-                                  dropDownValue:
-                                      controller.locationdropdownvalue,
-                                  controller: controller,
-                                  text: "Select Location"),
-                              FilterRow(
-                                  items: controller.subrcibersItems,
-                                  dropDownValue:
-                                      controller.subcribersdropdownvalue,
-                                  controller: controller,
-                                  text: "No of Subscribers"),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              FilterRow(
-                                controller: controller,
-                                text: "Upload Date",
-                                dropDownValue: controller.uploaddropdownvalue,
-                                items: controller.uploadItems,
-                              ),
-                              FilterRow(
-                                controller: controller,
-                                text: "No of Views",
-                                dropDownValue: controller.viewsdropdownvalue,
-                                items: controller.viewsItems,
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Divider(
-                            color: black.withOpacity(0.1),
-                            thickness: 1,
-                          ),
+                          // Obx(
+                          //   () =>
+
+                          IconButton(
+                              onPressed: () {
+                                controller.isDisplayFilter.value =
+                                    !controller.isDisplayFilter.value;
+                                // controller.press.value =
+                                //     !controller.press.value;
+                              },
+                              icon: Icon(
+                                Icons.filter_alt_outlined,
+                                size: 18,
+                              )),
+                          // ),
                         ],
                       ),
-                    )
-                  : SizedBox();
-            }),
-            SizedBox(height: 40),
-            FilterSearchContainer(
-              text: "wilicumal",
-            ),
-            FilterSearchContainer(
-              text: "wilicumal",
-            ),
-            FilterSearchContainer(
-              text: "wilicumal",
-            ),
-            FilterSearchContainer(
-              width: 288,
-              text: "wilicumal wilicumal",
-            ),
-            FilterSearchContainer(
-              text: "wilicumal",
-            ),
-            FilterSearchContainer(
-              text: "wilicumal",
-            ),
-            FilterSearchContainer(
-              text: "wilicumal",
-            ),
-            FilterSearchContainer(
-              text: "wilicumal",
-            ),
-          ],
+                      prefixIcon: Icon(
+                        Icons.search,
+                        size: 18,
+                      ),
+                      hintText: "Search or paste URL",
+                    ),
+                  )),
+              SizedBox(
+                height: 30,
+              ),
+              Obx(() {
+                return controller.isDisplayFilter.value
+                    ? SizedBox(
+                        width: double.infinity,
+                        child: Column(
+                          children: [
+                            Text(
+                              "Filters",
+                              style: TextStyle(
+                                  color: black,
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Divider(
+                              color: black.withOpacity(0.1),
+                              thickness: 1,
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                FilterRow(
+                                  controller: controller,
+                                  text: "Sort by",
+                                  dropDownValue: controller.sortBydropdownvalue,
+                                  items: controller.sortbyItems,
+                                ),
+                                FilterRow(
+                                  controller: controller,
+                                  text: "Type",
+                                  dropDownValue: controller.typedropdownvalue,
+                                  items: controller.typeItems,
+                                ),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                FilterRow(
+                                    items: controller.locationItems,
+                                    dropDownValue:
+                                        controller.locationdropdownvalue,
+                                    controller: controller,
+                                    text: "Select Location"),
+                                FilterRow(
+                                    items: controller.subrcibersItems,
+                                    dropDownValue:
+                                        controller.subcribersdropdownvalue,
+                                    controller: controller,
+                                    text: "No of Subscribers"),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                FilterRow(
+                                  controller: controller,
+                                  text: "Upload Date",
+                                  dropDownValue: controller.uploaddropdownvalue,
+                                  items: controller.uploadItems,
+                                ),
+                                FilterRow(
+                                  controller: controller,
+                                  text: "No of Views",
+                                  dropDownValue: controller.viewsdropdownvalue,
+                                  items: controller.viewsItems,
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Divider(
+                              color: black.withOpacity(0.1),
+                              thickness: 1,
+                            ),
+                          ],
+                        ),
+                      )
+                    : SizedBox();
+              }),
+              SizedBox(height: 40),
+              FilterSearchContainer(
+                text: "wilicumal",
+              ),
+              FilterSearchContainer(
+                text: "wilicumal",
+              ),
+              FilterSearchContainer(
+                text: "wilicumal",
+              ),
+              FilterSearchContainer(
+                width: 288,
+                text: "wilicumal wilicumal",
+              ),
+              FilterSearchContainer(
+                text: "wilicumal",
+              ),
+              FilterSearchContainer(
+                text: "wilicumal",
+              ),
+              FilterSearchContainer(
+                text: "wilicumal",
+              ),
+              FilterSearchContainer(
+                text: "wilicumal",
+              ),
+            ],
+          ),
         ),
       ),
     );

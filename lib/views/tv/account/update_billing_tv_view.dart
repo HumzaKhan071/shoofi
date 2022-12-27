@@ -20,7 +20,7 @@ class UpdateBillingTvView extends StatelessWidget {
             height: Get.height * 0.1,
           ),
           Container(
-            height: 263,
+            height: 150,
             width: 263,
             decoration: BoxDecoration(
                 image:
@@ -32,13 +32,13 @@ class UpdateBillingTvView extends StatelessWidget {
           Text(
             "Scan QRcode to customize",
             style: TextStyle(
-                color: grey, fontSize: 28, fontWeight: FontWeight.w200),
+                color: grey, fontSize: 20, fontWeight: FontWeight.w200),
           ),
           SizedBox(height: 10),
           Text(
             "on your registered phone",
             style: TextStyle(
-                color: grey, fontSize: 28, fontWeight: FontWeight.w200),
+                color: grey, fontSize: 20, fontWeight: FontWeight.w200),
           ),
         ],
       ),
