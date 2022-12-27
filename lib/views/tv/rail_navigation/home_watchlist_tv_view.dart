@@ -31,7 +31,7 @@ class HomeWatchlistTvView extends StatelessWidget {
       alignment: Alignment.center,
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 50.0, left: 50, right: 50),
+          padding: const EdgeInsets.only(top: 50.0, left: 50, right: 40),
           child: Column(
             children: [
               Padding(

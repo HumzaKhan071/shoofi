@@ -26,7 +26,7 @@ class VideoThumbnailForTv extends StatelessWidget {
           children: [
             Container(
               height: Get.height * 0.30,
-              width: Get.width * 0.27,
+              width: Get.width * 0.24,
               decoration: BoxDecoration(
                 image: DecorationImage(image: AssetImage(imgPath)),
                 borderRadius: BorderRadius.circular(16),

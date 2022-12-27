@@ -101,11 +101,14 @@ class _HomeReelTvViewState extends State<HomeReelTvView> {
                       padding: const EdgeInsets.only(right: 10.0),
                       child: trendingImage(
                           imgPath: ImageConstant.short1,
-                          height: 100,
-                          width: 100),
+                          height: 130.0,
+                          width: 100.0),
                     );
                   }),
             ),
+          ),
+          SizedBox(
+            height: 15,
           )
         ],
       ),
