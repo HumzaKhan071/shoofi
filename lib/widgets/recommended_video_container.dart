@@ -27,14 +27,16 @@ class RecommendedVideoContainer extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 10),
+                  // Text(
+                  //   overflow:TextOverflow.ellipsis,
+                  //   "Vivamus mattis sapien vel eros cursus, a venen Vivamus mattis sapien vel eros cursus, a venen ...",
+                  //   style: TextStyle(
+                  //     fontSize: 18,
+                  //     fontWeight: FontWeight.bold,
+                  //   ),
+                  // ),
                   Text(
-                    "Vivamus mattis sapien vel eros cursus, a venen Vivamus mattis sapien vel eros cursus, a venen ...",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text(
+                    overflow: TextOverflow.ellipsis,
                     "Vivamus mattis sapien vel eros cursus,a venen ...",
                     style: TextStyle(
                       fontSize: 18,
@@ -61,22 +63,18 @@ class RecommendedVideoContainer extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 20),
-                  Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
-                    style: TextStyle(color: grey, fontSize: 15),
+                  SizedBox(
+                    width: Get.width * 0.5,
+                    child: Text(
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 5,
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc",
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: grey,
+                      ),
+                    ),
                   ),
-                  Text(
-                    "aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo   ",
-                    style: TextStyle(color: grey, fontSize: 15),
-                  ),
-                  Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-                    style: TextStyle(color: grey, fontSize: 15),
-                  ),
-                  Text(
-                    "magna aliqua. Ut enim ad minim veniam, quis nostrud exerc",
-                    style: TextStyle(color: grey, fontSize: 15),
-                  )
                 ],
               )
             ],

@@ -95,6 +95,9 @@ class RegisterLocationTvView extends StatelessWidget {
                 conColor: yellow,
                 height: 38,
                 width: 270,
+                press: () {
+                  Get.back();
+                },
               )
             ],
           ),

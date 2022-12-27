@@ -20,7 +20,7 @@ Widget adBannerForTv({isInChannel = false}) {
               width: 50,
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 100.0),
+              padding: const EdgeInsets.only(top: 50.0),
               child: SizedBox(
                   height: Get.height * 0.4,
                   child: Row(
@@ -68,6 +68,8 @@ Widget adBannerForTv({isInChannel = false}) {
                           SizedBox(
                             width: 200,
                             child: Text(
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 5,
                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc",
                               style: TextStyle(
                                 fontSize: 12,

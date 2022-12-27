@@ -2,6 +2,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:shoofi/Routes/routes.dart';
 import 'package:shoofi/views/mobile/home/trending_view.dart';
+import 'package:shoofi/views/tv/get_started/get_started_tv_view.dart';
 import 'package:shoofi/views/tv/rail_navigation/home_account_tv_view.dart';
 import 'package:shoofi/views/tv/rail_navigation/home_reel_tv_view.dart';
 import 'package:shoofi/views/tv/rail_navigation/home_search_tv_view.dart';
@@ -99,7 +100,7 @@ class RailNavigation extends StatelessWidget {
                       padding: const EdgeInsets.all(5.0),
                       child: TextButton(
                           onPressed: () {
-                            signoutDialog(controller);
+                            Get.offAll(() => GetStartedTvView());
                           },
                           child: Text(
                             "Sign Out",
