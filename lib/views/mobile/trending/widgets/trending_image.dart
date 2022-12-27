@@ -1,9 +1,9 @@
 import 'package:shoofi/routes/routes.dart';
 
-trendingImage({required String imgPath}) {
+Widget trendingImage({required String imgPath, height, width}) {
   return Container(
-    height: Get.height * 0.45,
-    width: Get.width * 0.15,
+    height: height ?? Get.height * 0.45,
+    width: width ?? Get.width * 0.15,
     decoration: BoxDecoration(
       image: DecorationImage(image: AssetImage(imgPath), fit: BoxFit.cover),
       borderRadius: BorderRadius.circular(16),

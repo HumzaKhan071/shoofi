@@ -20,13 +20,15 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: ResponsiveBuilder(
           builder: (context, sizingInformation) {
-          
             if (sizingInformation.deviceScreenType ==
                 DeviceScreenType.desktop) {
               return RailNavigation();
             }
             if (sizingInformation.deviceScreenType == DeviceScreenType.mobile) {
               return SplashView();
+            }
+            if (sizingInformation.deviceScreenType == DeviceScreenType.tablet) {
+              return RailNavigation();
             }
             return Center(
               child: Text("No Size"),
