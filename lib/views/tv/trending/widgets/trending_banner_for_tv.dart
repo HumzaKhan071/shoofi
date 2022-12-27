@@ -43,56 +43,56 @@ Widget trendingBannerForTv({required String title, required String imgPath}) {
                 homeBottomNavigationBarController.currentIndex.value = 1;
                 homeBottomNavigationBarController.indexBeforeShort = 0;
               },
-              child: trendingImage(imgPath: ImageConstant.short1),
+              child: trendingImageForTv(imgPath: ImageConstant.short1),
             ),
             SizedBox(width: 15),
             InkWell(
               onTap: () {
                 Get.to(HomeReelTvView());
               },
-              child: trendingImage(imgPath: ImageConstant.short2),
+              child: trendingImageForTv(imgPath: ImageConstant.short2),
             ),
             SizedBox(width: 15),
             InkWell(
               onTap: () {
                 Get.to(HomeReelTvView());
               },
-              child: trendingImage(imgPath: ImageConstant.short3),
+              child: trendingImageForTv(imgPath: ImageConstant.short3),
             ),
             SizedBox(width: 15),
             InkWell(
               onTap: () {
                 Get.to(HomeReelTvView());
               },
-              child: trendingImage(imgPath: ImageConstant.short1),
+              child: trendingImageForTv(imgPath: ImageConstant.short1),
             ),
             SizedBox(width: 15),
             InkWell(
               onTap: () {
                 Get.to(HomeReelTvView());
               },
-              child: trendingImage(imgPath: ImageConstant.short2),
+              child: trendingImageForTv(imgPath: ImageConstant.short2),
             ),
             SizedBox(width: 15),
             InkWell(
               onTap: () {
                 Get.to(HomeReelTvView());
               },
-              child: trendingImage(imgPath: ImageConstant.short3),
+              child: trendingImageForTv(imgPath: ImageConstant.short3),
             ),
             SizedBox(width: 15),
             InkWell(
               onTap: () {
                 Get.to(HomeReelTvView());
               },
-              child: trendingImage(imgPath: ImageConstant.short1),
+              child: trendingImageForTv(imgPath: ImageConstant.short1),
             ),
             SizedBox(width: 15),
             InkWell(
               onTap: () {
                 Get.to(HomeReelTvView());
               },
-              child: trendingImage(imgPath: ImageConstant.short2),
+              child: trendingImageForTv(imgPath: ImageConstant.short2),
             ),
             SizedBox(width: 15),
           ],
