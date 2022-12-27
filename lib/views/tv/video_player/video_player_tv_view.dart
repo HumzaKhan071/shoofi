@@ -1,21 +1,54 @@
 import 'package:shoofi/routes/routes.dart';
+import 'package:shoofi/views/tv/channel/channel_about_tv_view.dart';
+import 'package:shoofi/views/tv/channel/channel_home_tv_view.dart';
+import 'package:shoofi/views/tv/channel/channel_tabbar_tv_view.dart';
 import 'package:shoofi/widgets/recommended_video_container.dart';
 
-class VideoPlayerTvView extends StatelessWidget {
+class VideoPlayerTvView extends StatefulWidget {
   const VideoPlayerTvView({super.key});
+
+  @override
+  State<VideoPlayerTvView> createState() => _VideoPlayerTvViewState();
+}
+
+class _VideoPlayerTvViewState extends State<VideoPlayerTvView> {
+  late VideoPlayerController videoPlayerController;
+
+  @override
+  void initState() {
+    super.initState();
+    initializePlayer(
+        'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4');
+  }
+
+  Future initializePlayer(videoLink) async {
+    videoPlayerController = VideoPlayerController.network(
+      videoLink,
+    );
+    await Future.wait([videoPlayerController.initialize()]);
+    videoPlayerController.setLooping(true);
+
+    videoPlayerController.play();
+    setState(() {});
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    videoPlayerController.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.only(left: 45, right: 45),
           child: Column(
             children: [
-              Container(
-                height: 500,
-                width: double.infinity,
-                color: Colors.red,
+              AspectRatio(
+                aspectRatio: 16 / 9,
+                child: VideoPlayer(videoPlayerController),
               ),
               SizedBox(height: 20),
               Row(
@@ -23,9 +56,14 @@ class VideoPlayerTvView extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      CircleAvatar(
-                        radius: 30,
-                        backgroundImage: AssetImage(ImageConstant.author),
+                      InkWell(
+                        onTap: () {
+                          Get.to(() => ChannelTabBarTvView());
+                        },
+                        child: CircleAvatar(
+                          radius: 30,
+                          backgroundImage: AssetImage(ImageConstant.author),
+                        ),
                       ),
                       SizedBox(width: 10),
                       Column(
@@ -68,22 +106,20 @@ class VideoPlayerTvView extends StatelessWidget {
                       )
                     ],
                   ),
-                  Row(
+                  Wrap(
+                    spacing: 50,
                     children: [
                       SvgPicture.asset(ImageConstant.likebutton),
-                      SizedBox(width: 20),
                       SvgPicture.asset(ImageConstant.disLikeicon2),
-                      SizedBox(width: 20),
                       SvgPicture.asset(ImageConstant.watchlater),
-                      SizedBox(width: 20),
                       Icon(Icons.more_horiz)
                     ],
                   )
                 ],
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 40),
               RecommendedVideoContainer(),
-              SizedBox(height: 20),
+              SizedBox(height: 40),
               RecommendedVideoContainer(),
             ],
           ),

@@ -33,28 +33,31 @@ class AllCategoriesTvView extends StatelessWidget {
       "Art",
     ];
     return Scaffold(
-      body: Column(
-        children: [
-          GridView.count(
-            crossAxisCount: 6,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
-            shrinkWrap: true,
-            childAspectRatio: 3.5,
-            physics: BouncingScrollPhysics(),
-            children: List.generate(
-                categories.length,
-                (index) => MyTvCategoryContainer(
-                      categories: categories[index],
-                    )),
-          ),
-          SizedBox(height: 30),
-          MyButtonContainer(
-            conColor: yellow,
-            text: "Confirm",
-            width: 200,
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(50.0),
+        child: Column(
+          children: [
+            GridView.count(
+              crossAxisCount: 6,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+              shrinkWrap: true,
+              childAspectRatio: 3.5,
+              physics: BouncingScrollPhysics(),
+              children: List.generate(
+                  categories.length,
+                  (index) => MyTvCategoryContainer(
+                        categories: categories[index],
+                      )),
+            ),
+            SizedBox(height: 30),
+            MyButtonContainer(
+              conColor: yellow,
+              text: "Confirm",
+              width: 200,
+            ),
+          ],
+        ),
       ),
     );
   }

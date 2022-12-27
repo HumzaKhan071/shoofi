@@ -24,10 +24,7 @@ class HomeTrendingTvView extends StatelessWidget {
           backgroundColor: Colors.white,
           elevation: 0,
           leadingWidth: 100,
-          leading: Padding(
-            padding: const EdgeInsets.only(left: 15.0),
-            child: SvgPicture.asset(ImageConstant.logo3),
-          ),
+         
           actions: [
             Icon(
               Icons.connected_tv_rounded,

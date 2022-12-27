@@ -1,19 +1,19 @@
- import 'package:shoofi/routes/routes.dart';
+import 'package:shoofi/routes/routes.dart';
 
 Positioned rightArrowBtn() {
-    return Positioned(
-        right: 22,
-        child: Card(
-          elevation: 10,
-          child: Container(
-              height: 40,
-              width: 30,
-              padding: EdgeInsets.only(right: 5),
-              decoration: BoxDecoration(
-                  color: Colors.white, border: Border.all(color: grey)),
-              child: Center(
-                  child:
-                      Icon(Icons.arrow_forward_ios, color: grey, size: 25))),
-        ),
-      );
-  }
+  return Positioned(
+    right: 12,
+    child: Card(
+      elevation: 10,
+      child: Container(
+          height: 35,
+          width: 35,
+          padding: EdgeInsets.only(right: 5),
+          decoration: BoxDecoration(
+              color: Colors.white, border: Border.all(color: grey)),
+          child: Center(
+              child: Icon(Icons.arrow_forward_ios,
+                  color: black.withOpacity(0.4), size: 25))),
+    ),
+  );
+}

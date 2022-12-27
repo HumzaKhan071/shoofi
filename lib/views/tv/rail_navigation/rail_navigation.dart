@@ -25,59 +25,91 @@ class RailNavigation extends StatelessWidget {
     return Scaffold(
         body: Obx(() => Row(
               children: [
-                NavigationRail(
-                  selectedIndex: controller.currentIndex.value,
-                  destinations: <NavigationRailDestination>[
-                    NavigationRailDestination(
-                        icon: SvgPicture.asset(
-                          ImageConstant.homeTrendingicon,
-                          color: controller.currentIndex.value == 0
-                              ? yellow
-                              : null,
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: SvgPicture.asset(ImageConstant.logo3),
+                    ),
+                    Expanded(
+                        child: Wrap(
+                      spacing: 50,
+                      direction: Axis.vertical,
+                      alignment: WrapAlignment.center,
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            controller.currentIndex.value = 0;
+                          },
+                          icon: SvgPicture.asset(
+                            ImageConstant.homeTrendingicon,
+                            color: controller.currentIndex.value == 0
+                                ? yellow
+                                : null,
+                          ),
                         ),
-                        label: Text("Trending")),
-                    NavigationRailDestination(
-                        icon: SvgPicture.asset(
-                          ImageConstant.homeShorticon,
-                          color: controller.currentIndex.value == 1
-                              ? yellow
-                              : null,
+                        IconButton(
+                          onPressed: () {
+                            controller.currentIndex.value = 1;
+                          },
+                          icon: SvgPicture.asset(
+                            ImageConstant.homeShorticon,
+                            color: controller.currentIndex.value == 1
+                                ? yellow
+                                : null,
+                          ),
                         ),
-                        label: Text("Shorts")),
-                    NavigationRailDestination(
-                        icon: SvgPicture.asset(
-                          ImageConstant.homeSearchicon,
-                          color: controller.currentIndex.value == 2
-                              ? yellow
-                              : null,
+                        IconButton(
+                          onPressed: () {
+                            controller.currentIndex.value = 2;
+                          },
+                          icon: SvgPicture.asset(
+                            ImageConstant.homeSearchicon,
+                            color: controller.currentIndex.value == 2
+                                ? yellow
+                                : null,
+                          ),
                         ),
-                        label: Text("Search")),
-                    NavigationRailDestination(
-                        icon: SvgPicture.asset(
-                          ImageConstant.homeWatchlisticon,
-                          color: controller.currentIndex.value == 3
-                              ? yellow
-                              : null,
+                        IconButton(
+                          onPressed: () {
+                            controller.currentIndex.value = 3;
+                          },
+                          icon: SvgPicture.asset(
+                            ImageConstant.homeWatchlisticon,
+                            color: controller.currentIndex.value == 3
+                                ? yellow
+                                : null,
+                          ),
                         ),
-                        label: Text("Watchlist")),
-                    NavigationRailDestination(
-                        icon: SvgPicture.asset(
-                          ImageConstant.homeAccounticon,
-                          color: controller.currentIndex.value == 4
-                              ? yellow
-                              : null,
+                        IconButton(
+                          onPressed: () {
+                            controller.currentIndex.value = 4;
+                          },
+                          icon: SvgPicture.asset(
+                            ImageConstant.homeAccounticon,
+                            color: controller.currentIndex.value == 4
+                                ? yellow
+                                : null,
+                          ),
                         ),
-                        label: Text("Account")),
+                      ],
+                    )),
+                    Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: TextButton(
+                          onPressed: () {
+                            signoutDialog(controller);
+                          },
+                          child: Text(
+                            "Sign Out",
+                            style: TextStyle(
+                                color: red,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500),
+                          )),
+                    ),
                   ],
-                  onDestinationSelected: (newIndex) {
-                    controller.extended.value = false;
-                    if (newIndex == 1) {
-                      controller.indexBeforeShort =
-                          controller.currentIndex.value;
-                    }
-                    controller.currentIndex.value = newIndex;
-                    // controller.currentIndex.value = newIndex;
-                  },
                 ),
                 const VerticalDivider(thickness: 1, width: 1),
                 Expanded(

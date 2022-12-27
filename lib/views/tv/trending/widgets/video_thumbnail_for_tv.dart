@@ -4,6 +4,7 @@ class VideoThumbnailForTv extends StatelessWidget {
   final String imgPath;
   final void Function()? onLongPress;
   final void Function()? onTap;
+
   const VideoThumbnailForTv({
     Key? key,
     required this.imgPath,

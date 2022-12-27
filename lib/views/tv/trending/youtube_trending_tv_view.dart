@@ -5,9 +5,11 @@ import 'package:shoofi/views/tv/rail_navigation/widgets/right_arrow_btn.dart';
 import 'package:shoofi/views/tv/trending/widgets/ad_banner_for_tv.dart';
 import 'package:shoofi/views/tv/trending/widgets/recommended_banner_for_tv.dart';
 import 'package:shoofi/views/tv/trending/widgets/trending_banner_for_tv.dart';
+import 'package:shoofi/views/tv/video_player/video_player_tv_view.dart';
 
 class YoutubeTrendingTvView extends StatelessWidget {
-  const YoutubeTrendingTvView({super.key});
+  final bool isInChannel;
+  const YoutubeTrendingTvView({super.key, this.isInChannel = false});
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +72,7 @@ class YoutubeTrendingTvView extends StatelessWidget {
                       title: 'Recommended Channels picked for you 💥',
                       imagePath: 'assets/images/fairytale.png',
                       onTap: () {
-                        Get.to(ChannelTabBarTvView());
+                        Get.to(VideoPlayerTvView());
                       }),
                 ),
                 leftArrowBtn(),

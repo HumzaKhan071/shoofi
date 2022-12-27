@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           builder: (context, sizingInformation) {
             if (sizingInformation.deviceScreenType ==
                 DeviceScreenType.desktop) {
-              return VideoPlayerTvView();
+              return RailNavigation();
             }
             if (sizingInformation.deviceScreenType == DeviceScreenType.mobile) {
               return SplashView();

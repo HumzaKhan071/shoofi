@@ -4,7 +4,8 @@ import 'package:shoofi/routes/routes.dart';
 import 'package:shoofi/views/tv/trending/widgets/video_thumbnail_for_tv.dart';
 
 class ExtendedWatchListTvView extends StatelessWidget {
-  const ExtendedWatchListTvView({super.key});
+  final  length;
+  const ExtendedWatchListTvView({super.key, this.length=3});
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +19,7 @@ class ExtendedWatchListTvView extends StatelessWidget {
               padding: const EdgeInsets.only(left: 45.0, right: 45, bottom: 30),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  VideoThumbnailForTv(imgPath: ImageConstant.fairytail),
-                  VideoThumbnailForTv(imgPath: ImageConstant.fairytail),
-                  VideoThumbnailForTv(imgPath: ImageConstant.fairytail),
-                ],
+                children: List.generate(length, (index) =>  VideoThumbnailForTv(imgPath: ImageConstant.fairytail),)
               ),
             );
           },

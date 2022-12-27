@@ -37,6 +37,7 @@ Widget trendingBannerForTv({required String title, required String imgPath}) {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
+            SizedBox(width: 20),
             InkWell(
               onTap: () {
                 homeBottomNavigationBarController.currentIndex.value = 1;
