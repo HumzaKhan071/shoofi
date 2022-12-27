@@ -2,6 +2,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:shoofi/views/mobile/splash/splash_view.dart';
 import 'package:shoofi/views/tv/rail_navigation/rail_navigation.dart';
 import 'package:shoofi/views/tv/splash/splash_tv_view.dart';
+import 'package:shoofi/views/tv/video_player/video_player_tv_view.dart';
 
 import 'routes/routes.dart';
 
@@ -20,10 +21,9 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: ResponsiveBuilder(
           builder: (context, sizingInformation) {
-          
             if (sizingInformation.deviceScreenType ==
                 DeviceScreenType.desktop) {
-              return RailNavigation();
+              return VideoPlayerTvView();
             }
             if (sizingInformation.deviceScreenType == DeviceScreenType.mobile) {
               return SplashView();

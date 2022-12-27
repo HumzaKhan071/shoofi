@@ -151,4 +151,7 @@ class ImageConstant {
   static String short1 = "assets/shortImages/1.png";
   static String short2 = "assets/shortImages/2.png";
   static String short3 = "assets/shortImages/3.png";
+  static String author = "assets/images/author.png";
+  static String watchlater = "assets/images/youtube_watch_later.svg";
+  static String trailerPic = "assets/images/trailer_pic.png";
 }
