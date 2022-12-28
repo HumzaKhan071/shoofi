@@ -42,16 +42,13 @@ class MyApp extends StatelessWidget {
 }
 
 responsive() {
-  
-  if (Get.height >= 1080 &&
-      Get.width >= 1920) {
+  print("Screen Size : ${Get.height} x ${Get.width}");
+  if (Get.height >= 1080 && Get.width >= 1920) {
     return SplashTvView();
-  } else if (Get.height >= 720 &&
-      Get.width >= 1280) {
+  } else if (Get.height >= 720 && Get.width >= 1280) {
     return SplashTvView();
-  } else if (Get.height >= 640 &&
-      Get.width >= 360) {
-    return SplashView();
+  } else if (Get.height >= 500 && Get.width >= 950) {
+    return SplashTvView();
   } else {
     return SplashView();
   }
