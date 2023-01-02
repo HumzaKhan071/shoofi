@@ -29,9 +29,7 @@ class MyButtonContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(100),
       ),
       child: TextButton(
-          onPressed: () {
-            press();
-          },
+          onPressed: press,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

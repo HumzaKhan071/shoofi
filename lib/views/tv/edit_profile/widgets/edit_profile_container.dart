@@ -13,9 +13,7 @@ class EditProfileContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        press();
-      },
+      onTap: press,
       child: Container(
         height: 48,
         width: 343,
