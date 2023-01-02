@@ -26,31 +26,33 @@ class ChannelTabBarTvView extends StatelessWidget {
             children: [
               Container(
                 width: double.infinity,
-                height: 230,
+                height: 300,
                 child: Stack(
                   children: [
-                    Container(
-                      width: double.infinity,
-                      height: 157,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage(ImageConstant.channelBg),
-                          fit: BoxFit.fill,
+                    SizedBox(
+                      child: Container(
+                        width: double.infinity,
+                        height: 157,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage(ImageConstant.channelBg),
+                            fit: BoxFit.fill,
+                          ),
                         ),
                       ),
                     ),
                     Positioned(
                       bottom: 0,
-                      left: 30,
+                      left: 50,
                       child: Row(
                         children: [
                           Column(
                             children: [
                               ProfileContainer(
-                                containerHeight: 52,
-                                containerWidth: 52,
-                                imageHeight: 46,
-                                imageWidth: 46,
+                                containerHeight: 150,
+                                containerWidth: 150,
+                                imageHeight: 150,
+                                imageWidth: 150,
                               ),
                               SizedBox(
                                 height: 4,
@@ -60,11 +62,11 @@ class ChannelTabBarTvView extends StatelessWidget {
                                 style: TextStyle(
                                     color: black,
                                     fontWeight: FontWeight.w500,
-                                    fontSize: 14),
+                                    fontSize: 20),
                               ),
                               Text(
                                 "9.5 M Subscribers",
-                                style: TextStyle(color: grey, fontSize: 11),
+                                style: TextStyle(color: grey, fontSize: 15),
                               ),
                               Text(
                                 "769 Videos",
@@ -74,7 +76,7 @@ class ChannelTabBarTvView extends StatelessWidget {
                           ),
                           SizedBox(width: 40),
                           Container(
-                            height: 30,
+                            height: 45,
                             width: Get.width * 0.8,
                             child: TabBar(
                                 onTap: (value) {
@@ -87,28 +89,28 @@ class ChannelTabBarTvView extends StatelessWidget {
                                     child: Text(
                                       "Home",
                                       style:
-                                          TextStyle(color: black, fontSize: 10),
+                                          TextStyle(color: black, fontSize: 25),
                                     ),
                                   ),
                                   Tab(
                                     child: Text(
                                       "Videos",
                                       style:
-                                          TextStyle(color: black, fontSize: 10),
+                                          TextStyle(color: black, fontSize: 25),
                                     ),
                                   ),
                                   Tab(
                                     child: Text(
                                       "Playlists",
                                       style:
-                                          TextStyle(color: black, fontSize: 10),
+                                          TextStyle(color: black, fontSize: 25),
                                     ),
                                   ),
                                   Tab(
                                     child: Text(
                                       "About",
                                       style:
-                                          TextStyle(color: black, fontSize: 10),
+                                          TextStyle(color: black, fontSize: 25),
                                     ),
                                   ),
                                 ]),

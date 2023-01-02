@@ -100,6 +100,7 @@ class _HomeReelTvViewState extends State<HomeReelTvView> {
                     return Padding(
                       padding: const EdgeInsets.only(right: 10.0),
                       child: trendingImageForTv(
+                        width: 170,
                         imgPath: ImageConstant.short1,
                       ),
                     );

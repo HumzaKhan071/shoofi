@@ -17,7 +17,7 @@ class ChannelHomeTvView extends StatelessWidget {
     HomeBottomNavigationBarController homeBottomNavigationBarController =
         Get.find(tag: "bottomNavigation");
     return Obx(() => homeBottomNavigationBarController.extendedForChannel.value
-        ? ExtendedWatchListTvView()
+        ? homeBottomNavigationBarController.extendedWidget
         : Scaffold(
             body: SingleChildScrollView(
             child: Padding(

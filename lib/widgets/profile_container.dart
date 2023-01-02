@@ -5,9 +5,14 @@ class ProfileContainer extends StatelessWidget {
   final double containerWidth;
   final double imageHeight;
   final double imageWidth;
-  
+  final double? radius;
   const ProfileContainer({
-    Key? key, required this.containerHeight, required this.containerWidth, required this.imageHeight, required this.imageWidth,
+    Key? key,
+    required this.containerHeight,
+    required this.containerWidth,
+    required this.imageHeight,
+    required this.imageWidth,
+    this.radius,
   }) : super(key: key);
 
   @override
@@ -24,6 +29,7 @@ class ProfileContainer extends StatelessWidget {
       ),
       child: CircleAvatar(
         backgroundColor: Colors.transparent,
+        radius: radius,
         child: Image.asset(
           ImageConstant.a,
           width: imageHeight,

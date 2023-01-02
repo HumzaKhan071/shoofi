@@ -5,16 +5,16 @@ Widget trendingImage({required String imgPath}) {
     height: 200,
     width: 150,
     decoration: BoxDecoration(
-      image: DecorationImage(image: AssetImage(imgPath), fit: BoxFit.fill),
+      image: DecorationImage(image: AssetImage(imgPath), fit: BoxFit.cover),
       borderRadius: BorderRadius.circular(16),
     ),
   );
 }
 
-Widget trendingImageForTv({required String imgPath}) {
+Widget trendingImageForTv({required String imgPath, height, width}) {
   return Container(
-    height: 300,
-    width: 250,
+    height: height ?? 300,
+    width: width ?? 250,
     decoration: BoxDecoration(
       image: DecorationImage(image: AssetImage(imgPath), fit: BoxFit.fill),
       borderRadius: BorderRadius.circular(16),
