@@ -9,7 +9,7 @@ adBanner() {
           borderRadius: BorderRadius.circular(25), // Image border
           child: Image.asset(
             ImageConstant.videoThumbnail,
-            fit: BoxFit.cover,
+            fit: BoxFit.fill,
           ),
         ),
       ),

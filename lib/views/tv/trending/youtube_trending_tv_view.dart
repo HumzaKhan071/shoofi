@@ -1,4 +1,5 @@
 import 'package:shoofi/Routes/routes.dart';
+import 'package:shoofi/controller/home/youtube_trending_controller.dart';
 import 'package:shoofi/views/tv/channel/channel_tabbar_tv_view.dart';
 import 'package:shoofi/views/tv/rail_navigation/widgets/left_arrow_btn.dart';
 import 'package:shoofi/views/tv/rail_navigation/widgets/right_arrow_btn.dart';
@@ -15,6 +16,9 @@ class YoutubeTrendingTvView extends StatelessWidget {
   Widget build(BuildContext context) {
     HomeBottomNavigationBarController homeBottomNavigationBarController =
         Get.find(tag: "bottomNavigation");
+    YoutubeTrendingController youtubeTrendingController = Get.isRegistered()
+        ? Get.find(tag: "youtube")
+        : Get.put(YoutubeTrendingController(), tag: "youtube");
     return Scaffold(
         body: SingleChildScrollView(
       child: Padding(
@@ -36,12 +40,19 @@ class YoutubeTrendingTvView extends StatelessWidget {
                   child: recommendedBannerForTv(
                       title: 'Recommended Channels picked for you 💥',
                       imagePath: 'assets/images/fairytale.png',
+                      scrollController:
+                          youtubeTrendingController.scrollController1,
                       onTap: () {
+                        homeBottomNavigationBarController.onChannelPage = true;
                         Get.to(ChannelTabBarTvView());
                       }),
                 ),
-                leftArrowBtn(),
-                rightArrowBtn(),
+                leftArrowBtn(
+                    scrollController:
+                        youtubeTrendingController.scrollController1),
+                rightArrowBtn(
+                    scrollController:
+                        youtubeTrendingController.scrollController1),
               ],
             ),
             SizedBox(
@@ -54,10 +65,16 @@ class YoutubeTrendingTvView extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 60, right: 60),
                   child: trendingBannerForTv(
                       title: "Recommended Shorts picked for you 💥",
+                      scrollController:
+                          youtubeTrendingController.scrollController2,
                       imgPath: 'assets/images/trending_reels.png'),
                 ),
-                leftArrowBtn(),
-                rightArrowBtn(),
+                leftArrowBtn(
+                    scrollController:
+                        youtubeTrendingController.scrollController2),
+                rightArrowBtn(
+                    scrollController:
+                        youtubeTrendingController.scrollController2),
               ],
             ),
             SizedBox(
@@ -71,12 +88,18 @@ class YoutubeTrendingTvView extends StatelessWidget {
                   child: recommendedBannerForTv(
                       title: 'Recommended Channels picked for you 💥',
                       imagePath: 'assets/images/fairytale.png',
+                      scrollController:
+                          youtubeTrendingController.scrollController3,
                       onTap: () {
                         Get.to(VideoPlayerTvView());
                       }),
                 ),
-                leftArrowBtn(),
-                rightArrowBtn(),
+                leftArrowBtn(
+                    scrollController:
+                        youtubeTrendingController.scrollController3),
+                rightArrowBtn(
+                    scrollController:
+                        youtubeTrendingController.scrollController3),
               ],
             ),
           ],

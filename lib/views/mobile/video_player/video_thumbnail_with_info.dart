@@ -15,7 +15,7 @@ class VideoThumbnailWithInfo extends StatelessWidget {
               borderRadius: BorderRadius.circular(20), // Image border
               child: Image.asset(
                 'assets/images/video_thumbnail.png',
-                fit: BoxFit.cover,
+                fit: BoxFit.fill,
               ),
             ),
           ),

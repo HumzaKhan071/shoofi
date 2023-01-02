@@ -12,7 +12,7 @@ Widget adBannerForTv({isInChannel = false}) {
                 borderRadius: BorderRadius.circular(25), // Image border
                 child: Image.asset(
                   ImageConstant.videoThumbnailTv,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                 ),
               ),
             ),
@@ -92,7 +92,7 @@ Widget adBannerForTv({isInChannel = false}) {
                 borderRadius: BorderRadius.circular(25), // Image border
                 child: Image.asset(
                   ImageConstant.videoThumbnailTv,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                 ),
               ),
             ),

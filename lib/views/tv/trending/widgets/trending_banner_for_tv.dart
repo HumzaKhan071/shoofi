@@ -1,8 +1,7 @@
 import 'package:shoofi/routes/routes.dart';
-import 'package:shoofi/views/tv/extended_views/extended_watchlist_tv_view.dart';
 import 'package:shoofi/views/tv/rail_navigation/home_reel_tv_view.dart';
 
-Widget trendingBannerForTv({required String title, required String imgPath}) {
+Widget trendingBannerForTv({required String title, required String imgPath, scrollController}) {
   HomeBottomNavigationBarController homeBottomNavigationBarController =
       Get.find(tag: "bottomNavigation");
   return Column(
@@ -35,6 +34,7 @@ Widget trendingBannerForTv({required String title, required String imgPath}) {
       SizedBox(height: 15),
       SingleChildScrollView(
         scrollDirection: Axis.horizontal,
+        controller: scrollController,
         child: Row(
           children: [
             SizedBox(width: 20),

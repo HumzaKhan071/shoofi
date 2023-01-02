@@ -7,7 +7,8 @@ class HomeBottomNavigationBarController extends GetxController {
   Rx<bool> isSwitched = false.obs;
   Rx<bool> valueBox = false.obs;
   Widget extendedWidget = Container();
-
+  bool onChannelPage = false;
+  Rx<bool> extendedForChannel = false.obs;
   late Rx<VideoPlayerController> playerController;
   Rx<bool> isPlayingVideo = false.obs;
   Rx<bool> isVideoPlayingInMiniplayer = false.obs;

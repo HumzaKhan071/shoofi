@@ -27,7 +27,8 @@ class VideoThumbnail extends StatelessWidget {
               height: Get.height * 0.14,
               width: Get.width * 0.27,
               decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage(imgPath)),
+                image: DecorationImage(
+                    image: AssetImage(imgPath), fit: BoxFit.fill),
                 borderRadius: BorderRadius.circular(16),
               ),
             ),

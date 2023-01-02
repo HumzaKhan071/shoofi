@@ -1,3 +1,4 @@
+import 'package:shoofi/controller/home/youtube_trending_controller.dart';
 import 'package:shoofi/routes/routes.dart';
 import 'package:shoofi/views/tv/register_location/register_location_tv_view.dart';
 import 'package:shoofi/views/tv/trending/all_category_tv_view.dart';
@@ -12,6 +13,7 @@ class HomeTrendingTvView extends StatelessWidget {
   Widget build(BuildContext context) {
     HomeTrendingController controller =
         Get.put(HomeTrendingController(), tag: "trending");
+ 
     List<Widget> screens = [
       YoutubeTrendingTvView(),
       FacebookTrendingTvView(),

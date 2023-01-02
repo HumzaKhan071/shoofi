@@ -41,6 +41,7 @@ class RailNavigation extends StatelessWidget {
                       children: [
                         IconButton(
                           onPressed: () {
+                            controller.extended.value = false;
                             controller.currentIndex.value = 0;
                           },
                           icon: SvgPicture.asset(
@@ -52,6 +53,7 @@ class RailNavigation extends StatelessWidget {
                         ),
                         IconButton(
                           onPressed: () {
+                            controller.extended.value = false;
                             controller.currentIndex.value = 1;
                           },
                           icon: SvgPicture.asset(
@@ -63,6 +65,7 @@ class RailNavigation extends StatelessWidget {
                         ),
                         IconButton(
                           onPressed: () {
+                            controller.extended.value = false;
                             controller.currentIndex.value = 2;
                           },
                           icon: SvgPicture.asset(
@@ -74,6 +77,7 @@ class RailNavigation extends StatelessWidget {
                         ),
                         IconButton(
                           onPressed: () {
+                            controller.extended.value = false;
                             controller.currentIndex.value = 3;
                           },
                           icon: SvgPicture.asset(
@@ -85,6 +89,7 @@ class RailNavigation extends StatelessWidget {
                         ),
                         IconButton(
                           onPressed: () {
+                            controller.extended.value = false;
                             controller.currentIndex.value = 4;
                           },
                           icon: SvgPicture.asset(

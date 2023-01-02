@@ -5,7 +5,7 @@ trendingImageForTv({required String imgPath}) {
     height: Get.height * 0.3,
     width: Get.width * 0.1,
     decoration: BoxDecoration(
-      image: DecorationImage(image: AssetImage(imgPath), fit: BoxFit.cover),
+      image: DecorationImage(image: AssetImage(imgPath), fit: BoxFit.fill),
       borderRadius: BorderRadius.circular(16),
     ),
   );

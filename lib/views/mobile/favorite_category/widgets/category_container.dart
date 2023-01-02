@@ -2,7 +2,6 @@ import 'dart:ui';
 
 import 'package:shoofi/routes/routes.dart';
 
-
 class CategoryContainer extends StatefulWidget {
   final String image;
 
@@ -25,7 +24,7 @@ class _CategoryContainerState extends State<CategoryContainer> {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
           image: DecorationImage(
-              image: AssetImage(widget.image), fit: BoxFit.cover)),
+              image: AssetImage(widget.image), fit: BoxFit.fill)),
       child: Stack(
         children: [
           ClipRRect(

@@ -28,7 +28,8 @@ class VideoThumbnailForTv extends StatelessWidget {
               height: Get.height * 0.30,
               width: Get.width * 0.24,
               decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage(imgPath)),
+                image: DecorationImage(
+                    image: AssetImage(imgPath), fit: BoxFit.fill),
                 borderRadius: BorderRadius.circular(16),
               ),
             ),

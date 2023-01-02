@@ -1,6 +1,5 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:shoofi/routes/routes.dart';
+import 'package:shoofi/views/tv/extended_views/extended_watchlist_tv_view.dart';
 import 'package:shoofi/views/tv/rail_navigation/home_watchlist_tv_view.dart';
 
 class ChannelPlaylistTvView extends StatelessWidget {
@@ -8,6 +7,10 @@ class ChannelPlaylistTvView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HomeWatchlistTvView();
+    HomeBottomNavigationBarController homeBottomNavigationBarController =
+        Get.find(tag: "bottomNavigation");
+    return Obx(() => homeBottomNavigationBarController.extendedForChannel.value
+        ? ExtendedWatchListTvView()
+        : HomeWatchlistTvView());
   }
 }
